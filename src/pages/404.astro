@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Page Not Found" noindex={true}>
+  <section class="not-found">
+    <div class="container container-narrow">
+      <p class="error-code">404</p>
+      <h1>Page Not Found</h1>
+      <p class="message">The page you're looking for doesn't exist.</p>
+      <a href="/" class="btn">Go Home</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .not-found {
+    text-align: center;
+    padding: var(--space-2xl) 0;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .error-code {
+    font-size: 6rem;
+    font-weight: 700;
+    color: var(--color-text-subtle);
+    line-height: 1;
+    margin-bottom: var(--space-md);
+  }
+
+  h1 {
+    margin-bottom: var(--space-md);
+  }
+
+  .message {
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-xl);
+  }
+</style>
+
+<script>
+  const redirects: Record<string, string> = {
+    '/index.php': '/',
+    '/index_old.php': '/',
+    '/contact.php': '/contact/',
+    '/dracula.php': '/portfolio/dracula/',
+    '/carmina_burana.php': '/portfolio/carmina-burana/',
+    '/stabat_mater.php': '/portfolio/stabat-mater/',
+    '/the_lost_steps.php': '/portfolio/the-lost-steps/',
+    '/lottie.html': '/',
+  };
+
+  const path = window.location.pathname;
+
+  if (path in redirects) {
+    window.location.replace(redirects[path]);
+  } else if (path.endsWith('.php')) {
+    window.location.replace('/');
+  }
+</script>

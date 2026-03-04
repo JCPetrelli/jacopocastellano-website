@@ -1,0 +1,427 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('portfolio');
+  return projects.map((project) => ({
+    params: { slug: project.id },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+
+const { title, description, date, category, thumbnail, images, video, tags, client, role } = project.data;
+
+const categoryLabels: Record<string, string> = {
+  video: 'Video Design',
+  software: 'Software',
+  motion: 'Motion Design',
+  installation: 'Installation',
+};
+
+const formattedDate = date.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+});
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const imageURL = new URL(thumbnail, Astro.site);
+
+// CreativeWork schema for portfolio items
+const creativeWorkSchema = {
+  '@context': 'https://schema.org',
+  '@type': category === 'software' ? 'SoftwareApplication' : 'CreativeWork',
+  name: title,
+  description: description,
+  image: imageURL.toString(),
+  dateCreated: date.toISOString(),
+  creator: {
+    '@type': 'Person',
+    name: 'Jacopo Castellano',
+  },
+  ...(client && { provider: { '@type': 'Organization', name: client } }),
+  ...(video && { video: { '@type': 'VideoObject', name: title, description: description, thumbnailUrl: imageURL.toString(), uploadDate: date.toISOString(), embedUrl: video } }),
+  keywords: tags.join(', '),
+  url: canonicalURL.toString(),
+};
+---
+
+<BaseLayout title={title} description={description} image={thumbnail} tags={tags} breadcrumbs={[{ name: 'Portfolio', url: '/portfolio/' }, { name: title, url: '' }]}>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(creativeWorkSchema)} />
+  <article class="project">
+    <div class="container">
+      <header class="project-header">
+        <a href="/portfolio" class="back-link">&larr; Back to Portfolio</a>
+        <span class="project-category">{categoryLabels[category] || category}</span>
+        <h1>{title}</h1>
+        <p class="project-description">{description}</p>
+
+        <div class="project-meta">
+          <div class="meta-item">
+            <span class="meta-label">Date</span>
+            <span class="meta-value">{formattedDate}</span>
+          </div>
+          {client && (
+            <div class="meta-item">
+              <span class="meta-label">Client</span>
+              <span class="meta-value">{client}</span>
+            </div>
+          )}
+          {role && (
+            <div class="meta-item">
+              <span class="meta-label">Role</span>
+              <span class="meta-value">{role}</span>
+            </div>
+          )}
+        </div>
+
+        {tags.length > 0 && (
+          <div class="project-tags">
+            {tags.map((tag) => (
+              <span class="tag">{tag}</span>
+            ))}
+          </div>
+        )}
+      </header>
+
+      {video && (
+        <div class="project-video">
+          <div class="video-wrapper">
+            <iframe
+              src={video}
+              frameborder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      )}
+
+      <div class="project-hero">
+        <img class="bg-blur" src={thumbnail} alt="" aria-hidden="true" />
+        <img class="main" src={thumbnail} alt={title} />
+      </div>
+
+      <div class="project-content prose">
+        <Content />
+      </div>
+
+      {images && images.length > 0 && (
+        <div class="project-gallery">
+          {images.map((img, i) => (
+            <figure class="gallery-item" data-lightbox={i}>
+              <img src={img} alt={`${title} detail`} loading="lazy" />
+            </figure>
+          ))}
+        </div>
+      )}
+
+      <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" aria-label="Close">&times;</button>
+        <button class="lightbox-prev" aria-label="Previous">&lsaquo;</button>
+        <button class="lightbox-next" aria-label="Next">&rsaquo;</button>
+        <img class="lightbox-img" alt="" />
+      </div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .project {
+    padding-top: var(--space-xl);
+  }
+
+  .back-link {
+    display: inline-block;
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-lg);
+  }
+
+  .back-link:hover {
+    color: var(--color-text);
+  }
+
+  .project-header {
+    max-width: var(--container-narrow);
+    margin-bottom: var(--space-xl);
+  }
+
+  .project-category {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text-subtle);
+    margin-bottom: var(--space-md);
+  }
+
+  .project-header h1 {
+    margin-bottom: var(--space-md);
+  }
+
+  .project-description {
+    font-size: 1.25rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-lg);
+  }
+
+  .project-meta {
+    display: flex;
+    gap: var(--space-xl);
+    margin-bottom: var(--space-lg);
+    flex-wrap: wrap;
+  }
+
+  .meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  .meta-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text-subtle);
+  }
+
+  .meta-value {
+    font-size: 0.875rem;
+  }
+
+  .project-tags {
+    display: flex;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+  }
+
+  .project-video {
+    margin-bottom: var(--space-xl);
+  }
+
+  .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    background: var(--color-bg-alt);
+  }
+
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .project-hero {
+    position: relative;
+    aspect-ratio: 21 / 9;
+    overflow: hidden;
+    margin-bottom: var(--space-xl);
+    background: var(--color-bg);
+  }
+
+  .project-hero .bg-blur {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(30px);
+    transform: scale(1.1);
+    opacity: 0.5;
+  }
+
+  .project-hero .main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 1;
+  }
+
+  /* Fade to black on left and right edges of blurred bg */
+  .project-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right,
+      rgba(10, 10, 10, 1) 0%,
+      transparent 20%,
+      transparent 80%,
+      rgba(10, 10, 10, 1) 100%
+    );
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  /* White glow behind image on hover */
+  .project-hero::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    aspect-ratio: 1;
+    height: 80%;
+    background: transparent;
+    z-index: 0;
+    transition: box-shadow var(--transition-base);
+    pointer-events: none;
+  }
+
+  .project-hero:hover::after {
+    box-shadow: -50px 0 80px rgba(255, 255, 255, 0.3),
+                50px 0 80px rgba(255, 255, 255, 0.3);
+  }
+
+  .project-content {
+    margin: 0 auto var(--space-xl);
+  }
+
+  .project-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+    margin-top: var(--space-xl);
+  }
+
+  .gallery-item {
+    margin: 0;
+  }
+
+  .gallery-item {
+    cursor: pointer;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    border: 1px solid var(--color-border-light);
+    transition: opacity var(--transition-fast);
+  }
+
+  .gallery-item:hover img {
+    opacity: 0.8;
+  }
+
+  @media (max-width: 768px) {
+    .project-gallery {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Lightbox */
+  .lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.92);
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .lightbox.active {
+    display: flex;
+    opacity: 1;
+  }
+
+  .lightbox-img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+  }
+
+  .lightbox-close,
+  .lightbox-prev,
+  .lightbox-next {
+    position: absolute;
+    background: none;
+    border: none;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    transition: color var(--transition-fast);
+    padding: 0;
+    line-height: 1;
+  }
+
+  .lightbox-close:hover,
+  .lightbox-prev:hover,
+  .lightbox-next:hover {
+    color: var(--color-text);
+  }
+
+  .lightbox-close {
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 2.5rem;
+  }
+
+  .lightbox-prev,
+  .lightbox-next {
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3.5rem;
+  }
+
+  .lightbox-prev {
+    left: 1.5rem;
+  }
+
+  .lightbox-next {
+    right: 1.5rem;
+  }
+</style>
+
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lbImg = lightbox?.querySelector('.lightbox-img') as HTMLImageElement;
+  const items = document.querySelectorAll<HTMLElement>('.gallery-item[data-lightbox]');
+  const imgs = Array.from(items).map(el => el.querySelector('img')!);
+  const srcs = imgs.map(img => img.src);
+  const alts = imgs.map(img => img.alt);
+  let current = 0;
+
+  function show(i: number) {
+    current = (i + srcs.length) % srcs.length;
+    lbImg.src = srcs[current];
+    lbImg.alt = alts[current];
+    lightbox!.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function close() {
+    lightbox!.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  items.forEach(el => {
+    el.addEventListener('click', () => show(Number(el.dataset.lightbox)));
+  });
+
+  lightbox?.querySelector('.lightbox-close')?.addEventListener('click', close);
+  lightbox?.querySelector('.lightbox-prev')?.addEventListener('click', () => show(current - 1));
+  lightbox?.querySelector('.lightbox-next')?.addEventListener('click', () => show(current + 1));
+
+  lightbox?.addEventListener('click', (e) => {
+    if (e.target === lightbox) close();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox?.classList.contains('active')) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft') show(current - 1);
+    if (e.key === 'ArrowRight') show(current + 1);
+  });
+</script>

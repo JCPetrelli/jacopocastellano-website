@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogCard from '../../components/BlogCard.astro';
+import { getCollection } from 'astro:content';
+import { getReadingTime } from '../../utils/readingTime';
+
+const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+const posts = allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<BaseLayout title="Blog" description="Thoughts on software engineering, video design, and the creative process.">
+  <section class="blog-page">
+    <div class="container">
+      <header class="page-header">
+        <h1>Blog</h1>
+        <p class="page-description">
+          Writing about code, tools, and creative projects.
+        </p>
+      </header>
+
+      <div class="blog-grid">
+        {posts.map((post) => (
+          <BlogCard
+            title={post.data.title}
+            description={post.data.description}
+            date={post.data.date}
+            slug={post.id}
+            tags={post.data.tags}
+            image={post.data.image}
+            readingTime={getReadingTime(post.body ?? '')}
+          />
+        ))}
+      </div>
+
+      {posts.length === 0 && (
+        <p class="no-posts text-muted">No posts yet. Check back soon.</p>
+      )}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .blog-page {
+    padding-top: var(--space-xl);
+  }
+
+  .page-header {
+    margin-bottom: var(--space-xl);
+  }
+
+  .page-header h1 {
+    margin-bottom: var(--space-md);
+  }
+
+  .page-description {
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+    max-width: 600px;
+  }
+
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+
+  @media (max-width: 768px) {
+    .blog-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .no-posts {
+    text-align: center;
+    padding: var(--space-2xl);
+  }
+</style>

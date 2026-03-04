@@ -1,0 +1,14 @@
+RewriteEngine On
+
+# Redirect old PHP pages to new Astro pages (301 permanent)
+RewriteRule ^index\.php$            / [R=301,L]
+RewriteRule ^index_old\.php$        / [R=301,L]
+RewriteRule ^contact\.php$          /contact/ [R=301,L]
+RewriteRule ^dracula\.php$          /portfolio/dracula/ [R=301,L]
+RewriteRule ^carmina_burana\.php$   /portfolio/carmina-burana/ [R=301,L]
+RewriteRule ^stabat_mater\.php$     /portfolio/stabat-mater/ [R=301,L]
+RewriteRule ^the_lost_steps\.php$   /portfolio/the-lost-steps/ [R=301,L]
+RewriteRule ^lottie\.html$          / [R=301,L]
+
+# Catch-all: any remaining .php file redirects to homepage
+RewriteRule ^(.*)\.php$             / [R=301,L]

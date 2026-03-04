@@ -1,0 +1,208 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+import { getReadingTime } from '../../utils/readingTime';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const { title, description, date, tags, image } = post.data;
+const readingTime = getReadingTime(post.body ?? '');
+
+const formattedDate = date.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+// Get related posts
+const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+const relatedPosts = allPosts
+  .filter((p) => p.id !== post.id && p.data.tags.some((t) => tags.includes(t)))
+  .slice(0, 2);
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  image={image}
+  type="article"
+  publishedTime={date}
+  tags={tags}
+  breadcrumbs={[{ name: 'Blog', url: '/blog/' }, { name: title, url: '' }]}
+>
+  <article class="blog-post">
+    <div class="container container-narrow">
+      <header class="post-header">
+        <a href="/blog" class="back-link">&larr; Back to Blog</a>
+        <div class="post-meta text-mono">
+          <time datetime={date.toISOString()}>{formattedDate}</time>
+          <span class="meta-separator">&middot;</span>
+          <span>{readingTime} min read</span>
+        </div>
+        <h1>{title}</h1>
+        {tags.length > 0 && (
+          <div class="post-tags">
+            {tags.map((tag) => (
+              <span class="tag">{tag}</span>
+            ))}
+          </div>
+        )}
+      </header>
+
+      {image && (
+        <figure class="post-image">
+          <img src={image} alt={title} />
+        </figure>
+      )}
+
+      <div class="post-content prose">
+        <Content />
+      </div>
+
+      <footer class="post-footer">
+        <div class="author">
+          <p class="author-name">Jacopo Castellano</p>
+          <p class="author-bio text-muted">Senior Software Engineer & Video Designer</p>
+        </div>
+      </footer>
+    </div>
+
+    {relatedPosts.length > 0 && (
+      <aside class="related-posts">
+        <div class="container container-narrow">
+          <h2>Related Posts</h2>
+          <div class="related-list">
+            {relatedPosts.map((p) => (
+              <a href={`/blog/${p.id}`} class="related-item">
+                <span class="related-title">{p.data.title}</span>
+                <span class="related-arrow">&rarr;</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    )}
+  </article>
+</BaseLayout>
+
+<style>
+  .blog-post {
+    padding-top: var(--space-xl);
+  }
+
+  .back-link {
+    display: inline-block;
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-lg);
+  }
+
+  .back-link:hover {
+    color: var(--color-text);
+  }
+
+  .post-header {
+    margin-bottom: var(--space-xl);
+  }
+
+  .post-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: 0.875rem;
+    color: var(--color-text-subtle);
+    margin-bottom: var(--space-md);
+  }
+
+  .meta-separator {
+    opacity: 0.5;
+  }
+
+  .post-header h1 {
+    margin-bottom: var(--space-md);
+  }
+
+  .post-tags {
+    display: flex;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+  }
+
+  .post-image {
+    margin: 0 0 var(--space-xl);
+  }
+
+  .post-image img {
+    width: 100%;
+    border: 1px solid var(--color-border-light);
+  }
+
+  .post-content {
+    margin-bottom: var(--space-xl);
+  }
+
+  .post-footer {
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--color-border-light);
+  }
+
+  .author-name {
+    font-family: var(--font-serif);
+    font-size: 1.125rem;
+    margin-bottom: var(--space-xs);
+  }
+
+  .author-bio {
+    font-size: 0.875rem;
+    margin-bottom: 0;
+  }
+
+  .related-posts {
+    margin-top: var(--space-2xl);
+    padding: var(--space-xl) 0;
+    background: var(--color-bg-alt);
+    border-top: 1px solid var(--color-border-light);
+  }
+
+  .related-posts h2 {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-lg);
+  }
+
+  .related-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .related-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-md);
+    background: var(--color-bg);
+    border: 1px solid var(--color-border-light);
+    transition: border-color var(--transition-fast);
+  }
+
+  .related-item:hover {
+    border-color: var(--color-border);
+  }
+
+  .related-title {
+    font-weight: 500;
+  }
+
+  .related-arrow {
+    color: var(--color-text-muted);
+  }
+</style>

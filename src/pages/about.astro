@@ -1,0 +1,219 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import GitHubRepos from '../components/GitHubRepos.astro';
+import YouTubeVideos from '../components/YouTubeVideos.astro';
+---
+
+<BaseLayout title="About" description="Senior Software Engineer and Video Designer with a passion for elegant solutions.">
+  <section class="about-page">
+    <div class="container">
+      <div class="about-layout">
+        <div class="about-content">
+          <h1>About Me</h1>
+
+          <div class="about-portrait">
+            <img src="/images/jc.webp" alt="Jacopo Castellano" width="600" height="757" loading="eager" />
+          </div>
+
+          <div class="prose">
+            <p class="lead">
+              I'm Jacopo Castellano, a Senior Software Engineer and Video Designer based in Berlin.
+              I specialize in AI-driven development and real-time video design, working at the
+              intersection of software engineering and real-time visual systems.
+            </p>
+
+            <h2>Background</h2>
+            <p>
+              My journey began with classical music—I hold a piano diploma from the conservatory (2011).
+              This foundation in artistic discipline led me to video design, where I've spent over a
+              decade creating visual experiences for ballet, opera, and orchestral productions across Europe.
+            </p>
+            <p>
+              In parallel, I've developed deep expertise in software engineering, focusing on Python,
+              JavaScript, and modern web technologies. My background in both software and music shapes how I approach projects.
+            </p>
+
+            <h2>What I Do</h2>
+
+            <h3>Software Engineering</h3>
+            <p>
+              I architect and build scalable applications, with particular expertise in backend systems,
+              automation, and developer tooling. My approach emphasizes clean code, thoughtful architecture,
+              and maintainable code.
+            </p>
+
+            <h3>Video Design</h3>
+            <p>
+              I create video projections and visual content for live performances, collaborating with
+              orchestras, ballet companies, and theaters. I have created visual experiences for prestigious
+              institutions such as the Magdeburg Opera House and Ballet, Zurich Tonhalle, Leipzig Gewandhaus,
+              and the Colombia National Ballet.
+            </p>
+
+            <h3>Automotive & Embedded Systems</h3>
+            <p>
+              In the automotive industry, I've worked as a Requirements Manager and Software Engineer
+              on complex in-vehicle information and communication systems. My focus includes HMI design,
+              requirements management, and ASPICE-compliant processes.
+            </p>
+
+            <h3>Creative Technology</h3>
+            <p>
+              I explore the space where code meets art—interactive installations, generative visuals,
+              and tools for other creators. My most active creative project is
+              <a href="https://www.doppelganger.mov/" target="_blank" rel="noopener">Doppelganger</a>,
+              a Berlin-based audiovisual duo creating performances and installations that blend
+              live music with real-time visuals.
+            </p>
+          </div>
+        </div>
+
+        <aside class="about-sidebar">
+          <div class="sidebar-section">
+            <h3>Skills</h3>
+            <div class="skill-group">
+              <h4>Languages</h4>
+              <ul class="skill-list">
+                <li>Python</li>
+                <li>JavaScript / TypeScript</li>
+                <li>Bash</li>
+                <li>SQL</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h4>AI Tools</h4>
+              <ul class="skill-list">
+                <li>Claude Code</li>
+                <li>Cursor</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h4>Frameworks & Tools</h4>
+              <ul class="skill-list">
+                <li>React / Next.js</li>
+                <li>Node.js</li>
+                <li>Flask / FastAPI</li>
+                <li>MySQL / SQLite</li>
+                <li>Git</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h4>Design & Video</h4>
+              <ul class="skill-list">
+                <li>Final Cut Pro</li>
+                <li>TouchDesigner</li>
+                <li>Adobe Creative Suite</li>
+                <li>Figma</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="sidebar-section">
+            <h3>Contact</h3>
+            <p class="contact-text">
+              Available for freelance projects and collaborations.
+            </p>
+            <a href="/contact" class="btn">Get in Touch</a>
+          </div>
+        </aside>
+      </div>
+
+      <GitHubRepos />
+      <YouTubeVideos />
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .about-page {
+    padding-top: var(--space-xl);
+  }
+
+  .about-layout {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: var(--space-2xl);
+    align-items: start;
+  }
+
+  @media (max-width: 900px) {
+    .about-layout {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .about-content h1 {
+    margin-bottom: var(--space-xl);
+  }
+
+  .about-portrait {
+    margin-bottom: var(--space-xl);
+    max-width: 280px;
+  }
+
+  .about-portrait img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid var(--color-border-light);
+  }
+
+  .lead {
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: var(--color-text-muted);
+  }
+
+  .about-sidebar {
+    position: sticky;
+    top: calc(var(--space-xl) + 60px);
+  }
+
+  .sidebar-section {
+    padding: var(--space-lg);
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border-light);
+    margin-bottom: var(--space-lg);
+  }
+
+  .sidebar-section h3 {
+    font-size: 1rem;
+    margin-bottom: var(--space-md);
+  }
+
+  .skill-group {
+    margin-bottom: var(--space-md);
+  }
+
+  .skill-group:last-child {
+    margin-bottom: 0;
+  }
+
+  .skill-group h4 {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text-subtle);
+    margin-bottom: var(--space-sm);
+  }
+
+  .skill-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .skill-list li {
+    font-size: 0.875rem;
+    padding: var(--space-xs) 0;
+    color: var(--color-text-muted);
+  }
+
+  .contact-text {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-md);
+  }
+</style>

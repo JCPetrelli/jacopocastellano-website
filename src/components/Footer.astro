@@ -1,0 +1,97 @@
+---
+const currentYear = new Date().getFullYear();
+
+const socialLinks = [
+  { href: 'https://www.linkedin.com/in/jacopocastellano/', label: 'LinkedIn' },
+  { href: 'https://github.com/JCPetrelli', label: 'GitHub' },
+  { href: 'https://medium.com/@jacopocastellano', label: 'Medium' },
+  { href: 'https://www.youtube.com/channel/UCiVwuK0LOAPZWaXvhNjIB0g', label: 'YouTube' },
+  { href: 'https://vimeo.com/jacopocastellano', label: 'Vimeo' },
+  { href: 'https://www.instagram.com/jcastellanodesign/', label: 'Instagram' },
+  { href: 'https://x.com/vjcastellano', label: 'X' },
+  { href: 'https://www.pinterest.de/jcastellanodesign/boards/', label: 'Pinterest' },
+];
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-info">
+        <p class="footer-name">Jacopo Castellano</p>
+        <p class="footer-role text-muted">Senior Software Engineer & Video Designer</p>
+      </div>
+
+      <nav class="footer-social" aria-label="Social links">
+        {socialLinks.map(({ href, label }) => (
+          <a href={href} target="_blank" rel="noopener noreferrer" aria-label={label}>
+            {label}
+          </a>
+        ))}
+      </nav>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="text-subtle text-mono">
+        &copy; {currentYear} Jacopo Castellano. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    border-top: 1px solid var(--color-border-light);
+    padding: var(--space-xl) 0 var(--space-lg);
+    margin-top: var(--space-2xl);
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-xl);
+  }
+
+  .footer-name {
+    font-family: var(--font-serif);
+    font-size: 1.125rem;
+    margin-bottom: var(--space-xs);
+  }
+
+  .footer-role {
+    font-size: 0.875rem;
+    margin-bottom: 0;
+  }
+
+  .footer-social {
+    display: flex;
+    gap: var(--space-lg);
+  }
+
+  .footer-social a {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    transition: color var(--transition-fast);
+  }
+
+  .footer-social a:hover {
+    color: var(--color-text);
+  }
+
+  .footer-bottom {
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--color-border-light);
+  }
+
+  .footer-bottom p {
+    margin: 0;
+    font-size: 0.75rem;
+  }
+
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      gap: var(--space-lg);
+    }
+  }
+</style>

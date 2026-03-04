@@ -1,0 +1,150 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PortfolioCard from '../../components/PortfolioCard.astro';
+import { getCollection } from 'astro:content';
+
+const allProjects = await getCollection('portfolio');
+const projects = allProjects.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const categories = ['all', 'video', 'software', 'motion', 'installation'];
+const categoryLabels: Record<string, string> = {
+  all: 'All',
+  video: 'Video Design',
+  software: 'Software',
+  motion: 'Motion Design',
+  installation: 'Installation',
+};
+---
+
+<BaseLayout title="Portfolio" description="A collection of video design, software, and creative projects.">
+  <section class="portfolio-page">
+    <div class="container">
+      <header class="page-header">
+        <h1>Portfolio</h1>
+        <p class="page-description">
+          Selected works spanning video design, software engineering, motion graphics, and interactive installations.
+        </p>
+      </header>
+
+      <nav class="filter-nav" aria-label="Filter projects">
+        {categories.map((cat) => (
+          <button
+            class="filter-btn"
+            data-filter={cat}
+            aria-pressed={cat === 'all'}
+          >
+            {categoryLabels[cat]}
+          </button>
+        ))}
+      </nav>
+
+      <div class="portfolio-grid">
+        {projects.map((project) => (
+          <div class="portfolio-item" data-category={project.data.category}>
+            <PortfolioCard
+              title={project.data.title}
+              description={project.data.description}
+              category={project.data.category}
+              thumbnail={project.data.thumbnail}
+              slug={project.id}
+              featured={project.data.featured}
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .portfolio-page {
+    padding-top: var(--space-xl);
+  }
+
+  .page-header {
+    margin-bottom: var(--space-xl);
+  }
+
+  .page-header h1 {
+    margin-bottom: var(--space-md);
+  }
+
+  .page-description {
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+    max-width: 600px;
+  }
+
+  .filter-nav {
+    display: flex;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-xl);
+    flex-wrap: wrap;
+  }
+
+  .filter-btn {
+    padding: var(--space-sm) var(--space-md);
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-text-muted);
+    background: transparent;
+    border: 1px solid var(--color-border);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+  }
+
+  .filter-btn:hover {
+    border-color: var(--color-text-muted);
+    color: var(--color-text);
+  }
+
+  .filter-btn[aria-pressed="true"] {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    color: var(--color-bg);
+  }
+
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .portfolio-item {
+    transition: opacity var(--transition-base);
+  }
+
+  .portfolio-item.hidden {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .portfolio-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script>
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const items = document.querySelectorAll('.portfolio-item');
+
+  filterBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const filter = btn.getAttribute('data-filter');
+
+      filterBtns.forEach((b) => b.setAttribute('aria-pressed', 'false'));
+      btn.setAttribute('aria-pressed', 'true');
+
+      items.forEach((item) => {
+        const category = item.getAttribute('data-category');
+        if (filter === 'all' || category === filter) {
+          item.classList.remove('hidden');
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+    });
+  });
+</script>
