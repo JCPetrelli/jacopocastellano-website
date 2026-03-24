@@ -1,7 +1,8 @@
 ---
 title: "I built a plugin that changes my terminal tabs when Claude is thinking"
 description: "When you're running five Claude sessions at once, a grey tab tells you nothing. TabChroma fixes that with color."
-date: 2026-03-12
+date: 2026-03-24
+image: /blog/tab-chroma-iterm2-claude-code/presentation.gif
 tags:
   - AI
   - Tools
@@ -21,6 +22,8 @@ So I built TabChroma.
 ## What it does
 
 TabChroma is a Claude Code hook plugin. It registers itself into the hooks system and changes your iTerm2 tab color, badge, and title based on what Claude is currently doing.
+
+![Tab color changing in real time as Claude moves through working, permission, and done states.](/blog/tab-chroma-iterm2-claude-code/presentation2.gif)
 
 | State | Color | When it fires |
 |---|---|---|
