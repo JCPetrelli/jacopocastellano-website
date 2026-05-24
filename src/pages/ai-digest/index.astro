@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import DigestView from '../../components/DigestView.astro';
+import { getCollection } from 'astro:content';
+
+// The live page always renders the most recent edition in the collection.
+const entries = (await getCollection('aiDigest')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+const latest = entries[0];
+const d = latest.data;
+---
+
+<BaseLayout
+  title="AI Digest"
+  description="Everything you need to know about AI, in a 2-minute read. The most important developments, synthesized from dozens of sources and updated every 48 hours."
+  type="website"
+  modifiedTime={d.date}
+>
+  <DigestView
+    date={d.date}
+    windowLabel={d.window}
+    sources={d.sources}
+    articles={d.articles}
+    points={d.points}
+    isLatest={true}
+  />
+</BaseLayout>

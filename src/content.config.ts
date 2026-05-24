@@ -32,4 +32,21 @@ const blog = defineCollection({
   }),
 });
 
-export const collections = { portfolio, blog };
+const aiDigest = defineCollection({
+  loader: glob({ pattern: '**/*.json', base: './src/content/ai-digest' }),
+  schema: z.object({
+    date: z.coerce.date(),
+    window: z.string().default('48h'),
+    sources: z.number(),
+    articles: z.number(),
+    points: z.array(
+      z.object({
+        headline: z.string(),
+        body: z.string(),
+        sources: z.array(z.object({ name: z.string(), url: z.string() })),
+      })
+    ),
+  }),
+});
+
+export const collections = { portfolio, blog, aiDigest };

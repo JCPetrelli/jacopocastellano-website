@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import DigestView from '../../../components/DigestView.astro';
+import { getCollection, type CollectionEntry } from 'astro:content';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('aiDigest');
+  return entries.map((entry) => ({
+    params: { date: entry.id },
+    props: { entry },
+  }));
+}
+
+type Props = { entry: CollectionEntry<'aiDigest'> };
+const { entry } = Astro.props;
+const d = entry.data;
+
+const dateLabel = d.date.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<BaseLayout
+  title={`AI Digest — ${dateLabel}`}
+  description={`The AI Digest for ${dateLabel}: the most important AI developments, synthesized from dozens of sources.`}
+  type="article"
+  publishedTime={d.date}
+>
+  <DigestView
+    date={d.date}
+    windowLabel={d.window}
+    sources={d.sources}
+    articles={d.articles}
+    points={d.points}
+    isLatest={false}
+  />
+</BaseLayout>

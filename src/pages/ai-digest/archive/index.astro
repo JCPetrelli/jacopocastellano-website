@@ -1,0 +1,162 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const entries = (await getCollection('aiDigest')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+
+const fmt = (date: Date) =>
+  date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+---
+
+<BaseLayout
+  title="AI Digest Archive"
+  description="Past editions of the AI Digest: the most important AI developments, synthesized and dated."
+>
+  <section class="archive">
+    <div class="container narrow">
+
+      <header class="archive-hero">
+        <span class="kicker">AI Digest · Archive</span>
+        <h1>Past editions</h1>
+        <p class="tagline">Every edition of the digest, newest first. <a href="/ai-digest">Back to the latest →</a></p>
+      </header>
+
+      <ol class="archive-list">
+        {entries.map((entry) => (
+          <li class="archive-item">
+            <a class="archive-link" href={`/ai-digest/archive/${entry.id}`}>
+              <div class="archive-meta">
+                <span class="archive-date">{fmt(entry.data.date)}</span>
+                <span class="archive-counts">{entry.data.sources} sources · {entry.data.articles} articles</span>
+              </div>
+              <ol class="archive-headlines">
+                {entry.data.points.map((point) => (
+                  <li>{point.headline}</li>
+                ))}
+              </ol>
+            </a>
+          </li>
+        ))}
+      </ol>
+
+      {entries.length === 0 && (
+        <p class="archive-empty text-muted">No editions yet.</p>
+      )}
+
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .archive {
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-2xl);
+  }
+
+  .narrow {
+    max-width: var(--container-narrow);
+  }
+
+  .archive-hero {
+    text-align: center;
+    padding-bottom: var(--space-xl);
+    margin-bottom: var(--space-xl);
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .kicker {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--color-text-subtle);
+    margin-bottom: var(--space-md);
+  }
+
+  .archive-hero h1 {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.1;
+    margin: 0 0 var(--space-md) 0;
+  }
+
+  .tagline {
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .tagline a {
+    color: var(--color-text);
+    text-decoration: underline;
+  }
+
+  .archive-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+
+  .archive-link {
+    display: block;
+    padding: var(--space-lg);
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border-light);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color var(--transition-fast);
+  }
+
+  .archive-link:hover {
+    border-color: var(--color-text);
+  }
+
+  .archive-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-xs) var(--space-sm);
+    margin-bottom: var(--space-md);
+    padding-bottom: var(--space-sm);
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .archive-date {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    color: var(--color-text);
+  }
+
+  .archive-counts {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-text-subtle);
+  }
+
+  .archive-headlines {
+    margin: 0;
+    padding-left: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  .archive-headlines li {
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    color: var(--color-text-muted);
+  }
+
+  .archive-empty {
+    text-align: center;
+    padding: var(--space-2xl);
+  }
+</style>

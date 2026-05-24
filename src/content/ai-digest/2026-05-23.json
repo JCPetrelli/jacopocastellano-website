@@ -1,0 +1,67 @@
+{
+  "date": "2026-05-23",
+  "window": "48h",
+  "sources": 42,
+  "articles": 270,
+  "points": [
+    {
+      "headline": "The \"agent era\" has arrived, and the bottleneck is tools and memory, not reasoning.",
+      "body": "Alibaba's Qwen3.7-Max can now run autonomously for 35 hours, and the recurring argument is that agents fail because they lack the right interfaces, not because models can't think. Researchers and vendors are pushing agents toward direct terminal and corpus access plus lightweight working memory, rather than leaning on RAG and ever-bigger context windows.",
+      "sources": [
+        { "name": "VentureBeat", "url": "https://venturebeat.com/orchestration/your-ai-agents-need-a-terminal-not-just-a-vector-database" },
+        { "name": "VentureBeat", "url": "https://venturebeat.com/orchestration/a-0-12-parameter-add-on-gives-ai-agents-the-working-memory-rag-cant" },
+        { "name": "VentureBeat", "url": "https://venturebeat.com/technology/alibabas-proprietary-qwen3-7-max-can-run-for-35-hours-autonomously-and-supports-external-harnesses-like-anthropics-claude-code" },
+        { "name": "TheSequence", "url": "https://thesequence.substack.com/p/the-sequence-opinion-864-every-ai" }
+      ]
+    },
+    {
+      "headline": "AI-written code is now the default, and developers feel the squeeze.",
+      "body": "At Anthropic's Code with Claude event most attendees had shipped AI-generated pull requests, and OpenAI's Codex was named a Gartner leader for enterprise coding agents. Surveys show most engineers now use AI for the bulk of their code, even as many openly worry the same tools are coming for their jobs.",
+      "sources": [
+        { "name": "MIT Tech Review", "url": "https://www.technologyreview.com/2026/05/21/1137735/anthropics-code-with-claude-showed-off-codings-future-whether-you-like-it-or-not/" },
+        { "name": "OpenAI", "url": "https://openai.com/index/gartner-2026-agentic-coding-leader" },
+        { "name": "The Register", "url": "https://www.theregister.com/devops/2026/05/21/web-devs-sleeping-with-the-enemy-ai-is-doing-their-job-and-they-worry-its-after-their-desk-too/5244132" }
+      ]
+    },
+    {
+      "headline": "Google's AI search is becoming unavoidable, monetized, and a little broken.",
+      "body": "Reporters argue you'll end up relying on Google's AI Overviews even if you dislike AI, and Google has now detailed how it will inject ads into those AI answers. The rollout isn't smooth: searching the word \"disregard\" briefly broke the feature, exposing how brittle the system still is.",
+      "sources": [
+        { "name": "Wired", "url": "https://www.wired.com/story/even-if-you-hate-ai-you-will-use-google-ai-search/" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-ml/2026/05/21/google-explains-how-it-will-infuse-ads-into-ai-answers/5244586" },
+        { "name": "The Verge", "url": "https://www.theverge.com/tech/936176/google-ai-overviews-search-disregard" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/05/22/you-can-no-longer-google-the-word-disregard/" }
+      ]
+    },
+    {
+      "headline": "The physical bill for the AI boom is coming due.",
+      "body": "A global memory shortage, driven by the three remaining manufacturers prioritizing AI demand, is repricing consumer electronics upward and squeezing enterprise buyers. At the same time, data-center expansion is colliding with US grid limits and the Gulf's build-out is straining undersea cables.",
+      "sources": [
+        { "name": "Simon Willison", "url": "https://simonwillison.net/2026/May/22/memory-shortage/#atom-everything" },
+        { "name": "The Register", "url": "https://www.theregister.com/personal-tech/2026/05/22/as-memory-prices-squeeze-enterprise-buyers-lenovo-laughs-all-the-way-to-the-bank/5245202" },
+        { "name": "The Register", "url": "https://www.theregister.com/systems/2026/05/22/ai-datacenter-boom-collides-with-us-grid-reality/5245295" },
+        { "name": "Wired", "url": "https://www.wired.com/story/the-gulfs-ai-boom-has-an-undersea-cable-problem/" }
+      ]
+    },
+    {
+      "headline": "Public trust in what's real is fraying.",
+      "body": "A survey found Americans can barely beat a coin flip at spotting deepfakes, AI was used to reconstruct dead pilots' voices from crash recordings, and online communities are mass-producing nonconsensual explicit deepfakes. AI's persuasiveness cuts the other way too: half of US Christians reportedly trust AI's spiritual advice.",
+      "sources": [
+        { "name": "VentureBeat", "url": "https://venturebeat.com/security/americans-cant-spot-a-deepfake-and-thats-a-business-crisis-not-just-a-consumer-problem" },
+        { "name": "Ars Technica", "url": "https://arstechnica.com/ai/2026/05/ai-users-re-create-dead-pilots-voices-from-crash-investigation-docs/" },
+        { "name": "Wired", "url": "https://www.wired.com/story/4chans-misogynist-wizards-are-nudifying-women-by-request/" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-ml/2026/05/21/deus-ex-machina-half-of-us-christians-trust-ais-spiritual-advice/5244371" }
+      ]
+    },
+    {
+      "headline": "Google I/O 2026 leaned hard into AI for science, glasses, and avatars.",
+      "body": "DeepMind's Demis Hassabis claimed we're in the \"foothills of the singularity\" while showcasing AI-accelerated science, alongside Android XR glasses with live Gemini translation. Google also demoed a tool that generates lifelike video avatars of yourself, which one writer called \"unnervingly me.\"",
+      "sources": [
+        { "name": "MIT Tech Review", "url": "https://www.technologyreview.com/2026/05/22/1137813/google-i-o-showed-how-the-path-for-ai-science-is-shifting/" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/05/22/we-tried-googles-ai-glasses-and-theyre-almost-there/" },
+        { "name": "Wired", "url": "https://www.wired.com/story/i-cloned-myself-with-geminis-ai-avatar-tool-the-result-was-unnervingly-me/" },
+        { "name": "Google", "url": "https://blog.google/innovation-and-ai/technology/ai/io-2026-dialogues-recap/" }
+      ]
+    }
+  ]
+}
