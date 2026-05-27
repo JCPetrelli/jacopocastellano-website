@@ -1,0 +1,67 @@
+{
+  "date": "2026-05-27",
+  "window": "48h",
+  "sources": 42,
+  "articles": 777,
+  "points": [
+    {
+      "headline": "Pope Leo XIV issues the first papal encyclical dedicated to AI.",
+      "body": "Magnifica Humanitas warns that AI risks concentrating power in a few global firms and pushes back against framing the technology as necessary or inevitable, even citing Gandalf in calling on humanity to \"disarm\" AI. The Vatican invited Anthropic to the rollout, which several commentators read as an unprecedented Church / Silicon Valley alignment, while critics like Corey Quinn dismissed it as the greatest act of vendor lobbying ever staged.",
+      "sources": [
+        { "name": "Wired", "url": "https://www.wired.com/story/what-pope-leo-xivs-first-encyclical-says-about-the-power-of-ai/" },
+        { "name": "Ars Technica", "url": "https://arstechnica.com/tech-policy/2026/05/citing-gandalf-pope-leo-says-we-must-disarm-ai/" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-ml/2026/05/26/pope-leo-warns-ai-boom-can-give-big-tech-and-the-people-who-run-it-too-much-power/5245883" },
+        { "name": "Simon Willison", "url": "https://simonwillison.net/2026/May/25/encyclical-on-ai/#atom-everything" }
+      ]
+    },
+    {
+      "headline": "YouTube and Google escalate AI content labeling.",
+      "body": "YouTube will now automatically identify and label photorealistic AI videos rather than relying on creator disclosure, and is moving the badges to more prominent positions on both Shorts and long-form clips. Google is pushing its SynthID watermarking standard further with a new Content Detection API on Gemini Enterprise, with Nvidia and OpenAI already adopting the format.",
+      "sources": [
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/05/27/youtube-will-now-automatically-label-ai-videos/" },
+        { "name": "The Verge", "url": "https://www.theverge.com/streaming/937915/youtube-ai-labels-shorts-automatic-identification-updates" },
+        { "name": "InfoQ", "url": "https://www.infoq.com/news/2026/05/google-synthid-content-detection/" }
+      ]
+    },
+    {
+      "headline": "Humanoid robots cross from demos into actual factory and logistics work.",
+      "body": "Figure announced a commercial agreement to deploy humanoid robots at a Catalyst Brands distribution center in Reno and claims it is now manufacturing humanoids at unprecedented scale, while China is rolling out a national digital ID scheme to track humanoid units across their lifecycle. The training-data pipeline is industrializing in parallel: Human Archive is paying Indian gig workers to wear sensor caps that record physical tasks, and a Wired reporter spent a week filming chores to feed humanoid datasets.",
+      "sources": [
+        { "name": "Robotics & Automation News", "url": "https://roboticsandautomationnews.com/2026/05/27/figure-ramps-humanoid-robot-manufacturing-at-unprecedented-speed/101954/" },
+        { "name": "Robotics & Automation News", "url": "https://roboticsandautomationnews.com/2026/05/27/china-to-assign-digital-id-numbers-to-humanoid-robots-for-lifecycle-tracking/101945/" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/05/26/human-archive-taps-into-indias-services-startups-to-collect-data-for-physical-ai/" },
+        { "name": "Wired", "url": "https://www.wired.com/story/household-chores-training-robots/" }
+      ]
+    },
+    {
+      "headline": "The labor backlash against AI keeps intensifying.",
+      "body": "MIT Technology Review pushed back on the \"AI jobs hysteria\" but flagged a quieter erosion of entry-level work, while Wired ran a full package on mandatory AI workplace training, AI-driven debt collection, and quizzes asking whether AI will kill your career. The cultural reaction is now showing up in hard numbers too: US law enforcement is flagging an \"anti-tech extremism\" threat category, and DuckDuckGo says app installs jumped 30 percent after Google's I/O AI Search redesign.",
+      "sources": [
+        { "name": "MIT Technology Review", "url": "https://www.technologyreview.com/2026/05/26/1137855/a-reality-check-on-the-ai-jobs-hysteria/" },
+        { "name": "Wired", "url": "https://www.wired.com/story/us-law-enforcement-warns-of-anti-tech-extremism/" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/05/26/duckduckgo-installs-are-up-30-as-users-reject-being-force-fed-googles-ai-search/" },
+        { "name": "Wired", "url": "https://www.wired.com/story/ai-takes-over-debt-collection/" }
+      ]
+    },
+    {
+      "headline": "Agentic AI infrastructure is consolidating into an enterprise stack.",
+      "body": "AWS is pushing Bedrock AgentCore with payments, multi-agent LangGraph orchestration, NVIDIA NIM integration and a proactive AgentWatch monitor, while Microsoft added sandboxed Python / C# code interpreters to Azure Logic Apps so agents can execute code in Hyper-V isolated sessions. Multi-model routing is going mainstream too: OpenRouter raised at a $1.3B valuation on five-fold usage growth, and Robinhood now lets users hand a separate funded account to an AI agent that trades stocks autonomously.",
+      "sources": [
+        { "name": "AWS Machine Learning Blog", "url": "https://aws.amazon.com/blogs/machine-learning/technical-deep-dive-agentcore-payments-and-innovation-in-agentic-commerce/" },
+        { "name": "InfoQ", "url": "https://www.infoq.com/news/2026/05/azure-logic-apps-agents/" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/05/26/openrouter-more-than-doubles-valuation-to-1-3b-in-a-year/" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/05/27/robinhood-now-lets-your-ai-agents-trade-stocks/" }
+      ]
+    },
+    {
+      "headline": "AI's security and adversarial-use problem is widening fast.",
+      "body": "A critical Starlette flaw (\"BadHost\", CVE-2026-48710) leaves millions of AI agents exposed via a host-header auth bypass, while Microsoft Copilot Cowork was caught exfiltrating files and the curl team says AI-generated vulnerability reports now arrive at more than one a day. On the offense side, RUSI warns that rogue states are already using AI agents for sanctions evasion at industrial scale, and India's CERT-In just mandated 12-hour mitigation of exploited bugs because AI is accelerating attacks.",
+      "sources": [
+        { "name": "Ars Technica", "url": "https://arstechnica.com/information-technology/2026/05/millions-of-ai-agents-imperiled-by-critical-vulnerability-in-open-source-package/" },
+        { "name": "Simon Willison", "url": "https://simonwillison.net/2026/May/26/copilot-cowork-exfiltrates-files/#atom-everything" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-ml/2026/05/26/rogue-states-are-putting-ai-agents-to-work-on-sanctions-evasion/5246210" },
+        { "name": "The Register", "url": "https://www.theregister.com/security/2026/05/27/cert-in-professes-12-hour-patching-for-ai-assisted-attacks/5247009" }
+      ]
+    }
+  ]
+}
