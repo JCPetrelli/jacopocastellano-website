@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>BLACK GATE</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- ===== State A: terminal ===== -->
+  <main id="terminal">
+    <div class="brand">Black Gate</div>
+    <form class="gate" id="gate" autocomplete="off">
+      <span class="prompt">&gt;</span>
+      <input id="code" inputmode="numeric" pattern="[0-9]*" maxlength="6"
+             aria-label="Access code" autofocus>
+      <span class="prompt caret">_</span>
+    </form>
+    <div class="hint">Enter to proceed</div>
+  </main>
+
+  <!-- ===== State B: sales content ===== -->
+  <div id="content" hidden>
+    <section class="hero">
+      <h1>BLACK GATE</h1>
+      <p class="tag">A website you enter, not navigate.</p>
+      <p class="desc">
+        A numeric access portal sold as a template. The homepage is a single
+        code input; entering a code opens one hidden page. No menus, no search,
+        no index &mdash; pages are <em>entered</em>, not browsed. The constraint
+        is the product.
+      </p>
+    </section>
+
+    <h2 class="section-label">Four editions &mdash; one interaction model</h2>
+    <section class="editions">
+      <article class="edition" id="wordpress">
+        <div class="top"><span class="idx">01</span><span class="name">WordPress</span></div>
+        <p class="blurb">A WordPress theme (plus optional companion plugin). Drops a
+          numeric access portal onto any WordPress install &mdash; menus, archives,
+          feeds, and search all stripped out.</p>
+        <div class="status">Available</div>
+        <div class="prices">Single project: $49<br>Unlimited / agency: $99</div>
+        <a class="cta" href="mailto:jcastellano@luxoft.com?subject=Black%20Gate%20%E2%80%94%20WordPress%20edition">Get in touch &rarr;</a>
+      </article>
+
+      <article class="edition" id="static">
+        <div class="top"><span class="idx">02</span><span class="name">Static (Astro)</span></div>
+        <p class="blurb">A static Astro site. Builds to plain HTML you can host
+          anywhere with no server. Generates one page per code; unknown codes fall
+          through to a 404, so nothing enumerates the code list.</p>
+        <div class="status">Available</div>
+        <div class="prices">Single project: $59<br>Unlimited / agency: $119</div>
+        <a class="cta" href="mailto:jcastellano@luxoft.com?subject=Black%20Gate%20%E2%80%94%20Static%20(Astro)%20edition">Get in touch &rarr;</a>
+      </article>
+
+      <article class="edition" id="react">
+        <div class="top"><span class="idx">03</span><span class="name">React</span></div>
+        <p class="blurb">A Vite + React single-page app. Client-side numeric routing
+          against a code&rarr;page map, with optional AES-GCM PIN-gated pages. Ships
+          as static files.</p>
+        <div class="status">Available</div>
+        <div class="prices">Single project: $59<br>Unlimited / agency: $119</div>
+        <a class="cta" href="mailto:jcastellano@luxoft.com?subject=Black%20Gate%20%E2%80%94%20React%20edition">Get in touch &rarr;</a>
+      </article>
+
+      <article class="edition" id="flask">
+        <div class="top"><span class="idx">04</span><span class="name">Flask</span></div>
+        <p class="blurb">The only edition with a real backend: server-side code
+          validation, time-limited codes, and PIN gating. Python / Flask, styled
+          with the standalone Tailwind CLI (no Node).</p>
+        <div class="status">Available</div>
+        <div class="prices">Single project: $79<br>Unlimited / agency: $149</div>
+        <a class="cta" href="mailto:jcastellano@luxoft.com?subject=Black%20Gate%20%E2%80%94%20Flask%20edition">Get in touch &rarr;</a>
+      </article>
+    </section>
+
+    <section class="bundle" id="bundle">
+      <div>
+        <div class="name">All-Editions Bundle</div>
+        <div class="note">All four editions &mdash; ~35% off vs buying separately.</div>
+      </div>
+      <div>
+        <div class="price">$149 single &nbsp;/&nbsp; $249 agency</div>
+        <a class="cta" href="mailto:jcastellano@luxoft.com?subject=Black%20Gate%20%E2%80%94%20All-Editions%20Bundle">Get the bundle &rarr;</a>
+      </div>
+    </section>
+
+    <p class="disclaimer">
+      Obscurity is not security. Pages are publicly accessible if the code is
+      discovered or guessed. Black Gate is an interaction model, not
+      authentication. (An optional code+PIN second stage ships in the Flask
+      edition.)
+    </p>
+
+    <div class="foot">
+      BLACK GATE &middot; jacopocastellano.com &middot;
+      <button type="button" id="return">&larr; Return</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var terminal = document.getElementById('terminal');
+      var content  = document.getElementById('content');
+      var input    = document.getElementById('code');
+      var gate     = document.getElementById('gate');
+      var ret      = document.getElementById('return');
+      // demo codes: after reveal, jump to a specific edition panel (or the bundle)
+      var JUMP = { '1':'wordpress', '2':'static', '3':'react', '4':'flask', '1149':'bundle' };
+
+      // digits only, max 6
+      input.addEventListener('input', function () {
+        input.value = input.value.replace(/\D/g, '').slice(0, 6);
+      });
+
+      gate.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var code = input.value;
+        terminal.classList.add('is-hidden');
+        content.hidden = false;
+        // next frame so the fade-in transition runs
+        requestAnimationFrame(function () { content.classList.add('is-visible'); });
+        window.setTimeout(function () { terminal.hidden = true; }, 300);
+        var id = JUMP[code];
+        if (id) {
+          var el = document.getElementById(id);
+          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+
+      ret.addEventListener('click', function (e) {
+        e.preventDefault();
+        content.classList.remove('is-visible');           // fade content out (0.4s)
+        terminal.hidden = false;
+        requestAnimationFrame(function () { terminal.classList.remove('is-hidden'); }); // fade terminal back in
+        window.setTimeout(function () { content.hidden = true; }, 400); // hide only after the fade completes
+        input.value = '';
+        input.focus();
+        window.scrollTo(0, 0);
+      });
+
+      input.focus();
+    })();
+  </script>
+</body>
+</html>
