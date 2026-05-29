@@ -1,0 +1,63 @@
+{
+  "date": "2026-05-29",
+  "window": "48h",
+  "sources": 42,
+  "articles": 908,
+  "points": [
+    {
+      "headline": "Anthropic's $65B raise and Claude Opus 4.8 dominate the week.",
+      "body": "Anthropic closed a $65B Series H at roughly a $965B post-money valuation ahead of a possible IPO, with its run-rate revenue reported near $47B. It paired the raise with Claude Opus 4.8, a launch outlets call a modest but real upgrade that adds a cheaper fast mode and a new \"dynamic workflow\" tool.",
+      "sources": [
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/05/28/anthropic-raises-65-billion-nears-1t-valuation-ahead-of-ipo/" },
+        { "name": "Anthropic", "url": "https://www.anthropic.com/news/series-h" },
+        { "name": "Simon Willison", "url": "https://simonwillison.net/2026/May/29/anthropic/" },
+        { "name": "VentureBeat", "url": "https://venturebeat.com/technology/anthropics-claude-opus-4-8-is-here-with-3x-cheaper-fast-mode-and-near-mythos-level-alignment" }
+      ]
+    },
+    {
+      "headline": "Agentic AI runs into a hard production reality check.",
+      "body": "Gartner warned that most generative-AI and custom-model projects will end up a bust, and analysts now expect roughly 4 in 10 enterprise AI agents to be demoted or scrapped. A new benchmark found frontier models scoring below 50% on real agentic enterprise IT tasks, reinforcing that agents still struggle with reliable production work.",
+      "sources": [
+        { "name": "The Register", "url": "https://www.theregister.com/ai-ml/2026/05/28/most-generative-ai-and-custom-model-projects-will-be-a-bust-gartner/5247633" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-ml/2026/05/27/4-in-10-ai-agents-headed-for-demotion-or-the-rubbish-bin/5246964" },
+        { "name": "Hugging Face", "url": "https://huggingface.co/blog/ibm-research/itbench-aa" },
+        { "name": "Towards Data Science", "url": "https://towardsdatascience.com/most-ai-agents-fail-in-production-because-theyre-built-backwards/" }
+      ]
+    },
+    {
+      "headline": "The AI data-center buildout is colliding with power and water limits.",
+      "body": "Regulators told Europe to cool its datacenter boom before water and electricity run short, even as Amazon touts a breakthrough it says unblocks future data-center growth. The spending keeps climbing too, with Snowflake alone committing $6B to AWS chips for AI infrastructure.",
+      "sources": [
+        { "name": "The Register", "url": "https://www.theregister.com/on-prem/2026/05/28/europe-told-to-cool-its-datacenter-boom-before-water-and-power-run-short/5247994" },
+        { "name": "Wired", "url": "https://www.wired.com/story/amazon-thinks-the-future-of-data-centers-depends-on-a-technical-problem-it-just-solved/" },
+        { "name": "The Register", "url": "https://www.theregister.com/off-prem/2026/05/27/snowflake-to-burn-6b-on-aws-graviton-cpus-ai-infra/5247475" }
+      ]
+    },
+    {
+      "headline": "AI coding agents are turning into an attack surface.",
+      "body": "A developer fed up with \"vibe coders\" slipped a data-nuking prompt injection into shared code to sabotage AI assistants, while attackers built malware aimed at stealing Claude users' secrets. The incidents show that as agents read and run untrusted code, prompt injection and supply-chain tricks become real security threats.",
+      "sources": [
+        { "name": "Ars Technica", "url": "https://arstechnica.com/security/2026/05/fed-up-with-vibe-coders-dev-sneaks-data-nuking-prompt-injection-into-their-code/" },
+        { "name": "The Register", "url": "https://www.theregister.com/cyber-crime/2026/05/27/supply-chain-brain-drain-npm-attacker-foolishly-leaks-own-github-private-token/5247424" }
+      ]
+    },
+    {
+      "headline": "US states and the EU tighten the screws on AI.",
+      "body": "Illinois passed what is being called America's strongest AI safety law, weakening the Trump administration's grip on federal AI policy. In Europe, researchers found that every big-name chatbot failed EU compliance tests, a signal of tougher enforcement ahead.",
+      "sources": [
+        { "name": "Ars Technica", "url": "https://arstechnica.com/tech-policy/2026/05/trump-loses-more-control-over-ai-regulation-as-illinois-passes-landmark-law/" },
+        { "name": "Wired", "url": "https://www.wired.com/story/illinois-pass-major-ai-safety-law-pritzker/" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-ml/2026/05/27/researchers-find-all-big-name-bots-bomb-eu-compliance-tests/5247176" }
+      ]
+    },
+    {
+      "headline": "DeepSeek and efficiency research keep shredding the cost moat.",
+      "body": "VentureBeat reports DeepSeek's radical architecture is shattering Silicon Valley's \"token moat,\" while researchers automated reasoning-strategy design to cut token usage by nearly 70%. Mistral piled on with a new \"Vibe\" product and a data-center push to challenge OpenAI, underscoring a race to drive inference costs down.",
+      "sources": [
+        { "name": "VentureBeat", "url": "https://venturebeat.com/infrastructure/how-deepseeks-radical-architecture-is-shattering-silicon-valleys-token-moat" },
+        { "name": "VentureBeat", "url": "https://venturebeat.com/orchestration/researchers-automated-llm-reasoning-strategy-design-and-cut-token-usage-by-69-5" },
+        { "name": "TheSequence", "url": "https://thesequence.substack.com/p/the-sequence-opinion-868-recursion" }
+      ]
+    }
+  ]
+}
