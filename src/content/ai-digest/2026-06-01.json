@@ -1,0 +1,61 @@
+{
+  "date": "2026-06-01",
+  "window": "48h",
+  "sources": 42,
+  "articles": 598,
+  "points": [
+    {
+      "headline": "Nvidia becomes a PC chipmaker with the RTX Spark.",
+      "body": "At Computex, Nvidia unveiled the RTX Spark, billed as \"the most efficient PC chip ever built,\" its first complete Arm-based CPU-plus-GPU computing chip for laptops and mini-PCs shipping this fall. Microsoft is the launch partner, putting the chip at the heart of a new Surface Laptop Ultra and reviving a bet it once wrote off $900 million on. The move turns Nvidia into a direct rival to Intel, AMD, Apple, and Qualcomm in consumer computing.",
+      "sources": [
+        { "name": "The Verge", "url": "https://www.theverge.com/tech/940589/nvidia-rtx-spark-n1-n1x-laptop-desktop-pc-cpu-gpu-ai-release-date" },
+        { "name": "The Verge", "url": "https://www.theverge.com/tech/940584/microsoft-surface-laptop-ultra-nvidia-rtx-spark-pictures" },
+        { "name": "Windows Blog", "url": "https://blogs.windows.com/devices/2026/05/31/introducing-surface-laptop-ultra-made-for-world-makers/" }
+      ]
+    },
+    {
+      "headline": "\"The token becomes the unit of account\" as AI gets expensive.",
+      "body": "Commentators converged on one theme this week: AI pricing is reshaping the industry, with usage metered by tokens and Anthropic posting a standout revenue month off its consumption-based model. Simon Willison summed up May simply as \"AI got expensive,\" and some users are now openly weighing whether to cancel subscriptions as costs climb.",
+      "sources": [
+        { "name": "TheSequence", "url": "https://thesequence.substack.com/p/the-sequence-radar-869-last-week" },
+        { "name": "Simon Willison", "url": "https://simonwillison.net/2026/Jun/1/may-newsletter/" },
+        { "name": "Simon Willison", "url": "https://simonwillison.net/2026/May/31/anthropic-run-rate/" }
+      ]
+    },
+    {
+      "headline": "The compute buildout keeps scaling up.",
+      "body": "SoftBank said it will invest up to €75 billion in French data centers to add 5 gigawatts of capacity, while Intel launched its first 2nm-class Xeon with 288 cores aimed squarely at AI agent workloads. With bills mounting, engineers are also fighting back: a Netflix engineer open-sourced \"Project Headroom\" to slash AI serving costs.",
+      "sources": [
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/05/30/softbank-says-it-will-invest-up-to-e75-billion-to-build-french-data-centers/" },
+        { "name": "The Register", "url": "https://www.theregister.com/systems/2026/06/01/intel-launches-288-core-clearwater-forest-xeon-6-on-18a-process/5248150" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-ml/2026/05/31/netflix-wiz-creates-app-to-slash-ai-bills-then-open-sources-it/5248702" }
+      ]
+    },
+    {
+      "headline": "Agentic AI's security holes are widening.",
+      "body": "Arm open-sourced Metis, an agentic security framework that uses semantic reasoning to find software vulnerabilities and reportedly outperforms traditional SAST tools. At the same time, researchers showed a ChatGPT integration for Google Sheets could be coaxed into exfiltrating entire workbooks, underscoring how tool-connected agents expand the attack surface through prompt injection.",
+      "sources": [
+        { "name": "InfoQ", "url": "https://www.infoq.com/news/2026/05/arm-metis-agentic-security/" },
+        { "name": "PromptArmor", "url": "https://www.promptarmor.com/resources/gpt-for-google-sheets-data-exfiltration" }
+      ]
+    },
+    {
+      "headline": "Physical AI goes open with NVIDIA Cosmos 3.",
+      "body": "Nvidia released Cosmos 3, described as the first open omni-model for physical AI reasoning and action, aimed at robots and embodied agents. The push lands alongside steady industrial momentum: MISUMI committed $1 billion to AI-driven digital manufacturing in the Americas, and open-source hardware continues to lower the barrier to building robots.",
+      "sources": [
+        { "name": "Hugging Face", "url": "https://huggingface.co/blog/nvidia/cosmos-3-for-physical-ai" },
+        { "name": "The Robot Report", "url": "https://www.therobotreport.com/misumi-group-invests-1b-americas-global-ai-digital-manufacturing/" },
+        { "name": "Robotics & Automation News", "url": "https://roboticsandautomationnews.com/2026/06/01/open-source-hardware-for-robotics-democratizing-robot-building/102089/" }
+      ]
+    },
+    {
+      "headline": "AI coding reshapes how software gets built, and developers push back.",
+      "body": "Posts on the speed of AI prototyping kept trending as coding agents like Codex find their own \"workarounds\" to get tasks done. But the developer mood is mixed: GitHub Copilot's new token-based billing drew loud complaints, and even AI boosters are questioning whether the always-on subscription is worth it.",
+      "sources": [
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/05/30/what-a-joke-github-copilots-new-token-based-billing-spurs-consternation-among-devs/" },
+        { "name": "Hacker News", "url": "https://darylcecile.net/notes/speed-of-prototyping-age-of-ai" },
+        { "name": "Simon Willison", "url": "https://simonwillison.net/2026/May/31/the-solution-might-be-cancelling-my-ai-subscription/" }
+      ]
+    }
+  ]
+}
