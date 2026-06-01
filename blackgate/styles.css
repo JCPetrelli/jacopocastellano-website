@@ -25,38 +25,72 @@ body { min-height: 100vh; }
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
+  gap: clamp(.55rem, 2.5vw, 1.5rem);
+  padding: clamp(.4rem, 1.5vw, 1.5rem) clamp(.4rem, 1.5vw, 1rem);
   transition: opacity .25s ease;
 }
 #terminal.is-hidden { opacity: 0; pointer-events: none; }
 
 .brand {
-  letter-spacing: .5em;
-  font-size: .8rem;
+  letter-spacing: .4em;
+  font-size: clamp(.55rem, 1.8vw, .8rem);
   text-transform: uppercase;
   color: var(--dim);
-  padding-left: .5em;
+  padding-left: .4em;
 }
-.gate { display: flex; align-items: center; gap: .5rem; }
-.prompt { color: var(--accent); font-size: 2.5rem; line-height: 1; }
+.gate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(.55rem, 2vw, 1.25rem);
+}
+.gate-row { display: flex; align-items: center; gap: clamp(.2rem, .8vw, .5rem); }
+/* Enter trigger: matches .brand styling (same font / dim color / wide spacing),
+   just underlined to signal it is clickable. */
+.gate-enter {
+  background: transparent;
+  border: none;
+  padding: 0;
+  font: inherit;
+  font-size: clamp(.55rem, 1.8vw, .8rem);
+  letter-spacing: .4em;
+  text-transform: uppercase;
+  color: var(--dim);
+  text-decoration: underline;
+  text-underline-offset: .25em;
+  cursor: pointer;
+  transition: color .15s ease;
+}
+.gate-enter:hover, .gate-enter:focus-visible {
+  color: var(--accent);
+  outline: none;
+}
+.prompt {
+  color: var(--accent);
+  font-size: clamp(1rem, 6vw, 2.5rem);
+  line-height: 1;
+}
 #code {
   background: transparent;
   border: none;
   outline: none;
   color: var(--fg);
   font: inherit;
-  font-size: 2.5rem;
-  letter-spacing: .25em;
-  /* 6 digits × (1ch + 0.25em letter-spacing) ≈ 7.5ch — 9ch leaves comfortable trailing room */
+  font-size: clamp(1rem, 6vw, 2.5rem);
+  letter-spacing: clamp(.12em, .8vw, .25em);
+  /* width in `ch` is font-size-relative, so it scales with clamp automatically.
+     6 digits × (1ch + ~0.25em letter-spacing) ≈ 7.5ch — 9ch gives comfortable room. */
   width: 9ch;
   caret-color: var(--accent);
 }
-#code:focus-visible { outline: 1px solid var(--accent); outline-offset: 6px; }
+#code:focus-visible { outline: 1px solid var(--accent); outline-offset: 4px; }
 .hint {
-  font-size: .7rem;
-  letter-spacing: .3em;
+  font-size: clamp(.45rem, 2vw, .7rem);
+  letter-spacing: clamp(.15em, .8vw, .3em);
   color: var(--dim);
   text-transform: uppercase;
+  text-align: center;
+  padding: 0 .5rem;
 }
 
 /* ---------- State B: content ---------- */
