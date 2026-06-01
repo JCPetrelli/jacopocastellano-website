@@ -12,12 +12,14 @@
   <main id="terminal">
     <div class="brand">Black Gate</div>
     <form class="gate" id="gate" autocomplete="off">
-      <span class="prompt">&gt;</span>
-      <input id="code" inputmode="numeric" pattern="[0-9]*" maxlength="6"
-             aria-label="Access code" autofocus>
-      <span class="prompt caret">_</span>
+      <div class="gate-row">
+        <span class="prompt">&gt;</span>
+        <input id="code" inputmode="numeric" pattern="[0-9]*" maxlength="6"
+               aria-label="Access code" autofocus>
+        <span class="prompt caret">_</span>
+      </div>
+      <button type="submit" class="gate-enter">Enter</button>
     </form>
-    <div class="hint">Enter to proceed</div>
   </main>
 
   <!-- ===== State B: sales content ===== -->
