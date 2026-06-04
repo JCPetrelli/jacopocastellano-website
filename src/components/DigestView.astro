@@ -57,6 +57,14 @@ const dateLabel = date.toLocaleDateString('en-US', {
             </>
           )}
         </span>
+        <a class="rss-subscribe" href="/ai-digest/rss.xml" title="Subscribe to the AI Digest RSS feed">
+          <svg class="rss-icon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true">
+            <circle cx="6.18" cy="17.82" r="2.18" />
+            <path d="M4 10.1v2.9a7 7 0 0 1 7 7h2.9A9.9 9.9 0 0 0 4 10.1z" />
+            <path d="M4 4.44v2.83a12.73 12.73 0 0 1 12.73 12.73h2.83A15.56 15.56 0 0 0 4 4.44z" />
+          </svg>
+          Subscribe via RSS
+        </a>
       </div>
     </header>
 
@@ -177,6 +185,30 @@ const dateLabel = date.toLocaleDateString('en-US', {
   .hero-links a:hover {
     color: var(--color-text);
     border-color: var(--color-text);
+  }
+
+  .rss-subscribe {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    color: var(--color-text);
+    text-decoration: none;
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    padding: var(--space-xs) var(--space-md);
+    transition: border-color var(--transition-fast), color var(--transition-fast);
+  }
+
+  .rss-subscribe:hover {
+    border-color: #f26522;
+    color: #f26522;
+  }
+
+  .rss-icon {
+    flex-shrink: 0;
   }
 
   /* ── List of points ── */

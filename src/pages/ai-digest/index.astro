@@ -17,6 +17,13 @@ const d = latest.data;
   type="website"
   modifiedTime={d.date}
 >
+  <link
+    slot="head"
+    rel="alternate"
+    type="application/rss+xml"
+    title="AI Digest"
+    href="/ai-digest/rss.xml"
+  />
   <DigestView
     date={d.date}
     windowLabel={d.window}
