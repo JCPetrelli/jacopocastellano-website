@@ -16,11 +16,15 @@ export async function GET(context: APIContext) {
     (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
   );
 
+  // Strict readers (e.g. Feedly) require an atom:link rel="self" to subscribe.
+  const selfUrl = new URL('/ai-digest/rss.xml', context.site).href;
+
   return rss({
     title: '🤖 AI Digest — Jacopo Castellano',
     description:
       'The 6 most important things happening in AI right now, deduplicated across dozens of sources. A ~2-minute read, updated every 48 hours.',
     site: context.site!,
+    xmlns: { atom: 'http://www.w3.org/2005/Atom' },
     items: editions.map((edition) => {
       const { date, window, sources, points } = edition.data;
       const day = date.toISOString().slice(0, 10);
@@ -48,6 +52,8 @@ export async function GET(context: APIContext) {
           `<p><em>${points.length} points &middot; ${window} window &middot; ${sources} sources.</em></p>\n${body}`,
       };
     }),
-    customData: `<language>en-us</language>`,
+    customData:
+      `<language>en-us</language>` +
+      `<atom:link href="${selfUrl}" rel="self" type="application/rss+xml"/>`,
   });
 }
