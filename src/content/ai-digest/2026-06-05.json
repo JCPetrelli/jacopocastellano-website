@@ -1,0 +1,62 @@
+{
+  "date": "2026-06-05",
+  "window": "48h",
+  "sources": 42,
+  "articles": 696,
+  "points": [
+    {
+      "headline": "Anthropic files for IPO while touting runaway revenue and self-improving AI.",
+      "body": "Anthropic beat OpenAI to an IPO filing this week, with Daniela Amodei brushing off doubts about AI returns and citing annualized revenue that crossed $47 billion in May, up from roughly $9 billion at the end of 2025. The company also reported that more than 80% of the code merged into its production codebase is now written by Claude, framing it as early progress toward recursive self-improvement, even as it publicly argued the industry should slow its \"AI sprints.\"",
+      "sources": [
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/06/04/ahead-of-its-ipo-anthropics-daniela-amodei-shrugs-off-doubts-about-ais-returns/" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/06/05/it-would-be-good-for-the-world-to-slow-down-ai-sprints-anthropic-says/5251460" },
+        { "name": "VentureBeat", "url": "https://venturebeat.com/technology/anthropic-says-80-of-its-new-production-code-is-now-authored-by-claude-how-your-enterprise-can-keep-up" },
+        { "name": "Anthropic", "url": "https://www.anthropic.com/institute/recursive-self-improvement" }
+      ]
+    },
+    {
+      "headline": "AI agents are turning into practical cyberattack tools.",
+      "body": "Researchers showed OpenAI's Codex chaining decade-old techniques into an \"HTTP/2 Bomb\" that crashes web servers in seconds, while a separate test used a free open model to power a self-spreading worm inside an enterprise network. A single malicious GitHub issue was enough to hijack a Claude Code agent through prompt injection, and Anthropic released an open-source harness aimed at pointing the same capability at finding vulnerabilities first.",
+      "sources": [
+        { "name": "The Register", "url": "https://www.theregister.com/security/2026/06/04/openais-codex-chains-decade-old-dos-techniques-into-http/2-bomb/5251377" },
+        { "name": "The Register", "url": "https://www.theregister.com/research/2026/06/04/free-ai-model-powers-self-spreading-worm-in-enterprise-test-network/5250918" },
+        { "name": "Dev.to", "url": "https://dev.to/coridev/one-malicious-github-issue-was-all-it-took-to-hijack-a-claude-code-agent-41da" },
+        { "name": "GitHub", "url": "https://github.com/anthropics/defending-code-reference-harness" }
+      ]
+    },
+    {
+      "headline": "Google's Gemma 4 12B brings multimodal AI fully onto laptops.",
+      "body": "Google released Gemma 4 12B, an open-weights model of about 12 billion parameters under a permissive Apache 2.0 license that runs entirely locally on a typical 16GB laptop. It analyzes audio and video and uses a new encoding scheme to punch above its size, continuing Google's bet on small on-device models while rivals chase ever-larger ones.",
+      "sources": [
+        { "name": "Ars Technica", "url": "https://arstechnica.com/google/2026/06/googles-new-gemma-4-open-ai-model-is-sized-for-your-laptop/" },
+        { "name": "VentureBeat", "url": "https://venturebeat.com/technology/googles-new-open-source-gemma-4-12b-analyzes-audio-video-and-runs-entirely-locally-on-a-typical-16gb-enterprise-laptop" }
+      ]
+    },
+    {
+      "headline": "Enterprises are hitting the cost and quality limits of AI coding.",
+      "body": "Uber capped employee use of tools like Claude Code after burning its entire 2026 AI budget in four months, a sign that heavy agentic coding is straining budgets. At the same time the rsync project erupted in a public row over AI-assisted commits blamed for broken backups, a reminder that \"vibe-coded\" contributions still need real review.",
+      "sources": [
+        { "name": "Simon Willison", "url": "https://simonwillison.net/2026/Jun/3/uber-caps-usage/#atom-everything" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/06/04/please-do-not-vibe-f-up-this-software-broken-backups-spark-ai-coding-row-in-rsync-project/5251189" }
+      ]
+    },
+    {
+      "headline": "AI policy is splintering along national lines.",
+      "body": "Trump signed a new executive order to test AI models for risk, but critics note the US security teams meant to do that work were gutted by DOGE, calling the plan performative. Canada joined a growing list of allies pushing to build sovereign AI and cut reliance on US systems, while UK regulators ordered Google to add clearer source links to AI search and let publishers opt out.",
+      "sources": [
+        { "name": "Ars Technica", "url": "https://arstechnica.com/tech-policy/2026/06/trumps-ai-executive-order-may-not-prevent-dangerous-deployments/" },
+        { "name": "MIT Technology Review", "url": "https://www.technologyreview.com/2026/06/03/1138322/the-download-trump-ai-order-smart-glasses-warfare/" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/06/04/canada-wants-its-own-ai-less-reliance-on-us-tech/5251404" }
+      ]
+    },
+    {
+      "headline": "Money and language are pouring into physical AI and robots.",
+      "body": "Robot foundation-model startup Generalist raised $400M, claiming it lifts average task success from 64% to 99%, as Amazon gave its Proteus warehouse robot natural-language control and expanded European deployments. Startups from Hello Robot to Genesis AI pushed home assistants and faster simulation, reflecting a broad bet that better training data, not new hardware, is what robotics needs next.",
+      "sources": [
+        { "name": "The Robot Report", "url": "https://www.therobotreport.com/generalist-raises-400m-to-scale-its-general-purpose-ai-models/" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/06/04/is-silicon-valley-ready-to-put-robots-in-peoples-homes-hello-robot-is/" },
+        { "name": "Robotics & Automation News", "url": "https://roboticsandautomationnews.com/2026/06/04/why-robotics-cant-advance-without-physical-ai/102280/" }
+      ]
+    }
+  ]
+}
