@@ -1,0 +1,54 @@
+{
+  "date": "2026-06-08",
+  "window": "48h",
+  "sources": 42,
+  "articles": 426,
+  "points": [
+    {
+      "headline": "Washington moves to take a stake in the AI boom.",
+      "body": "The Trump administration is reportedly in talks to take an equity stake in OpenAI, with Trump saying he wants deals \"where the American people can benefit from the success of AI.\" The shift lands as White House AI advisor Sriram Krishnan steps down to start a new institution aimed at shaping that same agenda.",
+      "sources": [
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/06/06/the-trump-administration-might-take-an-equity-stake-in-openai/" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/06/06/sriram-krishnan-is-leaving-his-role-as-white-house-ai-advisor/" }
+      ]
+    },
+    {
+      "headline": "AI labs head for the public markets, and prices are climbing.",
+      "body": "Anthropic filed its S-1 and the major labs are lining up to go public, which TechCrunch argues is fueling a wave of token price increases it nicknames the \"Tokenpocalypse.\" The era of heavily subsidized, cheap inference may be ending as investors start demanding a clear path to profit.",
+      "sources": [
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/06/07/is-this-the-dawn-of-the-tokenpocalypse/" },
+        { "name": "TheSequence", "url": "https://thesequence.substack.com/p/the-sequence-radar-873-last-week" }
+      ]
+    },
+    {
+      "headline": "Agentic coding works, exposing everything else that doesn't.",
+      "body": "Several outlets argue agents have largely \"solved\" code generation, only to reveal that requirements, integration, and maintenance, not typing speed, were always the real bottlenecks. The emerging discipline is \"harness engineering\": building the reliable scaffolding agents need to run for hours without going off the rails.",
+      "sources": [
+        { "name": "VentureBeat", "url": "https://venturebeat.com/technology/agentic-ai-solved-coding-and-exposed-every-other-problem-in-software-engineering" },
+        { "name": "VentureBeat", "url": "https://venturebeat.com/orchestration/when-claude-changed-everything-changed-managing-ai-blast-radius-in-production" },
+        { "name": "Dev.to", "url": "https://dev.to/prabhakar_chaudhary_7afe4/harness-engineering-the-missing-layer-for-reliable-coding-agents-4p8a" }
+      ]
+    },
+    {
+      "headline": "OpenAI ships Lockdown Mode against prompt injection.",
+      "body": "OpenAI introduced a Lockdown Mode for ChatGPT designed to limit how much sensitive data can leak through prompt-injection attacks. The company concedes it does not eliminate the risk, only reduces the odds that an attacker tricks the model into exfiltrating private information.",
+      "sources": [
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/06/06/openai-unveils-lockdown-mode-to-protect-sensitive-data-from-prompt-injection-attacks/" }
+      ]
+    },
+    {
+      "headline": "DeepSeek V4 Pro is being touted as beating GPT-5.5 on precision.",
+      "body": "A widely shared report claims China's DeepSeek V4 Pro edges out OpenAI's GPT-5.5 Pro on precision benchmarks, drawing heavy debate across developer communities. The framing extends a year of Chinese open-weight models pressuring US frontier labs on both cost and capability.",
+      "sources": [
+        { "name": "Hacker News", "url": "https://runtimewire.com/article/deepseek-v4-pro-beats-gpt-5-5-pro-on-precision" }
+      ]
+    },
+    {
+      "headline": "AI data centers are straining the power grid.",
+      "body": "Texas grid operators flagged reliability risks after AI data centers and crypto sites failed voltage tests, warning they could worsen outages during disturbances. The episode underscores how the AI compute buildout is colliding with the physical limits of electricity infrastructure.",
+      "sources": [
+        { "name": "Hacker News / Reuters", "url": "https://www.reuters.com/business/energy/texas-grid-flags-risks-data-centers-crypto-sites-fail-voltage-tests-2026-06-05/" }
+      ]
+    }
+  ]
+}
