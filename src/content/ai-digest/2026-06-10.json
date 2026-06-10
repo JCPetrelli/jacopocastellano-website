@@ -1,0 +1,64 @@
+{
+  "date": "2026-06-10",
+  "window": "48h",
+  "sources": 42,
+  "articles": 729,
+  "points": [
+    {
+      "headline": "Anthropic launches Claude Fable 5 and Mythos 5, its first Mythos-class models for the public.",
+      "body": "Anthropic released Fable 5 to everyone and the more powerful Mythos 5 to trusted organizations, calling Fable its strongest widely available model for software engineering, knowledge work, and vision. The public version ships with guardrails that refuse high-risk cybersecurity, biology, and chemistry queries, and early testers say it excels at long, complex tasks and one-click \"vibe-coded\" games.",
+      "sources": [
+        { "name": "Wired", "url": "https://www.wired.com/story/anthropic-releases-claude-fable-5-mythos-5/" },
+        { "name": "The Verge", "url": "https://www.theverge.com/news/946725/anthropic-releases-claude-fable-5-mythos" },
+        { "name": "VentureBeat", "url": "https://venturebeat.com/technology/anthropic-brings-mythos-to-the-masses-with-claude-fable-5-its-most-powerful-generally-available-model-ever" },
+        { "name": "Ars Technica", "url": "https://arstechnica.com/ai/2026/06/anthropic-says-these-topics-are-too-dangerous-to-let-its-fable-5-model-talk-about/" }
+      ]
+    },
+    {
+      "headline": "Apple bets its AI comeback on a rebuilt Siri at WWDC 2026, partly powered by Google Gemini.",
+      "body": "Apple unveiled a far more capable, personal Siri AI that can act across apps, plus a third-generation on-device foundation model and a partnership that runs some models on Google's cloud while claiming to keep data private. Reviewers were cautiously positive that Siri can finally do useful things like turning an email into calendar events, but Apple said EU users may not get the features, blaming the Digital Markets Act.",
+      "sources": [
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/06/09/wwdc-2026-everything-announced-on-siri-ai-os-27-apple-intelligence-and-more/" },
+        { "name": "Wired", "url": "https://www.wired.com/story/everything-apple-announced-at-wwdc-2026/" },
+        { "name": "The Verge", "url": "https://www.theverge.com/ai-artificial-intelligence/947051/apple-europe-dma-siri-ai" },
+        { "name": "VentureBeat", "url": "https://venturebeat.com/technology/on-device-ai-agents-hit-a-hard-memory-limit-apples-new-architecture-routes-around-it" }
+      ]
+    },
+    {
+      "headline": "OpenAI confidentially files to go public, joining an AI IPO wave.",
+      "body": "OpenAI confirmed it submitted a confidential draft S-1 to the SEC, a week after Anthropic took the same step and alongside a public-debut-bound SpaceX, prompting talk of a new \"MANGOS\" cohort of tech giants. Timing for the listing has not been set.",
+      "sources": [
+        { "name": "Wired", "url": "https://www.wired.com/story/openai-confidentially-files-for-ipo/" },
+        { "name": "OpenAI", "url": "https://openai.com/index/openai-submits-confidential-s-1" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/06/09/its-not-faang-anymore-its-mangos/" }
+      ]
+    },
+    {
+      "headline": "A price war breaks out over cheaper AI models.",
+      "body": "Google sharply cut the price of its budget AI subscription tier, and analysts now debate whether companies will embrace cheaper models that handle the same workloads for a fraction of the cost. Cohere added pressure by open-sourcing North Mini Code, a coding agent that runs on a single H100, though it generated roughly three times the output tokens of rivals.",
+      "sources": [
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/06/09/google-just-fired-a-warning-shot-in-the-ai-subscription-price-wars/" },
+        { "name": "VentureBeat", "url": "https://venturebeat.com/technology/cohere-open-sources-a-coding-agent-that-runs-on-a-single-h100" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/06/09/can-tech-companies-learn-to-love-cheaper-models/" }
+      ]
+    },
+    {
+      "headline": "AI's surging power demand pulls automakers and nations into the infrastructure race.",
+      "body": "GM is building new sodium-ion batteries and switching on vehicle-to-grid charging to help offset the electricity AI data centers pull from the grid, while Meta signed its first Indian data center deal with Reliance. The UK separately committed to a billion-dollar state-backed AI supercomputer to cut its reliance on US chips.",
+      "sources": [
+        { "name": "The Verge", "url": "https://www.theverge.com/transportation/946820/gm-energy-ev-v2g-storage-sodium-ion" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/06/10/meta-signs-first-ai-data-center-deal-in-india-with-reliance/" },
+        { "name": "Wired", "url": "https://www.wired.com/story/uk-supercomputer-investment-ai-homegrown-semiconductor/" }
+      ]
+    },
+    {
+      "headline": "Google pushes real-time translation and on-device AI with Gemini 3.5 and Gemma 4.",
+      "body": "Google announced Gemini 3.5 Live Translate for near-instant voice-to-voice translation that preserves a speaker's tone and pitch across Translate and Meet, watermarked with SynthID. It also released Gemma 4 12B, a unified encoder-free multimodal model designed to run agentic workflows locally on laptops.",
+      "sources": [
+        { "name": "Google DeepMind", "url": "https://deepmind.google/blog/fluid-natural-voice-translation-with-gemini-35-live-translate/" },
+        { "name": "Ars Technica", "url": "https://arstechnica.com/ai/2026/06/google-announces-gemini-3-5-live-translate-for-instant-voice-to-voice-translation/" },
+        { "name": "InfoQ", "url": "https://www.infoq.com/news/2026/06/google-gemma4-12b-local-coding/" }
+      ]
+    }
+  ]
+}
