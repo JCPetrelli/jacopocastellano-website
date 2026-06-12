@@ -1,0 +1,63 @@
+{
+  "date": "2026-06-12",
+  "window": "48h",
+  "sources": 42,
+  "articles": 650,
+  "points": [
+    {
+      "headline": "Google DeepMind ships DiffusionGemma, a diffusion-based open model up to 4x faster.",
+      "body": "DiffusionGemma borrows the parallel, iterative-refinement trick from image generators to produce text: it generates 256 tokens at once and self-corrects as it goes, rather than one token at a time. The open-weights release targets fast local inference and is the week's most-covered model launch.",
+      "sources": [
+        { "name": "Ars Technica", "url": "https://arstechnica.com/google/2026/06/googles-latest-diffusiongemma-open-ai-model-comes-with-a-4x-speed-boost/" },
+        { "name": "VentureBeat", "url": "https://venturebeat.com/technology/googles-diffusiongemma-generates-256-tokens-in-parallel-and-self-corrects-as-it-goes" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/06/11/googles-diffusiongemma-uses-diffusion-tech-to-speed-text-generation/5254406" },
+        { "name": "DeepMind", "url": "https://deepmind.google/blog/diffusiongemma-4x-faster-text-generation/" }
+      ]
+    },
+    {
+      "headline": "Claude Fable 5 lands strong on coding but draws a mixed verdict.",
+      "body": "Anthropic's new general-access Mythos-class model posts 95% on SWE-bench Verified, yet OpenAI's GPT-5.5 edged it on the brutal new Agents' Last Exam, and testers flagged hyper-cautious safety classifiers that refuse innocuous prompts. Alongside the model, Anthropic leaned hard into enterprise: a TCS deployment partnership, a push to sell Claude to nonprofits, and a walk-back of a policy that could have quietly limited researchers building rival models.",
+      "sources": [
+        { "name": "Dev.to", "url": "https://dev.to/peremptory/claude-fable-5-scores-95-on-swe-bench-then-hands-off-to-opus-48-4ji6" },
+        { "name": "VentureBeat", "url": "https://venturebeat.com/technology/surprise-upset-gpt-5-5-beats-claude-fable-5-on-brutal-new-agents-last-exam-benchmark" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/06/10/anthropic-claude-fable-5-refuses-innocuous-prompts/5253754" },
+        { "name": "Wired", "url": "https://www.wired.com/story/anthropic-responds-to-backlash-on-claudes-secret-sabotage-on-ai-research/" }
+      ]
+    },
+    {
+      "headline": "OpenAI accelerates its enterprise land-grab.",
+      "body": "OpenAI is acquiring Ona to give Codex secure, persistent cloud environments for long-running agents, scaled ChatGPT Enterprise to 100,000 BBVA employees, and opened access to its models and Codex through Oracle Cloud commitments. GPT-5.5, GPT-5.4, and Codex also reached general availability on Amazon Bedrock at direct-rate pricing, a month after OpenAI loosened its Azure exclusivity.",
+      "sources": [
+        { "name": "OpenAI", "url": "https://openai.com/index/openai-to-acquire-ona" },
+        { "name": "OpenAI", "url": "https://openai.com/index/bbva" },
+        { "name": "InfoQ", "url": "https://www.infoq.com/news/2026/06/openai-frontier-models-aws/" }
+      ]
+    },
+    {
+      "headline": "The bill for AI's compute build-out is coming due.",
+      "body": "Amazon disclosed for the first time that its data centers used 2.5 billion gallons of water last year, just as Seattle imposed a one-year data-center moratorium. Oracle's $70B capex plan rattled investors despite 21% sales growth, and grid operators warn data-center growth could hit a power wall by 2030.",
+      "sources": [
+        { "name": "The Verge", "url": "https://www.theverge.com/tech/948534/amazon-data-centers-water-use" },
+        { "name": "The Register", "url": "https://www.theregister.com/paas-and-iaas/2026/06/11/oracles-ai-datacenter-splurge-gives-investors-the-capex-jitters/5254035" },
+        { "name": "The Register", "url": "https://www.theregister.com/on-prem/2026/06/10/datacenter-growth-may-run-into-a-power-wall-by-2030/5253635" }
+      ]
+    },
+    {
+      "headline": "Open-source agentic coding tools challenge the incumbents.",
+      "body": "Xiaomi open-sourced MiMo Code, a terminal-native harness it claims beats Anthropic's Claude Code on ultra-long, 200+ step tasks per its own beta survey of 576 developers. Microsoft separately released SkillOpt, which automatically optimizes an agent's markdown \"skills\" without retraining model weights, attacking a slow, manual bottleneck in production agents.",
+      "sources": [
+        { "name": "VentureBeat", "url": "https://venturebeat.com/technology/xiaomis-new-open-source-agentic-ai-coding-harness-mimo-code-beats-claude-code-at-ultra-long-200-step-tasks" },
+        { "name": "VentureBeat", "url": "https://venturebeat.com/orchestration/microsofts-open-source-skillopt-automatically-upgrades-ai-agent-skills-without-touching-model-weights" },
+        { "name": "Xiaomi", "url": "https://mimo.xiaomi.com/mimocode" }
+      ]
+    },
+    {
+      "headline": "Money pours into \"physical AI\" and robotics.",
+      "body": "Jeff Bezos's Prometheus raised $12B at a $41B valuation to build an \"artificial general engineer\" aimed at automating heavy engineering and drug design in the physical world. Theker added $85M for reconfigurable, non-specialized factory robots, signaling investor appetite for embodied AI beyond fixed-form humanoids.",
+      "sources": [
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/06/11/jeff-bezoss-prometheus-raises-12b-to-build-an-artificial-general-engineer-for-the-physical-world/" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/06/11/theker-just-raised-85m-to-build-the-factory-robot-that-doesnt-specialize-in-anything/" }
+      ]
+    }
+  ]
+}
