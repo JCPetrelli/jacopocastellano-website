@@ -1,5 +1,5 @@
 ---
-title: 'Claude Fable 5: A New Model, "Free" on Your Plan Until June 22'
+title: "Claude Fable 5: A New Model, Free Until June 22 (Update: Pulled Offline by the US Government)"
 description: "Fable 5 and Mythos 5 from Anthropic are the same model with different safeguards. Fable 5 is free on paid plans until June 22, then needs usage credits. What changed, and what to do before the window closes."
 date: 2026-06-10
 tags:
@@ -9,6 +9,8 @@ tags:
 draft: false
 image: /blog/claude-fable-5-free-until-june-22/cover.jpg
 ---
+
+> **Update (June 15, 2026):** Since this article was published, the US Commerce Department ordered Anthropic to pull both Claude Fable 5 and Mythos 5 offline worldwide on national-security grounds, and Anthropic [complied](https://www.wired.com/story/anthropic-says-us-government-ordered-it-to-shut-down-mythos-models/), cutting off access even for its own foreign employees. The free-until-June-22 window and the access steps described below no longer apply. Anthropic says it disputes the order and hopes to restore the models, but it has given no timeline. I am leaving the original piece below for the record. For the full story, see [this week's AI digest](https://jacopocastellano.com/blog/ai-weekly-digest-week-of-2026-06-08/).
 
 *Image credit: Anthropic, from the [Claude Fable 5 and Claude Mythos 5 announcement](https://www.anthropic.com/news/claude-fable-5-mythos-5).*
 
