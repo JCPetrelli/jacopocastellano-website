@@ -1,0 +1,66 @@
+{
+  "date": "2026-06-16",
+  "window": "48h",
+  "sources": 42,
+  "articles": 968,
+  "points": [
+    {
+      "headline": "The US government forced Anthropic to pull Claude Fable 5 and Mythos 5.",
+      "body": "A White House export-control directive on June 12 made Anthropic suspend foreign access to its newest models, even for its own employees, and reporting now confirms the alarming \"jailbreak\" behind it was really just asking the model to \"fix this code\" and patch bugs. Dozens of cybersecurity experts signed a protest calling the ban dangerous, arguing it handicaps defenders more than attackers.",
+      "sources": [
+        { "name": "The Verge", "url": "https://www.theverge.com/ai-artificial-intelligence/950026/anthropic-fable-mythos-ban-ai-shutdown" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/06/15/the-us-governments-anthropic-models-ban-was-never-about-an-ai-jailbreak/" },
+        { "name": "The Register", "url": "https://www.theregister.com/security/2026/06/15/feds-freaked-over-fable-5-after-simple-fix-this-code-prompt-not-jailbreak-says-researcher/5255827" },
+        { "name": "Simon Willison", "url": "https://simonwillison.net/2026/Jun/16/fable-5-export-controls/" }
+      ]
+    },
+    {
+      "headline": "The shutdown supercharged the case for \"sovereign,\" non-American AI.",
+      "body": "Commentators and EU officials framed Washington's ability to switch off a leading model overnight as proof that depending on US frontier labs is a strategic risk, sending Europe's digital-sovereignty push into overdrive. Brussels is pressing cloud-autonomy and open-source efforts despite US objections.",
+      "sources": [
+        { "name": "The Verge", "url": "https://www.theverge.com/ai-artificial-intelligence/949986/anthropic-fable-mythos-shutdown-sovereign-ai" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/06/15/us-clampdown-on-anthropic-models-sends-eu-sovereignty-surge-into-overdrive/5255487" },
+        { "name": "The Register", "url": "https://www.theregister.com/off-prem/2026/06/14/eu-sovereignty-push-gives-tech-buyers-a-new-alphabet-soup-to-swallow/5251995" }
+      ]
+    },
+    {
+      "headline": "AI's effect on jobs dominated the discourse, with warnings and contradictions.",
+      "body": "Microsoft CEO Satya Nadella warned that a few frontier models could \"hollow out\" entire industries by commoditizing their expertise, while reporters described an AI layoff wave turning into a \"powder keg\" as a handful of insiders grow rich. Yet UK AI hiring jumped 61% (mostly for people to use, not build, AI), and others argued AI still hasn't replaced software engineers and won't soon.",
+      "sources": [
+        { "name": "VentureBeat", "url": "https://venturebeat.com/technology/satya-nadella-warns-that-ai-could-hollow-out-entire-industries-echoing-the-damage-done-by-globalization" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/06/15/the-ai-layoff-wave-is-becoming-a-powder-keg/" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/06/15/uk-ai-hiring-surges-as-firms-seek-people-to-babysit-the-bots/5255437" },
+        { "name": "Simon Willison", "url": "https://simonwillison.net/2026/Jun/14/why-ai-hasnt-replaced-software-engineers/" }
+      ]
+    },
+    {
+      "headline": "Enterprise AI agents drove a fresh wave of deals and a governance scramble.",
+      "body": "Salesforce agreed to buy customer-service AI firm Fin for $3.6B to bolster its Agentforce platform, and NewCore raised $66M to give AI agents workplace \"identities\" as they start acting like employees. Surveys show control lagging the hype: 85% of IT teams claim every agent has an owner, but only 42% actually know who that is.",
+      "sources": [
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/06/15/salesforce-acquires-ai-customer-service-platform-fin-for-3-6b/" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/06/15/ai-agents-are-becoming-employees-newcore-emerges-with-66m-to-give-them-identities/" },
+        { "name": "VentureBeat", "url": "https://venturebeat.com/security/85-of-it-teams-claim-every-ai-agent-is-under-control-only-42-actually-know-who-owns-them" },
+        { "name": "InfoQ", "url": "https://www.infoq.com/news/2026/06/stack-overflow-for-agents/" }
+      ]
+    },
+    {
+      "headline": "The AI infrastructure buildout kept accelerating.",
+      "body": "Nvidia moved to raise over $25B in its first bond sale since 2021 to fund AI expansion, while Google committed $1.5B to a new Alabama data-center phase and Amazon announced a multibillion-dollar Missouri campus. At the same time, a key US federal data-center efficiency and security rule is set to lapse in September with no replacement.",
+      "sources": [
+        { "name": "Ars Technica", "url": "https://arstechnica.com/ai/2026/06/chipmaker-nvidia-seeks-to-raise-over-25b-in-first-bond-deal-since-2021/" },
+        { "name": "Google", "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/alabama-investment-june-2026/" },
+        { "name": "Wired", "url": "https://www.wired.com/story/the-us-government-is-letting-a-key-data-center-regulation-expire/" },
+        { "name": "Hacker News", "url": "https://www.narracomm.com/amazon-announces-multibillion-dollar-data-center-in-missouri/" }
+      ]
+    },
+    {
+      "headline": "Meta pushed AI deeper into Facebook amid internal turmoil.",
+      "body": "Meta began rolling out an \"AI Mode\" search on Facebook that draws on users' public posts across its platforms, part of a broad effort to catch up in the AI race. Internally, CTO Andrew Bosworth admitted the company's AI reorganization had been \"atrocious\" and promised employees more stability.",
+      "sources": [
+        { "name": "The Verge", "url": "https://www.theverge.com/tech/950264/meta-ai-mode-search-facebook" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/06/15/metas-new-ai-mode-on-facebook-pulls-from-public-info-across-its-platforms/" },
+        { "name": "Wired", "url": "https://www.wired.com/story/andrew-bosworth-meta-employees-unrest/" }
+      ]
+    }
+  ]
+}
