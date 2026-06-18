@@ -1,0 +1,62 @@
+{
+  "date": "2026-06-18",
+  "window": "48h",
+  "sources": 42,
+  "articles": 601,
+  "points": [
+    {
+      "headline": "The White House forced Anthropic to pull Fable 5 and Mythos 5 offline.",
+      "body": "Trump administration officials ordered the company to cut access for all foreign nationals, including its own staff and US users, and to revoke SK Telecom's access over alleged China ties, then said the models cannot return until their guardrails are fully jailbreak-proof, which security experts call impossible. At the G7, leaders including Macron and Modi warned the blackout proves Washington can switch off American AI overnight.",
+      "sources": [
+        { "name": "Wired", "url": "https://www.wired.com/story/sk-telecom-anthropic-mythos-export-controls/" },
+        { "name": "The Verge", "url": "https://www.theverge.com/ai-artificial-intelligence/951703/anthropic-shutdown-export-controls" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/06/17/world-leaders-want-american-ai-they-just-dont-want-america-to-be-able-to-turn-it-off/" },
+        { "name": "Ars Technica", "url": "https://arstechnica.com/ai/2026/06/dangerous-ai-models-are-coming-no-matter-what/" }
+      ]
+    },
+    {
+      "headline": "Chinese open-weight models are matching frontier labs at a fraction of the cost.",
+      "body": "Z.ai released GLM-5.2, a 753B-parameter MIT-licensed model that reportedly beats GPT-5.5 on several long-horizon coding benchmarks for one-sixth the price, which Simon Willison calls probably the most powerful text-only open-weights LLM. Weibo's tiny 3B VibeThinker reignited benchmark debates by claiming flagship-level reasoning, underscoring how fast cheap Chinese models are closing the gap.",
+      "sources": [
+        { "name": "VentureBeat", "url": "https://venturebeat.com/technology/z-ais-open-weights-glm-5-2-beats-gpt-5-5-on-multiple-long-horizon-coding-benchmarks-for-1-6th-the-cost" },
+        { "name": "Simon Willison", "url": "https://simonwillison.net/2026/Jun/17/glm-52/" },
+        { "name": "Hugging Face", "url": "https://huggingface.co/blog/zai-org/glm-52-blog" }
+      ]
+    },
+    {
+      "headline": "AI's spending bill is coming due.",
+      "body": "Anthropic paused planned token-based billing for its Claude Agent SDK after warnings it would sharply raise power users' costs, and shipped a fix for Claude Design's token-burning problem, while reports describe Uber blowing through its annual AI budget in months and enterprises still hunting for clear ROI. Researchers even warn that bloated config files quietly waste agent tokens, as analysts question whether AI economics can stay sustainable.",
+      "sources": [
+        { "name": "Ars Technica", "url": "https://arstechnica.com/ai/2026/06/anthropic-pauses-token-based-billing-for-its-claude-agent-sdk/" },
+        { "name": "VentureBeat", "url": "https://venturebeat.com/technology/anthropic-ships-major-claude-design-overhaul-with-design-system-imports-code-round-trips-and-a-fix-for-its-token-burning-problem" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/06/17/smelly-config-files-will-make-your-agents-waste-tokens-researchers-warn/5257951" }
+      ]
+    },
+    {
+      "headline": "Cloud giants are racing to give AI agents enterprise-grade infrastructure.",
+      "body": "At their summits AWS unveiled a context-intelligence stack and AgentCore upgrades, Databricks claimed to fix the data-pipeline bottleneck slowing agents, and Microsoft introduced Scout, an always-on autonomous \"autopilot.\" Identity is the new frontier: Uber and Auth0 are rethinking agent permissions, and Estonia plans to issue AI agents their own digital IDs.",
+      "sources": [
+        { "name": "VentureBeat", "url": "https://venturebeat.com/data/aws-enters-the-context-layer-race-with-a-graph-that-learns-from-agents-not-manual-curation" },
+        { "name": "InfoQ", "url": "https://www.infoq.com/news/2026/06/microsoft-scout-openclaw-build/" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/06/18/estonia-intends-to-recognize-ai-agents-with-digital-ids/5258087" }
+      ]
+    },
+    {
+      "headline": "Physical AI and robot-training data are the next battleground.",
+      "body": "Nvidia is using teams of AI coding agents to autonomously direct robot training, even teaching robots to install GPUs and cut zip ties, while startups like XDOF get paid to collect the dirty, unglamorous real-world data that physical AI needs. World-model maker Odyssey raised a $1.45B valuation backed by Amazon, as a wave of humanoid and \"physical AI\" deployments reaches Tier 1 manufacturers.",
+      "sources": [
+        { "name": "Ars Technica", "url": "https://arstechnica.com/ai/2026/06/ai-coding-agents-can-autonomously-direct-robot-training/" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/06/17/world-model-maker-odyssey-nabs-1-45b-valuation-backed-by-amazon-and-other-big-names/" },
+        { "name": "The Robot Report", "url": "https://www.therobotreport.com/sanctuary-ai-validates-physical-ai-performance-tier-1-automotive-supplier/" }
+      ]
+    },
+    {
+      "headline": "Most Americans think AI is moving too fast.",
+      "body": "A new Pew survey finds 63% of Americans believe AI is advancing too quickly and only 16% expect it to have a positive impact on society, even as chatbot use has climbed to 49% with ChatGPT adoption doubling since 2023. The gap shows public unease widening even as everyday adoption keeps rising.",
+      "sources": [
+        { "name": "The Verge", "url": "https://www.theverge.com/ai-artificial-intelligence/951653/pew-research-ai-chatbot-usage-advancing-too-quickly" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/06/17/only-16-percent-of-americans-think-ai-will-have-a-positive-impact-on-society-a-new-study-shows/" }
+      ]
+    }
+  ]
+}
