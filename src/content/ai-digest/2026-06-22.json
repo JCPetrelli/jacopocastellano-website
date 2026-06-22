@@ -1,0 +1,59 @@
+{
+  "date": "2026-06-22",
+  "window": "48h",
+  "sources": 42,
+  "articles": 107,
+  "points": [
+    {
+      "headline": "Anthropic and the Trump administration escalate their standoff.",
+      "body": "Reports describe an intensifying \"Mythos\" dispute in which the administration appears to be pressuring Anthropic after the company resisted some of its demands. Commentators warn the cybersecurity community could be the collateral damage, and ask who actually benefits from the crackdown.",
+      "sources": [
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/06/22/anthropics-mythos-mess-just-keeps-getting-more-complicated/5258577" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/06/21/when-the-trump-administration-cracks-down-on-anthropic-who-benefits/" }
+      ]
+    },
+    {
+      "headline": "Google DeepMind is losing senior talent to Anthropic.",
+      "body": "Nobel laureate John Jumper, who led the AlphaFold work, is leaving DeepMind for Anthropic, and he is reportedly not the only big name heading out. The departures feed a wider narrative of a Google brain drain reshaping the competitive map among frontier labs.",
+      "sources": [
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/06/20/nobel-laureate-john-jumper-is-leaving-deepmind-for-rival-anthropic/" },
+        { "name": "TheSequence", "url": "https://thesequence.substack.com/p/the-sequence-radar-880-last-week" }
+      ]
+    },
+    {
+      "headline": "Apple bets on on-device generative AI.",
+      "body": "A revamped, conversational Siri anchors a broad Apple Intelligence push across iOS 27, with hands-on coverage calling the new assistant genuinely useful. Underneath it, Apple introduced Core AI, the successor to Core ML, letting developers run LLMs and generative models entirely on Apple silicon.",
+      "sources": [
+        { "name": "Wired", "url": "https://www.wired.com/story/siri-ai-hands-on-iphone/" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/06/21/beyond-siri-here-are-the-practical-ai-features-coming-to-your-iphone-in-ios-27/" },
+        { "name": "InfoQ", "url": "https://www.infoq.com/news/2026/06/apple-core-ai-wwdc/" }
+      ]
+    },
+    {
+      "headline": "Open-weight models gain credibility against proprietary labs.",
+      "body": "Comparisons of GLM 5.2 against Claude Opus, a widely shared argument that there is minimal downside to switching to open models, and the launch of Apertus as an open foundation model for sovereign AI all point the same way. The thread of the week is that open alternatives are closing the gap fast enough to question premium subscriptions.",
+      "sources": [
+        { "name": "TechStackups", "url": "https://techstackups.com/comparisons/glm-5.2-vs-opus/" },
+        { "name": "marble.onl", "url": "https://www.marble.onl/posts/cancel_claude.html" },
+        { "name": "Apertus", "url": "https://apertvs.ai/" }
+      ]
+    },
+    {
+      "headline": "Enterprises are deploying AI at scale.",
+      "body": "Samsung Electronics is rolling out ChatGPT Enterprise and Codex to employees worldwide in one of OpenAI's largest deployments. Anthropic separately reported that Claude now handles about 95% of its internal analytics queries, crediting data governance and discipline more than raw model gains.",
+      "sources": [
+        { "name": "OpenAI", "url": "https://openai.com/index/samsung-electronics-chatgpt-codex-deployment" },
+        { "name": "InfoQ", "url": "https://www.infoq.com/news/2026/06/anthropic-claude-analytics/" }
+      ]
+    },
+    {
+      "headline": "Safety and governance debates sharpen.",
+      "body": "Signal's Meredith Whittaker urged users to remember AI chatbots \"are not your friends,\" while researchers debated whether AI biorisk thresholds need intermediate warning levels. Amazon, meanwhile, publicly pushed back on human-in-the-loop AI governance, arguing people are not always the safer check.",
+      "sources": [
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/06/20/signals-meredith-whittaker-wants-you-to-remember-that-ai-chatbots-are-not-your-friends/" },
+        { "name": "LessWrong", "url": "https://www.lesswrong.com/posts/3QvnQczuGD8H9zood/do-ai-biorisk-thresholds-need-intermediate-warning-levels" },
+        { "name": "The Register", "url": "https://www.theregister.com/security/2026/06/20/why-amazon-hates-human-in-the-loop-ai-governance/5258639" }
+      ]
+    }
+  ]
+}
