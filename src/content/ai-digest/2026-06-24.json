@@ -1,0 +1,61 @@
+{
+  "date": "2026-06-24",
+  "window": "48h",
+  "sources": 42,
+  "articles": 263,
+  "points": [
+    {
+      "headline": "Anthropic puts an always-on Claude teammate inside Slack.",
+      "body": "Anthropic launched Claude Tag, retiring its old Slack app for a persistent agent anyone can summon with @Claude that learns a team's context, monitors channels, and works autonomously. Coverage frames it as a strategic land grab for institutional knowledge and enterprise workflows, not just a productivity feature, and it lands the same week Menlo Ventures closed a $3B fund off its early Anthropic bet.",
+      "sources": [
+        { "name": "VentureBeat", "url": "https://venturebeat.com/technology/anthropic-launches-claude-tag-replacing-its-slack-app-with-a-persistent-ai-teammate-that-learns-monitors-and-works-autonomously" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/06/23/anthropics-claude-tag-is-learning-your-company-one-slack-message-at-a-time/" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/06/23/anthropic-reimagines-claude-in-slack-as-nosy-always-on-agentic-ai-coworker/5260422" }
+      ]
+    },
+    {
+      "headline": "OpenAI pivots hard into security with Daybreak.",
+      "body": "OpenAI unveiled Daybreak, a suite including Codex Security and a GPT-5.5-Cyber model to find, validate, and patch vulnerabilities at scale, plus a \"Patch the Planet\" initiative aimed at open source maintainers. The push positions OpenAI as a defensive-security player and arrives as Five Eyes agencies warn that AI is turning routine infosec incidents into major operational crises.",
+      "sources": [
+        { "name": "OpenAI", "url": "https://openai.com/index/daybreak-securing-the-world" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/06/22/openai-launches-new-initiative-to-help-find-and-patch-open-source-bugs/" },
+        { "name": "The Register", "url": "https://www.theregister.com/security/2026/06/23/openai-yoo-hoo-look-over-here-we-do-that-security-stuff-too/5259842" }
+      ]
+    },
+    {
+      "headline": "The AI capex-for-jobs trade keeps widening.",
+      "body": "Oracle cut 21,000 roles to help fund debt-financed data center spending, while GM installed robots at a flagship EV plant after laying off 1,300 workers. Microsoft locked in a 20-year gas-powered data center deal with Chevron, underlining how the buildout is reshaping both labor and energy as the running tally of AI-cited layoffs grows.",
+      "sources": [
+        { "name": "Ars Technica", "url": "https://arstechnica.com/ai/2026/06/oracles-21000-layoffs-help-drive-its-debt-fueled-ai-investments/" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/06/22/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai/" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/06/22/microsoft-and-chevron-plan-one-of-the-largest-gas-powered-data-center-projects-in-us/" }
+      ]
+    },
+    {
+      "headline": "\"The loop\" becomes the new shape of agentic AI.",
+      "body": "Commentary and product launches converged on agents that run continuously in the background, with swarms working endlessly rather than answering one prompt at a time. Sakana's Fugu routes queries across many models through one API to dodge vendor lock-in, and a new Self-Harness framework lets agents rewrite their own operating rules for up to 60% gains.",
+      "sources": [
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/06/22/the-ai-world-is-getting-loopy/" },
+        { "name": "VentureBeat", "url": "https://venturebeat.com/orchestration/no-claude-fable-5-no-problem-sakana-achieves-frontier-performance-with-new-fugu-multi-model-auto-synthesis-system" },
+        { "name": "VentureBeat", "url": "https://venturebeat.com/orchestration/researchers-introduce-self-harness-a-framework-that-lets-ai-agents-rewrite-their-own-rules-boosting-performance-up-to-60" }
+      ]
+    },
+    {
+      "headline": "Generative video and image quality jump, and the leaderboard shuffles.",
+      "body": "Alibaba's HappyHorse 1.1 climbed to No. 2 in global AI video rankings as OpenAI's Sora and ByteDance's Seedance slipped, signaling fast turnover at the top. On the image side, Krea 2 now produces enterprise-grade visuals in about two seconds and ships as open weights under a custom license.",
+      "sources": [
+        { "name": "VentureBeat", "url": "https://venturebeat.com/technology/alibabas-ai-video-model-rises-to-no-2-in-global-rankings-as-openais-sora-and-bytedances-seedance-fall-away" },
+        { "name": "VentureBeat", "url": "https://venturebeat.com/technology/enterprise-grade-ai-image-generation-in-2-seconds-is-here-krea-2-raw-and-turbo-available-as-open-weights-under-custom-license" }
+      ]
+    },
+    {
+      "headline": "Physical AI consolidates around dexterity and safety.",
+      "body": "Bear Robotics acquired Kinisi to fold a humanoid platform and physical-AI team into its lineup, while NVIDIA released Halos, a full-stack safety system spanning compute, sensors, and inspection for robots. Researchers also showed ultrasound imaging can give a robot hand human-like dexterity, reflecting a shift from flashy locomotion demos toward real-world manipulation and reliability.",
+      "sources": [
+        { "name": "The Robot Report", "url": "https://www.therobotreport.com/bear-robotics-acquires-kinisi-robotics-to-boost-its-physical-ai-capabilities/" },
+        { "name": "The Robot Report", "url": "https://www.therobotreport.com/nvidia-releases-halos-a-full-stack-safety-system-for-robotics/" },
+        { "name": "MIT Technology Review", "url": "https://www.technologyreview.com/2026/06/23/1138279/ultrasound-imaging-turns-a-robot-hand-into-a-skillful-mimic/" }
+      ]
+    }
+  ]
+}
