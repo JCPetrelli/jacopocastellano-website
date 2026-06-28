@@ -1,0 +1,62 @@
+{
+  "date": "2026-06-28",
+  "window": "48h",
+  "sources": 42,
+  "articles": 175,
+  "points": [
+    {
+      "headline": "The U.S. government is now a gatekeeper for frontier model releases.",
+      "body": "After weeks of negotiation, the Trump administration let Anthropic release its top Mythos model to roughly 100 vetted U.S. companies and agencies, and separately asked OpenAI to delay the broad rollout of its new GPT-5.6 family (Sol, Terra, Luna), restricting it to preview partners. Both labs warn that case-by-case government access should not become the long-term norm.",
+      "sources": [
+        { "name": "Wired", "url": "https://www.wired.com/story/anthropic-restores-access-to-mythos/" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/06/26/trump-admin-releases-anthropic-mythos-to-be-used-by-more-than-100-us-companies-agencies/" },
+        { "name": "VentureBeat", "url": "https://venturebeat.com/technology/openai-unveils-gpt-5-6-sol-terra-and-luna-models-but-only-accessible-to-limited-preview-partners-for-now-per-us-gov" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/06/26/openai-limits-gpt-5-6-rollout-after-government-request-says-restrictions-shouldnt-be-the-norm/" }
+      ]
+    },
+    {
+      "headline": "Export limits are fragmenting the global AI race.",
+      "body": "Asian startups are rushing out Mythos-like models that carry no export ban, with some warning U.S. labs may permanently lose that market, while Europe pushes harder for sovereign models of its own. In China, users keep routing around Anthropic's geolocation blocks via proxies and fake identities sourced on Telegram.",
+      "sources": [
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/06/27/asian-ai-startups-launch-mythos-like-models-as-anthropics-export-ban-drags-on/" },
+        { "name": "Wired", "url": "https://www.wired.com/story/europe-is-fed-up-and-wants-its-own-ai/" },
+        { "name": "Wired", "url": "https://www.wired.com/story/how-people-in-china-keep-outsmarting-anthropics-geolocation-restrictions/" }
+      ]
+    },
+    {
+      "headline": "The scramble to escape Nvidia is accelerating.",
+      "body": "OpenAI detailed Jalapeño, a custom inference chip built with Broadcom, joining Google, Apple, and SpaceX in designing their own silicon to cut single-supplier risk. China added a twist by claiming the world's fastest supercomputer, LineShine, built without any GPUs.",
+      "sources": [
+        { "name": "TechCrunch", "url": "https://techcrunch.com/video/why-everyone-from-openai-to-spacex-is-building-their-own-chips-and-turning-up-the-heat-on-nvidia/" },
+        { "name": "Wired", "url": "https://www.wired.com/story/china-defies-us-restrictions-and-builds-the-worlds-fastest-supercomputer/" }
+      ]
+    },
+    {
+      "headline": "Physical AI is moving from labs to factory floors.",
+      "body": "AGIBOT shipped its 15,000th robot and General Intuition raised $320M to train robots on video-game footage, while Flexiv, Kawasaki, and ABB showed off new dexterous, force-controlled \"physical AI\" arms at Automate 2026. Funding is flowing into the supporting stack too, with Limitless Labs raising $20M for AI-driven CNC programming.",
+      "sources": [
+        { "name": "The Robot Report", "url": "https://www.therobotreport.com/agibot-produces-15000th-robot-marking-milestone-embodied-ai-deployment/" },
+        { "name": "The Robot Report", "url": "https://www.therobotreport.com/general-intuition-raises-320m-uses-video-game-data-train-robots/" },
+        { "name": "Robotics & Automation News", "url": "https://roboticsandautomationnews.com/2026/06/26/flexiv-launches-new-adaptive-robots-for-industrial-automation/102857/" },
+        { "name": "Robotics & Automation News", "url": "https://roboticsandautomationnews.com/2026/06/26/limitless-labs-raises-20-million-to-expand-ai-platform-for-cnc-programming-and-precision-manufacturing/102848/" }
+      ]
+    },
+    {
+      "headline": "AI coding assistants are becoming an attack surface.",
+      "body": "Researchers showed an Amazon Q flaw that let booby-trapped Git repositories execute code and steal cloud credentials, warning that many assistants now run commands straight from project config files. More broadly, security teams face a messy summer as AI tools surface countless previously hidden vulnerabilities.",
+      "sources": [
+        { "name": "The Register", "url": "https://www.theregister.com/cyber-crime/2026/06/26/amazon-q-flaw-let-booby-trapped-git-repos-execute-code-swipe-cloud-creds/5263202" },
+        { "name": "The Register", "url": "https://www.theregister.com/security/2026/06/27/its-looking-like-a-hot-messy-summer-for-security-teams-as-ai-finds-countless-previously-hidden-vulns/5260478" }
+      ]
+    },
+    {
+      "headline": "Tooling for autonomous agents is maturing fast.",
+      "body": "Vercel open-sourced Eve, a filesystem-based framework for building and running production agents, and AWS previewed a FinOps Agent that investigates cost anomalies and routes findings to Slack and Jira. The shift is real enough that Notion is shutting its Gmail client because more than half of users now let bots handle email.",
+      "sources": [
+        { "name": "InfoQ", "url": "https://www.infoq.com/news/2026/06/vercel-eve-agents/" },
+        { "name": "InfoQ", "url": "https://www.infoq.com/news/2026/06/aws-finops-agent/" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/06/26/notion-kills-its-gmail-client-after-ai-agents-keep-humans-from-troubling-inbox/5263024" }
+      ]
+    }
+  ]
+}
