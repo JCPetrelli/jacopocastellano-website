@@ -1,0 +1,59 @@
+{
+  "date": "2026-07-06",
+  "window": "48h",
+  "sources": 42,
+  "articles": 114,
+  "points": [
+    {
+      "headline": "The frontier model race keeps accelerating.",
+      "body": "OpenAI's GPT-5.6 \"Sol Ultra\" is reportedly heading to Codex, drawing heavy developer attention, while Anthropic's Claude Fable 5 is being framed as a comeback alongside new agent tooling. The rapid cadence of major releases shows the labs are still trading the lead on coding and agentic work.",
+      "sources": [
+        { "name": "Hacker News", "url": "https://news.ycombinator.com/item?id=48799614" },
+        { "name": "TheSequence", "url": "https://thesequence.substack.com/p/the-sequence-radar-889-fable-5s-comeback" }
+      ]
+    },
+    {
+      "headline": "Anthropic's Claude hits deployment and trust friction.",
+      "body": "Alibaba reportedly classified Claude Code as high-risk and banned employees from using it, and Claude reached general availability on Microsoft Foundry but without a European data zone, leaving EU banking and healthcare unable to deploy it in production. Developers meanwhile report Fable 5 shipping real production code (a roughly $149 sqlite-utils release), even as Opus 4.8 sometimes invents fields in tool calls.",
+      "sources": [
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/07/04/alibaba-reportedly-bans-employees-from-using-claude-code/" },
+        { "name": "InfoQ", "url": "https://www.infoq.com/news/2026/07/claude-foundry-ga-europe/" },
+        { "name": "Simon Willison", "url": "https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/" }
+      ]
+    },
+    {
+      "headline": "Humanoid robotics pushes toward commercialization.",
+      "body": "Agility Robotics is going public via SPAC while its CEO tempers promises of a home robot anytime soon, and startup Humanoid claims its KinetIQ Ascend reinforcement-learning approach reaches 99.9% manipulation reliability at human speed. RoboCup 2026 in Incheon, South Korea capped the week with its humanoid-league finals.",
+      "sources": [
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/07/05/this-humanoid-robotics-company-is-going-public-but-its-ceo-isnt-promising-a-robot-in-your-home-anytime-soon/" },
+        { "name": "The Robot Report", "url": "https://www.therobotreport.com/humanoid-announces-kinetiq-ascend-reinforcement-learning-approach/" },
+        { "name": "Robohub", "url": "https://robohub.org/robocup2026-humanoid-league-knockout-stages/" }
+      ]
+    },
+    {
+      "headline": "AI tutoring shows measurable classroom gains.",
+      "body": "Wealthy US families are turning to AI-driven schools like Alpha and Forge Prep instead of traditional classrooms, and a new AI tutor posted a 0.71 to 1.30 standard-deviation effect size in a Dartmouth course. The results strengthen the case that personalized AI instruction can outperform conventional teaching, at least for some students.",
+      "sources": [
+        { "name": "The Verge", "url": "https://www.theverge.com/ai-artificial-intelligence/961505/wealthy-ai-schools-alpha-forge-prep" },
+        { "name": "Hacker News", "url": "https://news.ycombinator.com/item?id=48796817" }
+      ]
+    },
+    {
+      "headline": "Agent payments and enterprise MCP move to the edge.",
+      "body": "Cloudflare and AWS both implemented x402 stablecoin micropayments for agent-to-service transactions, reviving HTTP 402 with sub-cent costs and 169 million transactions in year one. The Model Context Protocol also promoted its enterprise-managed authorization extension to stable, letting organizations control agent access through their existing identity provider.",
+      "sources": [
+        { "name": "InfoQ", "url": "https://www.infoq.com/news/2026/07/cloudflare-aws-x402-micropayment/" },
+        { "name": "InfoQ", "url": "https://www.infoq.com/news/2026/07/mcp-ema-enterprise-auth/" }
+      ]
+    },
+    {
+      "headline": "The AI ROI reckoning arrives.",
+      "body": "Enterprise buyers increasingly find deployed AI falls short of the demo six to twelve months in, and analyses warn that per-task AI spend could exceed the cost of a human engineer within a few years. Firms like Trunk Tools are responding by ditching general-purpose models for specialized stacks, cutting document review from 60 days to 10.",
+      "sources": [
+        { "name": "Dev.to", "url": "https://dev.to/mirasloan/the-gap-between-what-ai-vendors-promise-and-what-enterprise-buyers-actually-get-22g1" },
+        { "name": "Hacker News", "url": "https://tomtunguz.com/ai-spend-breakeven-2029/" },
+        { "name": "VentureBeat", "url": "https://venturebeat.com/orchestration/trunk-tools-stack-cut-document-review-from-60-days-to-10-by-ditching-general-purpose-models" }
+      ]
+    }
+  ]
+}
