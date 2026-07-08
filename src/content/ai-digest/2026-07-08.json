@@ -1,0 +1,63 @@
+{
+  "date": "2026-07-08",
+  "window": "48h",
+  "sources": 42,
+  "articles": 595,
+  "points": [
+    {
+      "headline": "Anthropic pushes Claude Cowork off the desktop and onto phones.",
+      "body": "Anthropic launched Claude Cowork on mobile and web, letting users start a task at their desk, follow it on their phone, and pick up the finished output later even with the laptop closed. Usage data shows most Cowork users are knowledge workers rather than coders, a sign that agents are spreading from the terminal into the wider office.",
+      "sources": [
+        { "name": "The Verge", "url": "https://www.theverge.com/ai-artificial-intelligence/961978/anthropic-claude-cowork-mobile-web" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/07/07/the-coding-agent-wars-are-spilling-into-the-rest-of-the-office-claude-cowork/" },
+        { "name": "VentureBeat", "url": "https://venturebeat.com/technology/anthropic-brings-claude-cowork-to-mobile-and-web-as-usage-data-shows-most-users-arent-coding" },
+        { "name": "Wired", "url": "https://www.wired.com/story/shut-those-laptops-anthropic-puts-its-claude-cowork-agent-on-your-phone/" }
+      ]
+    },
+    {
+      "headline": "AI agents keep springing security leaks.",
+      "body": "Researchers tricked GitHub's AI agent into exposing private repositories (\"GitLost\") with no fix on offer, while a separate study showed nine popular AI tools can be steered into assembling botnets via \"HalluSquatting.\" Discord blamed an AI moderation bug for wrongly banning users, and surveys report a majority of enterprises have already hit AI-related security incidents.",
+      "sources": [
+        { "name": "The Register", "url": "https://www.theregister.com/security/2026/07/07/github-ai-agent-leaks-private-repos-when-asked-nicely/5267924" },
+        { "name": "Ars Technica", "url": "https://arstechnica.com/security/2026/07/hackers-can-use-9-of-the-most-popular-ai-tools-to-assemble-massive-botnets/" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/07/07/discord-admits-ai-moderation-bug-wrongfully-banned-users-over-harmless-images/" }
+      ]
+    },
+    {
+      "headline": "Meta's Muse Image lets strangers drop you into AI photos.",
+      "body": "Meta's Superintelligence Labs shipped Muse Image, its first in-house generator, now powering AI images across Instagram, WhatsApp, and the Meta AI app. Public Instagram accounts can be pulled into other people's AI creations unless users opt out, triggering immediate backlash over consent.",
+      "sources": [
+        { "name": "The Verge", "url": "https://www.theverge.com/tech/962485/meta-muse-image-ai-model-instagram" },
+        { "name": "Wired", "url": "https://www.wired.com/story/meta-now-lets-anyone-use-your-instagram-photos-in-ai-images-unless-you-opt-out/" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/07/07/meta-rolls-out-muse-a-new-ai-image-generator/" }
+      ]
+    },
+    {
+      "headline": "Banks and hyperscalers start whispering \"bubble.\"",
+      "body": "Banks, the BIS, and even hyperscalers are warning that AI valuations may be overheated, with Oracle down more than 40% on the month. At the same time inference is turning into a commodity: cheap open models, cost-cutting (Microsoft is leaning more on its own models), and soaring data-center energy bills are squeezing everything except a few luxury frontier tiers.",
+      "sources": [
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/07/06/even-banks-and-hyperscalers-are-now-sounding-the-alarm-about-the-ai-bubble/" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/07/07/microsoft-joins-ai-cost-cutting-trend-by-relying-more-on-its-own-models/" },
+        { "name": "Ars Technica", "url": "https://arstechnica.com/tech-policy/2026/07/us-manufacturers-energy-costs-soar-because-of-ai-data-center-demand/" }
+      ]
+    },
+    {
+      "headline": "The AI chip race widens beyond Nvidia.",
+      "body": "SambaNova raised $1B at an $11B valuation just five months after its last mega-round, and China's DeepSeek said it will design its own chips to cut reliance on Nvidia and Huawei. French startup ZML open-sourced software to speed inference across many chip types, while Korea's FuriosaAI pushed its accelerators into European data centers.",
+      "sources": [
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/07/08/sambanova-draws-1b-at-11b-valuation-in-series-f-first-close/" },
+        { "name": "Ars Technica", "url": "https://arstechnica.com/ai/2026/07/facing-us-export-controls-chinas-deepseek-plans-to-make-its-own-chips/" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/07/07/south-korean-chip-startup-furiosaai-invades-european-datacenters/" }
+      ]
+    },
+    {
+      "headline": "Humanoid and \"physical AI\" robots hit new milestones.",
+      "body": "Agility Robotics agreed to go public via a $2.5B SPAC merger, while Boston Dynamics brought its Atlas humanoid and Spot robots to the FIFA World Cup. Money and benchmarks keep flowing into embodied AI, from dexterous robotic hands to industrial foundation models, as researchers map how general-purpose robot autonomy might arrive.",
+      "sources": [
+        { "name": "Robotics & Automation News", "url": "https://roboticsandautomationnews.com/2026/07/07/agility-robotics-to-go-public-through-2-5-billion-spac-merger/103130/" },
+        { "name": "The Robot Report", "url": "https://www.therobotreport.com/boston-dynamics-brings-its-legged-robots-to-the-fifa-world-cup/" },
+        { "name": "Ars Technica", "url": "https://arstechnica.com/features/2026/07/robot-workers-rising-how-ai-may-drive-general-purpose-autonomy-in-robotics/" }
+      ]
+    }
+  ]
+}
