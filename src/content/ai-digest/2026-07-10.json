@@ -1,0 +1,60 @@
+{
+  "date": "2026-07-10",
+  "window": "48h",
+  "sources": 42,
+  "articles": 568,
+  "points": [
+    {
+      "headline": "OpenAI ships GPT-5.6, folds Codex into an agentic \"ChatGPT Work,\" and kills its Atlas browser.",
+      "body": "GPT-5.6 arrives in three sizes (Luna, Terra, Sol) after clearing a government safety review, and OpenAI says it is now the preferred model behind Microsoft 365 Copilot. In the same push, OpenAI relaunched ChatGPT as \"Work,\" an agent meant to stay on a task for hours unsupervised, while quietly sunsetting its year-old Atlas browser to fold agentic browsing into the desktop app instead.",
+      "sources": [
+        { "name": "Ars Technica", "url": "https://arstechnica.com/ai/2026/07/openai-wants-its-new-tool-to-do-your-work-for-you-and-with-you/" },
+        { "name": "The Verge", "url": "https://www.theverge.com/ai-artificial-intelligence/963464/openai-gpt-5-6-codex-chatgpt-work" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/07/09/openai-launches-its-new-family-of-models-with-gpt-5-6/" },
+        { "name": "OpenAI", "url": "https://openai.com/index/gpt-5-6" }
+      ]
+    },
+    {
+      "headline": "Fidji Simo is stepping down as OpenAI's head of AGI deployment.",
+      "body": "She is moving into a part-time advisory role after a medical leave ran longer than planned, a leadership gap that lands awkwardly as OpenAI eyes a possible IPO and races to match Anthropic in the enterprise market.",
+      "sources": [
+        { "name": "Wired", "url": "https://www.wired.com/story/fidji-simo-ceo-agi-deployment-openai/" },
+        { "name": "The Verge", "url": "https://www.theverge.com/ai-artificial-intelligence/963738/openai-fidji-simo-steps-down-ceo-advisor" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/07/09/fidji-simo-steps-down-from-openais-no-2-role/" }
+      ]
+    },
+    {
+      "headline": "SpaceX's xAI undercuts rivals with Grok 4.5, its first model built for coding and autonomous agents.",
+      "body": "Priced at roughly half of competing frontier models, it is the first product to emerge from xAI's $60 billion acquisition of Cursor, aimed squarely at Anthropic and OpenAI's enterprise coding customers.",
+      "sources": [
+        { "name": "VentureBeat", "url": "https://venturebeat.com/technology/spacexs-grok-4-5-launches-at-half-the-price-of-rivals-heres-why-that-could-rattle-anthropic-and-openai" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/07/09/elon-musk-praises-mythos-fable-promises-not-to-cut-off-anthropic/" }
+      ]
+    },
+    {
+      "headline": "Anthropic found a \"Jacobian lens\" that reveals a hidden space where Claude works through concepts before answering.",
+      "body": "The technique gives researchers their clearest look yet at what happens inside a large model mid-task, with findings ranging from mundane to unnerving, and outside researchers are already reusing it to study why vision-language models hallucinate.",
+      "sources": [
+        { "name": "MIT Technology Review", "url": "https://www.technologyreview.com/2026/07/09/1140293/anthropic-found-a-hidden-space-where-claude-puzzles-over-concepts/" },
+        { "name": "LessWrong", "url": "https://www.lesswrong.com/posts/T3u6Hctes6vkawsib/reading-into-vlm-hallucinations-using-the-jacobian-lens" }
+      ]
+    },
+    {
+      "headline": "AI's appetite for compute is straining chips, power grids and hardware supply chains.",
+      "body": "A DRAM shortage driven by AI demand is now denting overall PC shipments, Meta says its own AI chips begin production in September to cut reliance on Nvidia, and reporting shows fossil-fuel power plants quietly multiplying across Texas to feed new data centers.",
+      "sources": [
+        { "name": "The Register", "url": "https://www.theregister.com/personal-tech/2026/07/08/ai-memory-crunch-takes-a-bite-out-of-pc-shipments/5268593" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/07/09/metas-new-ai-chips-will-begin-production-in-september/" },
+        { "name": "Wired", "url": "https://www.wired.com/story/data-centers-taking-over-texas-pollution-could-be-catastrophic/" }
+      ]
+    },
+    {
+      "headline": "The New York Times says OpenAI hid evidence in their copyright trial.",
+      "body": "Publishers allege OpenAI concealed tools and datasets that could reveal copyrighted journalism inside ChatGPT's training data and are now seeking sanctions, a move that could reshape the wider AI copyright litigation landscape.",
+      "sources": [
+        { "name": "Ars Technica", "url": "https://arstechnica.com/tech-policy/2026/07/openai-faked-inability-to-search-training-data-hid-billions-of-logs-nyt-says/" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/07/09/new-york-times-says-openai-hid-evidence-in-chatgpt-copyright-trial/" }
+      ]
+    }
+  ]
+}
