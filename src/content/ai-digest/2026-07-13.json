@@ -1,0 +1,62 @@
+{
+  "date": "2026-07-13",
+  "window": "48h",
+  "sources": 42,
+  "articles": 323,
+  "points": [
+    {
+      "headline": "GPT-5.6 lands and resets the frontier pecking order.",
+      "body": "Teams migrating production agents to GPT-5.6 report it running 2.2x faster and 27% cheaper than their previous stack, and commentators place OpenAI's \"Sol\" tier squarely in the same class as Anthropic's Fable and Mythos models. Anthropic responded by extending Fable 5 access on all paid Claude plans and holding Claude Code's weekly limits 50% higher through July 19. Weekly roundups now group GPT-5.6, Grok 4.5 and Muse Spark 1.1 as a single wave pushing past the chatbot into agent stacks.",
+      "sources": [
+        { "name": "Simon Willison", "url": "https://simonwillison.net/2026/Jul/12/bump/" },
+        { "name": "Hacker News", "url": "https://ploy.ai/blog/migrating-a-production-ai-agent-to-gpt-5-6" },
+        { "name": "TheSequence", "url": "https://thesequence.substack.com/p/the-sequence-radar-893-last-week" }
+      ]
+    },
+    {
+      "headline": "Cheaper tokens are not producing cheaper AI.",
+      "body": "DeepSeek cut V4-Pro pricing by 75%, yet vendors find margins are not improving, because agent systems consume tokens at roughly 100x the rate of chat. Instrumentation shows where it goes: one study logged Claude Code sending about 33k tokens of scaffolding before it even reads the prompt, against 7k for OpenCode. The fixes being proposed are engineering, not pricing: deterministic prompt-pruning layers and hard context discipline.",
+      "sources": [
+        { "name": "VentureBeat", "url": "https://venturebeat.com/orchestration/deepseek-cut-prices-75-the-100x-problem-remains" },
+        { "name": "Hacker News", "url": "https://systima.ai/blog/claude-code-vs-opencode-token-overhead" },
+        { "name": "Towards Data Science", "url": "https://towardsdatascience.com/long-context-isnt-free-i-built-a-safe-prompt-pruning-layer-that-makes-llm-systems-work/" }
+      ]
+    },
+    {
+      "headline": "The data center buildout is hitting political and physical limits.",
+      "body": "Irish data centers now consume 23% of the country's electricity, up another 10% while most new grid connections around Dublin stay frozen. Local opposition to AI data centers is organizing far beyond the usual pattern, and reporters covering it say the fight is only beginning. Memory makers, meanwhile, are riding the sharpest boom-bust cycle in their history, with the RAM squeeze reading as the first bill for the compute rush.",
+      "sources": [
+        { "name": "The Register", "url": "https://www.theregister.com/on-prem/2026/07/11/irish-datacenters-now-guzzle-23-of-the-countrys-electricity/5270013" },
+        { "name": "The Verge", "url": "https://www.theverge.com/column/963346/ai-data-centers-fight" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/07/12/memory-makers-are-slaves-to-the-boom-bust-rollercoaster-and-the-ai-boom-is-the-wildest-ride-of-all/5269549" }
+      ]
+    },
+    {
+      "headline": "AI now sits on both sides of the security line.",
+      "body": "An AI system found a root-level use-after-free bug in the Linux kernel that had gone unnoticed for 15 years, the strongest evidence yet that models can audit code humans cannot. Pointing the other way, \"slopsquatting\" has emerged as a supply chain attack that simply registers the package names AI assistants hallucinate. Researchers also show IDE coding agents can be jailbroken across an ordinary multi-step workflow even when they refuse the same request in a single chat turn.",
+      "sources": [
+        { "name": "Wired", "url": "https://www.wired.com/story/security-news-this-week-ai-found-a-root-bug-in-linux-that-everyone-missed-for-15-years/" },
+        { "name": "VentureBeat", "url": "https://venturebeat.com/security/forget-typosquatting-slopsquatting-is-the-software-supply-chain-threat-created-by-ai-coding-tools" },
+        { "name": "arXiv", "url": "https://arxiv.org/abs/2607.03968" }
+      ]
+    },
+    {
+      "headline": "Agent research is moving from short tasks to long horizons.",
+      "body": "New benchmarks target work that runs for hours rather than minutes and grade partial progress instead of only the final answer, because outcome-only scoring hides where agents actually break. Context management is the stated bottleneck: papers propose scoped verification for agent instructions that mutate over long runs, while practitioners publish patterns for orchestrating 100+ agents in parallel. The shared conclusion is that raw capability is no longer the limiting factor, verification and context are.",
+      "sources": [
+        { "name": "arXiv", "url": "https://arxiv.org/abs/2607.08964" },
+        { "name": "arXiv", "url": "https://arxiv.org/abs/2607.09175" },
+        { "name": "Towards Data Science", "url": "https://towardsdatascience.com/how-to-orchestrate-100-agents-with-claude-code/" }
+      ]
+    },
+    {
+      "headline": "The backlash is getting louder, and it is coming from insiders.",
+      "body": "George Hotz's \"I love LLMs, I hate hype\" topped Hacker News the same week Meta pulled its first self-declared \"superintelligence\" product after three days because it was trivially abused. Bots, not people, are now the heaviest users of the web, and Hacker News is openly debating a flag for AI-generated articles. Analysts add that enterprise buyers are drifting away from general purpose \"AI Swiss Army knives\" toward smaller, built-for-purpose tools.",
+      "sources": [
+        { "name": "Hacker News", "url": "https://geohot.github.io//blog/jekyll/update/2026/07/12/i-love-llms.html" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/07/13/meta-admits-its-first-superintelligence-was-too-stupid-to-survive-for-three-days/5270234" },
+        { "name": "The Register", "url": "https://www.theregister.com/columnists/2026/07/12/its-an-ai-web-and-were-just-rats-in-the-walls/5269760" }
+      ]
+    }
+  ]
+}
