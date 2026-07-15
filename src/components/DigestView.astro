@@ -86,6 +86,31 @@ const dateLabel = date.toLocaleDateString('en-US', {
       ))}
     </ol>
 
+    {isLatest && (
+      <section class="digest-subscribe">
+        <span class="subscribe-kicker">Newsletter</span>
+        <h2>Get the digest by email</h2>
+        <p class="subscribe-tagline">Every edition, straight to your inbox. No spam, unsubscribe anytime.</p>
+        <form
+          class="subscribe-form embeddable-buttondown-form"
+          action="https://buttondown.com/api/emails/embed-subscribe/JacopoCastellano"
+          method="post"
+          target="popupwindow"
+          onsubmit="window.open('https://buttondown.com/JacopoCastellano', 'popupwindow')"
+        >
+          <input
+            type="email"
+            name="email"
+            id="bd-email"
+            placeholder="you@example.com"
+            required
+            aria-label="Email address"
+          />
+          <button type="submit">Subscribe</button>
+        </form>
+      </section>
+    )}
+
     <footer class="digest-foot">
       <p>Synthesized automatically from major AI and tech news feeds, deduplicated so each point reflects what multiple outlets are reporting. Links point to the original sources.</p>
     </footer>
@@ -290,6 +315,85 @@ const dateLabel = date.toLocaleDateString('en-US', {
 
   .sep {
     color: var(--color-text-subtle);
+  }
+
+  /* ── Subscribe (newsletter) ── */
+  .digest-subscribe {
+    margin-top: var(--space-2xl);
+    padding: var(--space-xl);
+    text-align: center;
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border-light);
+  }
+
+  .subscribe-kicker {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--color-text-subtle);
+    margin-bottom: var(--space-sm);
+  }
+
+  .digest-subscribe h2 {
+    font-family: var(--font-serif);
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    line-height: 1.2;
+    margin: 0 0 var(--space-sm) 0;
+  }
+
+  .subscribe-tagline {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: var(--color-text-muted);
+    max-width: 30rem;
+    margin: 0 auto var(--space-lg) auto;
+  }
+
+  .subscribe-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-sm);
+    max-width: 30rem;
+    margin: 0 auto;
+  }
+
+  .subscribe-form input[type="email"] {
+    flex: 1 1 16rem;
+    min-width: 0;
+    padding: var(--space-sm) var(--space-md);
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    color: var(--color-text);
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 0;
+    transition: border-color var(--transition-fast);
+  }
+
+  .subscribe-form input[type="email"]:focus {
+    outline: none;
+    border-color: var(--color-text);
+  }
+
+  .subscribe-form button {
+    flex: 0 0 auto;
+    padding: var(--space-sm) var(--space-lg);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-bg);
+    background: var(--color-text);
+    border: 1px solid var(--color-text);
+    cursor: pointer;
+    transition: opacity var(--transition-fast);
+  }
+
+  .subscribe-form button:hover {
+    opacity: 0.85;
   }
 
   /* ── Footer note ── */
