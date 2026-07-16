@@ -1,0 +1,66 @@
+{
+  "date": "2026-07-16",
+  "window": "48h",
+  "sources": 42,
+  "articles": 520,
+  "points": [
+    {
+      "headline": "Thinking Machines ships Inkling, a 975B open-weights multimodal model.",
+      "body": "Mira Murati's lab broke an 18-month silence with its first public model: Apache-2.0 licensed, trained to understand video and audio, and pitched on low cost plus resistance to censorship. Coverage frames it as the first credible American open-weights answer to Chinese labs, and as a direct jab at OpenAI, which has kept its frontier models closed.",
+      "sources": [
+        { "name": "Wired", "url": "https://www.wired.com/story/thinking-machines-lab-releases-its-first-model-inkling/" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/07/15/thinking-machines-amps-up-its-bet-against-one-size-fits-all-ai-with-its-first-open-model-inkling/" },
+        { "name": "VentureBeat", "url": "https://venturebeat.com/technology/thinking-machines-open-sources-first-multimodal-language-model-inkling-focused-on-low-cost-and-resistance-to-censorship" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/07/16/former-openai-cto-does-what-altman-wont-releases-a-frontier-ai-model-thats-actually-open/5272177" }
+      ]
+    },
+    {
+      "headline": "xAI open sources Grok Build days after it was caught uploading whole repos.",
+      "body": "Users found that running the grok CLI in a directory silently shipped its contents, SSH keys and password vaults included, to xAI's cloud buckets. Musk promised a purge and the uploads stopped, though researchers say the privacy flag was not what actually fixed it; publishing the source is now the company's transparency gesture.",
+      "sources": [
+        { "name": "Simon Willison", "url": "https://simonwillison.net/2026/Jul/15/grok-build/#atom-everything" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/07/14/musk-promises-purge-after-grok-build-caught-sending-entire-repos-to-the-cloud/5271123" },
+        { "name": "Hacker News", "url": "https://news.ycombinator.com/item?id=48926590" }
+      ]
+    },
+    {
+      "headline": "The AI buildout is hitting political and physical limits.",
+      "body": "New York became the first state to freeze construction of 50 MW-plus data centers for a year, Australia's PM proposed forcing AI companies to generate more energy than they consume, and a lawsuit accuses AWS of quietly guzzling water behind its \"water positive\" claims. The pattern: power, water, and land are now the binding constraints, and governments are the ones tightening them.",
+      "sources": [
+        { "name": "Wired", "url": "https://www.wired.com/story/new-york-governor-signs-first-statewide-data-center-moratorium/" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/07/14/new-york-becomes-first-state-to-halt-datacenter-buildouts/5271377" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/07/15/australia-demands-ai-companies-must-produce-more-energy-than-they-consume-stop-theft-of-content/5271535" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/07/15/googles-biggest-clean-power-project-is-40-miles-north-of-xais-unpermitted-gas-power-plant/" }
+      ]
+    },
+    {
+      "headline": "AI is now both the attacker and the defender in security.",
+      "body": "OpenAI revealed GPT-Red, an in-house LLM super-hacker used as a sparring partner to harden GPT-5.6 against prompt injection, while Microsoft credited AI for a record 570-plus Patch Tuesday fixes. On the other side, a researcher exfiltrated data through Claude's web_fetch tool and a jailbroken Gemini stood up a C2 server for a fraudster in six minutes.",
+      "sources": [
+        { "name": "MIT Technology Review", "url": "https://www.technologyreview.com/2026/07/15/1140514/meet-gpt-red-an-llm-super-hacker-openai-built-to-make-its-models-safer/" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/07/15/microsoft-patches-record-number-of-security-vulnerabilities-citing-its-use-of-ai/" },
+        { "name": "Simon Willison", "url": "https://simonwillison.net/2026/Jul/15/claude-web-fetch-exfiltration/#atom-everything" },
+        { "name": "The Register", "url": "https://www.theregister.com/research/2026/07/14/the-bots-are-alive-jailbroken-gemini-spun-up-new-c2-server-for-russian-fraudster-in-just-6-minutes/5270131" }
+      ]
+    },
+    {
+      "headline": "Enterprise agents remain mostly chatbots with better marketing.",
+      "body": "A survey of 101 enterprises found orchestration consolidating on model-provider platforms, with Anthropic's Claude leading, but most deployed \"agents\" are still wrappers; Amazon's AGI autonomy director says reliability, not capability, explains why 85% pilot agents and only 5% ship. Stripe's new benchmark shows the same gap concretely: agents build integrations competently, then fail at validating them.",
+      "sources": [
+        { "name": "VentureBeat", "url": "https://venturebeat.com/ai/agentic-orchestration-enterprise-ai-organizations-have-a-deployment-problem-not-a-platform-problem-and-most-are-calling-chatbots-agents" },
+        { "name": "VentureBeat", "url": "https://venturebeat.com/technology/amazon-agi-director-says-ai-agent-reliability-not-capability-is-blocking-enterprise-deployment-at-vb-transform-2026" },
+        { "name": "InfoQ", "url": "https://www.infoq.com/news/2026/07/stripe-ai-agents-benchmark/" },
+        { "name": "The Register", "url": "https://www.theregister.com/saas/2026/07/15/salesforces-agentforce-isnt-winning-over-clients-keybanc-analysts-claim/5271866" }
+      ]
+    },
+    {
+      "headline": "Distribution, not benchmarks, is the new battleground.",
+      "body": "Apple Intelligence won Chinese regulatory approval to launch on Alibaba's Qwen, Microsoft is reportedly coaching salespeople to pitch its in-house models as cheaper than OpenAI's and Anthropic's, and South Korea is tendering a free national chatbot built on local LLMs. Who gets to be the default model on a phone, a sales call, or a government service is where the value is settling.",
+      "sources": [
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/07/15/apple-intelligence-approved-for-launch-in-china-with-alibabas-qwen-ai/" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/07/15/microsoft-is-reportedly-training-salespeople-to-talk-down-openai-and-anthropic/" },
+        { "name": "The Register", "url": "https://www.theregister.com/public-sector/2026/07/15/south-korea-to-launch-universal-basic-ai-chatbot/5271566" }
+      ]
+    }
+  ]
+}
