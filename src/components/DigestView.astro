@@ -57,14 +57,23 @@ const dateLabel = date.toLocaleDateString('en-US', {
             </>
           )}
         </span>
-        <a class="rss-subscribe" href="/ai-digest/rss.xml" title="Subscribe to the AI Digest RSS feed">
-          <svg class="rss-icon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true">
-            <circle cx="6.18" cy="17.82" r="2.18" />
-            <path d="M4 10.1v2.9a7 7 0 0 1 7 7h2.9A9.9 9.9 0 0 0 4 10.1z" />
-            <path d="M4 4.44v2.83a12.73 12.73 0 0 1 12.73 12.73h2.83A15.56 15.56 0 0 0 4 4.44z" />
-          </svg>
-          Subscribe via RSS
-        </a>
+        <span class="subscribe-buttons">
+          <a class="pill-subscribe pill-email" href={isLatest ? '#newsletter' : '/ai-digest#newsletter'} title="Get the AI Digest by email">
+            <svg class="pill-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="m2 7 10 6 10-6" />
+            </svg>
+            Subscribe by email
+          </a>
+          <a class="pill-subscribe pill-rss" href="/ai-digest/rss.xml" title="Subscribe to the AI Digest RSS feed">
+            <svg class="pill-icon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true">
+              <circle cx="6.18" cy="17.82" r="2.18" />
+              <path d="M4 10.1v2.9a7 7 0 0 1 7 7h2.9A9.9 9.9 0 0 0 4 10.1z" />
+              <path d="M4 4.44v2.83a12.73 12.73 0 0 1 12.73 12.73h2.83A15.56 15.56 0 0 0 4 4.44z" />
+            </svg>
+            Subscribe via RSS
+          </a>
+        </span>
       </div>
     </header>
 
@@ -87,7 +96,7 @@ const dateLabel = date.toLocaleDateString('en-US', {
     </ol>
 
     {isLatest && (
-      <section class="digest-subscribe">
+      <section class="digest-subscribe" id="newsletter">
         <span class="subscribe-kicker">Newsletter</span>
         <h2>Get the digest by email</h2>
         <p class="subscribe-tagline">Every edition, straight to your inbox. No spam, unsubscribe anytime.</p>
@@ -212,7 +221,14 @@ const dateLabel = date.toLocaleDateString('en-US', {
     border-color: var(--color-text);
   }
 
-  .rss-subscribe {
+  .subscribe-buttons {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-sm);
+  }
+
+  .pill-subscribe {
     display: inline-flex;
     align-items: center;
     gap: var(--space-xs);
@@ -227,13 +243,24 @@ const dateLabel = date.toLocaleDateString('en-US', {
     transition: border-color var(--transition-fast), color var(--transition-fast);
   }
 
-  .rss-subscribe:hover {
+  .pill-email:hover {
+    border-color: var(--color-text);
+    color: var(--color-text);
+  }
+
+  .pill-rss:hover {
     border-color: #f26522;
     color: #f26522;
   }
 
-  .rss-icon {
+  .pill-icon {
     flex-shrink: 0;
+  }
+
+  /* The site header is sticky (~153px tall on desktop), so an anchor jump must
+     offset past it or the header covers the top of the section. */
+  #newsletter {
+    scroll-margin-top: 11rem;
   }
 
   /* ── List of points ── */
@@ -408,6 +435,13 @@ const dateLabel = date.toLocaleDateString('en-US', {
     line-height: 1.7;
     color: var(--color-text-subtle);
     margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    /* The nav collapses into an overlay, leaving a much shorter sticky header. */
+    #newsletter {
+      scroll-margin-top: 6rem;
+    }
   }
 
   @media (max-width: 600px) {
