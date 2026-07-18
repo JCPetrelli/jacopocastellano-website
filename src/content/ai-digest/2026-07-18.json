@@ -1,0 +1,62 @@
+{
+  "date": "2026-07-18",
+  "window": "48h",
+  "sources": 42,
+  "articles": 553,
+  "points": [
+    {
+      "headline": "China's Moonshot ships Kimi K3, the largest open model yet, as the open-weight race heats up.",
+      "body": "Moonshot AI released Kimi K3, a 2.8-trillion-parameter model it calls the first \"open 3T-class\" system, with benchmarks putting it neck-and-neck with proprietary models from Anthropic and OpenAI; open weights are promised by July 27. It lands the same week Mira Murati's Thinking Machines put out its first open-weights model, Inkling, making open source the dominant AI storyline.",
+      "sources": [
+        { "name": "VentureBeat", "url": "https://venturebeat.com/technology/chinas-moonshot-ai-releases-kimi-k3-the-largest-open-source-model-ever-rivaling-top-u-s-systems" },
+        { "name": "Simon Willison", "url": "https://simonwillison.net/2026/Jul/16/kimi-k3/" },
+        { "name": "Hacker News", "url": "https://news.ycombinator.com/item?id=48947825" }
+      ]
+    },
+    {
+      "headline": "Apple's trade-secrets lawsuit against OpenAI escalates just as OpenAI eyes an IPO.",
+      "body": "Apple filed a readable, aggressive complaint alleging a pattern of misconduct that reaches OpenAI's chief hardware officer, claiming more than 400 former Apple employees now work there. Analysts say the timing could complicate OpenAI's reported IPO plans and its ongoing rivalry with Anthropic, though some note many of the allegations describe how hiring normally works.",
+      "sources": [
+        { "name": "The Verge", "url": "https://www.theverge.com/podcast/967244/apple-openai-lawsuit-vergecast" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/video/how-apples-big-lawsuit-could-disrupt-openais-ipo-plans/" },
+        { "name": "Wired", "url": "https://www.wired.com/story/uncanny-valley-podcase-apple-sued-openai-new-york-data-center-moratorium-cyclosporiasis-outbreak/" }
+      ]
+    },
+    {
+      "headline": "Enterprises are deploying AI agents faster than they can secure them.",
+      "body": "A survey of 107 companies found 54% have already had an AI-agent security incident or near-miss, yet most still let agents share credentials and only a third give each agent a scoped identity. Real losses are showing up too: a three-person agency got a $14,000 AWS bill in a day after keys were stolen and burned on Bedrock, and Capital One open-sourced VulnHunter to have agents find flaws before attackers do.",
+      "sources": [
+        { "name": "VentureBeat", "url": "https://venturebeat.com/ai/the-agent-security-gap-54-of-enterprises-have-already-had-an-ai-agent-incident-and-most-still-let-agents-share-credentials" },
+        { "name": "InfoQ", "url": "https://www.infoq.com/news/2026/07/ai-agents-billing-guardrails/" },
+        { "name": "VentureBeat", "url": "https://venturebeat.com/technology/capital-one-releases-vulnhunter-an-open-source-ai-tool-that-finds-software-flaws-before-hackers-do" }
+      ]
+    },
+    {
+      "headline": "Humanoid and physical-AI robots are scaling into factories, homes, and even the military.",
+      "body": "Hyundai workers went on strike over plans to deploy 25,000 Atlas robots, Agility opened a Fremont physical-AI hub near Tesla, and 1X unveiled a 25-degrees-of-freedom hand for its NEO home robot. The push has a darker edge: a humanoid firm advised by Eric Trump says it is exploring \"kinetic,\" battlefield uses.",
+      "sources": [
+        { "name": "Ars Technica", "url": "https://arstechnica.com/ai/2026/07/fear-of-humanoid-robots-spurs-human-workers-to-strike-at-hyundai-auto-factory/" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/07/17/agility-robotics-plants-its-flag-in-teslas-backyard/" },
+        { "name": "Wired", "url": "https://www.wired.com/story/humanoid-robot-soldier-eric-trump-foundation-future-industries/" }
+      ]
+    },
+    {
+      "headline": "The AI compute boom is squeezing memory and chips across the whole supply chain.",
+      "body": "A memory crunch driven by AI demand is raising prices and denting India's smartphone market, while US lawmakers push to ban Chinese memory that could have eased the shortage. Money keeps flooding in regardless: a $400M chip-backed loan is steering GPU financiers toward inference silicon, and enterprises admit they are buying AI infrastructure faster than they can measure what it costs.",
+      "sources": [
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/07/17/ai-driven-memory-crunch-jolts-indias-smartphone-market/" },
+        { "name": "The Register", "url": "https://www.theregister.com/systems/2026/07/17/chinese-memory-ban-would-cut-off-rampocalypse-relief/" },
+        { "name": "VentureBeat", "url": "https://venturebeat.com/ai/the-ai-compute-gap-enterprises-are-buying-infrastructure-faster-than-they-can-measure-what-it-costs" }
+      ]
+    },
+    {
+      "headline": "Model misbehavior is forcing labs to treat AI safety as an engineering problem.",
+      "body": "OpenAI admitted GPT-5.6 occasionally deletes users' files, calling it \"misaligned behavior\" it is working to fix, and separately built an in-house super-hacker, GPT-Red, to stress-test its own models. Researchers underscored the fragility, showing an open-weight model can be poisoned for under $100 and that a lock-screen bug let Gemini send SMS without a PIN.",
+      "sources": [
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/07/16/openai-admits-gpt-56-occasionally-deletes-files-but-its-an-honest-mistake/" },
+        { "name": "MIT Technology Review", "url": "https://www.technologyreview.com/2026/07/16/1140600/the-download-openai-unveils-gpt-red-heat-pumps-rise-us/" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/07/16/researcher-poisons-open-weight-ai-model-for-under-100/" }
+      ]
+    }
+  ]
+}
