@@ -1,0 +1,61 @@
+{
+  "date": "2026-07-20",
+  "window": "48h",
+  "sources": 42,
+  "articles": 343,
+  "points": [
+    {
+      "headline": "Nvidia pushes \"physical AI\" deep into Japan's industrial base.",
+      "body": "During Jensen Huang's Tokyo visit, Nvidia locked in partnerships spanning the country's robotics and auto giants: Toyota extended a deal to build AI for vehicles, factories and cities, while Fujitsu teamed with Fanuc, Yaskawa and Kawasaki to deploy physical AI across manufacturing and logistics. Nvidia also expanded its open LeRobot effort with Hugging Face, releasing the Isaac GR00T vision-language-action model for humanoids.",
+      "sources": [
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/07/19/what-to-watch-for-after-jensen-huangs-japan-visit/" },
+        { "name": "Robotics & Automation News", "url": "https://roboticsandautomationnews.com/2026/07/18/toyota-and-nvidia-expand-partnership-to-develop-ai-for-vehicles-factories-and-cities/103485/" },
+        { "name": "Robotics & Automation News", "url": "https://roboticsandautomationnews.com/2026/07/18/fujitsu-partners-with-fanuc-yaskawa-and-kawasaki-to-advance-physical-ai-using-nvidia-technology/103488/" }
+      ]
+    },
+    {
+      "headline": "Connecting AI agents to outside services is the new attack surface.",
+      "body": "Security researchers warn that wiring agents into external tools and services dramatically widens the \"risk radius,\" and Gartner predicts AI ops tools will cause console sprawl and break IT more often. On the defensive side, researchers find prompt-injection tricks like \"context bombing\" can actually shut malicious AI hacking agents down before they do harm.",
+      "sources": [
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/07/19/connecting-ai-agents-to-outside-services-explodes-the-risk-radius/5274640" },
+        { "name": "Wired", "url": "https://www.wired.com/story/prompt-injection-attacks-are-thwarting-ai-hacking-agents/" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/07/20/ai-ops-tools-will-create-console-sprawl-and-break-it-more-often-gartner/5274712" }
+      ]
+    },
+    {
+      "headline": "China's open-model surge reshapes the release race.",
+      "body": "Moonshot's new Kimi model stirred fresh debate over how fast Chinese labs are moving, and weekly trackers now frame the story as China, compression and an accelerating open-model race. Ant Group's Robbyant open-sourced an hour-long real-time world model, while a resurfaced Sam Altman memo shows OpenAI has long weighed releasing capable open weights to stay ahead of rivals.",
+      "sources": [
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/07/18/kimi-threat-or-menace/" },
+        { "name": "TheSequence", "url": "https://thesequence.substack.com/p/the-sequence-radar-897-last-week" },
+        { "name": "Robotics & Automation News", "url": "https://roboticsandautomationnews.com/2026/07/18/robbyant-releases-lingbot-world-2-0-with-hour-long-real-time-world-generation/103476/" },
+        { "name": "Simon Willison", "url": "https://simonwillison.net/2026/Jul/20/sam-altman/#atom-everything" }
+      ]
+    },
+    {
+      "headline": "Studies suggest AI is quietly eroding human judgment.",
+      "body": "New research finds using AI makes people less likely to admit they don't know something, with confidence rising even as accuracy falls. Consultants describe an \"AI mania\" distorting decision-making inside large companies, and director Christopher Nolan called AI an obvious \"Trojan horse\" for the creative industries.",
+      "sources": [
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/07/19/using-ai-makes-people-less-likely-to-admit-they-dont-know-something/5274567" },
+        { "name": "Simon Willison", "url": "https://simonwillison.net/2026/Jul/19/ai-mania/#atom-everything" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/07/19/odyssey-director-christopher-nolan-calls-ai-an-obvious-trojan-horse/" }
+      ]
+    },
+    {
+      "headline": "Netflix bets big on generative AI, on screen and behind it.",
+      "body": "Netflix disclosed it paid $587 million in cash for InterPositive, Ben Affleck's AI filmmaking startup, signaling serious investment in AI-assisted production. Separately, its engineers detailed GenPage, a single generative model that now builds personalized homepages directly, replacing a traditional multi-stage recommendation pipeline.",
+      "sources": [
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/07/19/netflix-paid-587m-for-ben-afflecks-ai-filmmaking-startup/" },
+        { "name": "InfoQ", "url": "https://www.infoq.com/news/2026/07/netflix-llm-homepage-generation/" }
+      ]
+    },
+    {
+      "headline": "AI starts producing real mathematical and scientific results.",
+      "body": "A Claude Fable model reportedly generated a genuine counterexample to the long-standing Jacobian Conjecture, drawing wide attention as evidence that frontier models can contribute novel mathematics. Meanwhile Google's AlphaEvolve reached general availability as an evolutionary code-optimization service, with early users such as Klarna doubling ML training throughput.",
+      "sources": [
+        { "name": "Hacker News", "url": "https://news.ycombinator.com/item?id=48973869" },
+        { "name": "InfoQ", "url": "https://www.infoq.com/news/2026/07/alphaevolve-generally-available/" }
+      ]
+    }
+  ]
+}
