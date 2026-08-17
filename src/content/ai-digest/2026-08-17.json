@@ -1,0 +1,62 @@
+{
+  "date": "2026-08-17",
+  "window": "48h",
+  "sources": 42,
+  "articles": 447,
+  "points": [
+    {
+      "headline": "Nvidia is now financing the customers that buy its chips.",
+      "body": "It disclosed a $21 billion stake in SpaceX and is putting $1.5 billion into the SoftBank developer building OpenAI's data center, guaranteeing its hardware powers both. Groq raised $350 million to abandon chipmaking for a neocloud business running on Nvidia GPUs.",
+      "sources": [
+        { "name": "Ars Technica", "url": "https://arstechnica.com/information-technology/2026/08/nvidia-discloses-21b-stake-in-spacex/" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/08/17/nvidia-investing-1-5b-in-softbank-data-center-developer-behind-openai-project/" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/08/17/groq-raises-350m-to-fuel-its-pivot-from-ai-chips-to-neocloud/" }
+      ]
+    },
+    {
+      "headline": "Agents fail in ways the leaderboards hide.",
+      "body": "DeepSeek's top-ranked V4 Flash completed only 53.8% of complex agent tasks across eight harnesses, and a separate eval harness found models are most confident exactly when they are wrong. Gartner expects agentic AI costs to rise fivefold by 2028, since cheaper tokens cannot offset how many a real workflow consumes.",
+      "sources": [
+        { "name": "VentureBeat", "url": "https://venturebeat.com/orchestration/deepseeks-top-ranked-v4-flash-stumbles-on-real-agent-tasks-as-its-prices-surge" },
+        { "name": "VentureBeat", "url": "https://venturebeat.com/orchestration/an-eval-harness-found-what-qualitative-review-couldnt-ai-models-are-most-confident-when-wrong" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/08/17/agentic-ai-costs-set-to-balloon-fivefold-by-2028/5288363" }
+      ]
+    },
+    {
+      "headline": "An AI wrote a bug at Snowflake and another AI exploited it.",
+      "body": "A GitHub Copilot Autofix commit introduced a CI/CD flaw that an autonomous agent later triggered simply by filing a carefully worded Jira issue. It ran through a bug bounty, but the reporting treats it as the first clean machine-to-machine attack chain.",
+      "sources": [
+        { "name": "The Register", "url": "https://www.theregister.com/security/2026/08/17/an-ai-broke-snowflakes-code-then-another-ai-agent-exploited-it/5288666" },
+        { "name": "Wiz Research", "url": "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug" },
+        { "name": "Dev.to", "url": "https://dev.to/jamilxt/copilot-autofix-introduced-a-critical-cicd-bug-at-snowflake-heres-how-to-harden-github-actions-1pf" }
+      ]
+    },
+    {
+      "headline": "Anthropic answers the AI backlash with watermarks and a trust argument.",
+      "body": "Claude's invisible text watermarking turns out to be a version of DeepMind's open-source SynthID-Text, applied to satisfy Europe's transparency rules. Dario Amodei separately called the public's negative view of AI \"fundamentally a crisis of trust\" in institutions, not a reaction to safety warnings from AI leaders.",
+      "sources": [
+        { "name": "The Verge", "url": "https://www.theverge.com/ai-artificial-intelligence/980869/anthropic-claude-watermarks-synthid-text-system" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/08/15/anthropic-shares-more-details-about-how-claudes-new-watermarks-will-work/" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/08/16/anthropic-ceo-says-ai-backlash-is-fundamentally-a-crisis-of-trust/" }
+      ]
+    },
+    {
+      "headline": "Amazon is destructively scanning rare books to train models.",
+      "body": "404 Media tracked a shipment of rare books to an Amazon AI training facility, confirming the suspicion behind anonymous, price-insensitive bulk orders placed with dealers. Print is valuable precisely because it was never online for earlier training runs.",
+      "sources": [
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/08/17/amazon-once-an-online-bookseller-is-destroying-rare-books-to-train-ai-models/" },
+        { "name": "404 Media", "url": "https://www.404media.co/we-tracked-a-shipment-of-rare-books-it-ended-at-an-amazon-ai-training-facility/" },
+        { "name": "Simon Willison", "url": "https://simonwillison.net/2026/Aug/17/we-tracked-a-shipment-of-rare-books-it-ended-at-an-amazon-ai-tra/" }
+      ]
+    },
+    {
+      "headline": "Capital is moving into AI that does physical work.",
+      "body": "Gravis Robotics raised a $200 million Series A from SoftBank to put autonomy software and hardware on excavators and other construction equipment. Uber added Zipline drones to Eats, took a stake in the company, and set a target of one million daily drone deliveries by 2029.",
+      "sources": [
+        { "name": "The Robot Report", "url": "https://www.therobotreport.com/gravis-robotics-raises-200m-autonomous-construction/" },
+        { "name": "The Verge", "url": "https://www.theverge.com/transportation/980912/uber-eats-zipline-drone-delivery-investment" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/08/17/uber-adds-zipline-drones-to-its-eats-delivery-network/" }
+      ]
+    }
+  ]
+}
