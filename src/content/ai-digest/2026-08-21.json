@@ -1,0 +1,66 @@
+{
+  "date": "2026-08-21",
+  "window": "48h",
+  "sources": 42,
+  "articles": 525,
+  "points": [
+    {
+      "headline": "OpenAI opens an enterprise offensive against Anthropic.",
+      "body": "New usage data shows OpenAI closing the gap with Anthropic among business customers, and it is courting them with a zero data retention pledge for frontier models. The push lands during visible upheaval at the top, with Greg Brockman's remit expanded and investors questioning C-suite turnover.",
+      "sources": [
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/08/20/openai-is-gaining-on-anthropic-with-business-users-new-data-indicates/" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/08/20/openai-chases-anthropics-biz-customers-with-zero-data-retention-pledge/5290609" },
+        { "name": "OpenAI", "url": "https://openai.com/index/offering-zero-data-retention-for-frontier-models" },
+        { "name": "The Verge", "url": "https://www.theverge.com/ai-artificial-intelligence/982774/greg-brockman-openai-role-expansion" }
+      ]
+    },
+    {
+      "headline": "AI agents move out of the terminal and into the group chat.",
+      "body": "Slack is putting coding agents and persistent agent teams directly into channels through Slack Code and NanoClaw, while open harnesses like TrueForge and the newly open-sourced DeepSeek harness unbundle agent infrastructure. The gap is governance: one in five enterprises cannot stop a runaway agent's spending in real time.",
+      "sources": [
+        { "name": "VentureBeat", "url": "https://venturebeat.com/orchestration/slack-wants-to-drag-ai-coding-out-of-the-terminal-and-into-the-group-chat" },
+        { "name": "VentureBeat (spend)", "url": "https://venturebeat.com/orchestration/one-in-five-enterprises-cant-stop-a-runaway-ai-agents-spending-in-real-time" },
+        { "name": "The Register", "url": "https://www.theregister.com/saas/2026/08/20/slack-code-taps-into-collective-vibe-puts-ai-agents-into-the-group-chat/5290413" },
+        { "name": "InfoQ", "url": "https://www.infoq.com/news/2026/08/deep-seek-harness/" }
+      ]
+    },
+    {
+      "headline": "Prompt injection stops being theoretical.",
+      "body": "Researchers showed Grok can be tricked into exfiltrating user data through encrypted malicious instructions, a technique dubbed Cryptographic Context Injection. Separately, US authorities warned that attackers are already using AI-written code against critical infrastructure controllers, and an engineer nearly installed a malware package on an agent's recommendation.",
+      "sources": [
+        { "name": "Ars Technica", "url": "https://arstechnica.com/security/2026/08/grok-exfiltrates-user-data-when-malicious-instructions-are-encrypted/" },
+        { "name": "The Register (CISA warning)", "url": "https://www.theregister.com/security/2026/08/19/not-a-theoretical-risk-feds-warn-as-attackers-use-ai-made-code-to-hack-critical-infrastructure-controllers/5289960" },
+        { "name": "The Register (malware package)", "url": "https://www.theregister.com/security/2026/08/20/ai-agent-suggested-installing-a-malware-package-engineer-almost-took-its-advice/5289849" }
+      ]
+    },
+    {
+      "headline": "The compute build-out turns geopolitical and energy-bound.",
+      "body": "Alibaba Cloud plans to cut Western chips from its stack to protect already large AI margins, Supermicro fired staff over a $2.5 billion GPU smuggling probe, and Google is playing Marvell against Broadcom on custom silicon. Power is becoming the binding constraint, with AMD pitching efficiency gains as the field starts talking about energy scaling laws.",
+      "sources": [
+        { "name": "The Register (Alibaba)", "url": "https://www.theregister.com/off-prem/2026/08/21/alibaba-cloud-plans-to-use-fewer-western-chips-to-boost-its-already-huge-ai-margins/5290815" },
+        { "name": "The Register (Supermicro)", "url": "https://www.theregister.com/legal/2026/08/21/supermicro-fired-staff-after-probe-into-25-billion-gpus-to-china-smuggling-operation/5290791" },
+        { "name": "The Register (Google silicon)", "url": "https://www.theregister.com/off-prem/2026/08/19/google-pits-marvell-against-broadcom-as-it-chases-ai-crown/5289902" },
+        { "name": "TheSequence", "url": "https://thesequence.substack.com/p/the-sequence-opinion-issue-918-the" }
+      ]
+    },
+    {
+      "headline": "Public sentiment sours as AI-written text floods the web.",
+      "body": "More than half of Americans now view AI negatively, and commentators argue Silicon Valley still does not understand why. A study found roughly a third of web pages published since ChatGPT's launch show signs of AI authorship, and Google is offering publishers new tools to fight AI-driven traffic losses.",
+      "sources": [
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/08/19/more-than-half-of-americans-now-view-ai-negatively/5289736" },
+        { "name": "Wired", "url": "https://www.wired.com/story/silicon-valley-doesnt-get-why-you-hate-ai/" },
+        { "name": "TechCrunch (AI authorship)", "url": "https://techcrunch.com/2026/08/20/a-third-of-webpages-published-since-chatgpts-launch-show-signs-of-ai-authorship-study-finds/" },
+        { "name": "TechCrunch (publishers)", "url": "https://techcrunch.com/2026/08/20/google-gives-publishers-a-new-way-to-fight-ai-driven-traffic-losses/" }
+      ]
+    },
+    {
+      "headline": "Physical AI scales up while regulation splits by country of origin.",
+      "body": "Nevada cleared Tesla, Uber and Waymo to operate thousands of robotaxis, one of the largest single approvals so far. Meanwhile an FCC ban on foreign-made robots pushed the US distributor of China's leading humanoids toward domestic manufacturing, just as Unitree's IPO sets a valuation marker for the whole sector.",
+      "sources": [
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/08/20/tesla-uber-and-waymo-all-get-the-ok-to-operate-thousands-of-robotaxis-in-nevada/" },
+        { "name": "Ars Technica", "url": "https://arstechnica.com/gadgets/2026/08/us-distributor-of-chinas-most-popular-humanoid-robots-pivots-after-us-ban/" },
+        { "name": "The Robot Report", "url": "https://www.therobotreport.com/what-does-unitree-robotics-ipo-mean-for-humanoid-industry/" }
+      ]
+    }
+  ]
+}
