@@ -1,0 +1,56 @@
+{
+  "date": "2026-08-24",
+  "window": "48h",
+  "sources": 42,
+  "articles": 437,
+  "points": [
+    {
+      "headline": "Anthropic's revenue surges even as cheaper rivals peel off users.",
+      "body": "Anthropic's annualized revenue reportedly jumped from $47 billion in May to $65 billion in July, but an FT report notes its flagship model is struggling to hold users against lower-cost alternatives. Developers writing on Dev.to echo the concern, arguing Claude's pricing leaves gaps that cheaper tools are exploiting.",
+      "sources": [
+        { "name": "Simon Willison", "url": "https://simonwillison.net/2026/Aug/23/anthropics-best-ai-model-struggles-to-attract-users-as-cheaper-t/" },
+        { "name": "Dev.to", "url": "https://dev.to/adilaidev/why-claude-loses-users-to-cheaper-ai-tools-44cn" }
+      ]
+    },
+    {
+      "headline": "AI's memory hunger is repricing cloud and consumer tech.",
+      "body": "OVHcloud is raising cloud server prices by up to 87 percent, citing RAM that costs six times more than a year ago as suppliers redirect capacity to high-bandwidth memory for AI. Amazon followed with price hikes of up to 60 percent on Echo, Kindle, and Fire TV devices, citing the same memory and storage cost squeeze.",
+      "sources": [
+        { "name": "InfoQ", "url": "https://www.infoq.com/news/2026/08/ovhcloud-memory-price-rise/" },
+        { "name": "The Verge", "url": "https://www.theverge.com/tech/983598/amazon-price-increase-echo-kindle-fire-tv" }
+      ]
+    },
+    {
+      "headline": "Frontier labs still lack a plan for a rogue model.",
+      "body": "A new study finds leading AI labs have few publicly documented plans for containing a model that goes rogue, even as systems increasingly show unexpected behavior. LessWrong contributors separately argue that alignment research has quietly merged with capabilities research over the past decade, blurring the line meant to keep development safe.",
+      "sources": [
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/08/22/frontier-ai-labs-still-wont-say-how-theyd-contain-a-rogue-model/" },
+        { "name": "LessWrong", "url": "https://www.lesswrong.com/posts/yaz8nx4ogZmiqHzt7/what-just-happened-pragmatism-and-pessimization" }
+      ]
+    },
+    {
+      "headline": "Enterprises are reining in agent autonomy, not expanding it.",
+      "body": "VentureBeat reports that companies actually succeeding with AI agents are deliberately limiting how much agents can do alone, after two years of assuming more autonomy meant better results. A UiPath analysis makes the same point from the automation side: most enterprises already have plenty of agents and bots, but no single layer accountable for the end-to-end outcome.",
+      "sources": [
+        { "name": "VentureBeat", "url": "https://venturebeat.com/orchestration/enterprises-winning-with-ai-agents-are-limiting-how-much-the-agents-can-do-alone" },
+        { "name": "UiPath Blog", "url": "https://www.uipath.com/blog/ai/cn/what-is-agentic-business-orchestration" }
+      ]
+    },
+    {
+      "headline": "New challengers rattle the frontier-lab pecking order.",
+      "body": "A mysterious stealth model called Ox Alpha has internet sleuths speculating about its origin, while DeepMind-alumni startup Inherent says its Faraday agent just outperformed both Anthropic and OpenAI at replicating scientific research. Both stories point to a narrowing gap between the biggest labs and fast-moving upstarts.",
+      "sources": [
+        { "name": "TechCrunch: Ox Alpha", "url": "https://techcrunch.com/2026/08/23/whos-behind-the-new-stealth-model-ox-alpha/" },
+        { "name": "TechCrunch: Inherent", "url": "https://techcrunch.com/2026/08/22/inherent-founded-by-deepmind-alumni-says-its-ai-teammate-just-outperformed-anthropic-and-openai-at-replicating-research/" }
+      ]
+    },
+    {
+      "headline": "AI's legal and policy fights are intensifying.",
+      "body": "OpenAI is now urging California to strengthen, not weaken, its SB 53 AI safety bill, a reversal from its earlier opposition. Separately, the legality of training models on copyrighted books remains murky, with most authors having unknowingly contributed to the very tools now competing with them.",
+      "sources": [
+        { "name": "TechCrunch: SB 53", "url": "https://techcrunch.com/2026/08/22/openai-says-california-should-strengthen-its-ai-safety-bill/" },
+        { "name": "TechCrunch: Copyright", "url": "https://techcrunch.com/2026/08/23/is-it-legal-to-train-ai-models-on-copyrighted-books-its-complicated/" }
+      ]
+    }
+  ]
+}
