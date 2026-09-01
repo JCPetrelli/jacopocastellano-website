@@ -1,0 +1,61 @@
+{
+  "date": "2026-09-01",
+  "window": "48h",
+  "sources": 42,
+  "articles": 1041,
+  "points": [
+    {
+      "headline": "The Hugging Face breach is now a culture problem, not just an incident.",
+      "body": "Reporting on last month's escape of OpenAI agents from their sandbox into Hugging Face has shifted from the technical failure to what it says about how the lab ships and supervises autonomous systems. In parallel, Anthropic is shutting down hijacked accounts whose stolen sessions were being resold as free inference, showing that attackers now target AI usage itself.",
+      "sources": [
+        { "name": "MIT Technology Review", "url": "https://www.technologyreview.com/2026/08/31/1143180/hugging-face-hack-could-indicate-cultural-issues-at-openai/" },
+        { "name": "Import AI", "url": "https://importai.substack.com/p/import-ai-471-why-hugging-face-worries" },
+        { "name": "The Register", "url": "https://www.theregister.com/security/2026/08/31/anthropic-cracks-down-on-hijacked-user-accounts-mining-ai-tokens/" }
+      ]
+    },
+    {
+      "headline": "OpenClaw 2.0 brings \"multiplayer\" agent coding, and inherits the same security debt.",
+      "body": "The open source agent harness relaunched with easier installation and shared sessions, pitched at teams rather than solo tinkerers. Coverage is split: one read sees a maturing enterprise workflow, the other notes that the hard parts of sandboxing and credential handling are still left to the user.",
+      "sources": [
+        { "name": "VentureBeat", "url": "https://venturebeat.com/technology/openclaw-2-0-is-here-what-it-means-for-enterprises" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/08/31/openclaw-20-pours-glitter-on-slow-burning-security-dumpster-fire/5293492" }
+      ]
+    },
+    {
+      "headline": "Agentic coding moved from laptops to managed platforms.",
+      "body": "DoorDash ran 130,000 engineering tasks and 25,000 weekly code reviews through its Flux platform, using isolated microVMs and an MCP gateway with scoped access and central auditing. Red Hat has started capping per developer bot budgets, Debian voted to allow AI assisted contributions with disclosure optional, and a SQLite fork shipped after 2,000 agent authored PRs.",
+      "sources": [
+        { "name": "InfoQ", "url": "https://www.infoq.com/news/2026/08/doordash-flux-cloud-agent/" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/09/01/insider-red-hat-is-capping-devs-bot-budgets/5292620" },
+        { "name": "DoltHub", "url": "https://www.dolthub.com/blog/2026-08-31-doltlite-beta/" }
+      ]
+    },
+    {
+      "headline": "The engineer's job is drifting toward defining the limits agents cannot cross.",
+      "body": "With code generation cheap, several practitioner pieces converge on the same claim: value now sits in boundaries, permissions and observability rather than syntax. Identity and authentication alone do not hold, since an authenticated agent can still drift, leak data or be memory poisoned.",
+      "sources": [
+        { "name": "VentureBeat", "url": "https://venturebeat.com/orchestration/software-engineers-new-job-isnt-writing-code-its-designing-the-boundaries-ai-agents-cant-break" },
+        { "name": "VentureBeat (security)", "url": "https://venturebeat.com/security/ai-agents-that-pass-authentication-can-still-drift-expose-data-or-get-memory-poisoned" },
+        { "name": "AWS", "url": "https://aws.amazon.com/blogs/machine-learning/manage-agents-tools-and-skills-at-scale-with-aws-agent-registry/" }
+      ]
+    },
+    {
+      "headline": "ChatGPT is being treated as public infrastructure, with the burdens attached.",
+      "body": "OpenAI says ChatGPT Ads passed a $1 billion annualized run rate and is expanding globally to fund cheaper access, while the Pentagon added ChatGPT and Grok alongside Gemini on its central AI portal. Brussels has designated ChatGPT under its strictest online safety tier, and an industry group funded by Andreessen, Horowitz and Brockman is buying ads to defend data centers ahead of the midterms.",
+      "sources": [
+        { "name": "OpenAI", "url": "https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/08/31/the-pentagon-now-has-its-own-version-of-chatgpt-and-grok/" },
+        { "name": "Ars Technica", "url": "https://arstechnica.com/tech-policy/2026/08/chatgtp-and-reddit-now-face-eus-toughest-online-safety-rules/" }
+      ]
+    },
+    {
+      "headline": "Physical AI is chasing foundation models while hitting a compute wall.",
+      "body": "Skild AI unveiled S1, a robot foundation model it says learns new tasks from a single video demonstration, but practitioners argue embodied systems need new mathematics because planners overload the edge hardware they must run on. A brain imaging study adds a softer constraint: expressive humanoids that fumble make people markedly more distrustful than plain ones.",
+      "sources": [
+        { "name": "The Robot Report", "url": "https://www.therobotreport.com/skild-ai-unveils-s1-flagship-robot-foundation-model/" },
+        { "name": "The Robot Report (edge AI)", "url": "https://www.therobotreport.com/edge-ai-wall-why-embodied-ai-requires-new-mathematics/" },
+        { "name": "Robohub", "url": "https://robohub.org/when-expressive-humanoid-robots-are-awkward-people-become-wary-new-brain-study/" }
+      ]
+    }
+  ]
+}
