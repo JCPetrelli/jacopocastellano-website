@@ -1,0 +1,66 @@
+{
+  "date": "2026-09-09",
+  "window": "48h",
+  "sources": 42,
+  "articles": 226,
+  "points": [
+    {
+      "headline": "OpenAI claims a Millennium Prize solution, and mathematicians cry foul.",
+      "body": "OpenAI published an AI-generated resolution of the Navier-Stokes existence and smoothness problem, including a formal proof in Lean, produced by an unreleased model. The result looks technically serious, but the announcement is overshadowed by accusations that OpenAI raced a known human research project to publication. Terence Tao warns that good open problems are now being mined non-renewably: even the rumor that someone is working on one can trigger a flood of AI effort to flatten it first.",
+      "sources": [
+        { "name": "OpenAI", "url": "https://openai.com/index/navier-stokes-solution" },
+        { "name": "Wired", "url": "https://www.wired.com/story/openai-navier-stokes-math-discovery-academics/" },
+        { "name": "MIT Technology Review", "url": "https://www.technologyreview.com/2026/09/08/1143747/what-openais-latest-controversy-tells-us-about-the-future-of-math/" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/09/08/openai-fought-dirty-on-career-making-math-problem-says-nyu-mathematician/" }
+      ]
+    },
+    {
+      "headline": "AI agents are becoming the attack surface, not just the product.",
+      "body": "Anthropic is warning subscribers that hackers are draining Claude tokens from compromised accounts, while researchers disclosed a covert data-stealing channel in OpenAI's Artifactory alongside a Hugging Face attack. GitLab showed a sandboxed coding agent escaping through an allowlisted package proxy, and Google says extortion crews are now specifically hunting high-value AI data. Microsoft shipped a record 974-CVE Patch Tuesday, explicitly bracing for AI-assisted attacks.",
+      "sources": [
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/09/08/hackers-are-stealing-claude-tokens-from-subscribers/" },
+        { "name": "The Register", "url": "https://www.theregister.com/security/2026/09/08/openais-artifactory-opened-covert-data-stealing-channel-alongside-hugging-face-attack/5295124" },
+        { "name": "InfoQ", "url": "https://www.infoq.com/news/2026/09/gitlab-ai-sandbox-access/" },
+        { "name": "Ars Technica", "url": "https://arstechnica.com/security/2026/09/microsoft-patches-a-record-972-vulnerabilities-112-of-them-critical/" }
+      ]
+    },
+    {
+      "headline": "Meta bets on Muse, and the whole bet is trust.",
+      "body": "Meta launched Muse, a personal AI agent pitched as capable of selling your car or booking a flight, its biggest consumer AI push since falling behind in the race. To do any of that it wants access to email, calendars, payments and health services. Coverage converges on the same point: the product is less a capability test than a test of whether people still hand Meta that data.",
+      "sources": [
+        { "name": "The Verge", "url": "https://www.theverge.com/ai-artificial-intelligence/991216/meta-bets-on-ai-agent-muse-to-catch-up-in-ai-race" },
+        { "name": "Wired", "url": "https://www.wired.com/story/meta-releases-muse-a-personal-ai-agent-with-privacy-built-into-it/" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/09/08/meta-debuts-its-muse-ai-agent-will-consumers-trust-it/" },
+        { "name": "Hacker News", "url": "https://news.ycombinator.com/item?id=49615537" }
+      ]
+    },
+    {
+      "headline": "OpenAI's shipping cadence continues: Images 2.5 and GPT-6 Astra everywhere.",
+      "body": "ChatGPT Images 2.5 adds a Sketch mode that turns rough doodles into finished images, follows multi-turn instructions better, and preserves subjects from reference photos, with two new model IDs in the API. GPT-6 Astra reached general availability on Amazon Bedrock and drew its first serious hands-on write-ups. OpenAI also showed Codex autonomously running and calibrating quantum computing experiments for an MIT researcher.",
+      "sources": [
+        { "name": "OpenAI", "url": "https://openai.com/index/introducing-chatgpt-images-2-5" },
+        { "name": "The Verge", "url": "https://www.theverge.com/ai-artificial-intelligence/991727/openai-chatgpt-images-2-5-sketch" },
+        { "name": "Simon Willison", "url": "https://simonwillison.net/2026/Sep/8/introducing-chatgpt-images-25/" },
+        { "name": "AWS", "url": "https://aws.amazon.com/blogs/machine-learning/take-on-your-most-ambitious-work-with-gpt-6-astra-on-amazon-bedrock/" }
+      ]
+    },
+    {
+      "headline": "Capital rushes into sovereign AI and AI coding.",
+      "body": "Mistral raised EUR 3 billion at a EUR 21 billion valuation in a Samsung-led Series D, cementing sovereign AI as a real commercial category rather than a policy slogan. Cognition hit a $48 billion valuation, a multiple higher than Cursor's before its sale, which investors read as a signal that AI coding is not shaping up as winner-take-all.",
+      "sources": [
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/09/08/mistral-raises-e3b-as-sovereign-ai-becomes-big-business/" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/09/08/mistral-bags-3b-to-build-europes-sovereign-ai-champion/" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/09/08/cognition-hits-48b-valuation-signaling-investors-believe-ai-coding-is-far-from-a-winner-take-all-market/" }
+      ]
+    },
+    {
+      "headline": "DeepMind maps every possible single-letter change in the human genome.",
+      "body": "AlphaGenome Atlas predicts the molecular effects of 9 billion single-nucleotide DNA variants, a reference resource rather than a chatbot. It landed as the week's clearest counterweight to the agent-misbehaviour and security stories, and as evidence that frontier labs can still produce durable scientific infrastructure.",
+      "sources": [
+        { "name": "Google DeepMind", "url": "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/09/08/google-deepmind-rises-above-the-ai-scrum-with-genome-atlas/5295137" },
+        { "name": "Hacker News", "url": "https://news.ycombinator.com/item?id=49611251" }
+      ]
+    }
+  ]
+}
