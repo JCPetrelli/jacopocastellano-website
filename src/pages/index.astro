@@ -20,31 +20,9 @@ const recentPosts = blogPosts
   <!-- Hero -->
   <section class="hero">
     <div class="hero-video-wrapper">
-      <video
-        class="hero-video"
-        autoplay
-        muted
-        loop
-        playsinline
-        poster="/videos/hero-bg-poster.jpg"
-      >
-        <source src="/videos/hero-bg.webm" type="video/webm" />
-        <source src="/videos/hero-bg.mp4" type="video/mp4" />
-      </video>
+      <div id="rise-bg" class="hero-canvas" aria-hidden="true"></div>
       <div class="hero-overlay"></div>
     </div>
-    <button class="audio-toggle" id="audioToggle" aria-label="Toggle audio">
-      <svg class="icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M11 5L6 9H2v6h4l5 4V5z"/>
-        <line x1="23" y1="9" x2="17" y2="15"/>
-        <line x1="17" y1="9" x2="23" y2="15"/>
-      </svg>
-      <svg class="icon-unmuted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M11 5L6 9H2v6h4l5 4V5z"/>
-        <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
-        <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
-      </svg>
-    </button>
     <div class="container">
       <div class="hero-content">
         <h1 class="hero-title">
@@ -174,10 +152,14 @@ const recentPosts = blogPosts
     z-index: -1;
   }
 
-  .hero-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  .hero-canvas {
+    position: absolute;
+    inset: 0;
+    background: #000;
+  }
+
+  .hero-canvas :global(canvas) {
+    display: block;
   }
 
   .hero-overlay {
@@ -259,46 +241,11 @@ const recentPosts = blogPosts
     margin-bottom: var(--space-xl);
   }
 
-  .audio-toggle {
-    position: absolute;
-    bottom: var(--space-lg);
-    right: var(--space-lg);
-    z-index: 10;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    background: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(8px);
-    color: white;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all var(--transition-fast);
-  }
 
-  .audio-toggle:hover {
-    background: rgba(0, 0, 0, 0.6);
-    border-color: rgba(255, 255, 255, 0.5);
-  }
 
-  .audio-toggle svg {
-    width: 20px;
-    height: 20px;
-  }
 
-  .audio-toggle .icon-unmuted {
-    display: none;
-  }
 
-  .audio-toggle.playing .icon-muted {
-    display: none;
-  }
 
-  .audio-toggle.playing .icon-unmuted {
-    display: block;
-  }
 
   /* Highlighted Projects */
   .highlighted-projects {
@@ -400,14 +347,10 @@ const recentPosts = blogPosts
   }
 </style>
 
-<script>
-  const audioToggle = document.getElementById('audioToggle');
-  const heroVideo = document.querySelector('.hero-video') as HTMLVideoElement;
-
-  if (audioToggle && heroVideo) {
-    audioToggle.addEventListener('click', () => {
-      heroVideo.muted = !heroVideo.muted;
-      audioToggle.classList.toggle('playing', !heroVideo.muted);
-    });
-  }
-</script>
+<script is:inline src="/rise/p5.min.js"></script>
+<script is:inline src="/rise/config.js"></script>
+<script is:inline src="/rise/tunnel.js"></script>
+<script is:inline src="/rise/drop.js"></script>
+<script is:inline src="/rise/ripple.js"></script>
+<script is:inline src="/rise/splash.js"></script>
+<script is:inline src="/rise/sketch.js"></script>
