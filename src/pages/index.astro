@@ -14,6 +14,9 @@ const blogPosts = await getCollection('blog', ({ data }) => !data.draft);
 const recentPosts = blogPosts
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, 3);
+
+// cache-buster for the hero sketch files, which GitHub Pages caches for 10 minutes
+const riseVersion = Date.now().toString(36);
 ---
 
 <BaseLayout title="Senior Software Engineer & Video Designer">
@@ -353,10 +356,10 @@ const recentPosts = blogPosts
   }
 </style>
 
-<script is:inline src="/rise/p5.min.js"></script>
-<script is:inline src="/rise/config.js"></script>
-<script is:inline src="/rise/tunnel.js"></script>
-<script is:inline src="/rise/drop.js"></script>
-<script is:inline src="/rise/ripple.js"></script>
-<script is:inline src="/rise/splash.js"></script>
-<script is:inline src="/rise/sketch.js"></script>
+<script is:inline src={`/rise/p5.min.js?v=${riseVersion}`}></script>
+<script is:inline src={`/rise/config.js?v=${riseVersion}`}></script>
+<script is:inline src={`/rise/tunnel.js?v=${riseVersion}`}></script>
+<script is:inline src={`/rise/drop.js?v=${riseVersion}`}></script>
+<script is:inline src={`/rise/ripple.js?v=${riseVersion}`}></script>
+<script is:inline src={`/rise/splash.js?v=${riseVersion}`}></script>
+<script is:inline src={`/rise/sketch.js?v=${riseVersion}`}></script>
