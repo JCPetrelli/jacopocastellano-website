@@ -5,7 +5,7 @@ const CONFIG = {
   palette: ['#ffffff', '#e2e2e2', '#bdbdbd', '#8c8c8c'],
 
   walls: ['top', 'bottom', 'left', 'right'],  // drop any to leave that side open
-  outer: 0.48,      // near rectangle half-size, as a fraction of the canvas width and height
+  outer: 0.5,       // near rectangle half-size, as a fraction of the canvas width and height (0.5 = edge to edge)
   inner: 0.06,      // far rectangle half-size (the vanishing point)
   edgeAlpha: 26,    // faint tunnel edges; 0 hides them
   depthScale: [0.3, 1.25], // size multiplier at the far and near edge of a wall

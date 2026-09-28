@@ -85,7 +85,6 @@ function drawTunnelEdges() {
   strokeWeight(1);
   noFill();
   rectMode(RADIUS);
-  rect(cx, cy, o * A, o);
   rect(cx, cy, i * A, i);
   for (const [sx, sy] of [[-1, -1], [1, -1], [1, 1], [-1, 1]]) {
     line(cx + sx * i * A, cy + sy * i, cx + sx * o * A, cy + sy * o);
