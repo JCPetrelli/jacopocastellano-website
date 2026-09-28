@@ -24,9 +24,25 @@ Every concept is a brick, related concepts form a sub-assembly, and a brick's si
 
 ## Live demos
 
-- [Web Request Lifecycle](https://jcpetrelli.github.io/brickwise/examples/web-request.html): themed, a train
-- [Theory of Relativity](https://jcpetrelli.github.io/brickwise/examples/relativity.html): stack
-- [Brickwise Internals](https://jcpetrelli.github.io/brickwise/examples/brickwise.html): the repo explaining itself
+Drag to orbit, press `E` to explode, click a brick to read it.
+
+### Theory of Relativity (stack)
+
+<div style="position:relative;aspect-ratio:4/3;border-radius:10px;overflow:hidden;margin:1rem 0 0.5rem"><iframe src="https://jcpetrelli.github.io/brickwise/examples/relativity.html" title="Brickwise: Theory of Relativity" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe></div>
+
+[Open full screen](https://jcpetrelli.github.io/brickwise/examples/relativity.html)
+
+### Web Request Lifecycle (themed: a train)
+
+<div style="position:relative;aspect-ratio:4/3;border-radius:10px;overflow:hidden;margin:1rem 0 0.5rem"><iframe src="https://jcpetrelli.github.io/brickwise/examples/web-request.html" title="Brickwise: Web Request Lifecycle" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe></div>
+
+[Open full screen](https://jcpetrelli.github.io/brickwise/examples/web-request.html)
+
+### Brickwise Internals (the repo explaining itself)
+
+<div style="position:relative;aspect-ratio:4/3;border-radius:10px;overflow:hidden;margin:1rem 0 0.5rem"><iframe src="https://jcpetrelli.github.io/brickwise/examples/brickwise.html" title="Brickwise: Brickwise Internals" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe></div>
+
+[Open full screen](https://jcpetrelli.github.io/brickwise/examples/brickwise.html)
 
 ## Controls
 
