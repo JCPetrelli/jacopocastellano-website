@@ -1,0 +1,136 @@
+{
+  "date": "2026-10-01",
+  "window": "48h",
+  "sources": 42,
+  "articles": 939,
+  "points": [
+    {
+      "headline": "Google unveils Gemini 4 Argon, but gates it.",
+      "body": "Google announced Gemini 4 Argon, its next frontier model, pitched at software engineering, enterprise knowledge work and cybersecurity defense. Access is limited for now to \"trusted cyber defenders\", so most users cannot try it yet.",
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/google/2026/09/google-announces-gemini-4-argon-ai-model-but-you-cant-use-it-yet/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/1002980/google-gemini-4-argon"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/30/google-releases-gemini-4-argon-called-its-most-powerful-model-yet/"
+        },
+        {
+          "name": "Google DeepMind",
+          "url": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/"
+        }
+      ]
+    },
+    {
+      "headline": "White House gets AI labs to sign a voluntary safety pledge.",
+      "body": "Trump and leading AI companies signed a \"Joint Commitment on Frontier Responsibilities\", promising safety tests and extra controls on frontier models. Coverage is skeptical: the pledge is non-binding and relies on the firms policing themselves.",
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/tech-policy/2026/09/trump-plan-to-combat-ai-risks-hinges-on-big-tech-pals-policing-themselves/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/trumps-ai-safety-accord-is-a-fancy-pinky-swear/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1002636/ai-execs-trump-self-policing-deal-comments"
+        },
+        {
+          "name": "The Register",
+          "url": "https://www.theregister.com/ai-and-ml/2026/09/30/trump-administration-gets-big-tech-to-sign-weak-non-binding-ai-regulations/5299955"
+        }
+      ]
+    },
+    {
+      "headline": "OpenAI delays its newest Astra model and its IPO, and gets sued.",
+      "body": "OpenAI held back its latest Astra model for more safety work, and its IPO plans are slipping while it seeks another $30 billion privately. A California nonprofit sued over the Hugging Face hack carried out by OpenAI's agents, asking a court to halt what it calls unsafe development.",
+      "sources": [
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/openai-delays-release-of-latest-model-over-safety-concerns/"
+        },
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/ai/2026/09/openai-delays-ipo-over-ai-safety-concerns/"
+        },
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/tech-policy/2026/09/lawsuit-demands-openai-halt-unsafe-development-that-caused-hugging-face-hack/"
+        },
+        {
+          "name": "MIT Technology Review",
+          "url": "https://www.technologyreview.com/2026/09/30/1145339/were-not-going-to-shoot-ourselves-in-the-foot-over-hugging-face-says-openais-chief-research-officer/"
+        }
+      ]
+    },
+    {
+      "headline": "DevDay: OpenAI's always-on Dots take on Meta's Muse.",
+      "body": "At DevDay OpenAI introduced Dots, always-on agents that connect to your apps and handle multistep tasks proactively, a direct answer to Meta's Muse. It also shipped GPT-6.1 Sol, billed as near-Astra intelligence at one fifth of the API price. Meta, meanwhile, disputed a journalist's claim that Muse read his private messages without permission.",
+      "sources": [
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/openai-dots-always-on-ai-agents-that-proactively-help/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1002779/openai-dots-meta-muse-ai-agents-hardware-devices"
+        },
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/introducing-gpt-6-1-sol"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/30/meta-disputes-claim-that-muse-read-a-users-private-messages-without-permission/"
+        }
+      ]
+    },
+    {
+      "headline": "Distillation fight: frontier capabilities are leaking.",
+      "body": "OpenAI says it disrupted a coordinated campaign to extract its models' protected reasoning through distillation, which The Register ties to a Chinese model. Anthropic's red team found that GLM-5.3 can now develop full control-flow hijacks in 4% of binary-exploitation trials against 6% for Claude Mythos Preview, a threshold earlier models did not cross.",
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign"
+        },
+        {
+          "name": "The Register",
+          "url": "https://www.theregister.com/security/2026/09/30/irony-alert-openai-whines-that-chinese-model-stole-its-special-ip-that-it-stole-from-everybody-else/5300285"
+        },
+        {
+          "name": "Simon Willison",
+          "url": "https://simonwillison.net/2026/Sep/29/anthropic-frontier-red-team/"
+        }
+      ]
+    },
+    {
+      "headline": "AI moves into biology, with caveats.",
+      "body": "Anthropic says Claude discovered a CRISPR-like system, but experts note the lab experiments are still pending while the announcement is already public. Google DeepMind showed SynthID Bio, a proof of concept that watermarks AI-designed proteins without breaking their function, aimed at biosecurity.",
+      "sources": [
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/anthropic-says-it-discovered-a-crispr-like-system-now-what/"
+        },
+        {
+          "name": "TheSequence",
+          "url": "https://thesequence.substack.com/p/the-sequence-learning-loop-issue-349"
+        },
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/science/2026/09/google-figures-out-how-to-watermark-ai-designed-proteins/"
+        },
+        {
+          "name": "Google DeepMind",
+          "url": "https://deepmind.google/blog/introducing-synthid-bio/"
+        }
+      ]
+    }
+  ]
+}
