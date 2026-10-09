@@ -34,11 +34,13 @@ const productSchema = {
   title="Orchestra Instruments: 31 3D models"
   description="31 instruments of the symphony orchestra as 3D models: GLB, FBX, OBJ and Blender files, real sizes, three detail levels, free updates."
   image={`${img}/all_instruments.jpg`}
+  breadcrumbs={[{ name: 'Store', url: '/store/' }, { name: 'Orchestra Instruments', url: '' }]}
 >
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(productSchema)} />
   <section class="oi">
     <div class="container">
       <header class="oi-hero">
+        <a href="/store" class="oi-back">&larr; Store</a>
         <span class="oi-kicker">3D model pack · version 1.0</span>
         <h1>Orchestra Instruments</h1>
         <p class="oi-lead">
@@ -124,6 +126,8 @@ const productSchema = {
 
 <style>
   .oi { padding-top: var(--space-xl); padding-bottom: var(--space-2xl); }
+  .oi-back { display: block; font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: var(--space-lg); }
+  .oi-back:hover { color: var(--color-text); }
   .oi-hero { max-width: var(--container-narrow); margin-bottom: var(--space-xl); }
   .oi-kicker { display: inline-block; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-subtle); margin-bottom: var(--space-md); }
   .oi-hero h1 { margin-bottom: var(--space-md); }

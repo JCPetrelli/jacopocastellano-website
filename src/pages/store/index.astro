@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+// One entry per thing for sale. `href` is its page on this site, or its Gumroad page (then `external`).
+const products = [
+  {
+    title: 'Orchestra Instruments',
+    kind: '3D model pack',
+    description: '31 instruments of the symphony orchestra as 3D models: GLB, FBX, OBJ and Blender files, at real sizes, in three detail levels.',
+    price: '€29',
+    image: '/images/portfolio/orchestra_instruments/all_instruments.jpg',
+    href: '/orchestra-instruments/',
+    external: false,
+  },
+  {
+    title: 'Lottie Floating Loaders (Dark Mode)',
+    kind: 'Animation pack',
+    description: 'Lottie floating loaders for websites, landing pages and apps, with layers optimised to keep the files small.',
+    price: '€9.99',
+    image: '/images/store/lottie_floating_loaders.jpg',
+    href: 'https://jacopocastellano.gumroad.com/l/lottie-floating-loaders-animation-pack',
+    external: true,
+  },
+  {
+    title: 'Charts and Graphs: Animated Social Kit 1',
+    kind: 'Animation pack',
+    description: 'Animated charts and graphs for websites, landing pages and social feeds such as Instagram, Pinterest and TikTok.',
+    price: '€9.99',
+    image: '/images/store/charts_and_graphs.jpg',
+    href: 'https://jacopocastellano.gumroad.com/l/QCtutm',
+    external: true,
+  },
+];
+---
+
+<BaseLayout title="Store" description="Things I make that you can buy: 3D model packs and animation packs.">
+  <section class="store">
+    <div class="container">
+      <header class="page-header">
+        <h1>Store</h1>
+        <p class="page-description">Things I make that you can buy. Checkout and downloads are handled by Gumroad.</p>
+      </header>
+
+      <div class="store-grid">
+        {products.map((p) => (
+          <a class="store-card" href={p.href} target={p.external ? '_blank' : undefined} rel={p.external ? 'noopener' : undefined}>
+            <img src={p.image} alt={p.title} loading="lazy" />
+            <div class="store-card-body">
+              <span class="store-kind">{p.kind}</span>
+              <h2>{p.title}</h2>
+              <p>{p.description}</p>
+              <span class="store-price">{p.price}{p.external && <span class="store-where"> · on Gumroad</span>}</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .store { padding-top: var(--space-xl); padding-bottom: var(--space-2xl); }
+  .page-header { max-width: var(--container-narrow); margin-bottom: var(--space-xl); }
+  .page-description { font-size: 1.25rem; color: var(--color-text-muted); margin-top: var(--space-md); }
+  .store-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-lg); }
+  .store-card { display: block; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: inherit; text-decoration: none; transition: border-color var(--transition-base); }
+  .store-card:hover { border-color: var(--color-text-subtle); }
+  .store-card img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+  .store-card-body { padding: var(--space-lg); display: flex; flex-direction: column; gap: var(--space-sm); }
+  .store-kind { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-subtle); }
+  .store-card h2 { font-size: 1.5rem; margin: 0; }
+  .store-card p { color: var(--color-text-muted); margin: 0; line-height: 1.6; }
+  .store-price { font-size: 1.125rem; font-weight: 600; margin-top: var(--space-sm); }
+  .store-where { font-size: 0.875rem; font-weight: 400; color: var(--color-text-subtle); }
+  .store-card img { background: #000; }
+  @media (max-width: 1000px) { .store-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) { .store-grid { grid-template-columns: 1fr; } }
+</style>
