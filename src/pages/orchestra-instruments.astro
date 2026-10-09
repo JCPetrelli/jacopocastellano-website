@@ -1,0 +1,156 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const buy = 'https://jacopocastellano.gumroad.com/l/orchestra-instruments';
+const img = '/images/portfolio/orchestra_instruments';
+const price = '29';
+const families = [
+  { name: 'Strings', items: 'violin, viola, cello, double bass, harp' },
+  { name: 'Woodwind', items: 'piccolo, flute, oboe, cor anglais, clarinet, bass clarinet, bassoon, contrabassoon' },
+  { name: 'Brass', items: 'french horn, trumpet, trombone, bass trombone, tuba' },
+  { name: 'Percussion', items: 'timpani, bass drum, snare drum, cymbals, triangle, tambourine, tam-tam, glockenspiel, xylophone, marimba, tubular bells' },
+  { name: 'Keyboards', items: 'celesta, grand piano' },
+];
+const facts = [
+  { value: '31', label: 'instruments' },
+  { value: '4', label: 'formats: GLB, FBX, OBJ, Blender' },
+  { value: '3', label: 'detail levels each' },
+  { value: '1:1', label: 'real sizes, in metres' },
+];
+const gallery = ['grand_piano.jpg', 'french_horn.jpg', 'trumpet.jpg', 'harp.jpg', 'tuba.jpg', 'grand_piano_views.jpg'];
+
+const productSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'Orchestra Instruments: 31 3D models of the symphony orchestra',
+  description: '31 instruments of the symphony orchestra as 3D models in GLB, FBX, OBJ and Blender formats, at real sizes, in three detail levels.',
+  image: new URL(`${img}/all_instruments.jpg`, Astro.site).toString(),
+  brand: { '@type': 'Person', name: 'Jacopo Castellano' },
+  offers: { '@type': 'Offer', price: price, priceCurrency: 'EUR', availability: 'https://schema.org/InStock', url: buy },
+};
+---
+
+<BaseLayout
+  title="Orchestra Instruments: 31 3D models"
+  description="31 instruments of the symphony orchestra as 3D models: GLB, FBX, OBJ and Blender files, real sizes, three detail levels, free updates."
+  image={`${img}/all_instruments.jpg`}
+>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(productSchema)} />
+  <section class="oi">
+    <div class="container">
+      <header class="oi-hero">
+        <span class="oi-kicker">3D model pack · version 1.0</span>
+        <h1>Orchestra Instruments</h1>
+        <p class="oi-lead">
+          Every instrument of the symphony orchestra, from the violin to the tubular bells, with a
+          concert grand piano as the centrepiece. 31 models at real sizes, in one style.
+        </p>
+        <div class="oi-cta">
+          <a href={buy} class="btn btn-primary" target="_blank" rel="noopener">Buy for €{price}</a>
+          <span class="oi-note">One payment. Later versions are free.</span>
+        </div>
+      </header>
+
+      <div class="oi-video">
+        <video controls muted playsinline preload="metadata" poster={`${img}/all_instruments.jpg`}>
+          <source src="/videos/orchestra-instruments-promo.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <ul class="oi-facts">
+        {facts.map((f) => (
+          <li><strong>{f.value}</strong><span>{f.label}</span></li>
+        ))}
+      </ul>
+
+      <div class="oi-body">
+        <h2>What you get</h2>
+        <dl class="oi-families">
+          {families.map((f) => (
+            <div><dt>{f.name}</dt><dd>{f.items}</dd></div>
+          ))}
+        </dl>
+        <p>Bows, sticks, mallets, beaters and the piano bench are included as separate objects.</p>
+
+        <h2>Formats</h2>
+        <ul>
+          <li>GLB, FBX and OBJ for every instrument, plus the Blender file.</li>
+          <li>Three detail levels: full, about 45 % and about 18 % of the triangles.</li>
+          <li>271,518 triangles in all at full detail. The lightest model has 464, the grand piano 39,972.</li>
+          <li>A 33-page PDF catalogue with every instrument's size, counts and parts.</li>
+        </ul>
+
+        <h2>Made to be animated</h2>
+        <p>
+          Each instrument is split into named parts under one parent. On ten of them the parts that
+          move have their origin on the hinge or slide line: the trombones' slides, the trumpet's
+          pistons, the piano's lid, fallboard, music desk and pedals, the harp's seven pedals.
+          Nothing is rigged, so you animate them your way.
+        </p>
+      </div>
+
+      <div class="oi-gallery">
+        {gallery.map((g) => (
+          <img src={`${img}/${g}`} alt="Orchestra Instruments render" loading="lazy" />
+        ))}
+      </div>
+
+      <div class="oi-body">
+        <h2>Honest notes</h2>
+        <ul>
+          <li>The models are stylised, not engineering copies. Woodwind key mechanisms and brass tubing are simplified.</li>
+          <li>Wood grain is an image texture on the bowed strings, the harp and the piano. Everything else uses plain materials.</li>
+          <li>The lower detail levels are made automatically.</li>
+          <li>Every file was re-imported and checked in Blender. Other programs have not been tested. If a file misbehaves in yours, <a href="/contact">write to me</a>.</li>
+          <li>No real maker's name or logo appears anywhere.</li>
+        </ul>
+
+        <h2>Licence</h2>
+        <p>
+          Use the models in any number of your own projects, personal or commercial. You may not
+          resell or share the model files themselves. One purchase per person. The full text is in
+          the download.
+        </p>
+
+        <div class="oi-cta oi-cta-end">
+          <a href={buy} class="btn btn-primary" target="_blank" rel="noopener">Buy for €{price} on Gumroad</a>
+          <a href="/portfolio/orchestra-instruments/" class="btn">How it was made</a>
+        </div>
+        <p class="oi-note">Checkout and download are handled by Gumroad.</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .oi { padding-top: var(--space-xl); padding-bottom: var(--space-2xl); }
+  .oi-hero { max-width: var(--container-narrow); margin-bottom: var(--space-xl); }
+  .oi-kicker { display: inline-block; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-subtle); margin-bottom: var(--space-md); }
+  .oi-hero h1 { margin-bottom: var(--space-md); }
+  .oi-lead { font-size: 1.25rem; color: var(--color-text-muted); margin-bottom: var(--space-lg); }
+  .oi-cta { display: flex; align-items: center; gap: var(--space-md); flex-wrap: wrap; }
+  .oi-cta-end { margin-top: var(--space-xl); }
+  .oi-note { font-size: 0.875rem; color: var(--color-text-subtle); }
+  .oi-video { margin-bottom: var(--space-xl); background: var(--color-bg-alt); border: 1px solid var(--color-border-light); }
+  .oi-video video { display: block; width: 100%; aspect-ratio: 16 / 9; }
+  .oi-facts { list-style: none; padding: 0; margin: 0 0 var(--space-xl); display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-md); }
+  .oi-facts li { border: 1px solid var(--color-border); padding: var(--space-lg) var(--space-md); display: flex; flex-direction: column; gap: var(--space-xs); }
+  .oi-facts strong { font-size: 2rem; font-weight: 600; line-height: 1; }
+  .oi-facts span { font-size: 0.875rem; color: var(--color-text-muted); }
+  .oi-body { max-width: var(--container-narrow); margin: 0 auto var(--space-xl); }
+  .oi-body h2 { margin: var(--space-xl) 0 var(--space-md); font-size: 1.5rem; }
+  .oi-body p, .oi-body li { color: var(--color-text-muted); line-height: 1.7; }
+  .oi-body ul { padding-left: 1.2rem; display: flex; flex-direction: column; gap: var(--space-sm); }
+  .oi-body a:not(.btn) { color: var(--color-text); text-decoration: underline; }
+  .oi-families { margin: 0 0 var(--space-md); }
+  .oi-families div { display: grid; grid-template-columns: 8rem 1fr; gap: var(--space-md); padding: var(--space-sm) 0; border-bottom: 1px solid var(--color-border-light); }
+  .oi-families dt { font-weight: 500; }
+  .oi-families dd { margin: 0; color: var(--color-text-muted); }
+  .oi-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-md); margin-bottom: var(--space-xl); }
+  .oi-gallery img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid var(--color-border-light); }
+  @media (max-width: 768px) {
+    .oi-facts { grid-template-columns: repeat(2, 1fr); }
+    .oi-gallery { grid-template-columns: 1fr; }
+    .oi-families div { grid-template-columns: 1fr; gap: 0; }
+  }
+</style>
