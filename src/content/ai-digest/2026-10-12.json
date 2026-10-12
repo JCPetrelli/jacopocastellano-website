@@ -1,0 +1,124 @@
+{
+  "date": "2026-10-12",
+  "window": "48h",
+  "sources": 42,
+  "articles": 484,
+  "points": [
+    {
+      "headline": "Nadella wants an \"emergency brake\" on AI models.",
+      "body": "Microsoft's CEO wrote that it is time \"to step back and assess the trust architecture\" of AI. The Register reports that AI systems can already carry out attacks on infrastructure, and that nobody is ready. An Alignment Forum proposal sets a minimum pace: no lab trains its next generation until the current one is aligned.",
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/10/microsofts-satya-nadella-says-ai-models-need-an-emergency-brake/"
+        },
+        {
+          "name": "The Register",
+          "url": "https://www.theregister.com/security/2026/10/11/ai-systems-are-fully-capable-of-carrying-out-nightmare-attacks-against-infrastructure-and-nobodys-ready/5302450"
+        },
+        {
+          "name": "AI Alignment Forum",
+          "url": "https://www.alignmentforum.org/posts/ZWSstGSwmaxTjQ8W7/minimum-required-pacing-finish-aligning-it-before-you-train"
+        }
+      ]
+    },
+    {
+      "headline": "Data centers are now a ballot issue.",
+      "body": "US midterm candidates compete to be the most anti-data center, Wired reports. TechCrunch asks whether dropping NDAs would calm local opposition and moratoriums. Power stays the constraint: Petra Power pitches fuel cells to an industry short of electricity.",
+      "sources": [
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/midterm-races-decide-data-centers-political-fate/"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/11/can-the-ai-industry-persuade-data-center-opponents-by-getting-rid-of-ndas/"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/10/petra-power-looks-to-modernize-energy-for-data-centers-and-defense-vehicles/"
+        }
+      ]
+    },
+    {
+      "headline": "Decision-only models get a rival API and a reality check.",
+      "body": "After TypeSafe's Jev, OpenAI has a Decisions API, and Towards Data Science asks if it is the \"JEV killer\". One paper finds Jev works as a cheap judge that escalates to a reasoning model when unsure. Another finds that faster decisions do not automatically make better agents.",
+      "sources": [
+        {
+          "name": "Towards Data Science",
+          "url": "https://towardsdatascience.com/a-practical-guide-to-openais-new-decisions-api/"
+        },
+        {
+          "name": "arXiv",
+          "url": "https://arxiv.org/abs/2609.26550"
+        },
+        {
+          "name": "arXiv",
+          "url": "https://arxiv.org/abs/2610.13092"
+        }
+      ]
+    },
+    {
+      "headline": "Agents move into text messages and operations.",
+      "body": "TechCrunch lists the assistants that now live in a text thread. HPE's networking chief says AI will handle all trouble tickets without humans in two years, and Gremlin shipped Foresight AI, which finds likely failures and tests the fix. The open problem is input: agents need guardrails around untrusted sources.",
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/10/all-the-ai-agents-that-can-live-in-your-text-messages/"
+        },
+        {
+          "name": "The Register",
+          "url": "https://www.theregister.com/networks/2026/10/11/hpes-networking-boss-says-ai-will-handle-all-trouble-tickets-without-humans-in-two-years/5302179"
+        },
+        {
+          "name": "InfoQ",
+          "url": "https://www.infoq.com/news/2026/10/gremlin-foresight-ai/"
+        },
+        {
+          "name": "Towards Data Science",
+          "url": "https://towardsdatascience.com/how-can-ai-agents-read-untrusted-sources-safely/"
+        }
+      ]
+    },
+    {
+      "headline": "Humanoids can sprint, but useful work is the test.",
+      "body": "At the World Humanoid Robot Games in Beijing, Tiangong Ultra ran 100 metres in 8.64 seconds, faster than Usain Bolt's record. Robotics outlets agree the hard parts are elsewhere: reliable dexterity, robots shaped by the workflow, and manufacturing thousands of units with consistent quality.",
+      "sources": [
+        {
+          "name": "Robohub",
+          "url": "https://robohub.org/humanoid-robots-can-sprint-and-box-but-the-real-test-is-doing-the-laundry/"
+        },
+        {
+          "name": "The Robot Report",
+          "url": "https://www.therobotreport.com/why-dexterity-is-physical-ai-real-bottleneck/"
+        },
+        {
+          "name": "The Robot Report",
+          "url": "https://www.therobotreport.com/will-boring-robots-win-in-the-real-world-why-robotic-form-should-follow-workflow/"
+        },
+        {
+          "name": "Robotics & Automation News",
+          "url": "https://roboticsandautomationnews.com/2026/10/10/interview-humanoid-robots-are-advancing-fast-manufacturing-them-at-scale-is-the-next-challenge/105812/"
+        }
+      ]
+    },
+    {
+      "headline": "AI's money and branding draw scrutiny.",
+      "body": "A research firm called Anthropic's planned IPO an \"unprecedented test of investor gullibility\", while TheSequence counts another week of billions in funding. The Verge reports that some of Silicon Valley's most powerful people now adopt Trump's rebrand of AI as \"super intelligence\".",
+      "sources": [
+        {
+          "name": "CNBC",
+          "url": "https://www.cnbc.com/2026/10/07/anthropic-will-be-most-ridiculous-ipo-of-year-analyst-says.html"
+        },
+        {
+          "name": "TheSequence",
+          "url": "https://thesequence.substack.com/p/the-sequence-radar-issue-948-last"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1009406/silicon-valley-is-falling-in-line-with-trumps-attempt-to-rename-ai"
+        }
+      ]
+    }
+  ]
+}
