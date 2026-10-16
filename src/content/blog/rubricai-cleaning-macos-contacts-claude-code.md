@@ -1,8 +1,8 @@
 ---
 title: "From 2,037 to 1,440 contacts: cleaning macOS Contacts with Claude Code"
-description: "One evening of cleaning my address book with Claude Code, turned into Rubrica, an open-source skill that deduplicates, merges and completes macOS Contacts with reviewed plans."
+description: "One evening of cleaning my address book with Claude Code, turned into Rubricai, an open-source skill that deduplicates, merges and completes macOS Contacts with reviewed plans."
 date: 2026-10-16
-image: /images/portfolio/rubrica.png
+image: /images/portfolio/rubricai.png
 tags:
   - AI
   - Tools
@@ -13,7 +13,7 @@ draft: false
 
 My macOS address book had 2,037 cards. 552 of them were exact copies of another card, some people were saved twice under different names, and some cards had only an e-mail address as their name. In one session with Claude Code I cleaned it down to 1,440 cards. I also added about 250 people from 20 years of e-mail and WhatsApp.
 
-Then I turned the steps into a skill, so that anyone can repeat them. It is called [Rubrica](https://github.com/JCPetrelli/rubrica), the Italian word for address book.
+Then I turned the steps into a skill, so that anyone can repeat them. It is called [Rubricai](https://github.com/JCPetrelli/rubricai): *rubrica* is the Italian word for address book, plus AI.
 
 ## What the session did
 
@@ -32,20 +32,20 @@ Then the session went the other way: who is missing? Apple Mail keeps an SQLite 
 
 The mechanical part was easy. The judgement calls were the interesting part, and they became the rules in the skill.
 
-A shared phone number does not make two cards one person. One landline appeared on two cards with unrelated first names, and two other pairs looked the same. Merging them would have created people who do not exist. Rubrica merges on a shared phone or e-mail only when the names are compatible, and it reports every other pair as a question.
+A shared phone number does not make two cards one person. One landline appeared on two cards with unrelated first names, and two other pairs looked the same. Merging them would have created people who do not exist. Rubricai merges on a shared phone or e-mail only when the names are compatible, and it reports every other pair as a question.
 
-Transitive matching goes too far. One corrupted company card held nine e-mail addresses of unrelated people. Through it, a union-find over shared values joined 59 cards into one group. Rubrica checks every group for names that do not fit together and reports it as a chain instead of merging it.
+Transitive matching goes too far. One corrupted company card held nine e-mail addresses of unrelated people. Through it, a union-find over shared values joined 59 cards into one group. Rubricai checks every group for names that do not fit together and reports it as a chain instead of merging it.
 
 A one-word name is weak evidence. Two cards called "Nina" with different numbers are more likely two people than one.
 
 The Mail data needed its own care. Old sending addresses from 2012 had to be marked as mine, or they turned up as contacts. Classified-ad sites create a new relay address for every conversation, and there were more than 120 of them. Gmail keeps sent mail in All Mail, not in a Sent folder. The scoring has four tiers: two-way correspondence, written to once, wrote to me at least twice, and often on Cc together.
 
-## How Rubrica works
+## How Rubricai works
 
 The skill is a ladder of eight rungs. Each rung writes a JSON plan and changes nothing:
 
 ```bash
-rb backup                         # rb = PYTHONPATH=rubrica python3 -m rubrica
+rb backup                         # rb = PYTHONPATH=rubricai python3 -m rubricai
 rb export
 rb scan linked --plan p3.json
 rb apply p3.json                  # dry run
@@ -64,11 +64,11 @@ Before writing the skill, I asked a fresh Claude agent without it to plan the sa
 
 ## Try it
 
-Rubrica needs macOS, Claude Code and Python 3.10 or later. Install it as a plugin:
+Rubricai needs macOS, Claude Code and Python 3.10 or later. Install it as a plugin:
 
 ```
-/plugin marketplace add JCPetrelli/rubrica
-/plugin install rubrica@rubrica
+/plugin marketplace add JCPetrelli/rubricai
+/plugin install rubricai@rubricai
 ```
 
-Then ask Claude Code to clean up your contacts. Source, docs and the undo instructions are on [GitHub](https://github.com/JCPetrelli/rubrica), under the MIT licence.
+Then ask Claude Code to clean up your contacts. Source, docs and the undo instructions are on [GitHub](https://github.com/JCPetrelli/rubricai), under the MIT licence.

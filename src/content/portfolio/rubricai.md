@@ -1,10 +1,10 @@
 ---
-title: "Rubrica"
+title: "Rubricai"
 description: "A Claude Code skill that deduplicates, merges and completes the macOS Contacts address book, one reviewed plan at a time."
 date: 2026-10-16
 category: software
 featured: false
-thumbnail: "/images/portfolio/rubrica.png"
+thumbnail: "/images/portfolio/rubricai.png"
 tags:
   - Code
   - Python
@@ -14,11 +14,11 @@ tags:
 role: "Developer"
 ---
 
-[View on GitHub](https://github.com/JCPetrelli/rubrica) · [Read the article](/blog/rubrica-cleaning-macos-contacts-claude-code)
+[View on GitHub](https://github.com/JCPetrelli/rubricai) · [Read the article](/blog/rubricai-cleaning-macos-contacts-claude-code)
 
 ## About
 
-Rubrica (Italian for address book) is a Claude Code skill for the macOS Contacts app. It finds duplicate cards and the same person saved under different names, and it adds the people you e-mail or chat with who are missing. Every change is a JSON plan that you approve first, and every applied plan leaves a vCard undo file.
+Rubricai (*rubrica* is Italian for address book, plus AI) is a Claude Code skill for the macOS Contacts app. It finds duplicate cards and the same person saved under different names, and it adds the people you e-mail or chat with who are missing. Every change is a JSON plan that you approve first, and every applied plan leaves a vCard undo file.
 
 It came out of cleaning a real address book: 2,037 cards went down to 1,440, and about 250 people from 20 years of Apple Mail and WhatsApp were added.
 
