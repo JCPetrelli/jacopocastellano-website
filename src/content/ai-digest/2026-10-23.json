@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-23",
+  "window": "48h",
+  "sources": 42,
+  "articles": 681,
+  "points": [
+    {
+      "headline": "OpenAI chases a $1.25T valuation while spreading everywhere.",
+      "body": "OpenAI is reportedly raising $30B at a $1.25 trillion valuation ahead of an IPO, which would make it the most valuable private company ever. In the same 48 hours its models landed in Google Cloud's Model Garden, ChatGPT Ads expanded to 26 more countries, and Uber rolled ChatGPT Work out to all 30,000 employees.",
+      "sources": [
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/10/22/openai-working-on-new-30b-raise-at-1-25t-valuation-ahead-of-ipo/" },
+        { "name": "OpenAI", "url": "https://openai.com/index/openai-models-google-cloud" },
+        { "name": "OpenAI", "url": "https://openai.com/index/chatgpt-ads-expands-26-new-countries" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/10/22/uber-puts-all-30000-employees-on-chatgpt-work/" }
+      ]
+    },
+    {
+      "headline": "Decision models become a product category.",
+      "body": "OpenAI made its Decisions API generally available: small, fast, cheap models that return a typed choice instead of free text, aimed squarely at Jev. Newsletters, tutorials and a wave of arXiv papers now treat decision models as a standard building block next to LLMs, from browser automation to clinical and legal triage.",
+      "sources": [
+        { "name": "OpenAI", "url": "https://openai.com/index/decisions-api" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/10/22/openai-makes-its-jev-competitor-widely-available-as-decision-model-competition-heats-up/" },
+        { "name": "TheSequence", "url": "https://thesequence.substack.com/p/the-sequence-learning-loop-issue-d54" },
+        { "name": "Towards Data Science", "url": "https://towardsdatascience.com/decision-models-in-action-build-a-hybrid-llm-workflow/" }
+      ]
+    },
+    {
+      "headline": "AI agents are now doing the hacking.",
+      "body": "Microsoft says a China-aligned group used AI agents to move through 2,250 cloud tenants after breaching ConnectWise, reaching privileged access in some cases in under three hours. Reporting on criminal groups shows guardrails are routinely bypassed, and a supply chain attack on the popular LiteLLM library stole passwords and API secrets.",
+      "sources": [
+        { "name": "The Register", "url": "https://www.theregister.com/security/2026/10/22/microsoft-says-connectwise-breach-let-chinese-spies-loose-on-2250-cloud-tenants/5304687" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/10/22/chinese-hackers-spied-on-thousands-of-companies-after-breaching-it-giant-connectwise/" },
+        { "name": "Wired", "url": "https://www.wired.com/story/ai-guardrails-arent-stopping-criminal-hackers/" },
+        { "name": "The Register", "url": "https://www.theregister.com/security/2026/10/21/litellm-supply-chain-attack-hoovers-up-passwords-and-secrets/5304548" }
+      ]
+    },
+    {
+      "headline": "Nvidia pitches plug-in data centers to Europe at GTC Berlin.",
+      "body": "Jensen Huang presented the DSX Pod, a containerized data center that Nvidia says cuts deployment from six months to two weeks, as the fix for Europe's compute gap. Nvidia also released open-weight embedding and reranking models, picked OpenShell as a locked-down runtime for agent fleets, and is funding suppliers like Samsung to ease GPU bottlenecks.",
+      "sources": [
+        { "name": "Wired", "url": "https://www.wired.com/story/jensen-huangs-vision-for-europe-runs-on-plug-in-data-centers/" },
+        { "name": "The Register", "url": "https://www.theregister.com/on-prem/2026/10/21/nvidias-grand-plan-for-speeding-up-datacenter-deployments-ai-trailer-parks/5304303" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/10/21/nvidia-picks-openshell-to-tame-ai-gents/5304319" },
+        { "name": "GitHub", "url": "https://github.com/NVIDIA/OpenShell" }
+      ]
+    },
+    {
+      "headline": "Robots learn from video and share skills across bodies.",
+      "body": "Google DeepMind showed Gemini 4 Argon learning a task from video and transferring it to Apptronik's Apollo humanoid, while Dream Labs raised $90M for a model that works across robots from different makers. Rivian bought a world model startup for driving simulation and AGCO will pilot Agility's Digit humanoid in a Kansas factory in 2027.",
+      "sources": [
+        { "name": "Robotics & Automation News", "url": "https://roboticsandautomationnews.com/2026/10/22/google-deepmind-uses-gemini-4-argon-to-teach-apptroniks-apollo-humanoid-new-skills-from-video/106227/" },
+        { "name": "The Robot Report", "url": "https://www.therobotreport.com/dream-labs-raises-90m-and-launches-dream-api/" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/10/22/rivian-buys-world-model-startup-to-accelerate-self-driving-ambitions/" },
+        { "name": "The Robot Report", "url": "https://www.therobotreport.com/agco-to-deploy-agility-digit-humanoid-in-kansas-factory/" }
+      ]
+    },
+    {
+      "headline": "AI pushes deeper into medicine and biology.",
+      "body": "A Science study found Microsoft's diagnostic system beat generalist doctors on hard cases, though most of the gain came from the underlying models. A patient received an AI-designed virus to fight antibiotic-resistant bacteria for the first time, and Hugging Face released an open model that lets researchers query DNA in plain language.",
+      "sources": [
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/10/22/microsofts-mustafa-suleyman-says-its-ai-outperforms-doctors-on-hard-cases-as-he-chases-medical-superintelligence/" },
+        { "name": "The Register", "url": "https://www.theregister.com/science/2026/10/22/human-receives-ai-designed-virus-for-the-first-time/5304874" },
+        { "name": "Wired", "url": "https://www.wired.com/story/hugging-face-new-ai-biology-model-chat-with-dna/" }
+      ]
+    }
+  ]
+}
