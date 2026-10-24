@@ -1,5 +1,10 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Slugs that exist today, so old links can be sent to the matching page.
+const portfolioSlugs = (await getCollection('portfolio')).map((p) => p.id);
+const blogSlugs = (await getCollection('blog')).map((p) => p.id);
 ---
 
 <BaseLayout title="Page Not Found" noindex={true}>
@@ -40,23 +45,31 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
 </style>
 
-<script>
-  const redirects: Record<string, string> = {
+<script is:inline define:vars={{ portfolioSlugs, blogSlugs }}>
+  // GitHub Pages serves this page for every unknown URL, so old links are redirected here.
+  const redirects = {
     '/index.php': '/',
     '/index_old.php': '/',
     '/contact.php': '/contact/',
-    '/dracula.php': '/portfolio/dracula/',
-    '/carmina_burana.php': '/portfolio/carmina-burana/',
-    '/stabat_mater.php': '/portfolio/stabat-mater/',
-    '/the_lost_steps.php': '/portfolio/the-lost-steps/',
     '/lottie.html': '/',
+    '/mwt': '/portfolio/video-mapping-mwt/',
+    '/die-wahlverwandtschaften': '/portfolio/elective-affinities/',
   };
+  // Prefixes of the old WordPress site and the old classicaldepicted blog, which are gone.
+  const legacyPrefixes = ['/classicaldepicted', '/category/', '/author/', '/tag/', '/page/', '/wp-content/', '/fonts/'];
 
-  const path = window.location.pathname;
+  const path = decodeURIComponent(window.location.pathname).toLowerCase().replace(/\/+$/, '') || '/';
+  // /projects/carmina_burana.html, /stabat_mater.php, /stabat-mater -> stabat-mater
+  const slug = path.split('/').pop().replace(/\.(html?|php)$/, '').replace(/_/g, '-');
+  const segments = path.split('/').filter(Boolean).length;
 
-  if (path in redirects) {
-    window.location.replace(redirects[path]);
-  } else if (path.endsWith('.php')) {
-    window.location.replace('/');
-  }
+  let target = null;
+  if (path in redirects) target = redirects[path];
+  else if (portfolioSlugs.includes(slug) && (segments === 1 || path.startsWith('/projects/'))) target = `/portfolio/${slug}/`;
+  else if (blogSlugs.includes(slug) && segments === 1) target = `/blog/${slug}/`;
+  else if (legacyPrefixes.some((p) => path.startsWith(p))) target = '/';
+  else if (path.endsWith('.php') || path.startsWith('/projects/')) target = '/';
+  else if (segments === 1 && /^[a-z0-9-]+$/.test(slug)) target = '/'; // an old blog post that no longer exists
+
+  if (target && target !== window.location.pathname) window.location.replace(target);
 </script>
