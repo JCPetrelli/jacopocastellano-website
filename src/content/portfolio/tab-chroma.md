@@ -58,4 +58,4 @@ brew install tab-chroma
 tab-chroma install
 ```
 
-[View on GitHub](https://github.com/JCPetrelli/TabChroma) · [Read the article](/blog/tab-chroma-iterm2-claude-code)
+[View on GitHub](https://github.com/JCPetrelli/TabChroma) · [Read the article](/blog/tab-chroma-iterm2-claude-code/)

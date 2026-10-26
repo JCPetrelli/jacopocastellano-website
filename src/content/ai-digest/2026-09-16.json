@@ -47,7 +47,7 @@
       "sources": [
         { "name": "Google DeepMind", "url": "https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking/" },
         { "name": "Simon Willison", "url": "https://simonwillison.net/2026/Sep/15/gemini-live/" },
-        { "name": "Hacker News", "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/" }
+        { "name": "Google Blog", "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/" }
       ]
     },
     {

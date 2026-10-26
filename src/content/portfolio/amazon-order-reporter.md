@@ -52,4 +52,4 @@ amazon.de only. No per-item prices, because Amazon does not show them on the ord
 
 Not on the Chrome Web Store. Clone the repository, open `chrome://extensions`, enable Developer mode, and use Load unpacked on the folder containing `manifest.json`.
 
-[View on GitHub](https://github.com/JCPetrelli/amazon-order-reporter) · [Read the article](/blog/amazon-order-history-to-csv-chrome-extension)
+[View on GitHub](https://github.com/JCPetrelli/amazon-order-reporter) · [Read the article](/blog/amazon-order-history-to-csv-chrome-extension/)

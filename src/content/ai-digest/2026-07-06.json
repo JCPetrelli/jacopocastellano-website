@@ -51,7 +51,7 @@
       "body": "Enterprise buyers increasingly find deployed AI falls short of the demo six to twelve months in, and analyses warn that per-task AI spend could exceed the cost of a human engineer within a few years. Firms like Trunk Tools are responding by ditching general-purpose models for specialized stacks, cutting document review from 60 days to 10.",
       "sources": [
         { "name": "Dev.to", "url": "https://dev.to/mirasloan/the-gap-between-what-ai-vendors-promise-and-what-enterprise-buyers-actually-get-22g1" },
-        { "name": "Hacker News", "url": "https://tomtunguz.com/ai-spend-breakeven-2029/" },
+        { "name": "Tomasz Tunguz", "url": "https://tomtunguz.com/ai-spend-breakeven-2029/" },
         { "name": "VentureBeat", "url": "https://venturebeat.com/orchestration/trunk-tools-stack-cut-document-review-from-60-days-to-10-by-ditching-general-purpose-models" }
       ]
     }

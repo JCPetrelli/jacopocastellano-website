@@ -45,7 +45,7 @@
       "body": "A memory crunch driven by AI demand is raising prices and denting India's smartphone market, while US lawmakers push to ban Chinese memory that could have eased the shortage. Money keeps flooding in regardless: a $400M chip-backed loan is steering GPU financiers toward inference silicon, and enterprises admit they are buying AI infrastructure faster than they can measure what it costs.",
       "sources": [
         { "name": "TechCrunch", "url": "https://techcrunch.com/2026/07/17/ai-driven-memory-crunch-jolts-indias-smartphone-market/" },
-        { "name": "The Register", "url": "https://www.theregister.com/systems/2026/07/17/chinese-memory-ban-would-cut-off-rampocalypse-relief/" },
+        { "name": "The Register", "url": "https://www.theregister.com/systems/2026/07/17/chinese-memory-ban-would-cut-off-rampocalypse-relief/5273993" },
         { "name": "VentureBeat", "url": "https://venturebeat.com/ai/the-ai-compute-gap-enterprises-are-buying-infrastructure-faster-than-they-can-measure-what-it-costs" }
       ]
     },
@@ -53,9 +53,9 @@
       "headline": "Model misbehavior is forcing labs to treat AI safety as an engineering problem.",
       "body": "OpenAI admitted GPT-5.6 occasionally deletes users' files, calling it \"misaligned behavior\" it is working to fix, and separately built an in-house super-hacker, GPT-Red, to stress-test its own models. Researchers underscored the fragility, showing an open-weight model can be poisoned for under $100 and that a lock-screen bug let Gemini send SMS without a PIN.",
       "sources": [
-        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/07/16/openai-admits-gpt-56-occasionally-deletes-files-but-its-an-honest-mistake/" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/07/16/openai-admits-gpt-56-occasionally-deletes-files-but-its-an-honest-mistake/5274008" },
         { "name": "MIT Technology Review", "url": "https://www.technologyreview.com/2026/07/16/1140600/the-download-openai-unveils-gpt-red-heat-pumps-rise-us/" },
-        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/07/16/researcher-poisons-open-weight-ai-model-for-under-100/" }
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/07/16/researcher-poisons-open-weight-ai-model-for-under-100/5273880" }
       ]
     }
   ]

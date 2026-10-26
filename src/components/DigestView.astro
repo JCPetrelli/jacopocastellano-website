@@ -39,7 +39,7 @@ const dateLabel = date.toLocaleDateString('en-US', {
         <p class="tagline">Bookmark this page. The most important things happening in AI, synthesized from dozens of sources into a two-minute read.</p>
       ) : (
         <h1>AI Digest</h1>
-        <p class="tagline">An archived edition. For the current digest, see the <a href="/ai-digest">latest</a>.</p>
+        <p class="tagline">An archived edition. For the current digest, see the <a href="/ai-digest/">latest</a>.</p>
       )}
       <div class="hero-meta">
         {isLatest && <span class="badge">Updated every 48 hours</span>}
@@ -48,17 +48,17 @@ const dateLabel = date.toLocaleDateString('en-US', {
         </span>
         <span class="hero-links">
           {isLatest ? (
-            <a href="/ai-digest/archive">View past digests →</a>
+            <a href="/ai-digest/archive/">View past digests →</a>
           ) : (
             <>
-              <a href="/ai-digest">← Latest digest</a>
+              <a href="/ai-digest/">← Latest digest</a>
               <span class="sep">·</span>
-              <a href="/ai-digest/archive">All past digests</a>
+              <a href="/ai-digest/archive/">All past digests</a>
             </>
           )}
         </span>
         <span class="subscribe-buttons">
-          <a class="pill-subscribe pill-email" href={isLatest ? '#newsletter' : '/ai-digest#newsletter'} title="Get the AI Digest by email">
+          <a class="pill-subscribe pill-email" href={isLatest ? '#newsletter' : '/ai-digest/#newsletter'} title="Get the AI Digest by email">
             <svg class="pill-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <rect x="2" y="4" width="20" height="16" rx="2" />
               <path d="m2 7 10 6 10-6" />

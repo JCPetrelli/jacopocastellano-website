@@ -50,4 +50,4 @@ claude plugin marketplace add JCPetrelli/tab-tag
 claude plugin install tab-tag@tab-tag
 ```
 
-[View on GitHub](https://github.com/JCPetrelli/tab-tag) · [Read the article](/blog/tab-tag-iterm2-claude-code)
+[View on GitHub](https://github.com/JCPetrelli/tab-tag) · [Read the article](/blog/tab-tag-iterm2-claude-code/)

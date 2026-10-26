@@ -33,7 +33,7 @@
       "body": "VentureBeat reports that companies actually succeeding with AI agents are deliberately limiting how much agents can do alone, after two years of assuming more autonomy meant better results. A UiPath analysis makes the same point from the automation side: most enterprises already have plenty of agents and bots, but no single layer accountable for the end-to-end outcome.",
       "sources": [
         { "name": "VentureBeat", "url": "https://venturebeat.com/orchestration/enterprises-winning-with-ai-agents-are-limiting-how-much-the-agents-can-do-alone" },
-        { "name": "UiPath Blog", "url": "https://www.uipath.com/blog/ai/cn/what-is-agentic-business-orchestration" }
+        { "name": "UiPath Blog", "url": "https://www.uipath.com/blog/ai/what-is-agentic-business-orchestration" }
       ]
     },
     {

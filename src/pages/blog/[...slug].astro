@@ -42,7 +42,7 @@ const relatedPosts = allPosts
   <article class="blog-post">
     <div class="container container-narrow">
       <header class="post-header">
-        <a href="/blog" class="back-link">&larr; Back to Blog</a>
+        <a href="/blog/" class="back-link">&larr; Back to Blog</a>
         <div class="post-meta text-mono">
           <time datetime={date.toISOString()}>{formattedDate}</time>
           <span class="meta-separator">&middot;</span>
@@ -82,7 +82,7 @@ const relatedPosts = allPosts
           <h2>Related Posts</h2>
           <div class="related-list">
             {relatedPosts.map((p) => (
-              <a href={`/blog/${p.id}`} class="related-item">
+              <a href={`/blog/${p.id}/`} class="related-item">
                 <span class="related-title">{p.data.title}</span>
                 <span class="related-arrow">&rarr;</span>
               </a>

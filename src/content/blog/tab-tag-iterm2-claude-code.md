@@ -62,7 +62,7 @@ The mod saves colour and name per session ID in its own store, and keeps the las
 
 ## tab-tag and TabChroma
 
-[TabChroma](/blog/tab-chroma-iterm2-claude-code) is an earlier plugin of mine for the same tab strip. It colours a tab by what Claude is doing: blue for working, green for done, red for a permission prompt. tab-tag answers a different question, which is what the session is about.
+[TabChroma](/blog/tab-chroma-iterm2-claude-code/) is an earlier plugin of mine for the same tab strip. It colours a tab by what Claude is doing: blue for working, green for done, red for a permission prompt. tab-tag answers a different question, which is what the session is about.
 
 Both tools write the tab colour and the tab title, so each overwrites the other. To use both, run `tab-chroma title off`. TabChroma then controls the colour and tab-tag the name. This follows from how the two tools write to the tab. The combination is not tested yet.
 

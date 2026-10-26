@@ -40,14 +40,14 @@
       "headline": "DeepSeek V4 Pro is being touted as beating GPT-5.5 on precision.",
       "body": "A widely shared report claims China's DeepSeek V4 Pro edges out OpenAI's GPT-5.5 Pro on precision benchmarks, drawing heavy debate across developer communities. The framing extends a year of Chinese open-weight models pressuring US frontier labs on both cost and capability.",
       "sources": [
-        { "name": "Hacker News", "url": "https://runtimewire.com/article/deepseek-v4-pro-beats-gpt-5-5-pro-on-precision" }
+        { "name": "RuntimeWire", "url": "https://runtimewire.com/article/deepseek-v4-pro-beats-gpt-5-5-pro-on-precision" }
       ]
     },
     {
       "headline": "AI data centers are straining the power grid.",
       "body": "Texas grid operators flagged reliability risks after AI data centers and crypto sites failed voltage tests, warning they could worsen outages during disturbances. The episode underscores how the AI compute buildout is colliding with the physical limits of electricity infrastructure.",
       "sources": [
-        { "name": "Hacker News / Reuters", "url": "https://www.reuters.com/business/energy/texas-grid-flags-risks-data-centers-crypto-sites-fail-voltage-tests-2026-06-05/" }
+        { "name": "Reuters", "url": "https://www.reuters.com/business/energy/texas-grid-flags-risks-data-centers-crypto-sites-fail-voltage-tests-2026-06-05/" }
       ]
     }
   ]

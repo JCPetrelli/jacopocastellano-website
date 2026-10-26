@@ -5,7 +5,7 @@ date: 2020-01-01
 category: motion
 featured: false
 thumbnail: "/images/portfolio/licht_video.jpg"
-video: "https://player.vimeo.com/video/427073762"
+video: "https://www.youtube.com/embed/5FAn_qzQrPs"
 images:
   - "/images/portfolio/licht/licht_frame_s1.jpg"
   - "/images/portfolio/licht/licht_frame_s2.jpg"

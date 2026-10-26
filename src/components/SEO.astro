@@ -26,6 +26,8 @@ const {
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+// noindex pages (the 404 page) get no canonical and share the site root.
+const shareURL = noindex ? new URL('/', Astro.site) : canonicalURL;
 const imageURL = new URL(image, Astro.site);
 const siteName = 'Jacopo Castellano';
 const fullTitle = `${title} | ${siteName}`;
@@ -110,11 +112,11 @@ const breadcrumbSchema = breadcrumbs ? {
 {noindex && <meta name="robots" content="noindex, nofollow" />}
 
 <!-- Canonical -->
-<link rel="canonical" href={canonicalURL} />
+{!noindex && <link rel="canonical" href={canonicalURL} />}
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content={type} />
-<meta property="og:url" content={canonicalURL} />
+<meta property="og:url" content={shareURL} />
 <meta property="og:title" content={fullTitle} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={imageURL} />
@@ -133,7 +135,7 @@ const breadcrumbSchema = breadcrumbs ? {
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:url" content={canonicalURL} />
+<meta name="twitter:url" content={shareURL} />
 <meta name="twitter:title" content={fullTitle} />
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={imageURL} />

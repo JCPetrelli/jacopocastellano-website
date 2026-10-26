@@ -27,7 +27,7 @@ About 80 WhatsApp help pages also [leaked a chatbot's hidden instructions](https
 
 An Apollo economist says AI has delivered [zero financial payoff to most companies](https://techcrunch.com/2026/10/25/ai-delivers-zero-financial-payoff-to-most-companies-according-to-apollo-economist/). Forrester expects AI to take [a fifth of tech budgets in 2027](https://www.theregister.com/ai-and-ml/2026/10/21/ai-will-eat-a-fifth-of-tech-budgets-in-2027-but-dont-expect-it-to-pay-for-itself/5304466), but it predicts only isolated wins.
 
-Building the data centers is also getting harder. Local groups in the US are [organizing against new data centers](https://www.wired.com/story/what-the-us-anti-data-center-movement-can-learn-from-everywhere-else/), and UK projects are [stuck in government permitting](https://www.theregister.com/public-sector/2026/10/25/want-to-build-a-uk-datacenter-please-hold-while-whitehall-transfers-you/).
+Building the data centers is also getting harder. Local groups in the US are [organizing against new data centers](https://www.wired.com/story/what-the-us-anti-data-center-movement-can-learn-from-everywhere-else/), and UK projects are [stuck in government permitting](https://www.theregister.com/public-sector/2026/10/25/want-to-build-a-uk-datacenter-please-hold-while-whitehall-transfers-you/5304956).
 
 ## 7. Anthropic's safety bill draws criticism as compute gets tight
 

@@ -71,4 +71,4 @@ target -> Claude -> JSON spec -> validator -> fixed three.js viewer -> one HTML 
 /plugin install brickwise@brickwise
 ```
 
-[View on GitHub](https://github.com/JCPetrelli/brickwise) · [Read the article](/blog/brickwise-claude-code-3d-brick-model)
+[View on GitHub](https://github.com/JCPetrelli/brickwise) · [Read the article](/blog/brickwise-claude-code-3d-brick-model/)

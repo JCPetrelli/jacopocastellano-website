@@ -27,13 +27,13 @@ const fmt = (date: Date) =>
       <header class="archive-hero">
         <span class="kicker">AI Digest · Archive</span>
         <h1>Past editions</h1>
-        <p class="tagline">Every edition of the digest, newest first. <a href="/ai-digest">Back to the latest →</a></p>
+        <p class="tagline">Every edition of the digest, newest first. <a href="/ai-digest/">Back to the latest →</a></p>
       </header>
 
       <ol class="archive-list">
         {entries.map((entry) => (
           <li class="archive-item">
-            <a class="archive-link" href={`/ai-digest/archive/${entry.id}`}>
+            <a class="archive-link" href={`/ai-digest/archive/${entry.id}/`}>
               <div class="archive-meta">
                 <span class="archive-date">{fmt(entry.data.date)}</span>
                 <span class="archive-counts">{entry.data.sources} sources · {entry.data.articles} articles</span>

@@ -13,7 +13,7 @@ This was the week the politics of AI stopped being theoretical. A single governm
 
 ## 10. The job question got louder and more contradictory
 
-Microsoft CEO Satya Nadella [warned that a handful of frontier models could "hollow out" entire industries](https://venturebeat.com/technology/satya-nadella-warns-that-ai-could-hollow-out-entire-industries-echoing-the-damage-done-by-globalization), the way globalization gutted manufacturing towns. At the same time TechCrunch described [the AI layoff wave becoming a "powder keg"](https://techcrunch.com/2026/06/15/the-ai-layoff-wave-is-becoming-a-powder-keg/) as a small group of insiders gets rich. The contradiction: UK [AI hiring jumped 61%](https://www.theregister.com/ai-and-ml/2026/06/15/uk-ai-hiring-surges-as-firms-seek-people-to-babysit-the-bots/), mostly for people to babysit the bots, not build them.
+Microsoft CEO Satya Nadella [warned that a handful of frontier models could "hollow out" entire industries](https://venturebeat.com/technology/satya-nadella-warns-that-ai-could-hollow-out-entire-industries-echoing-the-damage-done-by-globalization), the way globalization gutted manufacturing towns. At the same time TechCrunch described [the AI layoff wave becoming a "powder keg"](https://techcrunch.com/2026/06/15/the-ai-layoff-wave-is-becoming-a-powder-keg/) as a small group of insiders gets rich. The contradiction: UK [AI hiring jumped 61%](https://www.theregister.com/ai-and-ml/2026/06/15/uk-ai-hiring-surges-as-firms-seek-people-to-babysit-the-bots/5255437), mostly for people to babysit the bots, not build them.
 
 ## 9. The public is not buying the hype
 

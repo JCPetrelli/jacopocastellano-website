@@ -21,7 +21,7 @@
         { "name": "VentureBeat", "url": "https://venturebeat.com/technology/deepseek-harness-launches-as-open-source-rival-to-claude-code-alongside-v4-pro-on-api-with-higher-prices" },
         { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/08/14/deepseeks-innovative-harness-treats-everything-as-a-plug-in/5288095" },
         { "name": "VentureBeat", "url": "https://venturebeat.com/technology/glm-5-3-is-here-with-advanced-cyber-capabilities-and-reportedly-already-found-a-serious-vulnerability-in-cursor" },
-        { "name": "Hacker News", "url": "https://huggingface.co/Qwen/Qwen3.8-27B-FP8" }
+        { "name": "Hugging Face", "url": "https://huggingface.co/Qwen/Qwen3.8-27B-FP8" }
       ]
     },
     {

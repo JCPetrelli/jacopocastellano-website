@@ -19,7 +19,7 @@
       "sources": [
         { "name": "OpenAI", "url": "https://openai.com/index/openai-broadcom-jalapeno-inference-chip" },
         { "name": "Ars Technica", "url": "https://arstechnica.com/gadgets/2026/06/openai-and-broadcom-announce-chip-designed-for-llm-inference-at-scale/" },
-        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/06/24/openai-gets-chippy-with-broadcom/" }
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/06/24/openai-gets-chippy-with-broadcom/5261697" }
       ]
     },
     {
@@ -28,7 +28,7 @@
       "sources": [
         { "name": "Ars Technica", "url": "https://arstechnica.com/apple/2026/06/apple-ratchets-up-prices-blames-the-cost-of-memory/" },
         { "name": "The Verge", "url": "https://www.theverge.com/tech/957151/ram-crisis-component-shortage-prices-computer-apple-microsoft-valve" },
-        { "name": "The Register", "url": "https://www.theregister.com/systems/2026/06/25/micron-locks-in-historically-high-memory-prices-for-five-years/" },
+        { "name": "The Register", "url": "https://www.theregister.com/systems/2026/06/25/micron-locks-in-historically-high-memory-prices-for-five-years/5261854" },
         { "name": "TechCrunch", "url": "https://techcrunch.com/2026/06/25/xbox-follows-apple-with-price-increases/" }
       ]
     },
@@ -47,7 +47,7 @@
       "sources": [
         { "name": "MIT Tech Review", "url": "https://www.technologyreview.com/2026/06/25/1139696/ibm-unveils-sub1nm-chip/" },
         { "name": "Ars Technica", "url": "https://arstechnica.com/gadgets/2026/06/ibm-claims-worlds-first-sub-1-nanometer-chip-technology/" },
-        { "name": "The Register", "url": "https://www.theregister.com/systems/2026/06/25/ibm-stacks-up-a-sub-nanometer-chip-future/" }
+        { "name": "The Register", "url": "https://www.theregister.com/systems/2026/06/25/ibm-stacks-up-a-sub-nanometer-chip-future/5261555" }
       ]
     },
     {
@@ -55,7 +55,7 @@
       "body": "OpenAI published research arguing agents now handle longer, more complex tasks, and says its own employees are shifting from chat to agents like Codex. Notion shut down its email app entirely as users hand inboxes to AI agents, while InfoQ reports agents climbing up the software lifecycle into code review and PRD governance.",
       "sources": [
         { "name": "OpenAI", "url": "https://openai.com/index/how-agents-are-transforming-work" },
-        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/06/25/openai-says-employees-moving-beyond-chat-to-agents/" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/06/25/openai-says-979-percent-of-its-employees-are-now-using-agents/5262499" },
         { "name": "TechCrunch", "url": "https://techcrunch.com/2026/06/25/notion-mail-shuts-down-amid-agent-takeover/" },
         { "name": "InfoQ", "url": "https://www.infoq.com/news/2026/06/ai-prd-code-review-governance/" }
       ]

@@ -36,7 +36,7 @@
       "headline": "Banks and hyperscalers start whispering \"bubble.\"",
       "body": "Banks, the BIS, and even hyperscalers are warning that AI valuations may be overheated, with Oracle down more than 40% on the month. At the same time inference is turning into a commodity: cheap open models, cost-cutting (Microsoft is leaning more on its own models), and soaring data-center energy bills are squeezing everything except a few luxury frontier tiers.",
       "sources": [
-        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/07/06/even-banks-and-hyperscalers-are-now-sounding-the-alarm-about-the-ai-bubble/" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/07/06/even-banks-and-hyperscalers-are-now-sounding-the-alarm-about-the-ai-bubble/5266123" },
         { "name": "TechCrunch", "url": "https://techcrunch.com/2026/07/07/microsoft-joins-ai-cost-cutting-trend-by-relying-more-on-its-own-models/" },
         { "name": "Ars Technica", "url": "https://arstechnica.com/tech-policy/2026/07/us-manufacturers-energy-costs-soar-because-of-ai-data-center-demand/" }
       ]
@@ -47,7 +47,7 @@
       "sources": [
         { "name": "TechCrunch", "url": "https://techcrunch.com/2026/07/08/sambanova-draws-1b-at-11b-valuation-in-series-f-first-close/" },
         { "name": "Ars Technica", "url": "https://arstechnica.com/ai/2026/07/facing-us-export-controls-chinas-deepseek-plans-to-make-its-own-chips/" },
-        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/07/07/south-korean-chip-startup-furiosaai-invades-european-datacenters/" }
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/07/07/south-korean-chip-startup-furiosaai-invades-european-datacenters/5267884" }
       ]
     },
     {

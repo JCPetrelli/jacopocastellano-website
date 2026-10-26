@@ -53,7 +53,7 @@
       "body": "Posts on the speed of AI prototyping kept trending as coding agents like Codex find their own \"workarounds\" to get tasks done. But the developer mood is mixed: GitHub Copilot's new token-based billing drew loud complaints, and even AI boosters are questioning whether the always-on subscription is worth it.",
       "sources": [
         { "name": "TechCrunch", "url": "https://techcrunch.com/2026/05/30/what-a-joke-github-copilots-new-token-based-billing-spurs-consternation-among-devs/" },
-        { "name": "Hacker News", "url": "https://darylcecile.net/notes/speed-of-prototyping-age-of-ai" },
+        { "name": "darylcecile.net", "url": "https://darylcecile.net/notes/speed-of-prototyping-age-of-ai" },
         { "name": "Simon Willison", "url": "https://simonwillison.net/2026/May/31/the-solution-might-be-cancelling-my-ai-subscription/" }
       ]
     }

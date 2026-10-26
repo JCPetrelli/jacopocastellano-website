@@ -14,7 +14,7 @@ tags:
 role: "Developer"
 ---
 
-[View on GitHub](https://github.com/JCPetrelli/rubricai) · [Read the article](/blog/rubricai-cleaning-macos-contacts-claude-code)
+[View on GitHub](https://github.com/JCPetrelli/rubricai) · [Read the article](/blog/rubricai-cleaning-macos-contacts-claude-code/)
 
 ## About
 
