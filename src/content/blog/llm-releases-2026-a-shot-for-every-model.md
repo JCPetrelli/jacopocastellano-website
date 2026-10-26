@@ -25,7 +25,7 @@ This is the full list, in date order. Every date below is confirmed by at least 
 ## January
 
 - Jan 8: [Jamba2](https://www.ai21.com/blog/introducing-jamba2/) (AI21). Hybrid SSM-Transformer, 256K context, Apache 2.0.
-- Jan 20: [LongCat-Flash-Thinking-2601](https://tech.meituan.com/2026/01/20/longcat-flash-thinking-2601.html) (Meituan). 560B MoE reasoning model, MIT licence.
+- Jan 20: [LongCat-Flash-Thinking-2601](https://huggingface.co/meituan-longcat/LongCat-Flash-Thinking-2601) (Meituan). 560B MoE reasoning model, MIT licence.
 - Jan 22: [ERNIE 5.0](https://www.scmp.com/tech/tech-trends/article/3340866/baidu-launches-ernie-50-firms-ai-assistant-users-reach-200-million-month) (Baidu). 2.4T-parameter omni-modal MoE, generally available after a November 2025 preview.
 - Jan 27: [Kimi K2.5](https://github.com/MoonshotAI/Kimi-K2.5) (Moonshot). 1T parameters, 32B active, native vision, up to 100 coordinated sub-agents. SWE-bench Verified 76.8.
 

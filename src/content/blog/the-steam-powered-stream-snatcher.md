@@ -64,7 +64,7 @@ Firstly we check if the value of the variable `i_want_the_highest_quality` is `T
 
 1. It creates a temporary folder called “temp_folder” if it does not already exist.2. It downloads the highest-quality video from YouTube using `pytube`, and saves it in the “temp_folder” with the file name “video.mp4”.3. It downloads the audio, and saves it also in the “temp_folder” with the file name “audio.mp3”.
 
-**Now … why are downloading audio and video separated? Are we not complicating things?** This has to do with the streaming technique that YouTube adopted called Dynamic Adaptive Streaming over HTTP (DASH). It is very clearly explained in the pytube documentation [at this link](https://pytube.io/en/latest/user/streams.html) if you want to know more. To summarize we need to download video and audio separately to get the highest possible quality and then we need to sync them together again using FFmpeg, which comes next:
+**Now … why are downloading audio and video separated? Are we not complicating things?** This has to do with the streaming technique that YouTube adopted called Dynamic Adaptive Streaming over HTTP (DASH). It is very clearly explained in the pytube documentation [at this link](https://pytubefix.readthedocs.io/en/latest/user/streams.html) if you want to know more. To summarize we need to download video and audio separately to get the highest possible quality and then we need to sync them together again using FFmpeg, which comes next:
 
 In this code, we set the variables `audio_file`, `video_file`, and `output_file` to file paths based on the values of `temp_folder`, `destination`, and `video_title_safe_for_filename`.
 

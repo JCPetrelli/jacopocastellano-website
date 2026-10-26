@@ -8,6 +8,8 @@ tags:
   - Plugins
 ---
 
+Update: OpenAI retired plugins in 2024.
+
 Have you ever imagined your AI assistant accessing real-time information, making bookings, or using third-party services? The wait is over! OpenAI has introduced initial support for plugins in ChatGPT, a cutting-edge language model designed with safety as a core principle. These plugins allow ChatGPT to interact with APIs defined by developers, perform a wide range of actions, and access up-to-date information, making it more powerful and versatile.
 
 ## What can ChatGPT Plugins do?
@@ -17,7 +19,7 @@ With ChatGPT plugins, users can experience a range of new features, such as:
 - Accessing knowledge-based information like company documents and personal notes.
 - Performing actions on behalf of users, like booking flights or ordering food.
 
-Please note that ChatGPT plugins are currently in limited alpha, which means access might be restricted. However, you can join the [waitlist](https://openai.com/waitlist/plugins) to be among the first to experience this exciting new feature.
+Please note that ChatGPT plugins are currently in limited alpha, which means access might be restricted. However, you can join the waitlist to be among the first to experience this exciting new feature.
 
 ## How do ChatGPT Plugins work?
 Plugin developers provide one or more API endpoints, a standardized manifest file, and an OpenAPI specification. These components define the plugin’s functionality, enabling ChatGPT to consume the files and make calls to developer-defined APIs. ChatGPT acts as an intelligent API caller, proactively using APIs to perform actions based on natural language descriptions.
@@ -32,4 +34,4 @@ To build a plugin, developers need to follow these steps:
 - Users must activate your plugin in the ChatGPT UI manually. During the alpha phase, plugin developers can share their plugins with 15 additional users (developers only). Over time, a review process will be introduced to expose the plugin to ChatGPT’s entire user base.
 - When users begin a conversation, OpenAI will inject a compact description of the plugin in a message to ChatGPT, invisible to end users. The model will incorporate API results into its response to the user, potentially including links returned from API calls as rich previews.
 
-Here is the link for the waitlist: [https://openai.com/waitlist/plugins](https://openai.com/waitlist/plugins) :-)
+Here is the link for the waitlist: https:<wbr>//openai.com/waitlist/plugins :-)

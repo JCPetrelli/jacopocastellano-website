@@ -17,7 +17,7 @@ The pressure from open-weight and non-US labs never let up. China's [DeepSeek V4
 
 ## 9. The backlash against AI data centers hardens
 
-The physical cost of the build-out turned into real political friction. Roughly [$130 billion in data-center projects have been blocked by local protests](https://arstechnica.com/tech-policy/2026/06/130-billion-in-data-center-projects-blocked-by-protests-so-far-this-year/) this year, Amazon [owned up to using 2.5 billion gallons of water](https://www.theregister.com/on-prem/2026/06/12/amazon-owns-up-to-using-25bn-gallons-of-h2o-in-its-bit-barns-last-year/) to cool its facilities last year, and grid operators keep warning the compute boom could [hit a power wall by 2030](https://www.theregister.com/on-prem/2026/06/10/datacenter-growth-may-run-into-a-power-wall-by-2030/5253635). One organizer described the wins as giving communities a taste of political power.
+The physical cost of the build-out turned into real political friction. Roughly [$130 billion in data-center projects have been blocked by local protests](https://arstechnica.com/tech-policy/2026/06/130-billion-in-data-center-projects-blocked-by-protests-so-far-this-year/) this year, Amazon [owned up to using 2.5 billion gallons of water](https://www.theregister.com/on-prem/2026/06/12/amazon-owns-up-to-using-25bn-gallons-of-h2o-in-its-bit-barns-last-year/5254748) to cool its facilities last year, and grid operators keep warning the compute boom could [hit a power wall by 2030](https://www.theregister.com/on-prem/2026/06/10/datacenter-growth-may-run-into-a-power-wall-by-2030/5253635). One organizer described the wins as giving communities a taste of political power.
 
 ## 8. A price war breaks out over cheaper AI
 

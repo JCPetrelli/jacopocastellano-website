@@ -31,7 +31,7 @@ A researcher turned a Word document injection into [a worm that spreads through 
 
 ## 6. An Anthropic model found a real weakness in a post-quantum crypto candidate
 
-Anthropic published cryptanalysis in which Claude Mythos found [a fatal mathematical weakness in HAWK](https://arstechnica.com/security/2026/07/mythos-uncovers-crypto-weaknesses-that-went-unknown-for-years/), a third-round post-quantum candidate that had survived years of human review. Visa ran the same model against its own payment network and [open-sourced the harness](https://venturebeat.com/security/visa-used-mythos-to-hunt-for-bugs-in-its-own-payment-network-then-open-sourced-the-harness-that-made-it-possible). VulnCheck reported the counterweight: under 2% of AI-assisted vulnerability discoveries [have actually been weaponized](https://www.theregister.com/security/2026/07/28/ai-found-bugs-arent-proving-any-easier-to-exploit-despite-the-hype/).
+Anthropic published cryptanalysis in which Claude Mythos found [a fatal mathematical weakness in HAWK](https://arstechnica.com/security/2026/07/mythos-uncovers-crypto-weaknesses-that-went-unknown-for-years/), a third-round post-quantum candidate that had survived years of human review. Visa ran the same model against its own payment network and [open-sourced the harness](https://venturebeat.com/security/visa-used-mythos-to-hunt-for-bugs-in-its-own-payment-network-then-open-sourced-the-harness-that-made-it-possible). VulnCheck reported the counterweight: under 2% of AI-assisted vulnerability discoveries [have actually been weaponized](https://www.theregister.com/a/5279637).
 
 ## 5. DeepMind pushed robotics models toward whole-body control
 

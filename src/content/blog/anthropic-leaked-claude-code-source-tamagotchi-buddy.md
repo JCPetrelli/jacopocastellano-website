@@ -54,7 +54,7 @@ But the more I looked at the implementation, the more it made sense. **This is a
 
 You could call this retention engineering, and you wouldn't be entirely wrong. But the depth of the implementation, the secrecy, the fact that Buddy interactions don't count toward your usage quota: it feels more like engineers having fun than a growth team optimizing engagement.
 
-The community response backed this up. A dedicated [@claudebuddies](https://x.com/claudebuddies) account appeared on X within hours. A Claude Buddy Community grew to over 250 members in a few days. Someone built a [Claude Buddy Checker](https://claudebuddychecker.netlify.app/) site so users could preview their creature. A [GitHub repo](https://github.com/Ido-Levi/claude-code-tamagotchi) appeared as a community riff on the concept.
+The community response backed this up. A dedicated @claudebuddies account appeared on X within hours. A Claude Buddy Community grew to over 250 members in a few days. Someone built a [Claude Buddy Checker](https://claudebuddychecker.netlify.app/) site so users could preview their creature. A [GitHub repo](https://github.com/Ido-Levi/claude-code-tamagotchi) appeared as a community riff on the concept.
 
 Sure, other dev tools have big communities too. The Cursor subreddit has tens of thousands of members. Copilot has its own ecosystem. **But people don't usually build fan accounts around a specific Easter egg.** The game-like mechanics, the rarity tiers, the stat system: those are what drove the response, not just brand loyalty.
 

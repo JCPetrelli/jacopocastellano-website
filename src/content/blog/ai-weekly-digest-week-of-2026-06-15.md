@@ -37,7 +37,7 @@ This was the week agents stopped being demos and got embedded in the tools teams
 
 ## 4. The compute and chip race intensified
 
-The infrastructure buildout kept compounding. Amazon is [reportedly in talks to sell its in-house AI chips to outside data centers](https://techcrunch.com/2026/06/18/amazon-hopes-to-challenge-nvidia-more-directly-by-selling-its-ai-chips/), a move Andy Jassy frames as a $50 billion opportunity and a direct shot at Nvidia. Nvidia itself moved to [raise over $25 billion in its first bond sale since 2021](https://arstechnica.com/ai/2026/06/chipmaker-nvidia-seeks-to-raise-over-25b-in-first-bond-deal-since-2021/), while startups like [Tensordyne bet on logarithmic math to undercut GPUs](https://www.theregister.com/systems/2026/06/19/tensordyne-makes-a-big-bet-on-log-math-to-beat-nvidia/). Everyone is racing to own the layer underneath the models.
+The infrastructure buildout kept compounding. Amazon is [reportedly in talks to sell its in-house AI chips to outside data centers](https://techcrunch.com/2026/06/18/amazon-hopes-to-challenge-nvidia-more-directly-by-selling-its-ai-chips/), a move Andy Jassy frames as a $50 billion opportunity and a direct shot at Nvidia. Nvidia itself moved to [raise over $25 billion in its first bond sale since 2021](https://arstechnica.com/ai/2026/06/chipmaker-nvidia-seeks-to-raise-over-25b-in-first-bond-deal-since-2021/), while startups like [Tensordyne bet on logarithmic math to undercut GPUs](https://www.theregister.com/a/5258662). Everyone is racing to own the layer underneath the models.
 
 ## 3. Chinese open models closed the gap
 

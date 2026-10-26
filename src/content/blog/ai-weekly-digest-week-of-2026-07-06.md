@@ -43,7 +43,7 @@ xAI launched Grok 4.5 at [roughly half the price of rival frontier models](https
 
 ## 3. The bubble talk got loud, and the ROI math got ugly
 
-Banks, the BIS, and even the hyperscalers [started sounding the alarm](https://www.theregister.com/ai-and-ml/2026/07/06/even-banks-and-hyperscalers-are-now-sounding-the-alarm-about-the-ai-bubble/) about AI valuations, with Oracle down more than 40% on the month. Underneath the market noise sits a simpler problem: enterprise buyers keep finding that deployed AI falls short of the demo six to twelve months in. The companies getting real returns are the ones [ditching general-purpose models for specialized stacks](https://venturebeat.com/orchestration/trunk-tools-stack-cut-document-review-from-60-days-to-10-by-ditching-general-purpose-models), which is not the story the frontier labs are selling.
+Banks, the BIS, and even the hyperscalers [started sounding the alarm](https://www.theregister.com/a/5266123) about AI valuations, with Oracle down more than 40% on the month. Underneath the market noise sits a simpler problem: enterprise buyers keep finding that deployed AI falls short of the demo six to twelve months in. The companies getting real returns are the ones [ditching general-purpose models for specialized stacks](https://venturebeat.com/orchestration/trunk-tools-stack-cut-document-review-from-60-days-to-10-by-ditching-general-purpose-models), which is not the story the frontier labs are selling.
 
 ## 2. The scramble for chips, memory, and power went global
 

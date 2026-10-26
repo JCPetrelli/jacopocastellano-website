@@ -21,7 +21,7 @@ Not every story was a victory lap. Ford [rehired the veteran "gray beard" engine
 
 ## 8. The AI bargain: fewer jobs, more power plants
 
-The cost of the buildout came into sharper focus. Oracle [cut 21,000 roles](https://arstechnica.com/ai/2026/06/oracles-21000-layoffs-help-drive-its-debt-fueled-ai-investments/) to help fund debt-financed data centers, Elastic ran [7% leaner](https://www.theregister.com/databases/2026/06/25/elastic-stretches-workforce-7-thinner-as-ai-does-more-of-the-heavy-lifting/) as automation took over, and Microsoft locked in [one of the largest gas-powered data center deals](https://techcrunch.com/2026/06/22/microsoft-and-chevron-plan-one-of-the-largest-gas-powered-data-center-projects-in-us/) in the US to feed the compute hunger. With the layoff tally climbing, AI giants even [backed a nonprofit](https://www.theregister.com/ai-and-ml/2026/06/26/ai-giants-back-non-profit-to-retrain-workers-left-behind-by-ai/) to retrain the workers they are displacing.
+The cost of the buildout came into sharper focus. Oracle [cut 21,000 roles](https://arstechnica.com/ai/2026/06/oracles-21000-layoffs-help-drive-its-debt-fueled-ai-investments/) to help fund debt-financed data centers, Elastic ran [7% leaner](https://www.theregister.com/a/5261993) as automation took over, and Microsoft locked in [one of the largest gas-powered data center deals](https://techcrunch.com/2026/06/22/microsoft-and-chevron-plan-one-of-the-largest-gas-powered-data-center-projects-in-us/) in the US to feed the compute hunger. With the layoff tally climbing, AI giants even [backed a nonprofit](https://www.theregister.com/a/5262601) to retrain the workers they are displacing.
 
 ## 7. AI becomes a security battleground
 
@@ -37,7 +37,7 @@ This year's agents stopped waiting for prompts. OpenAI published [research on ho
 
 ## 4. The RAMpocalypse hits your wallet
 
-The AI memory shortage stopped being an enterprise problem and showed up at checkout. Apple [raised Mac and iPad prices](https://arstechnica.com/apple/2026/06/apple-ratchets-up-prices-blames-the-cost-of-memory/) and Microsoft hiked Xbox prices, both blaming surging memory and storage costs, while Micron [locked in historically high prices](https://www.theregister.com/systems/2026/06/25/micron-locks-in-historically-high-memory-prices-for-five-years/) for five years. The crunch has been so lucrative that Wall Street now calls Micron [the next Nvidia](https://techcrunch.com/2026/06/28/why-wall-street-thinks-us-memory-maker-micron-is-the-next-nvidia/).
+The AI memory shortage stopped being an enterprise problem and showed up at checkout. Apple [raised Mac and iPad prices](https://arstechnica.com/apple/2026/06/apple-ratchets-up-prices-blames-the-cost-of-memory/) and Microsoft hiked Xbox prices, both blaming surging memory and storage costs, while Micron [locked in historically high prices](https://www.theregister.com/a/5261854) for five years. The crunch has been so lucrative that Wall Street now calls Micron [the next Nvidia](https://techcrunch.com/2026/06/28/why-wall-street-thinks-us-memory-maker-micron-is-the-next-nvidia/).
 
 ## 3. Anthropic accuses Alibaba of the largest Claude heist yet
 
