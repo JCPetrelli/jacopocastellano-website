@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-28",
+  "window": "48h",
+  "sources": 42,
+  "articles": 740,
+  "points": [
+    {
+      "headline": "Anthropic's IPO filing puts its risks and money on the record.",
+      "body": "The S-1 carries a 93-page risk section that warns its models could blackmail people or escape human control, while it argues that humanity must spend $800B on AI. Reporters note that key figures are missing and that a complex governance structure aims to protect the safety mission from Wall Street pressure. Amazon stands to gain most from its note conversions.",
+      "sources": [
+        { "name": "Ars Technica", "url": "https://arstechnica.com/ai/2026/10/anthropic-ipo-warns-its-ai-could-blackmail-people-become-sentient-end-humanity/" },
+        { "name": "Wired", "url": "https://www.wired.com/story/anthropic-prospectus-leaves-out-some-numbers/" },
+        { "name": "The Verge", "url": "https://www.theverge.com/ai-artificial-intelligence/1019470/anthropic-ipo-resist-investor-pressure-cut-corners-safety" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/10/27/vcs-will-make-billions-on-anthropics-ipo-but-amazon-is-set-to-make-much-much-more/" }
+      ]
+    },
+    {
+      "headline": "DeepMind's Genie 4 world model adds audio and real-time steering.",
+      "body": "Genie 4 keeps a scene consistent for up to two minutes, double the limit of Genie 3, with better physics and more humanlike characters. Users can steer the generated world while it runs. The launch was one of the most discussed threads on Hacker News.",
+      "sources": [
+        { "name": "Google DeepMind", "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/10/27/googles-genie-4-world-model-adds-audio-more-realistic-worlds-and-real-time-steering/" },
+        { "name": "Ars Technica", "url": "https://arstechnica.com/google/2026/10/deepminds-genie-4-world-model-adds-audio-and-more-realistic-people-to-simulations/" }
+      ]
+    },
+    {
+      "headline": "OpenAI claims model-made results in math and physics, but researchers want more access.",
+      "body": "OpenAI says its models produced results on the Kakeya conjecture, the Exponential Time Hypothesis and quantum chromodynamics, and it published how researchers can verify them. Scientists say the company still decides who sees the work, which slows independent checks.",
+      "sources": [
+        { "name": "OpenAI", "url": "https://openai.com/index/building-scientific-understanding-with-academic-communities" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/10/27/frontier-ai-labs-say-their-models-refuted-the-exponential-time-hypothesis-what-does-that-mean/" },
+        { "name": "The Verge", "url": "https://www.theverge.com/ai-artificial-intelligence/1019921/openai-breakthrough-math-computer-science-physics" }
+      ]
+    },
+    {
+      "headline": "AI finds bugs faster, and AI tooling becomes a target.",
+      "body": "An AI agent found 4 severe flaws in popular industrial control software in under 4 hours, and AWS showed agents that triage Linux kernel CVEs. At the same time, the LiteLLM supply-chain attack started from an exposed master key, and the MCP community moved security to the top of its agenda.",
+      "sources": [
+        { "name": "The Register", "url": "https://www.theregister.com/security/2026/10/27/ai-hacker-finds-4-severe-bugs-in-popular-industrial-control-software-in-under-4-hours/5305811" },
+        { "name": "InfoQ", "url": "https://www.infoq.com/news/2026/10/aws-ai-agents-linux-kernel-cves/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global" },
+        { "name": "The Register", "url": "https://www.theregister.com/security/2026/10/26/litellm-supply-chain-attack-started-with-an-exposed-master-key/5305544" },
+        { "name": "InfoQ", "url": "https://www.infoq.com/news/2026/10/agntcon-mcpcon-2026/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global" }
+      ]
+    },
+    {
+      "headline": "Memory and power stay the limits of the AI buildout.",
+      "body": "SK Hynix expects memory shortages to last until 2030, which also pushes up prices for PCs and phones. Oracle will offer Google TPUs next to Nvidia hardware, and new grid hardware such as solid-state transformers is pitched as a way to feed data centers.",
+      "sources": [
+        { "name": "The Register", "url": "https://www.theregister.com/systems/2026/10/28/sk-hynix-says-memory-shortages-to-persist-until-2030/5305887" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/10/27/big-red-gets-cozy-with-google-to-offer-tpus-to-ai-customers/5305846" },
+        { "name": "MIT Technology Review", "url": "https://www.technologyreview.com/2026/10/27/1147684/solid-state-transformers/" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/10/27/the-data-center-boom-has-an-upside-innovation-for-the-us-grid/" }
+      ]
+    },
+    {
+      "headline": "Rules for AI agents that act for people take shape.",
+      "body": "A Delaware plan would let AI agents run entire businesses, and critics say owners could escape liability for reckless AI. Bank of America tells customers that they are responsible for what their AI agents do with banking access. A senior UK judge says AI could decide many civil cases.",
+      "sources": [
+        { "name": "Ars Technica", "url": "https://arstechnica.com/tech-policy/2026/10/no-human-at-the-helm-delaware-plan-would-let-ai-agents-run-entire-businesses/" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/10/27/bank-of-america-kindly-asks-that-you-dont-share-your-banking-password-with-your-ai-assistant/" },
+        { "name": "Wired", "url": "https://www.wired.com/story/geoffrey-vos-uk-judge-ai-legal-profession-challenges/" }
+      ]
+    }
+  ]
+}
