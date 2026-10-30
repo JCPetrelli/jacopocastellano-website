@@ -8,22 +8,23 @@ const families = [
   { name: 'Strings', items: 'violin, viola, cello, double bass, harp' },
   { name: 'Woodwind', items: 'piccolo, flute, oboe, cor anglais, clarinet, bass clarinet, bassoon, contrabassoon' },
   { name: 'Brass', items: 'french horn, trumpet, trombone, bass trombone, tuba' },
-  { name: 'Percussion', items: 'timpani, bass drum, snare drum, cymbals, triangle, tambourine, tam-tam, glockenspiel, xylophone, marimba, tubular bells' },
-  { name: 'Keyboards', items: 'celesta, grand piano' },
+  { name: 'Percussion', items: 'timpani, bass drum, snare drum, cymbals, triangle, tambourine, tam-tam, glockenspiel, xylophone, marimba, vibraphone, tubular bells' },
+  { name: 'Folk strings', items: 'mandolin, hurdy-gurdy' },
+  { name: 'Keyboards', items: 'celesta, harpsichord, fortepiano, grand piano' },
 ];
 const facts = [
-  { value: '31', label: 'instruments' },
-  { value: '4', label: 'formats: GLB, FBX, OBJ, Blender' },
+  { value: '36', label: 'instruments' },
+  { value: '5', label: 'formats: GLB, FBX, OBJ, USDZ, Blender' },
   { value: '3', label: 'detail levels each' },
   { value: '1:1', label: 'real sizes, in metres' },
 ];
-const gallery = ['grand_piano.jpg', 'french_horn.jpg', 'trumpet.jpg', 'harp.jpg', 'tuba.jpg', 'grand_piano_views.jpg'];
+const gallery = ['grand_piano.jpg', 'harpsichord.jpg', 'fortepiano.jpg', 'harp.jpg', 'hurdy_gurdy.jpg', 'vibraphone.jpg', 'french_horn.jpg', 'trumpet.jpg', 'grand_piano_views.jpg'];
 
 const productSchema = {
   '@context': 'https://schema.org',
   '@type': 'Product',
-  name: 'Orchestra Instruments: 31 3D models of the symphony orchestra',
-  description: '31 instruments of the symphony orchestra as 3D models in GLB, FBX, OBJ and Blender formats, at real sizes, in three detail levels.',
+  name: 'Orchestra Instruments: 36 3D models of the symphony orchestra',
+  description: '36 orchestral instruments as 3D models in GLB, FBX, OBJ, USDZ and Blender formats, at real sizes, in three detail levels.',
   image: new URL(`${img}/all_instruments.jpg`, Astro.site).toString(),
   brand: { '@type': 'Person', name: 'Jacopo Castellano' },
   offers: { '@type': 'Offer', price: price, priceCurrency: 'EUR', availability: 'https://schema.org/InStock', url: buy },
@@ -31,8 +32,8 @@ const productSchema = {
 ---
 
 <BaseLayout
-  title="Orchestra Instruments: 31 3D models"
-  description="31 instruments of the symphony orchestra as 3D models: GLB, FBX, OBJ and Blender files, real sizes, three detail levels, free updates."
+  title="Orchestra Instruments: 36 3D models"
+  description="36 orchestral instruments as 3D models: GLB, FBX, OBJ, USDZ and Blender files, real sizes, three detail levels, free updates."
   image={`${img}/all_instruments.jpg`}
   breadcrumbs={[{ name: 'Store', url: '/store/' }, { name: 'Orchestra Instruments', url: '' }]}
 >
@@ -41,11 +42,11 @@ const productSchema = {
     <div class="container">
       <header class="oi-hero">
         <a href="/store/" class="oi-back">&larr; Store</a>
-        <span class="oi-kicker">3D model pack · version 1.0</span>
+        <span class="oi-kicker">3D model pack · version 2.0</span>
         <h1>Orchestra Instruments</h1>
         <p class="oi-lead">
           Every instrument of the symphony orchestra, from the violin to the tubular bells, with a
-          concert grand piano as the centrepiece. 31 models at real sizes, in one style.
+          concert grand piano as the centrepiece. 36 models at real sizes, in one style.
         </p>
         <div class="oi-cta">
           <a href={buy} class="btn btn-primary" target="_blank" rel="noopener">Buy for €{price}</a>
@@ -54,7 +55,7 @@ const productSchema = {
       </header>
 
       <div class="oi-video">
-        <video controls muted playsinline preload="metadata" poster={`${img}/all_instruments.jpg`}>
+        <video controls muted playsinline preload="metadata" poster={`${img}/cover_all_instruments.jpg`}>
           <source src="/videos/orchestra-instruments-promo.mp4" type="video/mp4" />
         </video>
       </div>
@@ -76,15 +77,16 @@ const productSchema = {
 
         <h2>Formats</h2>
         <ul>
-          <li>GLB, FBX and OBJ for every instrument, plus the Blender file.</li>
+          <li>GLB, FBX, OBJ and USDZ for every instrument, plus the Blender file.</li>
+          <li>USDZ opens in Quick Look on a Mac, iPhone or iPad: put the instrument in your room at real size.</li>
           <li>Three detail levels: full, about 45 % and about 18 % of the triangles.</li>
-          <li>271,518 triangles in all at full detail. The lightest model has 464, the grand piano 39,972.</li>
-          <li>A 33-page PDF catalogue with every instrument's size, counts and parts.</li>
+          <li>870,042 triangles in all at full detail. The lightest model has 1,432, the grand piano 100,182.</li>
+          <li>A 38-page PDF catalogue with every instrument's size, counts and parts.</li>
         </ul>
 
         <h2>Made to be animated</h2>
         <p>
-          Each instrument is split into named parts under one parent. On ten of them the parts that
+          Each instrument is split into named parts under one parent. On 13 of them the parts that
           move have their origin on the hinge or slide line: the trombones' slides, the trumpet's
           pistons, the piano's lid, fallboard, music desk and pedals, the harp's seven pedals.
           Nothing is rigged, so you animate them your way.
@@ -101,9 +103,9 @@ const productSchema = {
         <h2>Honest notes</h2>
         <ul>
           <li>The models are stylised, not engineering copies. Woodwind key mechanisms and brass tubing are simplified.</li>
-          <li>Wood grain is an image texture on the bowed strings, the harp and the piano. Everything else uses plain materials.</li>
+          <li>Wood grain is an image texture on the bowed strings, the harp, the wooden bars, the keyboards, the mandolin and the hurdy-gurdy. Everything else uses plain materials.</li>
           <li>The lower detail levels are made automatically.</li>
-          <li>Every file was re-imported and checked in Blender. Other programs have not been tested. If a file misbehaves in yours, <a href="/contact/">write to me</a>.</li>
+          <li>Every file was re-imported and checked in Blender, and the FBX and OBJ files were opened in TouchDesigner at real size. If a file misbehaves in your program, <a href="/contact/">write to me</a>.</li>
           <li>No real maker's name or logo appears anywhere.</li>
         </ul>
 

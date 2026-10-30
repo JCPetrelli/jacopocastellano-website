@@ -1,6 +1,6 @@
 ---
 title: "Orchestra Instruments"
-description: "31 instruments of the symphony orchestra as 3D models, built from Python scripts in Blender and sold as a pack."
+description: "36 orchestral instruments as 3D models, built from Python scripts in Blender and sold as a pack."
 date: 2026-10-09
 category: motion
 featured: true
@@ -24,7 +24,7 @@ role: "Design and development"
 
 ## About
 
-Orchestra Instruments is a pack of 31 3D models covering the symphony orchestra: strings, woodwind, brass, percussion, a celesta and a concert grand piano. It is for sale as a download.
+Orchestra Instruments is a pack of 36 3D models covering the symphony orchestra: strings, woodwind, brass, percussion and keyboards (celesta, harpsichord, fortepiano, concert grand), plus a mandolin and a hurdy-gurdy. It is for sale as a download.
 
 [Get the pack](/orchestra-instruments/) · [Buy on Gumroad](https://jacopocastellano.gumroad.com/l/orchestra-instruments)
 
@@ -34,7 +34,7 @@ Orchestra Instruments is a pack of 31 3D models covering the symphony orchestra:
 
 ## How it is made
 
-No model was sculpted by hand. Each instrument is a Python module that builds its mesh in Blender from named measurements: body length, bore, bell diameter, key positions. One command rebuilds all 31, exports them and renders the catalogue.
+No model was sculpted by hand. Each instrument is a Python module that builds its mesh in Blender from named measurements: body length, bore, bell diameter, key positions. One command rebuilds all 36, exports them and renders the catalogue.
 
 Shared code handles what instruments have in common. The bowed strings come from one builder with four sets of sizes. The woodwinds share a module for key cups, rods and levers. The brass share bells, braces and mouthpieces.
 
