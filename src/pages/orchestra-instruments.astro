@@ -18,7 +18,7 @@ const facts = [
   { value: '3', label: 'detail levels each' },
   { value: '1:1', label: 'real sizes, in metres' },
 ];
-const gallery = ['grand_piano.jpg', 'harpsichord.jpg', 'fortepiano.jpg', 'harp.jpg', 'hurdy_gurdy.jpg', 'vibraphone.jpg', 'french_horn.jpg', 'trumpet.jpg', 'grand_piano_views.jpg'];
+const gallery = ['grand_piano.jpg', 'harpsichord.jpg', 'fortepiano.jpg', 'harp.jpg', 'hurdy_gurdy.jpg', 'vibraphone.jpg', 'french_horn.jpg', 'trumpet.jpg', 'tuba.jpg', 'grand_piano_views.jpg'];
 
 const productSchema = {
   '@context': 'https://schema.org',
@@ -95,7 +95,7 @@ const productSchema = {
 
       <div class="oi-gallery">
         {gallery.map((g) => (
-          <img src={`${img}/${g}`} alt="Orchestra Instruments render" loading="lazy" />
+          <img src={`${img}/${g}`} alt="Orchestra Instruments render" loading="lazy" class={g.endsWith('_views.jpg') ? 'wide' : undefined} />
         ))}
       </div>
 
@@ -154,6 +154,7 @@ const productSchema = {
   .oi-families dd { margin: 0; color: var(--color-text-muted); }
   .oi-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-md); margin-bottom: var(--space-xl); }
   .oi-gallery img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid var(--color-border-light); }
+  .oi-gallery img.wide { grid-column: 1 / -1; aspect-ratio: auto; }
   @media (max-width: 768px) {
     .oi-facts { grid-template-columns: repeat(2, 1fr); }
     .oi-gallery { grid-template-columns: 1fr; }
