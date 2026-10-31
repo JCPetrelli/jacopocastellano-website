@@ -1,0 +1,36 @@
+---
+// Sends a GA4 event for every click on a link that leaves the site.
+// - every external link  -> "outbound_click"
+// - Gumroad links        -> also "store_click" (product slug in item_id)
+// Works for links added later too (one listener on the document).
+---
+<script is:inline>
+  (function () {
+    function track(event) {
+      var link = event.target.closest && event.target.closest('a[href]');
+      if (!link || typeof gtag !== 'function') return;
+      var url;
+      try { url = new URL(link.href, location.href); } catch (e) { return; }
+      if (!/^https?:$/.test(url.protocol)) return;
+      var host = url.hostname.replace(/^www\./, '');
+      var here = location.hostname.replace(/^www\./, '');
+      if (host === here) return;
+
+      var params = {
+        link_url: url.href,
+        link_domain: host,
+        link_text: (link.textContent || '').trim().slice(0, 100),
+        page_path: location.pathname,
+        transport_type: 'beacon'
+      };
+      gtag('event', 'outbound_click', params);
+
+      if (/(^|\.)gumroad\.com$/.test(host)) {
+        var slug = (url.pathname.match(/\/l\/([^/?#]+)/) || [])[1] || url.pathname;
+        gtag('event', 'store_click', Object.assign({ item_id: slug }, params));
+      }
+    }
+    document.addEventListener('click', track, true);
+    document.addEventListener('auxclick', function (e) { if (e.button === 1) track(e); }, true);
+  })();
+</script>
