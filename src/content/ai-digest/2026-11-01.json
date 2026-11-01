@@ -1,0 +1,66 @@
+{
+  "date": "2026-11-01",
+  "window": "48h",
+  "sources": 42,
+  "articles": 196,
+  "points": [
+    {
+      "headline": "The Claude extension attack reached about 5,000 developer machines.",
+      "body": "New reporting on the backdoored Claude Code extension on Cursor's marketplace says the tainted build landed on some 5,000 developer systems, but a bug in the malicious code stopped it from fully taking over most of them. Anthropic blames a malicious actor in a targeted supply-chain attack, and it is still unknown how the attacker got into the verified account.",
+      "sources": [
+        { "name": "Wired", "url": "https://www.wired.com/story/trojan-malware-targets-thousands-of-anthropic-claude-developer-systems/" },
+        { "name": "The Register", "url": "https://www.theregister.com/cyber-crime/2026/10/30/anthropic-that-claude-code-extension-compromise-couldnt-be-us/5306682" },
+        { "name": "Ars Technica", "url": "https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours/" }
+      ]
+    },
+    {
+      "headline": "Criminals now use AI as a standard tool.",
+      "body": "New infostealer malware called Volta-Autodoxer uses AI to build full profiles of its victims, one extortionist spent over $7,000 on AI services and left the evidence behind, and the US DOJ says thousands of AI-run \"ghost students\" stole millions in student loans. On the other side, researchers showed a ChatGPT account takeover through its HTML previews, and Google says its PageBreak AI agent found over 500 XSS bugs.",
+      "sources": [
+        { "name": "Wired", "url": "https://www.wired.com/story/kernel-panic-volta-autodoxer-ai-infostealer-malware/" },
+        { "name": "The Register", "url": "https://www.theregister.com/security/2026/10/30/crim-spent-7k-on-ai-services-in-extortion-attacks-then-left-evidence-for-all-to-see/5306754" },
+        { "name": "Ars Technica", "url": "https://arstechnica.com/tech-policy/2026/10/doj-exposes-ghost-students-using-ai-to-complete-courses-steal-student-loans/" },
+        { "name": "Simon Willison", "url": "https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/" }
+      ]
+    },
+    {
+      "headline": "Raising money gets harder for the big AI labs.",
+      "body": "OpenAI has reportedly lowered the target for its new funding round, and Blackstone expects credit agencies to give Anthropic a high junk rating after its IPO, which would make its debt more expensive. Nvidia is even weighing whether to cosign the loan for Nscale's West Virginia data center, a sign that lenders want more security before they fund AI build-outs.",
+      "sources": [
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/10/31/openai-reportedly-lowers-funding-target-for-new-round/" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/10/30/anthropic-expected-to-receive-high-junk-rating-from-credit-agencies-following-ipo-report-says/" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/10/30/nvidia-weighs-playing-the-cosigner-for-nscales-ai-data-center-in-west-virginia/" }
+      ]
+    },
+    {
+      "headline": "AI demand squeezes compute, memory and even tape.",
+      "body": "AWS capacity is reportedly almost sold out through 2027, and AI's appetite for memory pushes PC prices up, which helped crash Intel's stock. Fujifilm will make five times more magnetic tape to store AI data, while plunging token prices cut payouts for Mac owners who rent their GPUs out on Darkbloom.",
+      "sources": [
+        { "name": "InfoQ", "url": "https://www.infoq.com/news/2026/11/aws-capacity-sold-out/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/10/30/intels-stock-crashes-knocking-12b-from-governments-stake/" },
+        { "name": "Ars Technica", "url": "https://arstechnica.com/gadgets/2026/10/fujifilm-to-boost-tape-production-5x-as-ai-fuels-archiving-demand/" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/10/30/darkbloom-which-allowed-mac-users-to-rent-out-their-gpus-for-ai-inference-warns-of-low-payouts/5306782" }
+      ]
+    },
+    {
+      "headline": "AI agents meet a slower reality at work and in shops.",
+      "body": "DoorDash says outside AI agents have placed only a few hundred orders so far, and Meta's Muse agent has not yet upended the businesses that feared it. Inside companies the change is faster: Accenture uses agents to sift job applicants, and an Amazon memo on AI use left many of its engineers worried about their profession.",
+      "sources": [
+        { "name": "Ars Technica", "url": "https://arstechnica.com/ai/2026/10/doordash-says-outside-ai-agents-have-only-led-to-hundreds-of-orders-so-far/" },
+        { "name": "Wired", "url": "https://www.wired.com/story/metas-muse-could-upend-all-kinds-of-businesses-it-hasnt-yet/" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/10/30/accenture-ai-agents-are-sifting-through-applicants/5306460" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/10/31/amazon-sends-chills-through-its-workforce-with-mixed-message-memo-about-ai-use-corey-quinn/5306804" }
+      ]
+    },
+    {
+      "headline": "Humanoid robots get insurance, but funding cools.",
+      "body": "UK insurers launched what they call the first policy for domestic humanoid robots, to cover the damage they may cause at home. Money still flows to physical AI, with $100 million for Foundry Robotics' autonomous assembly factory, but Agility now expects $155 million less than planned from its SPAC deal.",
+      "sources": [
+        { "name": "Robotics & Automation News", "url": "https://roboticsandautomationnews.com/2026/10/31/first-insurance-policy-for-domestic-humanoid-robots-in-the-uk/106568/" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/10/30/domestic-droid-gone-amok-dont-worry-youre-covered/5306396" },
+        { "name": "The Robot Report", "url": "https://www.therobotreport.com/humanoid-developer-agility-now-expects-raise-465m-spac-deal/" },
+        { "name": "Robotics & Automation News", "url": "https://roboticsandautomationnews.com/2026/10/31/foundry-robotics-raises-100-million-to-build-americas-first-autonomous-factory-for-assembly/106564/" }
+      ]
+    }
+  ]
+}
