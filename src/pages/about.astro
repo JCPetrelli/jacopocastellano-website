@@ -109,6 +109,30 @@ import YouTubeVideos from '../components/YouTubeVideos.astro';
           </div>
 
           <div class="sidebar-section">
+            <h3>Certifications</h3>
+            <ul class="cert-list">
+              <li>
+                <a href="https://www.credly.com/badges/909e8d52-3d9e-4207-a7bc-e47cbd4f12b1" target="_blank" rel="noopener" class="cert">
+                  <img src="/images/certifications/claude-certified-developer-foundations.png" alt="Claude Certified Developer - Foundations badge" width="400" height="400" loading="lazy" />
+                  <span class="cert-text">
+                    <span class="cert-name">Claude Certified Developer – Foundations</span>
+                    <span class="cert-meta">Anthropic · November 2026</span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.credly.com/badges/3eb661db-0a31-4dc5-be3c-59acec74fc47" target="_blank" rel="noopener" class="cert">
+                  <img src="/images/certifications/claude-certified-associate-foundations.png" alt="Claude Certified Associate - Foundations badge" width="400" height="400" loading="lazy" />
+                  <span class="cert-text">
+                    <span class="cert-name">Claude Certified Associate – Foundations</span>
+                    <span class="cert-meta">Anthropic · September 2026</span>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="sidebar-section">
             <h3>Contact</h3>
             <p class="contact-text">
               Available for freelance projects and collaborations.
@@ -209,6 +233,51 @@ import YouTubeVideos from '../components/YouTubeVideos.astro';
     font-size: 0.875rem;
     padding: var(--space-xs) 0;
     color: var(--color-text-muted);
+  }
+
+  .cert-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .cert-list li + li {
+    margin-top: var(--space-md);
+  }
+
+  .cert {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .cert img {
+    width: 64px;
+    height: 64px;
+    flex: 0 0 64px;
+  }
+
+  .cert-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .cert-name {
+    font-size: 0.875rem;
+    line-height: 1.35;
+    color: var(--color-text);
+  }
+
+  .cert:hover .cert-name {
+    text-decoration: underline;
+  }
+
+  .cert-meta {
+    font-size: 0.75rem;
+    color: var(--color-text-subtle);
   }
 
   .contact-text {
