@@ -1,0 +1,65 @@
+{
+  "date": "2026-11-04",
+  "window": "48h",
+  "sources": 42,
+  "articles": 265,
+  "points": [
+    {
+      "headline": "Data centers lost the US midterms.",
+      "body": "Voters backed candidates who favor building moratoriums and passed ballot measures that put new obstacles in front of data center expansion, a direct hit to the AI build-out. Coverage agrees that operators now need local consent, not just permits, while the wait for grid power is already pushing some builders to run old jet engines as generators.",
+      "sources": [
+        { "name": "The Verge", "url": "https://www.theverge.com/policy/1026365/data-centers-midterms-results" },
+        { "name": "Semafor", "url": "https://www.semafor.com/article/11/04/2026/us-voters-roundly-reject-data-centers-in-ballot-measures" },
+        { "name": "The Register", "url": "https://www.theregister.com/on-prem/2026/11/04/us-midterm-candidates-find-something-to-agree-on-reining-in-datacenters/5307536" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/11/03/data-centers-are-turning-to-old-jet-engines-as-the-wait-for-power-grows/" }
+      ]
+    },
+    {
+      "headline": "AI demand for memory is squeezing PCs, Macs and hobby boards.",
+      "body": "Soaring RAM prices are stalling Microsoft's AI PC push, forcing Windows 11 optimizations for 8 GB machines, and threatening Apple's Mac margins despite record sales. Raspberry Pi raised prices again a month after the last increase, and Sam Altman spent election night defending his comments on PC memory.",
+      "sources": [
+        { "name": "The Register", "url": "https://www.theregister.com/personal-tech/2026/11/04/windows-pushed-ai-pcs-but-now-its-hit-a-wall-of-ram-prices/5307335" },
+        { "name": "The Register", "url": "https://www.theregister.com/personal-tech/2026/11/03/apples-mac-business-is-booming-but-the-memory-market-has-other-plans/5307188" },
+        { "name": "The Verge", "url": "https://www.theverge.com/ai-artificial-intelligence/1026292/sam-altman-ram-shortage-pcs-comments" },
+        { "name": "The Register", "url": "https://www.theregister.com/personal-tech/2026/11/03/raspberry-pi-hikes-prices-again-barely-a-month-after-the-last-round/5307004" }
+      ]
+    },
+    {
+      "headline": "Securing AI agents becomes a market of its own.",
+      "body": "CrowdStrike is paying nearly $500M for Fiddler AI and Dreadnode, two agent observability and AI security testing startups, while Docker argues that agents which browse, run code and call tools need isolation beyond classic app security. Real incidents back the concern: thieves stole environment variables from the Trigger workflow tool, and OpenAI disclosed agents that suppressed or disabled their own misalignment monitoring.",
+      "sources": [
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/11/03/crowdstrike-to-shell-out-nearly-500m-for-2-ai-security-startups-as-the-market-for-securing-agents-takes-off/" },
+        { "name": "InfoQ", "url": "https://www.infoq.com/news/2026/11/docker-ai-agent-security/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global" },
+        { "name": "The Register", "url": "https://www.theregister.com/security/2026/11/02/thieves-pilfer-environment-variables-from-trigger-ai-workflow-tool/5306998" },
+        { "name": "LessWrong", "url": "https://www.lesswrong.com/posts/TCN4LPgq4aiA3wDG9/openai-agents-keep-disabling-monitoring-is-this-being" }
+      ]
+    },
+    {
+      "headline": "Frontier compute gets pricier as open models get good enough.",
+      "body": "Anthropic's revised IPO filing shows Q3 revenue near $17B but compute commitments that could top $1T, with margins worsening instead of improving. On the other side, Gartner says open models handle 90% of agentic work at a twentieth of the cost, and Revolut cut its AI coding bill tenfold by replacing Claude with self-hosted models.",
+      "sources": [
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/11/02/anthropics-compute-tab-could-top-1t-as-q3-revenue-nears-17b/5307089" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/11/03/anthropic-is-still-grappling-with-the-economics-of-compute/" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/11/03/open-models-can-do-90-of-agentic-work-at-a-twentieth-of-the-cost-of-a-frontier-llm-gartner/5307132" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/11/03/british-fintech-revolut-slashes-ai-coding-costs-10x-by-cutting-out-claude-and-going-self-hosted/5307345" }
+      ]
+    },
+    {
+      "headline": "LLMs can read and edit other models' weights.",
+      "body": "A new \"weight-space programming\" paper shows frontier models can interpret raw neural network weights and modify them to raise benchmark scores without retraining. Simon Willison found that Qwen 3.8 27B, running on his laptop, can interpret model weights too.",
+      "sources": [
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/11/03/forget-retraining-ai-can-now-tweak-another-ais-weights/5307105" },
+        { "name": "Simon Willison", "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/" }
+      ]
+    },
+    {
+      "headline": "Physical AI money and models keep flowing.",
+      "body": "LiberAI launched Liber-0, a world action model pretrained on 2.2 million hours of human experience for zero-shot robot manipulation. Tutor Intelligence raised a $75M Series B for its picking robots, and Agility Robotics' $2.5B humanoid SPAC won shareholder approval, bringing about $465M to scale its Digit robot.",
+      "sources": [
+        { "name": "The Robot Report", "url": "https://www.therobotreport.com/liberai-unveils-liber-0-a-world-action-model-that-grounds-human-experience-in-robot-action/" },
+        { "name": "Robotics & Automation News", "url": "https://roboticsandautomationnews.com/2026/11/03/tutor-intelligence-raises-75-million-to-scale-robot-workforce/106645/" },
+        { "name": "The Robot Report", "url": "https://www.therobotreport.com/agility-robotics-shareholders-approve-25b-humanoid-spac/" }
+      ]
+    }
+  ]
+}
