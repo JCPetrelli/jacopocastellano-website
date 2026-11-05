@@ -72,7 +72,7 @@
 - [7 benefits of memorizing the first 2000 digits of π](https://jacopocastellano.com/blog/7-benefits-of-memorizing-the-first-2000-digits-of-/): And why on earth would you do it in the first place.
 - [How to Extract Email Addresses from a Text File with Regular Expressions and Bash](https://jacopocastellano.com/blog/how-to-extract-email-addresses-from-a-text-file-wi/): Use regex and `grep` to easily extract email addresses from a text file.
 - [The Ultimate (Easy) Guide to Setting Up SSH Key Pairs](https://jacopocastellano.com/blog/the-ultimate-easy-guide-to-setting-up-ssh-key-pair/): Eliminate the need for passwords with SSH key pairs! Get started with this handy guide and take your security to the next level.
-- [Regular expressions made simple: An introduction to regex in bash](https://jacopocastellano.com/blog/regular-expressions-made-simple-an-introduction-to/): Regular expressions, also known as regex or regexp, are a powerful tool for manipulating and extracting information from text-based data…
+- [Bash Regex: How to Use Regular Expressions in Bash (grep, sed, =~)](https://jacopocastellano.com/blog/regular-expressions-made-simple-an-introduction-to/): How to use regex in bash: the =~ operator inside [[ ]], plus grep -E, sed and awk, with copy-paste examples for matching, extracting and validating text.
 - [Automate Your Backups with Bash Scripts](https://jacopocastellano.com/blog/automate-your-backups-with-bash-scripts/): Say goodbye to manual backups! This collection of scripts makes it easy to automate your backups and protect your valuable data. For free.
 
 ## Portfolio
