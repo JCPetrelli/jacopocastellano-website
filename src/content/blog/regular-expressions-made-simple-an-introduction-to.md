@@ -1,6 +1,6 @@
 ---
-title: "Regular expressions made simple: An introduction to regex in bash"
-description: "Regular expressions, also known as regex or regexp, are a powerful tool for manipulating and extracting information from text-based data…"
+title: "Bash Regex: How to Use Regular Expressions in Bash (grep, sed, =~)"
+description: "How to use regex in bash: the =~ operator inside [[ ]], plus grep -E, sed and awk, with copy-paste examples for matching, extracting and validating text."
 date: 2022-12-15
 tags:
   - Bash
@@ -45,7 +45,10 @@ In summary, regular expressions are written using a specific syntax and language
 ## Using regular expressions in bash: A guide to the most common regex commands and functions in bash
 Now that you have a basic understanding of regular expression syntax and structure, it’s time to learn how to use regular expressions in bash scripting. In bash, regular expressions are used in a variety of commands and functions to search for and manipulate strings of text. Some of the most common commands and functions used to work with regex in bash are:
 
-1. `**grep**`: This command is used to search for a specific pattern in a file or group of files. The `grep` command takes a regular expression as an argument, and returns any lines that match the specified pattern.2. `**sed**`: This command is used to search for and replace text within a file or group of files. The `sed` command takes a regular expression as an argument, and replaces any instances of the specified pattern with a replacement string.3. `**awk**`: This command is used to process and manipulate text-based data. The `awk` command uses regular expressions to search for and extract specific information from a file or group of files.4. `**[[ ]]**`: This bash construct is used to test a string against a regular expression. The `[[ ]]` construct takes a regular expression as an argument, and returns `true` if the specified pattern matches the string, and `false` otherwise.
+1. `**grep**`: This command is used to search for a specific pattern in a file or group of files. The `grep` command takes a regular expression as an argument, and returns any lines that match the specified pattern.
+2. `**sed**`: This command is used to search for and replace text within a file or group of files. The `sed` command takes a regular expression as an argument, and replaces any instances of the specified pattern with a replacement string.
+3. `**awk**`: This command is used to process and manipulate text-based data. The `awk` command uses regular expressions to search for and extract specific information from a file or group of files.
+4. `**[[ ]]**`: This bash construct is used to test a string against a regular expression. The `[[ ]]` construct takes a regular expression as an argument, and returns `true` if the specified pattern matches the string, and `false` otherwise.
 
 These commands and functions are commonly used in bash scripts to search for and manipulate text-based data. For example, the `grep` command can be used to search for a specific pattern within a log file, and the `sed` command can be used to replace that pattern with a different string. The `awk` command can be used to extract specific information from a file, and the `[[ ]]` construct can be used to validate user input against a regular expression.
 
@@ -68,7 +71,7 @@ Another common use for regular expressions in bash is to validate user input. Th
 # Prompt the user for a password
 read -p "Enter password: " password
 # Test the password against a regular expression
-if [[ $password =~ ^[a-zA-Z0–9]{8,}$ ]]; then
+if [[ $password =~ ^[a-zA-Z0-9]{8,}$ ]]; then
  echo "Valid password"
 else
  echo "Invalid password"
