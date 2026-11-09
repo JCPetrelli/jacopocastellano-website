@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-09",
+  "window": "48h",
+  "sources": 42,
+  "articles": 176,
+  "points": [
+    {
+      "headline": "Nvidia's board opens an investigation into Jensen Huang.",
+      "body": "Nvidia is investigating its CEO over his relationship with Megaspeed executive Alice Huang, whom a US intelligence memo describes as recruited by China's Ministry of State Security and who reportedly bought GPUs in bulk. In a memo to staff, Huang admitted to an affair. Governance experts now call his future at the world's most valuable AI chip company roughly a coin flip.",
+      "sources": [
+        { "name": "The Verge", "url": "https://www.theverge.com/ai-artificial-intelligence/1029562/nvidia-investigating-jensen-huang-relationship-chinese-spy" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/11/07/chinese-exec-was-recruited-to-spy-on-nvidia-ceo-according-to-us-intelligence-memo/" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/11/08/is-jensen-huangs-job-on-the-line-yales-jeffrey-sonnenfeld-estimates-its-about-a-50-50/" },
+        { "name": "The Register", "url": "https://www.theregister.com/legal/2026/11/09/nvidia-ceo-jensen-huang-starring-in-possible-remake-of-the-spy-who-shagged-me/5308327" }
+      ]
+    },
+    {
+      "headline": "Big companies put limits on AI coding tools.",
+      "body": "Goldman Sachs is reportedly pulling Claude Code from its bankers and traders, a story that drew one of the largest Hacker News discussions of the weekend. Apple is said to cap engineers at a $200 daily AI budget. Both point to the same shift: after the rush to adopt agents, companies now manage cost and risk per seat.",
+      "sources": [
+        { "name": "The State of AI", "url": "https://www.thestateofai.com/news/goldman-sachs-claude-code-traders-bankers" },
+        { "name": "Stork.ai", "url": "https://www.stork.ai/newsletter/2026-11-08-apple-capped-engineers-at-a-200-daily-ai-budget#story-1" }
+      ]
+    },
+    {
+      "headline": "Software teams adapt to the flood of agent-written code.",
+      "body": "Linus Torvalds says the wave of AI-prompted kernel patches may have peaked, with fixes now arriving faster than new bug reports. Grab described the guardrails it built to keep its mobile app stable under a surge of AI-generated changes, and Entire launched a Git forge designed around coding agents. Simon Willison suggests hiding verbose agent-written PR descriptions behind collapsible sections.",
+      "sources": [
+        { "name": "The Register", "url": "https://www.theregister.com/security/2026/11/09/linus-torvalds-sees-signs-ai-prompted-patch-flood-has-peaked/5308345" },
+        { "name": "InfoQ", "url": "https://www.infoq.com/news/2026/11/grab-ai-generated-code-safety/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global" },
+        { "name": "InfoQ", "url": "https://www.infoq.com/news/2026/11/entire-git-forge-coding-agents/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global" },
+        { "name": "Simon Willison", "url": "https://simonwillison.net/2026/Nov/9/details-summary/" }
+      ]
+    },
+    {
+      "headline": "Apple pushes to make Siri a real agent.",
+      "body": "According to Bloomberg, CEO John Ternus is pressing Craig Federighi to speed up the Siri roadmap so it can compete with OpenAI's and Meta's assistants. Code in the iOS 27.3 beta also hints at a \"Conversational Apps\" category for chatbots on Apple's HomeView smart home hub.",
+      "sources": [
+        { "name": "The Verge", "url": "https://www.theverge.com/ai-artificial-intelligence/1029552/apple-siri-ai-agentic" },
+        { "name": "The Verge", "url": "https://www.theverge.com/tech/1029526/chatbots-might-be-coming-to-apples-homeview" }
+      ]
+    },
+    {
+      "headline": "AI is speeding up research, including AI research itself.",
+      "body": "Commentators cite Anthropic's S1 filing as evidence that AI already accelerates AI development, and the debate over OpenAI's claim to have solved 372 open math problems continues to unsettle academia. The Sequence reads the week as smarter models meeting a more nervous market.",
+      "sources": [
+        { "name": "AI Alignment Forum", "url": "https://www.alignmentforum.org/posts/8tL9f5HZxsTvn2LHp/ajeya-ai-is-dramatically-accelerating-ai-research-right-now" },
+        { "name": "LessWrong", "url": "https://www.lesswrong.com/posts/4yhxNedKfccqb9ba4/why-can-t-academia-deal-with-ai" },
+        { "name": "TheSequence", "url": "https://thesequence.substack.com/p/the-sequence-radar-issue-967-last" }
+      ]
+    },
+    {
+      "headline": "Data centers become a political issue after the US midterms.",
+      "body": "Analysts say the midterm results make the outlook harder for data center expansion. In Michigan, a candidate who campaigned against data centers won a House seat and now plans to push for a federal moratorium.",
+      "sources": [
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/11/07/after-the-midterms-things-are-looking-rocky-for-elon-musk-and-data-centers/" },
+        { "name": "Wired", "url": "https://www.wired.com/story/he-ran-on-fighting-data-centers-now-hes-going-to-congress/" }
+      ]
+    }
+  ]
+}
