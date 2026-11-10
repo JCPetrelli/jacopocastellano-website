@@ -1,0 +1,132 @@
+{
+  "date": "2026-11-10",
+  "window": "48h",
+  "sources": 42,
+  "articles": 237,
+  "points": [
+    {
+      "headline": "Anthropic ships Fable 5.2 and Mythos 5.2 as it heads for a record IPO.",
+      "body": "Fable 5.2 went straight to first place on Artificial Analysis and both models are on Amazon Bedrock, while Mythos's bug-finding is going into Cisco and IBM security products. Anthropic is also reportedly seeking a $1.3 trillion IPO valuation.",
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/09/anthropic-releases-new-mythos-and-fable-models-amid-rsi-concerns/"
+        },
+        {
+          "name": "Simon Willison",
+          "url": "https://simonwillison.net/2026/Nov/9/llm-anthropic/"
+        },
+        {
+          "name": "The Register",
+          "url": "https://www.theregister.com/ai-and-ml/2026/11/10/anthropics-super-bug-finding-mythos-model-is-going-into-cisco-and-ibm-products/5308616"
+        },
+        {
+          "name": "WSJ",
+          "url": "https://www.wsj.com/finance/stocks/anthropic-to-seek-1-3-trillion-valuation-in-ipo-8337b669"
+        }
+      ]
+    },
+    {
+      "headline": "The Nvidia spy scandal turns into a legal and geopolitical problem.",
+      "body": "Nvidia shares fell more than 4% after the board opened its probe into Jensen Huang's affair with a suspected Chinese asset, and securities suits are lining up. The case also weakens Nvidia's lobbying to loosen chip export rules for China.",
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/09/the-race-is-on-to-sue-nvidia/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1030422/nvidia-jensen-huang-ai-china-alice-huang"
+        },
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/tech-policy/2026/11/ceo-jensen-huang-admits-affair-as-nvidia-probes-possible-chinese-espionage/"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/09/jensen-huangs-affair-with-alleged-chinese-spy-puts-nvidias-china-ambitions-under-scrutiny/"
+        }
+      ]
+    },
+    {
+      "headline": "DeepMind's AlphaProof Code formally proves Signal's encryption is secure.",
+      "body": "AI agents and human experts wrote three million lines of Lean proofs covering Signal's post-quantum handshake and Triple Ratchet. DeepMind's stated goal is machine-checked guarantees for software in general.",
+      "sources": [
+        {
+          "name": "Google DeepMind",
+          "url": "https://deepmind.google/blog/introducing-alphaproof-code/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/a-new-ai-tool-from-google-deepmind-formally-verified-the-signal-protocol/"
+        },
+        {
+          "name": "The Register",
+          "url": "https://www.theregister.com/ai-and-ml/2026/11/10/google-deepmind-melds-humans-and-ai-agents-to-vet-signals-secure-messaging-techniques/5308625"
+        }
+      ]
+    },
+    {
+      "headline": "Robots get their own foundation models at CoRL.",
+      "body": "NVIDIA launched GR00T 2 and Isaac Lab 3.0, Google released Gemini 4 Argon for robot control and simulation, and Nature Will unveiled a 50-billion-parameter model for dexterous hands. At home, Ring is launching an AI indoor drone and a patrol rover.",
+      "sources": [
+        {
+          "name": "The Robot Report",
+          "url": "https://www.therobotreport.com/nvidia-launches-gr00t-2-isaac-lab-3-0-corl/"
+        },
+        {
+          "name": "InfoQ",
+          "url": "https://www.infoq.com/news/2026/11/google-gemini-argon/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global"
+        },
+        {
+          "name": "Robotics & Automation News",
+          "url": "https://roboticsandautomationnews.com/2026/11/09/nature-will-launches-50-billion-parameter-ai-model-for-dexterous-robot-hands/106855/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/1030601/ring-drone-cam-hands-on-price-release-date-ai-pilot"
+        }
+      ]
+    },
+    {
+      "headline": "Data centers' power hunger becomes a climate and political fight.",
+      "body": "Reporting from Virginia suggests the backlash is mostly about electricity bills, and at the UN climate talks critics say AI's climate case is unproven, just as Anthropic buys $3.4 billion of gas turbines. Scott Wiener, author of California's AI safety bills, now takes Nancy Pelosi's seat in Congress.",
+      "sources": [
+        {
+          "name": "MIT Technology Review",
+          "url": "https://www.technologyreview.com/2026/11/09/1148194/the-backlash-about-data-centers-might-really-just-be-about-electricity/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/science/1030252/ai-data-center-climate-pledge-united-nations-cop31"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/09/anthropic-joins-ais-natural-gas-frenzy-buys-3-4b-worth-of-turbines/"
+        },
+        {
+          "name": "MIT Technology Review",
+          "url": "https://www.technologyreview.com/2026/11/09/1148182/nancy-pelosis-replacement-is-ready-to-regulate-ai/"
+        }
+      ]
+    },
+    {
+      "headline": "AI tools become a new security weak spot.",
+      "body": "Claude Code settings files committed to GitHub are leaking thousands of secrets, and a breach at inference provider Fireworks AI reached Notion's customers. Hugging Face warns that rising attacks could force open AI platforms to lock down.",
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/ai/2026/11/claude-code-settings-files-expose-thousands-of-secrets-on-github/"
+        },
+        {
+          "name": "Notion",
+          "url": "https://www.notion.com/help/security-incident-involving-a-third-party-ai-vendor"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/10/cyberattacks-threaten-to-make-open-source-ai-a-little-less-open-hugging-face-exec-warns/"
+        }
+      ]
+    }
+  ]
+}
