@@ -1,0 +1,64 @@
+{
+  "date": "2026-11-12",
+  "window": "48h",
+  "sources": 42,
+  "articles": 718,
+  "points": [
+    {
+      "headline": "Nvidia's board weighs removing Jensen Huang.",
+      "body": "The spy scandal escalated fast: the board is reportedly preparing to oust its founder of 33 years, the FBI is investigating, and a second alleged affair, with a subordinate, has surfaced. House Republicans want a closed-door briefing, Nvidia's stock fell, and governance experts say the company has no succession plan.",
+      "sources": [
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/11/11/nvidias-stock-drops-as-board-reportedly-preps-to-oust-ceo-jensen-huang/" },
+        { "name": "The Verge", "url": "https://www.theverge.com/tech/1031652/jensen-huang-rumor" },
+        { "name": "Ars Technica", "url": "https://arstechnica.com/gadgets/2026/11/ceo-jensen-huangs-job-is-suddenly-on-the-line-at-nvidia/" },
+        { "name": "WSJ", "url": "https://www.wsj.com/business/nvidia-is-preparing-to-oust-nvidia-ceo-jensen-huang-30f421ad" }
+      ]
+    },
+    {
+      "headline": "AI money keeps circling, with signs of strain.",
+      "body": "OpenAI's quarterly revenue reportedly passed $10 billion for the first time, up almost 50% from the previous quarter, and TSMC will invest $1 billion in Anthropic and OpenAI, another round of the boom's circular financing. At the same time CoreWeave is asking clients to pay up front and sign shorter contracts to fund its build-out.",
+      "sources": [
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/11/11/openais-quarterly-revenue-reportedly-crosses-10b-for-the-first-time/" },
+        { "name": "Ars Technica", "url": "https://arstechnica.com/ai/2026/11/taiwans-chipmaking-giant-tsmc-to-invest-1b-in-anthropic-openai/" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/11/11/coreweave-turns-to-customer-prepayments-shorter-contracts-to-fund-ai-growth/" }
+      ]
+    },
+    {
+      "headline": "Google ships a batch of new models.",
+      "body": "Gemini 4 Carbon, first limited to cyber defenders, is now open to everyone, and a new Gemini Decisions API offers fast, calibrated multimodal decisions for developers. DeepMind also released AlphaGenome 2, which predicts how DNA variants affect specific cell types and disease.",
+      "sources": [
+        { "name": "Google DeepMind", "url": "https://deepmind.google/blog/gemini-4-carbon-is-now-available/" },
+        { "name": "Google", "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/" },
+        { "name": "Simon Willison", "url": "https://simonwillison.net/2026/Nov/11/gemini-decisions-api/" },
+        { "name": "The Verge", "url": "https://www.theverge.com/ai-artificial-intelligence/1031524/google-deepmind-alphagenome-2-genetic-ai-model" }
+      ]
+    },
+    {
+      "headline": "Claude moves deeper into office work.",
+      "body": "Anthropic added Sheets, Whiteboards and Data artifact types, bringing Claude closer to a productivity suite. Microsoft, meanwhile, is turning Claude on by default in UK Copilot tenants, and admins have until December 9 to review access since the data is processed in the US.",
+      "sources": [
+        { "name": "The Register", "url": "https://www.theregister.com/software/2026/11/10/anthropic-tiptoes-into-ms-office-territory/5308988" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/11/10/microsoft-is-giving-claude-the-keys-to-uk-copilot-tenants-by-default/5308693" }
+      ]
+    },
+    {
+      "headline": "AI agents meet guardrails, and leaks.",
+      "body": "United Airlines says personal AI agents may not book its flights, citing privacy and regulation, while GitHub made Agentic Workflows generally available with read-only defaults and budget controls. A researcher found 35,000 apps built with xAI's Grok Build coding agent left open, some exposing confidential SpaceX data.",
+      "sources": [
+        { "name": "The Verge", "url": "https://www.theverge.com/ai-artificial-intelligence/1031623/united-unauthorized-ai-agents" },
+        { "name": "CBS News", "url": "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/" },
+        { "name": "InfoQ", "url": "https://www.infoq.com/news/2026/11/github-agentic-workflows-ga/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global" },
+        { "name": "Ars Technica", "url": "https://arstechnica.com/security/2026/11/grok-build-coding-agent-leaks-oodles-of-confidential-info-some-belonging-to-spacexsi/" }
+      ]
+    },
+    {
+      "headline": "AI safety rules start to bite.",
+      "body": "New York's AI safety law takes effect, requiring OpenAI, Anthropic and other large developers to register, disclose safety practices and report critical incidents. Australia may make knowingly selling unsafe AI a crime, and OpenAI described a kill switch that could stop a rogue research model in about 35 seconds.",
+      "sources": [
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/11/10/openai-anthropic-face-new-oversight-as-new-yorks-ai-safety-law-takes-effect/" },
+        { "name": "The Register", "url": "https://www.theregister.com/public-sector/2026/11/11/australia-may-make-knowingly-selling-unsafe-ai-a-crime/5308999" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/11/11/openai-builds-a-kill-switch-for-its-research-models/5309006" }
+      ]
+    }
+  ]
+}
