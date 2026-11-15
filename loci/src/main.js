@@ -8,6 +8,7 @@ import { LociHints, loadLoci, loadMarkerFont } from './loci.js';
 import { Drift } from './drift.js';
 import { computePoses, Glide } from './glide.js';
 import { Mannequin } from './mannequin.js';
+import { Loader } from './loader.js';
 import { Menu } from './menu.js';
 import { Post } from './post.js';
 import { Sound } from './sound.js';
@@ -25,8 +26,6 @@ document.body.dataset.palace = palace; // per-palace accent colour (style.css)
 
 const ui = {
   overlay: document.getElementById('overlay'),
-  status: document.getElementById('status'),
-  progress: document.getElementById('progress'),
   prompt: document.getElementById('prompt'),
   fade: document.getElementById('fade'),
   tutorial: document.getElementById('tutorial'),
@@ -88,12 +87,12 @@ function fitCamera() {
 }
 addEventListener('resize', fitCamera);
 
-const loadingManager = new THREE.LoadingManager();
-loadingManager.onProgress = (_url, loaded, total) => {
-  ui.progress.style.width = `${Math.round((loaded / total) * 100)}%`;
-};
+const loading = new Loader(document.getElementById('loader'));
+loading.set(0, `Opening ${document.getElementById('title').textContent.replace(/^The /, 'the ')}`);
 const draco = new DRACOLoader().setDecoderPath('https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/libs/draco/gltf/');
-const loader = new GLTFLoader(loadingManager).setDRACOLoader(draco);
+const loader = new GLTFLoader().setDRACOLoader(draco);
+// Let the loading screen paint between long synchronous steps.
+const nextFrame = () => new Promise((r) => requestAnimationFrame(() => setTimeout(r)));
 
 // Collision and glass come from glTF extras written by the exporter
 // (userData.loci_nocollide, userData.loci_glass), not from names.
@@ -139,10 +138,10 @@ async function main() {
   }
   if (info.sky?.fog) [scene.fog.near, scene.fog.far] = info.sky.fog;
 
-  ui.status.textContent = 'Loading palace…';
+  // Sizes are fallbacks for servers that send no Content-Length.
   const [palaceGltf, mannequinGltf, lociData, examples] = await Promise.all([
-    loader.loadAsync(`${base}palace.glb${v}`),
-    loader.loadAsync(`${base}mannequin.glb${v}`),
+    loader.loadAsync(`${base}palace.glb${v}`, loading.track('palace', 5.5e6)),
+    loader.loadAsync(`${base}mannequin.glb${v}`, loading.track('mannequin', 6e4)),
     loadLoci(`${base}loci.json`),
     loadLoci(`${base}tutorial.json`),
     loadMarkerFont(),
@@ -161,8 +160,8 @@ async function main() {
   const drawn = [];
   palaceGltf.scene.traverse((o) => { if (o.isMesh) drawn.push(o); });
 
-  ui.status.textContent = 'Building collision…';
-  await new Promise((r) => setTimeout(r));
+  loading.after(0.2, 'Building the walls');
+  await nextFrame();
   const mover = new Mover(buildWorld(colliders), { height: info.walker.eye_height + 0.13 });
 
   const mannequin = new Mannequin(mannequinGltf.scene);
@@ -177,6 +176,8 @@ async function main() {
 
   // Viewing poses for the guided glide (Play), computed once from the collision world.
   const lociAt = (lociData?.loci ?? []).map((l) => fromBlender(l.at));
+  loading.after(0.5, 'Finding where to stand at each place');
+  await nextFrame();
   const t0 = performance.now();
   const viewBvh = buildWorld(drawn);
   const t1 = performance.now();
@@ -191,7 +192,7 @@ async function main() {
 
   const input = new Input(renderer.domElement);
   window.loci = { timings, viewBvh, player, input, mover, scene, camera, renderer, hints, portals, tutorial, poses, glide, mannequin }; // for the console and tests
-  ui.status.textContent = 'Ready';
+  loading.after(0.9, 'Lighting the rooms');
   // Play: no pointer lock, the camera glides; its own loop runs while it is open.
   const play = poses.length ? new Play({
     el: ui.play, glide, poses, hints, camera, palace, sound,
@@ -338,9 +339,10 @@ async function main() {
   };
   addEventListener('resize', render);
   render();
+  loading.done();
 }
 
 main().catch((err) => {
   console.error(err);
-  ui.status.textContent = `Could not load "${palace}": ${err.message}`;
+  loading.fail(`Could not open the palace: ${err.message}`);
 });
