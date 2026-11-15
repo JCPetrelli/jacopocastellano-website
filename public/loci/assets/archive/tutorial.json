@@ -1,0 +1,59 @@
+{
+  "about": "Worked examples for the tutorial (key T in the player): lists to practise on, with an example image for each item on an Archive locus. They show how an image is made: it touches or uses the object, it moves, it is exaggerated, it engages a second sense, and a hook ties it to the item. `start` is the locus the first item goes on. An item without `image` has only a `nudge` (a question that helps the learner make their own) or nothing: the examples fade out so the learner takes over.",
+  "sets": [
+    {
+      "id": "planets",
+      "title": "The planets, in order from the Sun",
+      "start": 1,
+      "intro": "Eight planets on loci 1 to 8, the ground floor as far as the tall bookcase. Walk them in order and read each image while you look at its object.",
+      "items": [
+        {"item": "Mercury", "image": "The winged messenger god bursts through the entrance door so fast it bangs against the wall. His sandals are smoking hot, and a thermometer on his ankle glows silver.", "hook": "Mercury is the messenger, the metal in a thermometer, and the planet nearest the Sun: the hottest start."},
+        {"item": "Venus", "image": "The goddess of love is caught inside the rings of the armillary sphere, spinning it the wrong way round. A cloud of heavy perfume pours off her.", "hook": "Venus spins backwards and hides under thick clouds."},
+        {"item": "Earth", "image": "Someone has tipped a wheelbarrow of wet garden earth over the bench. Worms wriggle out of it and it smells of rain.", "hook": "Earth is earth: the soil you can smell."},
+        {"item": "Mars", "image": "A Roman soldier in red armour hacks the ivy off the column with his sword. Red dust billows up and his blade rings on the stone.", "hook": "Mars is the god of war and the red planet."},
+        {"item": "Jupiter", "image": "The king of the gods, far too big for the room, has yanked every drawer out of the card catalogue. Thunderbolts crackle between the cards, and a huge red stain spreads across his belly.", "hook": "Jupiter is the biggest planet, with its Great Red Spot. It sits on the golden hand, locus 5."},
+        {"item": "Saturn", "image": "A giant ringed ball wobbles on the reading table like a spinning plate. Its rings slice the open books in half with a sound of tearing paper.", "hook": "Saturn: the planet with the rings."},
+        {"item": "Uranus", "image": "Both paintings have tipped over onto their sides, and their skies have turned an icy pale blue. A freezing draught blows out of the frames.", "hook": "Uranus rolls round the Sun on its side, pale blue and cold."},
+        {"item": "Neptune", "image": "The sea god has rammed his trident into the top shelf of the tall bookcase. Waves pour out between the books, and you taste salt.", "hook": "Neptune is the sea god, and the deep blue planet at the edge."}
+      ]
+    },
+    {
+      "id": "wonders",
+      "title": "The Seven Wonders of the Ancient World",
+      "start": 9,
+      "intro": "Seven wonders, oldest first, on loci 9 to 15: from the display cases, past the piano and up the stairs to the arched door. The list starts in the middle of the route, so you will have to count from the landmarks.",
+      "items": [
+        {"item": "Great Pyramid of Giza", "image": "Inside the display cases a pyramid of sand keeps growing until it cracks the glass. Sand pours out and hisses over your shoes.", "hook": "The oldest wonder, and the only one still standing."},
+        {"item": "Hanging Gardens of Babylon", "image": "Vines and flowers tumble out of the piano's open lid, dripping water onto the keys, which play by themselves. It smells of jasmine.", "hook": "Gardens that hang. The piano is the Decimus, locus 10."},
+        {"item": "Temple of Artemis at Ephesus", "image": "The huntress Artemis runs up the staircase with her bow drawn. A marble column shoots up out of every step she touches, and hooves clatter behind her.", "hook": "A temple of columns, for the goddess of the hunt."},
+        {"item": "Statue of Zeus at Olympia", "image": "A huge seated Zeus of gold and ivory squints through the telescope. His knees are bending the gallery railing, which creaks.", "hook": "The great seated statue of the king of the gods."},
+        {"item": "Mausoleum at Halicarnassus", "image": "The globe opens like a lid, and King Mausolus climbs out of it, coughing out dust and incense.", "hook": "The mausoleum was his tomb, and every mausoleum is named after him."},
+        {"item": "Colossus of Rhodes", "image": "A bronze giant tries to sit in the armchair and flattens it with a crash. The candle drips hot wax down his metal shin.", "hook": "The colossus fell in an earthquake, as the chair does."},
+        {"item": "Lighthouse of Alexandria", "image": "The light under the arched door swells into a blinding beam that sweeps the whole hall, and a foghorn booms behind the door.", "hook": "The lighthouse shows ships the way out, and this is the way out of the Archive."}
+      ]
+    },
+    {
+      "id": "elements",
+      "title": "The first 15 elements",
+      "start": 1,
+      "intro": "The periodic table from hydrogen to phosphorus, one element per locus, round the whole route. Loci 1 to 5 have images. From 6 to 10 you get a question to help you make your own image, and from 11 to 15 you make it yourself. Stand at the object and see the image clearly before you move on.",
+      "items": [
+        {"item": "Hydrogen (H)", "image": "A huge airship squeezes in through the entrance door and bursts into flames with a bang. You feel the heat on your face.", "hook": "Hydrogen filled the airships, and it burns."},
+        {"item": "Helium (He)", "image": "A bunch of party balloons lifts the armillary sphere off its stand. Everyone who laughs comes out squeaky.", "hook": "Helium balloons and squeaky voices."},
+        {"item": "Lithium (Li)", "image": "A battery as long as the bench lies on it, swelling and throwing sparks while a phone buzzes somewhere inside.", "hook": "Lithium is in batteries."},
+        {"item": "Beryllium (Be)", "image": "Green emerald crystals burst out of the column between the ivy leaves and scatter across the floor, tinkling.", "hook": "Emerald is a kind of beryl."},
+        {"item": "Boron (B)", "image": "A man is so bored that his yawn blows every drawer of the card catalogue open, and he snores loudly into the cards.", "hook": "Boron sounds like 'boring'. It sits on the golden hand, locus 5."},
+        {"item": "Carbon (C)", "nudge": "Carbon is coal, pencil lead and diamond. What is it doing to the reading table: burning it, scribbling on it, cutting it?"},
+        {"item": "Nitrogen (N)", "nudge": "Liquid nitrogen freezes things instantly, with white smoke. What happens to the paintings when it touches them?"},
+        {"item": "Oxygen (O)", "nudge": "Oxygen feeds fire, and you breathe it. What does the tall bookcase do with it? Can you hear it or feel it?"},
+        {"item": "Fluorine (F)", "nudge": "Fluoride is in toothpaste, and fluorine sounds like 'flour'. What fills the display cases?"},
+        {"item": "Neon (Ne)", "nudge": "Neon glows red-orange in shop signs. How does the piano, the Decimus, light up, and what does it play?"},
+        {"item": "Sodium (Na)"},
+        {"item": "Magnesium (Mg)"},
+        {"item": "Aluminium (Al)"},
+        {"item": "Silicon (Si)"},
+        {"item": "Phosphorus (P)"}
+      ]
+    }
+  ]
+}
