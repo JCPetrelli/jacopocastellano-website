@@ -1,6 +1,6 @@
 // The title screen: palace name, the three modes (Learn, Play, Walk) and the
-// palace picker. It shows a loading bar until the palace is ready, then the
-// modes; when the player pauses (Esc) it comes back with "Resume" on top.
+// palace picker. It shows the modes once the palace is ready (loader.js covers
+// the wait); when the player pauses (Esc) it comes back with "Resume" on top.
 
 export const PALACES = [
   { id: 'archive', name: 'The Archive', blurb: 'A dusty hall of books, lit through the roof' },
@@ -20,7 +20,6 @@ export class Menu {
     this.onChoose = onChoose;
     this.el = {
       title: document.getElementById('title'),
-      loading: document.getElementById('loading'),
       modes: document.getElementById('modes'),
       palaces: document.getElementById('palaces'),
     };
@@ -40,7 +39,6 @@ export class Menu {
   // Called once the palace has loaded.
   ready(available = {}) {
     this.available = available;
-    this.el.loading.hidden = true;
     this.render(false);
     this.el.modes.hidden = false;
     this.el.modes.querySelector('button:not([disabled])')?.focus();

@@ -83,12 +83,40 @@ h1 {
   max-width: 34ch;
 }
 
-.loading { margin-bottom: 28px; }
-.loading[hidden] { display: none; }
-#status { margin: 0 0 10px; color: var(--muted); font-size: 13px; }
-
-.bar { height: 2px; background: rgba(255, 255, 255, 0.08); border-radius: 2px; overflow: hidden; max-width: 280px; }
-#progress { height: 100%; width: 0; background: var(--accent); transition: width 0.3s var(--ease); }
+/* Loading screen: one big number in the middle, over everything, until ready. */
+#loader {
+  position: fixed; inset: 0; z-index: 20;
+  display: grid; place-items: center;
+  padding: 16px;
+  background: radial-gradient(ellipse 60% 50% at 50% 46%, rgba(214, 178, 120, 0.07), transparent 70%), var(--bg);
+  transition: opacity 0.7s var(--ease);
+}
+#loader.gone { opacity: 0; pointer-events: none; }
+#loader[hidden] { display: none; }
+.ld-inner { display: flex; flex-direction: column; align-items: center; text-align: center; }
+.ld-eyebrow {
+  font: 500 11px/1 var(--sans); letter-spacing: 0.32em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 18px; padding-left: 0.32em;
+}
+.ld-count {
+  display: flex; align-items: flex-start;
+  font: 300 clamp(104px, 24vw, 208px)/0.9 var(--serif);
+  font-variant-numeric: lining-nums tabular-nums;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  animation: ld-breathe 3.2s ease-in-out infinite;
+}
+.ld-pct { font-size: 0.3em; line-height: 1; margin: 0.32em 0 0 0.12em; color: var(--accent); }
+.ld-bar {
+  width: min(300px, 64vw); height: 1px; margin: 26px 0 22px;
+  background: rgba(239, 230, 216, 0.12); overflow: hidden;
+}
+.ld-fill { height: 100%; background: var(--accent); transform: scaleX(0); transform-origin: left; }
+.ld-label { margin: 0; font: italic 400 21px/1.3 var(--serif); color: var(--text); opacity: 0.85; }
+.ld-detail { margin: 8px 0 0; min-height: 1.4em; font: 400 12px/1.4 var(--sans); color: var(--muted); font-variant-numeric: tabular-nums; letter-spacing: 0.04em; }
+#loader.failed .ld-count, #loader.failed .ld-bar { opacity: 0.25; animation: none; }
+@keyframes ld-breathe { 50% { opacity: 0.82; } }
+@media (prefers-reduced-motion: reduce) { .ld-count { animation: none; } }
 
 button { font: inherit; color: inherit; cursor: pointer; }
 

@@ -25,6 +25,15 @@
   </script>
 </head>
 <body>
+  <div id="loader" role="progressbar" aria-label="Loading the palace" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+    <div class="ld-inner">
+      <div class="ld-eyebrow">The method of loci</div>
+      <div class="ld-count"><span class="ld-num">0</span><span class="ld-pct">%</span></div>
+      <div class="ld-bar"><div class="ld-fill"></div></div>
+      <p class="ld-label">Opening the palace</p>
+      <p class="ld-detail"></p>
+    </div>
+  </div>
   <div id="veil"></div>
   <div id="overlay">
     <div class="title-scrim"></div>
@@ -32,10 +41,6 @@
       <div class="eyebrow">The method of loci</div>
       <h1 id="title">loci-forge</h1>
       <p class="lede">Remember anything in order: leave one image at each place along a walk you know, then walk it again.</p>
-      <div id="loading" class="loading">
-        <p id="status">Loading…</p>
-        <div class="bar"><div id="progress"></div></div>
-      </div>
       <nav id="modes" class="modes" aria-label="Modes" hidden></nav>
       <div id="palaces" class="palaces"></div>
       <details class="controls">
