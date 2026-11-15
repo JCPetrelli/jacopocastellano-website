@@ -1,0 +1,23 @@
+{
+  "about": "Loci for the Garden, the second palace, reached through the arched door at the end of the Archive's gallery. Clockwise seen from above, starting at the entry gate you arrive through: the bridge over the koi pond in the middle, then the west side, the north side, the east side and back along the south wall to the moon gate, the way on. Every locus is a different kind of thing. `at` is where the number floats, in Blender coordinates (metres, Z up). `portals` link a locus to another palace; `arrive` is where you appear here when you come back through it (x, y, z, yaw).",
+  "loci": [
+    {"label": "Entry gate", "at": [0.0, -9.3, 2.4]},
+    {"label": "Arched bridge over the koi pond", "at": [0.0, -2.6, 2.1]},
+    {"label": "Sake barrels", "at": [-4.5, -9.3, 2.1]},
+    {"label": "Stone lantern", "at": [-9.4, -4.8, 2.7]},
+    {"label": "Bamboo water spout", "at": [-9.6, -0.5, 1.6]},
+    {"label": "Cherry tree", "at": [-7.6, 3.9, 2.6]},
+    {"label": "Taiko drum", "at": [-9.2, 8.3, 2.3]},
+    {"label": "Tea house", "at": [-3.2, 7.2, 2.2]},
+    {"label": "Zen rock garden", "at": [3.6, 8.2, 1.6]},
+    {"label": "Bonsai", "at": [9.3, 8.3, 2.3]},
+    {"label": "Carp streamers", "at": [9.2, 4.3, 3.0]},
+    {"label": "Porcelain urn", "at": [9.6, 0.2, 1.9]},
+    {"label": "Well", "at": [8.7, -4.1, 2.9]},
+    {"label": "Red umbrella and bench", "at": [4.6, -8.4, 1.5]},
+    {"label": "Moon gate onward", "at": [8.6, -9.5, 2.9]}
+  ],
+  "portals": [
+    {"locus": 1, "to": "archive", "arrive": [0.0, -8.6, 0.0, 0.0]}
+  ]
+}

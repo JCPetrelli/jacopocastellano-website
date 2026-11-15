@@ -79,6 +79,7 @@
 
 ## Portfolio
 - [Concert Programs](https://jacopocastellano.com/portfolio/concert-programs/): Free listening guides for every concert of the Berliner Philharmoniker, Wiener Philharmoniker, Royal Concertgebouw Orchestra and London Symphony Orchestra.
+- [Loci](https://jacopocastellano.com/portfolio/loci/): A browser game that teaches the method of loci in two 3D memory palaces built in Blender: leave one image at each place along a walk, then walk it again.
 - [Omaggio a Marcello Morandini](https://jacopocastellano.com/portfolio/omaggio-a-marcello-morandini/): Black and white animations inspired by the geometric work of Marcello Morandini.
 - [Rubricai](https://jacopocastellano.com/portfolio/rubricai/): A Claude Code skill that deduplicates, merges and completes the macOS Contacts address book, one reviewed plan at a time.
 - [Philharmonie Berlin in Blender](https://jacopocastellano.com/portfolio/philharmonie-berlin-blender/): A 3D model of the main hall of the Philharmonie Berlin, built to visualise scenographies I have in mind.
