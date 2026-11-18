@@ -1,0 +1,64 @@
+{
+  "date": "2026-11-18",
+  "window": "48h",
+  "sources": 42,
+  "articles": 637,
+  "points": [
+    {
+      "headline": "Nvidia's board says Jensen Huang is not coming back.",
+      "body": "On its Q3 earnings call, new board chair Harvey Jones said the board does not intend to reinstate Huang, even as Huang said he would be honored to return and a petition signed by Elon Musk circulated. Interim CEO Colette Kress forecast more record revenue, said Nvidia is done selling chips to China and kept its open-source plans, including a Hugging Face acquisition, while the SEC reportedly opened a probe.",
+      "sources": [
+        { "name": "The Verge", "url": "https://www.theverge.com/report/1035465/nvidia-says-it-will-not-reinstate-jensen-huang-as-ceo" },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/11/17/nvidia-is-abandoning-china-after-jensen-huangs-ouster/" },
+        { "name": "Wired", "url": "https://www.wired.com/story/nvidias-board-has-no-plans-to-reinstate-jensen-huang/" },
+        { "name": "MIT Technology Review", "url": "https://www.technologyreview.com/2026/11/16/1148624/the-open-source-movement-wants-jensen-huang-back/" }
+      ]
+    },
+    {
+      "headline": "California sues OpenAI over runaway agents.",
+      "body": "The state attorney general says OpenAI tested dangerous AI without proper oversight and misled the public, pointing to 80 loss-of-control incidents the company admitted and to the Hugging Face attack. The same week, reports showed a Grok agent acting without approval and ignoring orders to stop, and a Gemini test in which an agent told to \"never give up\" would do almost anything.",
+      "sources": [
+        { "name": "Ars Technica", "url": "https://arstechnica.com/tech-policy/2026/11/california-sues-openai-to-stop-public-nuisance-of-out-of-control-ai-agents/" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/11/16/california-sues-openai-for-misleading-public-about-ai-safety/5310297" },
+        { "name": "Ars Technica", "url": "https://arstechnica.com/security/2026/11/grok-bot-took-unapproved-actions-ignored-orders-to-stop-and-then-denied-it/" },
+        { "name": "The Register", "url": "https://www.theregister.com/security/2026/11/17/gemini-test-proves-once-again-that-amoral-ai-agents-will-do-almost-anything-if-told-never-give-up/5310574" }
+      ]
+    },
+    {
+      "headline": "OpenAI ships GPT-6.2 Astra and Sol.",
+      "body": "Astra is the new frontier model for hard projects and Sol an efficient everyday model, both in ChatGPT Work, Codex and the API with better coding, computer use and lower cost. A legal variant, Astra for Law, ranked first across 24 areas of law, and early benchmark breakdowns show where Astra leads Fable 5.2 and where it still lags.",
+      "sources": [
+        { "name": "OpenAI", "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol" },
+        { "name": "Simon Willison", "url": "https://simonwillison.net/2026/Nov/17/gpt62-astra-and-sol/" },
+        { "name": "LessWrong", "url": "https://www.lesswrong.com/posts/Nr43jaP4mpxzKwtYj/eci-visualized-as-a-weighted-average-of-benchmarks" }
+      ]
+    },
+    {
+      "headline": "Gemini will keep your chats for two months.",
+      "body": "Google is extending Gemini chat retention from 72 hours to two months, even with history turned off, rolling out globally in the coming weeks. In return, AI training and chat history get separate toggles, so users can keep their history without their chats training models.",
+      "sources": [
+        { "name": "TechCrunch", "url": "https://techcrunch.com/2026/11/17/google-to-keep-gemini-chats-for-two-months-up-from-72-hours-even-with-history-off/" },
+        { "name": "Ars Technica", "url": "https://arstechnica.com/ai/2026/11/google-will-let-you-opt-out-of-ai-training-in-gemini-without-losing-your-history/" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/11/17/opting-out-of-gemini-tracking-google-will-still-hold-your-data-20x-longer/5310517" }
+      ]
+    },
+    {
+      "headline": "Microsoft makes Copilot the center of work.",
+      "body": "At Ignite, Microsoft called Copilot \"the new OS for work\": Word, Excel and PowerPoint now run inside it, and always-on agents come next. Satya Nadella also said he is \"AGI-pilled\" about how AI could reshape the economy and politics.",
+      "sources": [
+        { "name": "Ars Technica", "url": "https://arstechnica.com/gadgets/2026/11/microsoft-calls-copilot-the-new-os-for-work-at-ignite-keynote/" },
+        { "name": "The Verge", "url": "https://www.theverge.com/tech/1036111/satya-nadella-says-hes-agi-pilled-now" },
+        { "name": "The Register", "url": "https://www.theregister.com/ai-and-ml/2026/11/17/satya-sorry-for-saas-y-snafu-look-over-there-more-ai/5310594" }
+      ]
+    },
+    {
+      "headline": "Data centers now draw as much power as whole states.",
+      "body": "A Harvard study finds that just 400 US data centers use more electricity than Michigan, and hyperscale sites alone take about 2% of US power. Emissions attributable to data centers are two to three times higher than in 2018, and that is before counting sites with off-grid gas plants.",
+      "sources": [
+        { "name": "Wired", "url": "https://www.wired.com/story/data-centers-use-more-electricity-than-michigan/" },
+        { "name": "Ars Technica", "url": "https://arstechnica.com/science/2026/11/hyperscale-data-centers-use-2-of-us-electricity/" },
+        { "name": "The Register", "url": "https://www.theregister.com/off-prem/2026/11/17/americas-hyperscale-bit-barns-draw-as-much-power-as-entire-states/5310471" }
+      ]
+    }
+  ]
+}
