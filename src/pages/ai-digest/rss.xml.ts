@@ -20,7 +20,7 @@ export async function GET(context: APIContext) {
   const selfUrl = new URL('/ai-digest/rss.xml', context.site).href;
 
   return rss({
-    title: '🤖 AI Digest — Jacopo Castellano',
+    title: '🤖 AI Digest | Jacopo Castellano',
     description:
       'The 6 most important things happening in AI right now, deduplicated across dozens of sources. A ~2-minute read, updated every 48 hours.',
     site: context.site!,
@@ -45,7 +45,7 @@ export async function GET(context: APIContext) {
         .join('\n');
 
       return {
-        title: `AI Digest — ${day}`,
+        title: `AI Digest: ${day}`,
         link: `/ai-digest/archive/${edition.id}/`,
         pubDate: date,
         description:
