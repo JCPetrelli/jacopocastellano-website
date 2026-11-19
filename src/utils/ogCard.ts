@@ -46,10 +46,17 @@ const h = (type: string, style: Record<string, unknown>, ...children: (Node | st
   props: { style: { display: 'flex', ...style }, children: children.filter((c) => c !== null) },
 });
 
-export async function renderOgCard({ title, section, subtitle }: OgCard): Promise<Buffer> {
+// No em dashes on the cards: " — " becomes ", ", a bare "—" becomes "-".
+const noEmDash = (s?: string) => s?.replace(/\s*—\s*/g, (m) => (m.trim() === m ? '-' : ', '));
+
+export async function renderOgCard(card: OgCard): Promise<Buffer> {
+  const title = noEmDash(card.title)!;
+  const section = noEmDash(card.section);
+  const subtitle = noEmDash(card.subtitle);
+  // satori adds padding on top of width/height, so the content box is sized explicitly.
   const tree = h(
     'div',
-    { width: '100%', height: '100%', flexDirection: 'column', justifyContent: 'space-between', padding: '72px 80px', background: C.bg, fontFamily: 'Inter' },
+    { width: 1200 - 160, height: 630 - 144, flexDirection: 'column', justifyContent: 'space-between', padding: '72px 80px', background: C.bg, fontFamily: 'Inter' },
     h(
       'div',
       { fontSize: 24, fontWeight: 600, letterSpacing: 4, color: C.muted, textTransform: 'uppercase' },

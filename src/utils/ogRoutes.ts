@@ -36,7 +36,7 @@ export function getOgCards(): Promise<Map<string, OgCard>> {
       subtitle: digests[0] ? `Latest edition: ${fmt(digests[0].data.date)}` : 'Everything you need to know about AI, in a 2-minute read',
     });
     for (const d of digests) {
-      cards.set(`ai-digest/archive/${d.id}`, { title: `AI Digest — ${fmt(d.data.date)}`, section: 'AI Digest', subtitle: clip(d.data.points[0]?.headline) });
+      cards.set(`ai-digest/archive/${d.id}`, { title: fmt(d.data.date), section: 'AI Digest', subtitle: clip(d.data.points[0]?.headline) });
     }
 
     for (const post of await getCollection('blog', ({ data }) => !data.draft)) {
