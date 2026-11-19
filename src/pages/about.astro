@@ -1,288 +1,106 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import GitHubRepos from '../components/GitHubRepos.astro';
-import YouTubeVideos from '../components/YouTubeVideos.astro';
+// JC-827 — about page.
+import SiteLayout from '../layouts/redesign/SiteLayout.astro';
+import '../styles/redesign/about.css';
+import { P } from '../layouts/redesign/paths';
+
+const disciplines = [
+  { name: 'Software Engineering', text: 'I architect and build scalable applications, with particular expertise in backend systems, automation, and developer tooling. My approach emphasizes clean code, thoughtful architecture, and maintainable code.' },
+  { name: 'AI Engineering', html: `I build tools on top of large language models and work with AI coding agents every day. I write skills, hooks and plugins for Claude Code, such as <a href="${P}/portfolio/brickwise/">Brickwise</a>, which explains a codebase as an interactive 3D brick model, and <a href="${P}/portfolio/rubricai/">Rubricai</a>, which cleans up the macOS Contacts address book. <a href="${P}/portfolio/vark/">VARK</a> uses local models to tag video collections, recognise faces and transcribe audio. The <a href="${P}/ai-digest/">AI Digest</a> on this site is synthesized automatically from dozens of news sources every 48 hours. I hold the Claude Certified Developer and Associate certifications from Anthropic.` },
+  { name: 'Video Design', text: 'I create video projections and visual content for live performances, collaborating with orchestras, ballet companies, and theaters. I have created visual experiences for prestigious institutions such as the Magdeburg Opera House and Ballet, Zurich Tonhalle, Leipzig Gewandhaus, and the Colombia National Ballet.' },
+  { name: 'Automotive & Embedded Systems', text: "In the automotive industry, I've worked as a Requirements Manager and Software Engineer on complex in-vehicle information and communication systems. My focus includes HMI design, requirements management, and ASPICE-compliant processes." },
+  { name: 'Creative Technology', html: 'I explore the space where code meets art: interactive installations, generative visuals, and tools for other creators. My most active creative project is <a href="https://www.doppelganger.mov/" target="_blank" rel="noopener">Doppelganger</a>, a Berlin-based audiovisual duo creating performances and installations that blend live music with real-time visuals.' },
+];
+
+const skills = [
+  { group: 'Languages', items: ['Python', 'JavaScript / TypeScript', 'Bash', 'SQL'] },
+  { group: 'AI Tools', items: ['Claude Code', 'Cursor'] },
+  { group: 'Frameworks & Tools', items: ['React / Next.js', 'Node.js', 'Flask / FastAPI', 'MySQL / SQLite', 'Git'] },
+  { group: 'Design & Video', items: ['Final Cut Pro', 'TouchDesigner', 'Adobe Creative Suite', 'Figma'] },
+];
+
+const certs = [
+  { name: 'Claude Certified Developer – Foundations', meta: 'Anthropic · November 2026',
+    href: 'https://www.credly.com/badges/909e8d52-3d9e-4207-a7bc-e47cbd4f12b1', img: '/images/certifications/claude-certified-developer-foundations.png' },
+  { name: 'Claude Certified Associate – Foundations', meta: 'Anthropic · September 2026',
+    href: 'https://www.credly.com/badges/3eb661db-0a31-4dc5-be3c-59acec74fc47', img: '/images/certifications/claude-certified-associate-foundations.png' },
+];
 ---
-
-<BaseLayout title="About" description="Senior Software Engineer and Video Designer with a passion for elegant solutions.">
-  <section class="about-page">
-    <div class="container">
-      <div class="about-layout">
-        <div class="about-content">
-          <h1>About Me</h1>
-
-          <div class="about-portrait">
-            <img src="/images/jc.webp" alt="Jacopo Castellano" width="600" height="757" loading="eager" />
-          </div>
-
-          <div class="prose">
-            <p class="lead">
-              I'm Jacopo Castellano, a Senior Software Engineer and Video Designer based in Berlin.
-              I specialize in AI-driven development and real-time video design, working at the
-              intersection of software engineering and real-time visual systems.
-            </p>
-
-            <h2>Background</h2>
-            <p>
-              My journey began with classical music: I hold a piano diploma from the conservatory (2011).
-              This foundation in artistic discipline led me to video design, where I've spent over a
-              decade creating visual experiences for ballet, opera, and orchestral productions across Europe.
-            </p>
-            <p>
-              In parallel, I've developed deep expertise in software engineering, focusing on Python,
-              JavaScript, and modern web technologies. My background in both software and music shapes how I approach projects.
-            </p>
-
-            <h2>What I Do</h2>
-
-            <h3>Software Engineering</h3>
-            <p>
-              I architect and build scalable applications, with particular expertise in backend systems,
-              automation, and developer tooling. My approach emphasizes clean code, thoughtful architecture,
-              and maintainable code.
-            </p>
-
-            <h3>Video Design</h3>
-            <p>
-              I create video projections and visual content for live performances, collaborating with
-              orchestras, ballet companies, and theaters. I have created visual experiences for prestigious
-              institutions such as the Magdeburg Opera House and Ballet, Zurich Tonhalle, Leipzig Gewandhaus,
-              and the Colombia National Ballet.
-            </p>
-
-            <h3>Automotive & Embedded Systems</h3>
-            <p>
-              In the automotive industry, I've worked as a Requirements Manager and Software Engineer
-              on complex in-vehicle information and communication systems. My focus includes HMI design,
-              requirements management, and ASPICE-compliant processes.
-            </p>
-
-            <h3>Creative Technology</h3>
-            <p>
-              I explore the space where code meets art: interactive installations, generative visuals,
-              and tools for other creators. My most active creative project is
-              <a href="https://www.doppelganger.mov/" target="_blank" rel="noopener">Doppelganger</a>,
-              a Berlin-based audiovisual duo creating performances and installations that blend
-              live music with real-time visuals.
-            </p>
-          </div>
-        </div>
-
-        <aside class="about-sidebar">
-          <div class="sidebar-section">
-            <h3>Skills</h3>
-            <div class="skill-group">
-              <h4>Languages</h4>
-              <ul class="skill-list">
-                <li>Python</li>
-                <li>JavaScript / TypeScript</li>
-                <li>Bash</li>
-                <li>SQL</li>
-              </ul>
-            </div>
-            <div class="skill-group">
-              <h4>AI Tools</h4>
-              <ul class="skill-list">
-                <li>Claude Code</li>
-                <li>Cursor</li>
-              </ul>
-            </div>
-            <div class="skill-group">
-              <h4>Frameworks & Tools</h4>
-              <ul class="skill-list">
-                <li>React / Next.js</li>
-                <li>Node.js</li>
-                <li>Flask / FastAPI</li>
-                <li>MySQL / SQLite</li>
-                <li>Git</li>
-              </ul>
-            </div>
-            <div class="skill-group">
-              <h4>Design & Video</h4>
-              <ul class="skill-list">
-                <li>Final Cut Pro</li>
-                <li>TouchDesigner</li>
-                <li>Adobe Creative Suite</li>
-                <li>Figma</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="sidebar-section">
-            <h3>Certifications</h3>
-            <ul class="cert-list">
-              <li>
-                <a href="https://www.credly.com/badges/909e8d52-3d9e-4207-a7bc-e47cbd4f12b1" target="_blank" rel="noopener" class="cert">
-                  <img src="/images/certifications/claude-certified-developer-foundations.png" alt="Claude Certified Developer - Foundations badge" width="400" height="400" loading="lazy" />
-                  <span class="cert-text">
-                    <span class="cert-name">Claude Certified Developer – Foundations</span>
-                    <span class="cert-meta">Anthropic · November 2026</span>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.credly.com/badges/3eb661db-0a31-4dc5-be3c-59acec74fc47" target="_blank" rel="noopener" class="cert">
-                  <img src="/images/certifications/claude-certified-associate-foundations.png" alt="Claude Certified Associate - Foundations badge" width="400" height="400" loading="lazy" />
-                  <span class="cert-text">
-                    <span class="cert-name">Claude Certified Associate – Foundations</span>
-                    <span class="cert-meta">Anthropic · September 2026</span>
-                  </span>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="sidebar-section">
-            <h3>Contact</h3>
-            <p class="contact-text">
-              Available for freelance projects and collaborations.
-            </p>
-            <a href="/contact/" class="btn">Get in Touch</a>
-          </div>
-        </aside>
+<SiteLayout title="About" description="Senior Software Engineer and Video Designer with a passion for elegant solutions.">
+  <section class="ab-hero">
+    <div class="wrap">
+      <span class="label">About</span>
+      <h1>Jacopo<br />Castellano</h1>
+      <div class="ab-intro">
+        <figure class="ab-portrait"><img src="/images/jc.webp" alt="Jacopo Castellano" width="600" height="757" /></figure>
+        <p class="ab-lead">
+          I'm a Senior Software Engineer and Video Designer based in Berlin.
+          I specialize in AI-driven development and real-time video design, working at the
+          intersection of software engineering and real-time visual systems.
+        </p>
       </div>
-
-      <GitHubRepos />
-      <YouTubeVideos />
     </div>
   </section>
-</BaseLayout>
 
-<style>
-  .about-page {
-    padding-top: var(--space-xl);
-  }
+  <section class="ab-background">
+    <div class="wrap ab-split">
+      <span class="label">Background</span>
+      <div>
+        <h2>My journey began with classical music.</h2>
+        <p>I trained as a pianist and earned my diploma at the A. Steffani Conservatory in Castelfranco Veneto, Italy. That foundation in artistic discipline led me to video design, where I've spent over a decade creating visual experiences for ballet, opera, and orchestral productions across Europe.</p>
+        <p>In parallel, I've developed deep expertise in software engineering, focusing on Python, JavaScript, and modern web technologies. My background in both software and music shapes how I approach projects.</p>
+      </div>
+    </div>
+  </section>
 
-  .about-layout {
-    display: grid;
-    grid-template-columns: 1fr 300px;
-    gap: var(--space-2xl);
-    align-items: start;
-  }
+  <section class="ab-do">
+    <div class="wrap">
+      <div class="section-head"><h2>What I do</h2></div>
+      {disciplines.map((d, i) => (
+        <div class="ab-row">
+          <span class="label">{String(i + 1).padStart(2, '0')}</span>
+          <h3>{d.name}</h3>
+          {d.html ? <p set:html={d.html} /> : <p>{d.text}</p>}
+        </div>
+      ))}
+    </div>
+  </section>
 
-  @media (max-width: 900px) {
-    .about-layout {
-      grid-template-columns: 1fr;
-    }
-  }
+  <section class="on-dark">
+    <div class="wrap">
+      <div class="section-head"><h2>Skills</h2></div>
+      <div class="ab-skills">
+        {skills.map((s) => (
+          <div>
+            <span class="label">{s.group}</span>
+            <ul>{s.items.map((it) => <li>{it}</li>)}</ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
 
-  .about-content h1 {
-    margin-bottom: var(--space-xl);
-  }
+  <section class="ab-certs">
+    <div class="wrap">
+      <div class="section-head"><h2>Latest certifications</h2></div>
+      {certs.map((c) => (
+        <a href={c.href} target="_blank" rel="noopener" class="ab-cert">
+          <img src={c.img} alt="" width="64" height="64" loading="lazy" />
+          <h3>{c.name}</h3>
+          <span class="label">{c.meta}</span>
+          <span class="arrow">&rarr;</span>
+        </a>
+      ))}
+    </div>
+  </section>
 
-  .about-portrait {
-    margin-bottom: var(--space-xl);
-    max-width: 280px;
-  }
-
-  .about-portrait img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border: 1px solid var(--color-border-light);
-  }
-
-  .lead {
-    font-size: 1.25rem;
-    line-height: 1.7;
-    color: var(--color-text-muted);
-  }
-
-  .about-sidebar {
-    position: sticky;
-    top: calc(var(--space-xl) + 60px);
-  }
-
-  .sidebar-section {
-    padding: var(--space-lg);
-    background: var(--color-bg-alt);
-    border: 1px solid var(--color-border-light);
-    margin-bottom: var(--space-lg);
-  }
-
-  .sidebar-section h3 {
-    font-size: 1rem;
-    margin-bottom: var(--space-md);
-  }
-
-  .skill-group {
-    margin-bottom: var(--space-md);
-  }
-
-  .skill-group:last-child {
-    margin-bottom: 0;
-  }
-
-  .skill-group h4 {
-    font-family: var(--font-sans);
-    font-size: 0.75rem;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--color-text-subtle);
-    margin-bottom: var(--space-sm);
-  }
-
-  .skill-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .skill-list li {
-    font-size: 0.875rem;
-    padding: var(--space-xs) 0;
-    color: var(--color-text-muted);
-  }
-
-  .cert-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .cert-list li + li {
-    margin-top: var(--space-md);
-  }
-
-  .cert {
-    display: flex;
-    align-items: center;
-    gap: var(--space-md);
-    text-decoration: none;
-    color: inherit;
-  }
-
-  .cert img {
-    width: 64px;
-    height: 64px;
-    flex: 0 0 64px;
-  }
-
-  .cert-text {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-  }
-
-  .cert-name {
-    font-size: 0.875rem;
-    line-height: 1.35;
-    color: var(--color-text);
-  }
-
-  .cert:hover .cert-name {
-    text-decoration: underline;
-  }
-
-  .cert-meta {
-    font-size: 0.75rem;
-    color: var(--color-text-subtle);
-  }
-
-  .contact-text {
-    font-size: 0.875rem;
-    color: var(--color-text-muted);
-    margin-bottom: var(--space-md);
-  }
-</style>
+  <section class="ab-contact">
+    <div class="wrap ab-split">
+      <span class="label">Contact</span>
+      <div>
+        <h2>Available for freelance projects and collaborations.</h2>
+        <a href={`${P}/contact/`} class="pill">Get in touch</a>
+      </div>
+    </div>
+  </section>
+</SiteLayout>

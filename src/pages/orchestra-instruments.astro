@@ -1,5 +1,8 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+// JC-827 — Orchestra Instruments product page, redesign.
+import SiteLayout from '../layouts/redesign/SiteLayout.astro';
+import { P } from '../layouts/redesign/paths';
+import '../styles/redesign/product.css';
 
 const buy = 'https://jacopocastellano.gumroad.com/l/orchestra-instruments';
 const img = '/images/portfolio/orchestra_instruments';
@@ -30,134 +33,104 @@ const productSchema = {
   offers: { '@type': 'Offer', price: price, priceCurrency: 'EUR', availability: 'https://schema.org/InStock', url: buy },
 };
 ---
-
-<BaseLayout
+<SiteLayout
   title="Orchestra Instruments: 36 3D models"
   description="36 orchestral instruments as 3D models: GLB, FBX, OBJ, USDZ and Blender files, real sizes, three detail levels, free updates."
   image={`${img}/all_instruments.jpg`}
   breadcrumbs={[{ name: 'Store', url: '/store/' }, { name: 'Orchestra Instruments', url: '' }]}
 >
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(productSchema)} />
-  <section class="oi">
-    <div class="container">
-      <header class="oi-hero">
-        <a href="/store/" class="oi-back">&larr; Store</a>
-        <span class="oi-kicker">3D model pack · version 2.0</span>
-        <h1>Orchestra Instruments</h1>
-        <p class="oi-lead">
-          Every instrument of the symphony orchestra, from the violin to the tubular bells, with a
-          concert grand piano as the centrepiece. 36 models at real sizes, in one style.
-        </p>
-        <div class="oi-cta">
-          <a href={buy} class="btn btn-primary" target="_blank" rel="noopener">Buy for €{price}</a>
-          <span class="oi-note">One payment. Later versions are free.</span>
+
+  <section class="pg-hero">
+    <div class="wrap">
+      <a href={`${P}/store/`} class="back">&larr; Store</a>
+      <span class="label oi-kicker">3D model pack · version 2.0</span>
+      <h1 class="oi-title">Orchestra Instruments</h1>
+      <div class="pg-intro">
+        <p>Every instrument of the symphony orchestra, from the violin to the tubular bells, with a concert grand piano as the centrepiece. 36 models at real sizes, in one style.</p>
+        <div class="oi-buy">
+          <span class="oi-price">€{price}</span>
+          <a href={buy} class="pill" target="_blank" rel="noopener">Buy on Gumroad &rarr;</a>
+          <span class="label">One payment. Later versions are free.</span>
         </div>
-      </header>
-
-      <div class="oi-video">
-        <video controls muted playsinline preload="metadata" poster={`${img}/cover_all_instruments.jpg`}>
-          <source src="/videos/orchestra-instruments-promo.mp4" type="video/mp4" />
-        </video>
       </div>
+    </div>
+  </section>
 
-      <ul class="oi-facts">
-        {facts.map((f) => (
-          <li><strong>{f.value}</strong><span>{f.label}</span></li>
-        ))}
-      </ul>
+  <div class="wrap oi-video">
+    <video controls muted playsinline preload="metadata" poster={`${img}/cover_all_instruments.jpg`}>
+      <source src="/videos/orchestra-instruments-promo.mp4" type="video/mp4" />
+    </video>
+  </div>
 
-      <div class="oi-body">
-        <h2>What you get</h2>
-        <dl class="oi-families">
-          {families.map((f) => (
-            <div><dt>{f.name}</dt><dd>{f.items}</dd></div>
-          ))}
-        </dl>
-        <p>Bows, sticks, mallets, beaters and the piano bench are included as separate objects.</p>
+  <section class="oi-facts-band">
+    <ul class="wrap oi-facts">
+      {facts.map((f) => <li><strong>{f.value}</strong><span class="label">{f.label}</span></li>)}
+    </ul>
+  </section>
 
-        <h2>Formats</h2>
-        <ul>
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head"><h2>What you get</h2></div>
+      <dl class="rows oi-families">
+        {families.map((f) => <div><dt class="label">{f.name}</dt><dd>{f.items}</dd></div>)}
+      </dl>
+      <p class="oi-aside">Bows, sticks, mallets, beaters and the piano bench are included as separate objects.</p>
+    </div>
+  </section>
+
+  <section class="on-dark">
+    <div class="wrap oi-two">
+      <div>
+        <span class="label">Formats</span>
+        <ul class="oi-list">
           <li>GLB, FBX, OBJ and USDZ for every instrument, plus the Blender file.</li>
           <li>USDZ opens in Quick Look on a Mac, iPhone or iPad: put the instrument in your room at real size.</li>
           <li>Three detail levels: full, about 45 % and about 18 % of the triangles.</li>
           <li>870,042 triangles in all at full detail. The lightest model has 1,432, the grand piano 100,182.</li>
           <li>A 38-page PDF catalogue with every instrument's size, counts and parts.</li>
         </ul>
-
-        <h2>Made to be animated</h2>
-        <p>
-          Each instrument is split into named parts under one parent. On 13 of them the parts that
-          move have their origin on the hinge or slide line: the trombones' slides, the trumpet's
-          pistons, the piano's lid, fallboard, music desk and pedals, the harp's seven pedals.
-          Nothing is rigged, so you animate them your way.
-        </p>
       </div>
-
-      <div class="oi-gallery">
-        {gallery.map((g) => (
-          <img src={`${img}/${g}`} alt="Orchestra Instruments render" loading="lazy" class={g.endsWith('_views.jpg') ? 'wide' : undefined} />
-        ))}
-      </div>
-
-      <div class="oi-body">
-        <h2>Honest notes</h2>
-        <ul>
-          <li>The models are stylised, not engineering copies. Woodwind key mechanisms and brass tubing are simplified.</li>
-          <li>Wood grain is an image texture on the bowed strings, the harp, the wooden bars, the keyboards, the mandolin and the hurdy-gurdy. Everything else uses plain materials.</li>
-          <li>The lower detail levels are made automatically.</li>
-          <li>Every file was re-imported and checked in Blender, and the FBX and OBJ files were opened in TouchDesigner at real size. If a file misbehaves in your program, <a href="/contact/">write to me</a>.</li>
-          <li>No real maker's name or logo appears anywhere.</li>
-        </ul>
-
-        <h2>Licence</h2>
-        <p>
-          Use the models in any number of your own projects, personal or commercial. You may not
-          resell or share the model files themselves. One purchase per person. The full text is in
-          the download.
-        </p>
-
-        <div class="oi-cta oi-cta-end">
-          <a href={buy} class="btn btn-primary" target="_blank" rel="noopener">Buy for €{price} on Gumroad</a>
-          <a href="/portfolio/orchestra-instruments/" class="btn">How it was made</a>
-        </div>
-        <p class="oi-note">Checkout and download are handled by Gumroad.</p>
+      <div>
+        <span class="label">Made to be animated</span>
+        <p class="oi-text">Each instrument is split into named parts under one parent. On 13 of them the parts that move have their origin on the hinge or slide line: the trombones' slides, the trumpet's pistons, the piano's lid, fallboard, music desk and pedals, the harp's seven pedals. Nothing is rigged, so you animate them your way.</p>
       </div>
     </div>
   </section>
-</BaseLayout>
 
-<style>
-  .oi { padding-top: var(--space-xl); padding-bottom: var(--space-2xl); }
-  .oi-back { display: block; font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: var(--space-lg); }
-  .oi-back:hover { color: var(--color-text); }
-  .oi-hero { max-width: var(--container-narrow); margin-bottom: var(--space-xl); }
-  .oi-kicker { display: inline-block; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-subtle); margin-bottom: var(--space-md); }
-  .oi-hero h1 { margin-bottom: var(--space-md); }
-  .oi-lead { font-size: 1.25rem; color: var(--color-text-muted); margin-bottom: var(--space-lg); }
-  .oi-cta { display: flex; align-items: center; gap: var(--space-md); flex-wrap: wrap; }
-  .oi-cta-end { margin-top: var(--space-xl); }
-  .oi-note { font-size: 0.875rem; color: var(--color-text-subtle); }
-  .oi-video { margin-bottom: var(--space-xl); background: var(--color-bg-alt); border: 1px solid var(--color-border-light); }
-  .oi-video video { display: block; width: 100%; aspect-ratio: 16 / 9; }
-  .oi-facts { list-style: none; padding: 0; margin: 0 0 var(--space-xl); display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-md); }
-  .oi-facts li { border: 1px solid var(--color-border); padding: var(--space-lg) var(--space-md); display: flex; flex-direction: column; gap: var(--space-xs); }
-  .oi-facts strong { font-size: 2rem; font-weight: 600; line-height: 1; }
-  .oi-facts span { font-size: 0.875rem; color: var(--color-text-muted); }
-  .oi-body { max-width: var(--container-narrow); margin: 0 auto var(--space-xl); }
-  .oi-body h2 { margin: var(--space-xl) 0 var(--space-md); font-size: 1.5rem; }
-  .oi-body p, .oi-body li { color: var(--color-text-muted); line-height: 1.7; }
-  .oi-body ul { padding-left: 1.2rem; display: flex; flex-direction: column; gap: var(--space-sm); }
-  .oi-body a:not(.btn) { color: var(--color-text); text-decoration: underline; }
-  .oi-families { margin: 0 0 var(--space-md); }
-  .oi-families div { display: grid; grid-template-columns: 8rem 1fr; gap: var(--space-md); padding: var(--space-sm) 0; border-bottom: 1px solid var(--color-border-light); }
-  .oi-families dt { font-weight: 500; }
-  .oi-families dd { margin: 0; color: var(--color-text-muted); }
-  .oi-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-md); margin-bottom: var(--space-xl); }
-  .oi-gallery img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid var(--color-border-light); }
-  .oi-gallery img.wide { grid-column: 1 / -1; aspect-ratio: auto; }
-  @media (max-width: 768px) {
-    .oi-facts { grid-template-columns: repeat(2, 1fr); }
-    .oi-gallery { grid-template-columns: 1fr; }
-    .oi-families div { grid-template-columns: 1fr; gap: 0; }
-  }
-</style>
+  <section>
+    <div class="wrap oi-gallery">
+      {gallery.map((g) => <img src={`${img}/${g}`} alt="Orchestra Instruments render" loading="lazy" class={g.endsWith('_views.jpg') ? 'wide' : undefined} />)}
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap oi-two">
+      <div>
+        <span class="label">Honest notes</span>
+        <ul class="oi-list">
+          <li>The models are stylised, not engineering copies. Woodwind key mechanisms and brass tubing are simplified.</li>
+          <li>Wood grain is an image texture on the bowed strings, the harp, the wooden bars, the keyboards, the mandolin and the hurdy-gurdy. Everything else uses plain materials.</li>
+          <li>The lower detail levels are made automatically.</li>
+          <li>Every file was re-imported and checked in Blender, and the FBX and OBJ files were opened in TouchDesigner at real size. If a file misbehaves in your program, <a href={`${P}/contact/`}>write to me</a>.</li>
+          <li>No real maker's name or logo appears anywhere.</li>
+        </ul>
+      </div>
+      <div>
+        <span class="label">Licence</span>
+        <p class="oi-text">Use the models in any number of your own projects, personal or commercial. You may not resell or share the model files themselves. One purchase per person. The full text is in the download.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="oi-end">
+    <div class="wrap">
+      <h2>36 instruments, €{price}.</h2>
+      <div class="oi-end-actions">
+        <a href={buy} class="pill" target="_blank" rel="noopener">Buy on Gumroad &rarr;</a>
+        <a href={`${P}/portfolio/orchestra-instruments/`} class="pill">How it was made</a>
+      </div>
+      <p class="label">Checkout and download are handled by Gumroad.</p>
+    </div>
+  </section>
+</SiteLayout>

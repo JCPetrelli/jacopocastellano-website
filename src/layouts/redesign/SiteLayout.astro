@@ -1,0 +1,133 @@
+---
+// JC-827 — shared shell of the redesign (head + SEO, top bar with mobile menu, footer).
+import SEO from '../../components/SEO.astro';
+import OutboundTracking from '../../components/OutboundTracking.astro';
+import { ogImageFor } from '../../utils/ogRoutes';
+import '../../styles/redesign/tokens.css';
+import '../../styles/redesign/site.css';
+import '../../styles/redesign/pages.css';
+import { P, LIVE, nav, social } from './paths';
+
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  type?: 'website' | 'article' | 'profile';
+  publishedTime?: Date;
+  modifiedTime?: Date;
+  tags?: string[];
+  breadcrumbs?: { name: string; url: string }[];
+  /** true when the page opens on the dark iridescent hero: top bar starts white */
+  overHero?: boolean;
+}
+const {
+  title,
+  description = 'Senior Software Engineer & Video Designer crafting elegant digital experiences at the intersection of code and visual storytelling.',
+  image, type = 'website', publishedTime, modifiedTime, tags = [], breadcrumbs, overHero = false,
+} = Astro.props;
+const noindex = !LIVE;
+const livePath = Astro.url.pathname.replace(P, '') || '/';
+const shareImage = image ?? (noindex ? '/og/index.png' : await ogImageFor(livePath));
+const here = Astro.url.pathname;
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="alternate" type="application/rss+xml" title="Jacopo Castellano Blog" href="/rss.xml" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+  <SEO title={title} description={description} image={shareImage} type={type} publishedTime={publishedTime}
+    modifiedTime={modifiedTime} tags={tags} noindex={noindex} breadcrumbs={breadcrumbs} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+  {LIVE && (
+    <>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-HQZQ0P6KD5"></script>
+      <script is:inline>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HQZQ0P6KD5');
+      </script>
+      <OutboundTracking />
+    </>
+  )}
+  <slot name="head" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class:list={['topbar', { 'past-hero': !overHero }]}>
+    <a href={`${P}/`} class="name">Jacopo Castellano</a>
+    <a href={`${P}/`} class="mark" aria-label="Jacopo Castellano, home">..:::: JC ::::..</a>
+    <nav class="topnav" aria-label="Main">
+      {nav.map((n) => (
+        <a href={n.href} aria-current={here.startsWith(n.href) ? 'page' : undefined}>{n.label}</a>
+      ))}
+    </nav>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+  </header>
+
+  <div class="menu" id="menu" hidden>
+    <nav aria-label="Main">
+      {nav.map((n) => <a href={n.href} aria-current={here.startsWith(n.href) ? 'page' : undefined}>{n.label}</a>)}
+    </nav>
+    <div class="menu-social">{social.map((s) => <a href={s.href} target="_blank" rel="noopener noreferrer">{s.label}</a>)}</div>
+  </div>
+
+  <main id="main">
+    <slot />
+  </main>
+
+  <footer>
+    <div class="wrap">
+      {!here.startsWith(`${P}/contact/`) && <a href={`${P}/contact/`} class="big">Say hello</a>}
+      <div class="cols">
+        <div><span>Berlin, Germany</span><span>Senior Software Engineer</span><span>Video Designer</span><span>&copy; {new Date().getFullYear()} Jacopo Castellano</span></div>
+        <div>{social.map((s) => <a href={s.href} target="_blank" rel="noopener noreferrer">{s.label}</a>)}</div>
+        <div>{nav.map((n) => <a href={n.href}>{n.label}</a>)}<a href="/rss.xml">RSS</a></div>
+      </div>
+    </div>
+  </footer>
+
+  {!LIVE && (
+    <script is:inline define:vars={{ P }}>
+      // Preview only: links inside articles and project texts point to the live pages; keep visitors in the redesign.
+      document.querySelectorAll('main a[href^="/"]').forEach(function (a) {
+        var h = a.getAttribute('href');
+        if (h.indexOf(P + '/') === 0 || /\.(xml|txt|json)$/.test(h)) return;
+        if (/^\/(blog|portfolio|orchestra-instruments|store|about|contact|ai-digest)(\/|$)/.test(h)) a.setAttribute('href', P + h);
+      });
+    </script>
+  )}
+  <script is:inline>
+    (function () {
+      var bar = document.querySelector('.topbar');
+      var hero = document.querySelector('.hero');
+      if (hero) {
+        // top bar: white over the hero, ink once the hero has scrolled past
+        new IntersectionObserver(function (e) { bar.classList.toggle('past-hero', !e[0].isIntersecting); },
+          { rootMargin: '-66px 0px 0px 0px' }).observe(hero);
+      }
+      var btn = document.querySelector('.menu-btn'), menu = document.getElementById('menu');
+      function setMenu(open) {
+        btn.setAttribute('aria-expanded', String(open));
+        btn.textContent = open ? 'Close' : 'Menu';
+        menu.hidden = !open;
+        bar.classList.toggle('menu-open', open);
+        document.body.style.overflow = open ? 'hidden' : '';
+        if (open) menu.querySelector('a').focus();
+      }
+      btn.addEventListener('click', function () { setMenu(menu.hidden); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !menu.hidden) { setMenu(false); btn.focus(); } });
+      matchMedia('(min-width: 1080px)').addEventListener('change', function (m) { if (m.matches) setMenu(false); });
+    })();
+  </script>
+</body>
+</html>

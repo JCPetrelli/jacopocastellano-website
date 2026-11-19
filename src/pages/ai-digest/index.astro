@@ -1,35 +1,13 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import DigestView from '../../components/DigestView.astro';
+// JC-827 — AI Digest (latest).
+import SiteLayout from '../../layouts/redesign/SiteLayout.astro';
+import DigestEdition from '../../components/redesign/DigestEdition.astro';
 import { getCollection } from 'astro:content';
 
-// The live page always renders the most recent edition in the collection.
-const entries = (await getCollection('aiDigest')).sort(
-  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
-);
-const latest = entries[0];
+const latest = (await getCollection('aiDigest')).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())[0];
 const d = latest.data;
 ---
-
-<BaseLayout
-  title="AI Digest"
-  description="Everything you need to know about AI, in a 2-minute read. The most important developments, synthesized from dozens of sources and updated every 48 hours."
-  type="website"
-  modifiedTime={d.date}
->
-  <link
-    slot="head"
-    rel="alternate"
-    type="application/rss+xml"
-    title="AI Digest"
-    href="/ai-digest/rss.xml"
-  />
-  <DigestView
-    date={d.date}
-    windowLabel={d.window}
-    sources={d.sources}
-    articles={d.articles}
-    points={d.points}
-    isLatest={true}
-  />
-</BaseLayout>
+<SiteLayout title="AI Digest" description="Everything you need to know about AI, in a 2-minute read. The most important developments, synthesized from dozens of sources and updated every 48 hours." modifiedTime={d.date}>
+  <link slot="head" rel="alternate" type="application/rss+xml" title="AI Digest" href="/ai-digest/rss.xml" />
+  <DigestEdition date={d.date} windowLabel={d.window} sources={d.sources} articles={d.articles} points={d.points} isLatest />
+</SiteLayout>

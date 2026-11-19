@@ -1,0 +1,28 @@
+/* JC-827 — AI Digest. */
+.dg-meta { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--hairline); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.dg-list { list-style: none; }
+.dg-item { display: grid; grid-template-columns: 80px 5fr 7fr; gap: 34px; padding: 40px 0; align-items: baseline; }
+.dg-item h2 { font-size: clamp(22px, 2.4vw, 29px); font-weight: 400; line-height: 1.2; }
+.dg-item p { font-size: 16px; color: var(--text-soft); line-height: 1.65; }
+.dg-sources { margin-top: 14px; font-size: 12px !important; color: var(--muted) !important; }
+.dg-sources a { color: var(--text); border-bottom: 1px solid var(--hairline); }
+@media (max-width: 860px) { .dg-item { grid-template-columns: 1fr; gap: 12px; } }
+.dg-sub { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: end; }
+.dg-sub h2 { margin: 20px 0 14px; font-size: var(--text-heading); font-weight: 300; line-height: 1.05; letter-spacing: -0.02em; }
+.dg-sub p { color: var(--inverse-muted); }
+.on-dark .field label { color: var(--inverse-muted); }
+.on-dark .field input { color: var(--inverse-text); border-bottom-color: var(--inverse-border); }
+.on-dark .field input:focus { border-bottom-color: var(--inverse-text); }
+.dg-form { display: flex; gap: 20px; align-items: flex-end; }
+.dg-form .field { flex: 1; }
+@media (max-width: 860px) { .dg-sub { grid-template-columns: 1fr; } .dg-form { flex-direction: column; align-items: stretch; } .dg-form .pill { align-self: flex-start; } }
+.dg-foot { max-width: 680px; line-height: 1.6; }
+
+.ar-row { display: grid; grid-template-columns: 200px 1fr; gap: 34px; padding: 34px 0; }
+.ar-row ol { list-style: none; counter-reset: h; }
+.ar-row li { counter-increment: h; font-size: 17px; line-height: 1.4; padding-left: 36px; position: relative; transition: transform var(--dur) var(--ease); }
+.ar-row li + li { margin-top: 8px; }
+.ar-row li::before { content: counter(h, decimal-leading-zero); position: absolute; left: 0; top: 4px; font-size: 11px; color: var(--muted); }
+.ar-row:hover li { transform: translateX(6px); }
+.ar-date { font-size: 22px; font-weight: 400; display: block; margin-bottom: 6px; }
+@media (max-width: 720px) { .ar-row { grid-template-columns: 1fr; gap: 16px; } }

@@ -1,0 +1,21 @@
+---
+// JC-827 — an image in a fixed-ratio frame that never cuts the picture badly.
+// Reads the real size at build time (sharp, from public/):
+//  - close to the frame ratio (within ~12%)  -> fills the frame (cover, tiny crop)
+//  - otherwise                                -> whole picture (contain) on a flat gray mat
+//  - small files (under 600 px wide)          -> shown at most at 1.5x their own size, never stretched to fill
+import { imageSize } from './imageSize';
+
+interface Props { src: string; alt?: string; ratio: number; class?: string; eager?: boolean; }
+const { src, alt = '', ratio, class: cls, eager = false } = Astro.props;
+const dim = await imageSize(src);
+const r = dim ? dim.w / dim.h : ratio;
+const small = !!dim && dim.w < 600;
+const mode = !small && Math.abs(Math.log(r / ratio)) <= 0.12 ? 'cover' : 'fit';
+const loading = eager ? 'eager' : 'lazy';
+---
+<div class:list={['fr', `fr-${mode}`, cls]} style={`aspect-ratio:${ratio}`}>
+  <img class="fr-img" src={src} alt={alt} loading={loading} decoding="async"
+    width={dim?.w} height={dim?.h}
+    style={small && dim ? `max-width:min(100%,${dim.w * 1.5}px);max-height:min(100%,${dim.h * 1.5}px)` : undefined} />
+</div>

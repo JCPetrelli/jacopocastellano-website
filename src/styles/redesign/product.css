@@ -1,0 +1,31 @@
+/* JC-827 redesign — product page (Orchestra Instruments). */
+.oi-kicker { display: block; margin-top: 28px; }
+.oi-title { font-size: var(--text-heading-lg) !important; font-weight: 400 !important; line-height: 0.9 !important; }
+.oi-buy { display: flex; flex-direction: column; align-items: flex-end; gap: 14px; }
+.oi-price { font-size: var(--text-heading); font-weight: 300; line-height: 1; }
+@media (max-width: 720px) { .oi-buy { align-items: flex-start; } }
+.oi-video { margin-top: clamp(48px, 7vw, 96px); }
+.oi-video video { width: 100%; height: auto; display: block; background: #000; }
+.oi-facts-band { padding: clamp(64px, 9vw, 112px) 0; }
+.oi-facts { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 34px; }
+.oi-facts li { border-top: 1px solid var(--hairline); padding-top: 20px; display: flex; flex-direction: column; gap: 10px; }
+.oi-facts strong { font-size: var(--text-heading); font-weight: 300; line-height: 1; }
+@media (max-width: 720px) { .oi-facts { grid-template-columns: 1fr 1fr; } }
+.oi-families > div { display: grid; grid-template-columns: 180px 1fr; gap: 34px; padding: 24px 0; align-items: baseline; }
+.oi-families dd { font-size: 20px; font-weight: 300; line-height: 1.4; }
+@media (max-width: 720px) { .oi-families > div { grid-template-columns: 1fr; gap: 8px; } }
+.oi-aside { margin-top: 28px; color: var(--muted); font-size: 16px; }
+.oi-two { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; }
+@media (max-width: 860px) { .oi-two { grid-template-columns: 1fr; gap: 56px; } }
+.oi-list { list-style: none; margin-top: 20px; }
+.oi-list li { padding: 14px 0; border-top: 1px solid var(--hairline); font-size: 16px; line-height: 1.55; }
+.on-dark .oi-list li { border-color: var(--inverse-border); }
+.oi-list a, .oi-text a { border-bottom: 1px solid currentColor; }
+.oi-text { margin-top: 20px; font-size: 20px; font-weight: 300; line-height: 1.5; }
+.oi-gallery { columns: 2; column-gap: 14px; }
+.oi-gallery img { width: 100%; height: auto; display: block; margin-bottom: 14px; break-inside: avoid; background: #111; }
+.oi-gallery img.wide { column-span: all; }
+@media (max-width: 720px) { .oi-gallery { columns: 1; } }
+.oi-end { border-top: 1px solid var(--hairline); }
+.oi-end h2 { font-size: var(--text-heading); font-weight: 300; line-height: 1.05; letter-spacing: -0.02em; }
+.oi-end-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 40px 0 20px; }

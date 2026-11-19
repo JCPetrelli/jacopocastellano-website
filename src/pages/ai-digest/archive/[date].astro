@@ -1,39 +1,16 @@
 ---
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import DigestView from '../../../components/DigestView.astro';
+// JC-827 — archived AI Digest edition.
+import SiteLayout from '../../../layouts/redesign/SiteLayout.astro';
+import DigestEdition from '../../../components/redesign/DigestEdition.astro';
 import { getCollection, type CollectionEntry } from 'astro:content';
 
 export async function getStaticPaths() {
-  const entries = await getCollection('aiDigest');
-  return entries.map((entry) => ({
-    params: { date: entry.id },
-    props: { entry },
-  }));
+  return (await getCollection('aiDigest')).map((entry) => ({ params: { date: entry.id }, props: { entry } }));
 }
-
-type Props = { entry: CollectionEntry<'aiDigest'> };
-const { entry } = Astro.props;
+const { entry } = Astro.props as { entry: CollectionEntry<'aiDigest'> };
 const d = entry.data;
-
-const dateLabel = d.date.toLocaleDateString('en-US', {
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric',
-});
+const label = d.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 ---
-
-<BaseLayout
-  title={`AI Digest: ${dateLabel}`}
-  description={`The AI Digest for ${dateLabel}: the most important AI developments, synthesized from dozens of sources.`}
-  type="article"
-  publishedTime={d.date}
->
-  <DigestView
-    date={d.date}
-    windowLabel={d.window}
-    sources={d.sources}
-    articles={d.articles}
-    points={d.points}
-    isLatest={false}
-  />
-</BaseLayout>
+<SiteLayout title={`AI Digest: ${label}`} description={`The AI Digest for ${label}: the most important AI developments, synthesized from dozens of sources.`} type="article" publishedTime={d.date}>
+  <DigestEdition date={d.date} windowLabel={d.window} sources={d.sources} articles={d.articles} points={d.points} />
+</SiteLayout>

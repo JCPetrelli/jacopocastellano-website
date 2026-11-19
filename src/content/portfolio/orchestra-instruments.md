@@ -1,6 +1,6 @@
 ---
 title: "Orchestra Instruments"
-description: "36 orchestral instruments as 3D models, built from Python scripts in Blender and sold as a pack."
+description: "36 orchestral instruments as 3D models at real sizes, built from Python scripts in Blender, in GLB, FBX, OBJ, USDZ and Blender formats with three detail levels."
 date: 2026-10-09
 category: motion
 featured: true

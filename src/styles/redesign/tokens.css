@@ -1,0 +1,70 @@
+/* JC-827 — design tokens, light and dark. */
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+  --text-soft: #181818;
+  --muted: #6d6d6d;
+  --border: #000000;
+  --hairline: rgba(0, 0, 0, 0.12);
+  --mat: #efefef;
+  --mat-inverse: #161616;
+  --inverse-bg: #000000;
+  --inverse-text: #ffffff;
+  --inverse-muted: rgba(255, 255, 255, 0.6);
+  --inverse-border: rgba(255, 255, 255, 0.3);
+
+  --font: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --text-caption: 12px;
+  --text-body-sm: 16px;
+  --text-body: 18px;
+  --text-subheading: clamp(28px, 3.6vw, 39px);
+  --text-heading: clamp(40px, 7.2vw, 78px);
+  --text-heading-lg: clamp(48px, 8.7vw, 94px);
+  --text-display: clamp(84px, 15.6vw, 225px);
+
+  --page-max: 1078px;
+  --gutter: clamp(16px, 4vw, 40px);
+  --section-gap: clamp(96px, 14vw, 152px);
+  --element-gap: 14px;
+
+  --radius-pill: 75px; /* buttons + tags only; everything else is 0 */
+
+  --ease: cubic-bezier(0.19, 1, 0.22, 1);
+  --dur-slow: 1.25s;
+  --dur: 0.8s;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg: #000000;
+    --text: #ffffff;
+    --text-soft: #e8e8e8;
+    --muted: #9a9a9a;
+    --border: #ffffff;
+    --hairline: rgba(255, 255, 255, 0.16);
+    --mat: #161616;
+    --mat-inverse: #efefef;
+    --inverse-bg: #ffffff;
+    --inverse-text: #000000;
+    --inverse-muted: rgba(0, 0, 0, 0.6);
+    --inverse-border: rgba(0, 0, 0, 0.3);
+  }
+}
+:root[data-theme='dark'] {
+  --bg: #000000;
+  --text: #ffffff;
+  --text-soft: #e8e8e8;
+  --muted: #9a9a9a;
+  --border: #ffffff;
+  --hairline: rgba(255, 255, 255, 0.16);
+  --mat: #161616;
+  --mat-inverse: #efefef;
+  --inverse-bg: #ffffff;
+  --inverse-text: #000000;
+  --inverse-muted: rgba(0, 0, 0, 0.6);
+  --inverse-border: rgba(0, 0, 0, 0.3);
+}
+
+/* bands in the opposite colour use the opposite mat */
+.on-dark { --mat: var(--mat-inverse); }

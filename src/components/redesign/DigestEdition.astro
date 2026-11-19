@@ -1,0 +1,71 @@
+---
+// JC-827 — one AI Digest edition. Same props as src/components/DigestView.astro.
+import { P, fmtLong } from '../../layouts/redesign/paths';
+import '../../styles/redesign/digest.css';
+
+interface Props {
+  date: Date; windowLabel: string; sources: number; articles: number;
+  points: { headline: string; body: string; sources: { name: string; url: string }[] }[];
+  isLatest?: boolean;
+}
+const { date, windowLabel, sources, articles, points, isLatest = false } = Astro.props;
+---
+<section class="pg-hero">
+  <div class="wrap">
+    <span class="label">AI Digest{isLatest ? ' · Updated every 48 hours' : ' · Archived edition'}</span>
+    <h1>{isLatest ? 'Everything you need to know about AI' : `AI Digest, ${fmtLong(date)}`}</h1>
+    <div class="pg-intro">
+      {isLatest
+        ? <p>Bookmark this page. The most important things happening in AI, synthesized from dozens of sources into a two-minute read.</p>
+        : <p>An archived edition. For the current digest, see the <a href={`${P}/ai-digest/`}>latest</a>.</p>}
+      <div class="pg-actions">
+        <a class="pill" href={isLatest ? '#newsletter' : `${P}/ai-digest/#newsletter`}>Subscribe by email</a>
+        <a class="pill" href="/ai-digest/rss.xml">RSS</a>
+      </div>
+    </div>
+    <div class="dg-meta">
+      <span class="label">{isLatest ? 'Last updated' : 'Edition of'} {fmtLong(date)} · {sources} sources · {articles} articles · {windowLabel} window</span>
+      {isLatest
+        ? <a class="back" href={`${P}/ai-digest/archive/`}>Past digests &rarr;</a>
+        : <a class="back" href={`${P}/ai-digest/archive/`}>All past digests &rarr;</a>}
+    </div>
+  </div>
+</section>
+
+<section class="pg-body">
+  <ol class="wrap dg-list rows">
+    {points.map((pt, i) => (
+      <li class="dg-item">
+        <span class="label">{String(i + 1).padStart(2, '0')}</span>
+        <h2>{pt.headline}</h2>
+        <div>
+          <p>{pt.body}</p>
+          <p class="dg-sources">
+            {pt.sources.map((s, j) => <>{j > 0 && ' · '}<a href={s.url} target="_blank" rel="noopener noreferrer">{s.name}</a></>)}
+          </p>
+        </div>
+      </li>
+    ))}
+  </ol>
+</section>
+
+{isLatest && (
+  <section class="on-dark" id="newsletter">
+    <div class="wrap dg-sub">
+      <div>
+        <span class="label">Newsletter</span>
+        <h2>Get the digest by email.</h2>
+        <p>Every edition, straight to your inbox. No spam, unsubscribe anytime.</p>
+      </div>
+      <form class="dg-form" action="https://buttondown.com/api/emails/embed-subscribe/JacopoCastellano" method="post"
+        target="popupwindow" onsubmit="window.open('https://buttondown.com/JacopoCastellano', 'popupwindow')">
+        <div class="field"><label for="bd-email">Email</label><input type="email" name="email" id="bd-email" placeholder="you@example.com" required /></div>
+        <button type="submit" class="pill">Subscribe</button>
+      </form>
+    </div>
+  </section>
+)}
+
+<section style="padding-top:clamp(48px,6vw,72px);padding-bottom:0">
+  <p class="wrap label dg-foot">Synthesized automatically from major AI and tech news feeds, deduplicated so each point reflects what multiple outlets are reporting. Links point to the original sources.</p>
+</section>

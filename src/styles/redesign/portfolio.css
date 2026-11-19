@@ -1,0 +1,31 @@
+/* JC-827 — portfolio list and project page. */
+.pf-count { font-size: 12px; opacity: 0.6; }
+
+.pj-title { font-size: var(--text-heading-lg) !important; font-weight: 400 !important; line-height: 0.9 !important; }
+.pj-tags { justify-content: flex-end; }
+@media (max-width: 720px) { .pj-tags { justify-content: flex-start; } }
+.pj-meta { margin-top: 64px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 34px; border-top: 1px solid var(--hairline); padding-top: 20px; }
+.pj-meta dd { margin-top: 6px; font-size: 16px; }
+@media (max-width: 720px) { .pj-meta { grid-template-columns: 1fr 1fr; } }
+.pj-media { margin-top: clamp(48px, 7vw, 96px); }
+.pj-media img { display: block; width: 100%; height: auto; margin: 0 auto; }
+.pj-video { aspect-ratio: 16 / 9; background: #000; }
+.pj-video iframe { width: 100%; height: 100%; border: 0; display: block; }
+.pj-body { display: grid; justify-items: center; }
+.pj-gallery { margin-top: clamp(64px, 9vw, 112px); columns: 2; column-gap: 14px; }
+.pj-shot { display: block; width: 100%; margin: 0 0 14px; padding: 0; border: 0; background: #111; cursor: zoom-in; overflow: hidden; break-inside: avoid; }
+.pj-shot img { width: 100%; height: auto; display: block; transition: transform var(--dur-slow) var(--ease); } /* natural shape */
+.pj-shot:hover img { transform: scale(1.04); }
+@media (max-width: 720px) { .pj-gallery { columns: 1; } }
+.pj-next { margin-top: clamp(96px, 14vw, 152px); }
+.pj-next a { display: block; }
+.pj-next h2 { margin-top: 20px; font-size: var(--text-heading); font-weight: 300; line-height: 1.05; letter-spacing: -0.02em; transition: transform var(--dur-slow) var(--ease); }
+.pj-next a:hover h2 { transform: translateX(16px); }
+
+.lightbox { position: fixed; inset: 0; z-index: 50; background: rgba(0,0,0,0.94); display: grid; place-items: center; }
+.lightbox[hidden] { display: none; }
+.lb-img { max-width: 90vw; max-height: 86vh; object-fit: contain; }
+.lightbox button { position: absolute; background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.3); border-radius: var(--radius-pill); padding: 11px 24px; font: inherit; font-size: 14px; cursor: pointer; }
+.lb-close { top: 18px; right: var(--gutter); }
+.lb-prev { left: var(--gutter); top: 50%; transform: translateY(-50%); }
+.lb-next { right: var(--gutter); top: 50%; transform: translateY(-50%); }

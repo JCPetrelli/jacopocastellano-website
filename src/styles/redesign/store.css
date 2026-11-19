@@ -1,0 +1,24 @@
+/* JC-827 — store page (builds on site.css). */
+.st-jump { display: flex; flex-wrap: wrap; gap: 12px; justify-content: flex-end; }
+.st-count { color: var(--muted); font-size: 12px; }
+@media (max-width: 720px) { .st-jump { justify-content: flex-start; } }
+
+.st-group { padding-top: clamp(64px, 9vw, 112px); padding-bottom: clamp(64px, 9vw, 112px); }
+.st-group + .st-group:not(.on-dark) { border-top: 1px solid var(--hairline); }
+.st-item {
+  display: grid; grid-template-columns: 280px 1fr auto; gap: 40px; align-items: center;
+  padding: 34px 0; border-top: 1px solid var(--hairline);
+}
+.st-item:last-child { border-bottom: 1px solid var(--hairline); }
+.on-dark .st-item { border-color: var(--inverse-border); }
+.st-item h3 { font-size: clamp(22px, 2.4vw, 29px); font-weight: 400; line-height: 1.19; transition: transform var(--dur) var(--ease); }
+.st-item:hover h3 { transform: translateX(8px); }
+.st-item p { margin-top: 12px; font-size: 16px; color: var(--muted); max-width: 52ch; }
+.on-dark .st-item p { color: var(--inverse-muted); }
+.st-buy { display: flex; flex-direction: column; align-items: flex-end; gap: 14px; }
+.st-price { font-size: var(--text-subheading); font-weight: 300; line-height: 1; }
+.st-item:hover .pill { letter-spacing: 0.04em; }
+@media (max-width: 860px) {
+  .st-item { grid-template-columns: 1fr; gap: 20px; }
+  .st-buy { flex-direction: row; align-items: center; justify-content: space-between; }
+}

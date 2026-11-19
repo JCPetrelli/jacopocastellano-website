@@ -1,0 +1,66 @@
+---
+// JC-827 — projects as a big typographic list. Desktop: the picture follows the cursor (whole, own shape).
+// Keyboard: focusing a row shows its picture beside it. Phones / touch: a small thumbnail on each row.
+import { P, categoryLabel } from '../../layouts/redesign/paths';
+import '../../styles/redesign/worklist.css';
+
+interface Item { id: string; data: { title: string; category: string; date: Date; thumbnail: string } }
+interface Props { items: Item[]; size?: 'lg' | 'md' }
+const { items, size = 'lg' } = Astro.props;
+---
+<div class:list={['wl', `wl-${size}`]}>
+  <ol class="wl-list">
+    {items.map((p, i) => (
+      <li data-category={p.data.category}>
+        <a href={`${P}/portfolio/${p.id}/`} class="wl-row" data-img={p.data.thumbnail}>
+          <span class="label wl-n">{String(i + 1).padStart(2, '0')}</span>
+          <span class="wl-title">{p.data.title}</span>
+          <span class="label wl-meta">{categoryLabel[p.data.category]} · {p.data.date.getFullYear()}</span>
+          <img class="wl-thumb" src={p.data.thumbnail} alt="" loading="lazy" decoding="async" />
+        </a>
+      </li>
+    ))}
+  </ol>
+  <img class="wl-float" alt="" aria-hidden="true" />
+</div>
+
+<script is:inline>
+  (function () {
+    document.querySelectorAll('.wl').forEach(function (wl) {
+      var f = wl.querySelector('.wl-float');
+      var fine = matchMedia('(hover: hover) and (pointer: fine) and (min-width: 860px)');
+      var x = 0, y = 0, tx = 0, ty = 0, raf = 0, preloaded = false;
+      function preload() {
+        if (preloaded) return; preloaded = true;
+        wl.querySelectorAll('[data-img]').forEach(function (a) { var i = new Image(); i.src = a.dataset.img; });
+      }
+      function show(a) { if (f.getAttribute('src') !== a.dataset.img) f.src = a.dataset.img; f.classList.add('on'); }
+      function hide() { f.classList.remove('on'); }
+      function loop() {
+        x += (tx - x) * 0.18; y += (ty - y) * 0.18;
+        f.style.transform = 'translate3d(' + x + 'px,' + y + 'px,0)';
+        raf = Math.abs(tx - x) + Math.abs(ty - y) > 0.5 ? requestAnimationFrame(loop) : 0;
+      }
+      function moveTo(nx, ny, jump) {
+        // keep the picture inside the viewport, to the right of the cursor
+        var w = f.offsetWidth || 340, h = f.offsetHeight || 260;
+        tx = Math.min(nx + 32, innerWidth - w - 16); ty = Math.max(16, Math.min(ny - h / 2, innerHeight - h - 16));
+        if (jump) { x = tx; y = ty; }
+        if (!raf) raf = requestAnimationFrame(loop);
+      }
+      wl.addEventListener('pointerenter', preload);
+      wl.querySelectorAll('.wl-row').forEach(function (a) {
+        a.addEventListener('mouseenter', function (e) { if (!fine.matches) return; show(a); moveTo(e.clientX, e.clientY, !f.classList.contains('was')); f.classList.add('was'); });
+        a.addEventListener('mouseleave', hide);
+        a.addEventListener('focus', function () { // keyboard: picture beside the row's right end
+          if (!fine.matches || a.matches(':hover')) return;
+          preload(); show(a); var r = a.getBoundingClientRect(); moveTo(r.left + r.width * 0.55, r.top + r.height / 2, true);
+        });
+        a.addEventListener('blur', hide);
+      });
+      wl.addEventListener('mousemove', function (e) { if (f.classList.contains('on')) moveTo(e.clientX, e.clientY, false); });
+      wl.addEventListener('mouseleave', function () { f.classList.remove('was'); });
+      addEventListener('scroll', hide, { passive: true });
+    });
+  })();
+</script>

@@ -21,11 +21,11 @@ export function getOgCards(): Promise<Map<string, OgCard>> {
   cache ??= (async () => {
     const cards = new Map<string, OgCard>([
       ['index', { title: 'Jacopo Castellano', section: 'Software & Video Design', subtitle: 'Senior Software Engineer & Video Designer' }],
-      ['about', { title: 'About', section: 'Jacopo Castellano' }],
-      ['contact', { title: 'Contact', section: 'Jacopo Castellano' }],
-      ['blog', { title: 'Blog', section: 'Jacopo Castellano', subtitle: 'Software engineering, video design, the creative process' }],
-      ['portfolio', { title: 'Portfolio', section: 'Jacopo Castellano', subtitle: 'Video design, software and creative projects' }],
-      ['store', { title: 'Store', section: 'Jacopo Castellano', subtitle: '3D model packs and animation packs' }],
+      ['about', { title: 'About', subtitle: 'Senior Software Engineer and Video Designer based in Berlin' }],
+      ['contact', { title: 'Contact', subtitle: 'Collaborations, projects, or just to say hello' }],
+      ['blog', { title: 'Blog', subtitle: 'Software engineering, video design, the creative process' }],
+      ['portfolio', { title: 'Portfolio', subtitle: 'Video design, software and creative projects' }],
+      ['store', { title: 'Store', subtitle: '3D model packs and animation packs' }],
       ['ai-digest/archive', { title: 'AI Digest Archive', section: 'AI Digest' }],
     ]);
 
