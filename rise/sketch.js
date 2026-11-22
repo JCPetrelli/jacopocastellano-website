@@ -19,6 +19,7 @@ function setup() {
 
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
     render();
+    reveal();
     noLoop();
     return;
   }
@@ -34,6 +35,14 @@ function setup() {
 function draw() {
   step(min(deltaTime, 50));
   render();
+  if (frameCount === 1) reveal();
+}
+
+// Fade the canvas in once it holds a real frame (the CSS keeps it at opacity 0 until then).
+function reveal() {
+  const el = host.querySelector('canvas');
+  void el.offsetWidth; // commit the hidden state first, so the opacity change animates
+  el.classList.add('is-ready');
 }
 
 function step(dtMs) {

@@ -74,6 +74,7 @@ void main(){
       gl.uniform1f(uT, still ? 20 : (now - t0) / 1000 + 20);
       gl.uniform2f(uM, mx, -my);
       gl.drawArrays(gl.TRIANGLES, 0, 3);
+      canvas.classList.add('is-ready'); // JC-973: fade in after the first frame
     }
     if (!still) requestAnimationFrame(frame);
   }
