@@ -154,3 +154,8 @@ a:hover .fr-fit .fr-img { transform: translate(-50%, -50%) scale(1.03); }
 
 /* Hero background host for the p5 "Rise" sketch (fills the hero, canvas sized by the sketch) */
 .hero .hero-bg { position: absolute; inset: 0; }
+
+/* JC-973: the hero animation loads 1-2 s after the page; keep its canvas hidden until the
+   first frame is drawn (the script adds .is-ready), then fade it in from the black hero. */
+.hero .hero-bg canvas, .hero #iri { opacity: 0; transition: opacity 1.2s ease-out; }
+.hero .hero-bg canvas.is-ready, .hero #iri.is-ready, .hero #iri.iri-fallback { opacity: 1; }
