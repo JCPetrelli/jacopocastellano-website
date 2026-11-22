@@ -26,6 +26,7 @@ export function getOgCards(): Promise<Map<string, OgCard>> {
       ['blog', { title: 'Blog', subtitle: 'Software engineering, video design, the creative process' }],
       ['portfolio', { title: 'Portfolio', subtitle: 'Video design, software and creative projects' }],
       ['store', { title: 'Store', subtitle: '3D model packs and animation packs' }],
+      ['puppet-theatre', { title: 'Light for your stage', section: 'Projections for puppet theatre', subtitle: 'Video projections built into the set, played live during the show' }],
       ['ai-digest/archive', { title: 'AI Digest Archive', section: 'AI Digest' }],
     ]);
 

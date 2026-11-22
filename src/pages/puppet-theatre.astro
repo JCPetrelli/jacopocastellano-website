@@ -2,12 +2,10 @@
 // Landing page for puppet and children's theatres (outreach after the
 // Puppentheaterfest FEZ Berlin 2026). Not in the nav; linked from emails.
 // Design: Scripts/puppet_collab/docs/specs/2026-11-22-landing-page-design.md
-import fs from 'node:fs';
 import SiteLayout from '../layouts/redesign/SiteLayout.astro';
 import { P } from '../layouts/redesign/paths';
 
-const teaser = '/videos/puppet-theatre-teaser';
-const hasTeaser = fs.existsSync(`public${teaser}.mp4`);
+const youtubeId = 'HAjrAeUHLR4'; // unlisted "Raindrop" teaser
 const mail = 'info@jacopocastellano.com';
 const subject = encodeURIComponent('Projections for our puppet theatre');
 
@@ -49,15 +47,17 @@ const work = [
   </section>
 
   <div class="wrap ft-teaser">
-    {hasTeaser ? (
-      <video autoplay muted loop playsinline preload="metadata" poster={`${teaser}.jpg`}>
-        <source src={`${teaser}.webm`} type="video/webm" />
-        <source src={`${teaser}.mp4`} type="video/mp4" />
-      </video>
-    ) : (
-      <div class="ft-placeholder"><span class="label">Teaser "Raindrop" coming soon</span></div>
-    )}
-    <p class="label ft-caption">Raindrop: rain, leaves and wind. Each scene is cued live.</p>
+    <div class="ft-video">
+      <iframe
+        src={`https://www.youtube-nocookie.com/embed/${youtubeId}?rel=0&modestbranding=1`}
+        title="Raindrop: live projection"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <p class="label ft-caption">Raindrop: a drop, a window, rain, leaves and a storm. Each scene is cued live.</p>
   </div>
 
   <section class="on-dark ft-why">
@@ -124,9 +124,8 @@ const work = [
 <style>
   .ft-hero h1 { max-width: 12ch; }
   .ft-teaser { margin-top: clamp(48px, 7vw, 88px); }
-  .ft-teaser video, .ft-placeholder { display: block; width: 100%; aspect-ratio: 16 / 9; background: #000; object-fit: cover; }
-  .ft-placeholder { display: grid; place-items: center; border: 1px dashed var(--hairline); }
-  .ft-placeholder .label { color: rgba(255, 255, 255, 0.6); }
+  .ft-video { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; }
+  .ft-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
   .ft-caption { margin-top: 14px; }
 
   .ft-why, .ft-end { margin-top: var(--section-gap); }
