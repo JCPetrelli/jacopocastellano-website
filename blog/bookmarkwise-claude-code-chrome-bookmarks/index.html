@@ -1,0 +1,113 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="alternate" type="application/rss+xml" title="Jacopo Castellano Blog" href="/rss.xml"><meta name="color-scheme" content="light dark"><meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)"><!-- Primary Meta Tags --><title>Bookmarkwise: a Claude Code skill that cleans up Chrome bookmarks | Jacopo Castellano</title><meta name="title" content="Bookmarkwise: a Claude Code skill that cleans up Chrome bookmarks | Jacopo Castellano"><meta name="description" content="How Bookmarkwise plans bookmark changes with Claude Code, applies them through a one-off Chrome extension, and keeps a backup and undo."><meta name="author" content="Jacopo Castellano"><meta name="keywords" content="AI, Tools, Python, Productivity"><!-- Canonical --><link rel="canonical" href="https://jacopocastellano.com/blog/bookmarkwise-claude-code-chrome-bookmarks/"><!-- Open Graph / Facebook --><meta property="og:type" content="article"><meta property="og:url" content="https://jacopocastellano.com/blog/bookmarkwise-claude-code-chrome-bookmarks/"><meta property="og:title" content="Bookmarkwise: a Claude Code skill that cleans up Chrome bookmarks | Jacopo Castellano"><meta property="og:description" content="How Bookmarkwise plans bookmark changes with Claude Code, applies them through a one-off Chrome extension, and keeps a backup and undo."><meta property="og:image" content="https://jacopocastellano.com/blog/bookmarkwise-claude-code-chrome-bookmarks/cover.png"><meta property="og:image:alt" content="How Bookmarkwise plans bookmark changes with Claude Code, applies them through a one-off Chrome extension, and keeps a backup and undo."><meta property="og:site_name" content="Jacopo Castellano"><meta property="og:locale" content="en_US"><meta property="article:published_time" content="2026-11-22T00:00:00.000Z"><meta property="article:author" content="Jacopo Castellano"><meta property="article:tag" content="AI"><meta property="article:tag" content="Tools"><meta property="article:tag" content="Python"><meta property="article:tag" content="Productivity"><!-- Twitter --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://jacopocastellano.com/blog/bookmarkwise-claude-code-chrome-bookmarks/"><meta name="twitter:title" content="Bookmarkwise: a Claude Code skill that cleans up Chrome bookmarks | Jacopo Castellano"><meta name="twitter:description" content="How Bookmarkwise plans bookmark changes with Claude Code, applies them through a one-off Chrome extension, and keeps a backup and undo."><meta name="twitter:image" content="https://jacopocastellano.com/blog/bookmarkwise-claude-code-chrome-bookmarks/cover.png"><meta name="twitter:creator" content="@vjcastellano"><!-- JSON-LD Structured Data --><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Jacopo Castellano","url":"https://jacopocastellano.com/","author":{"@type":"Person","name":"Jacopo Castellano"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Jacopo Castellano","url":"https://jacopocastellano.com/","jobTitle":["Senior Software Engineer","Video Designer"],"sameAs":["https://www.linkedin.com/in/jacopocastellano/","https://github.com/JCPetrelli","https://medium.com/@jacopocastellano","https://vimeo.com/jacopocastellano","https://www.youtube.com/channel/UCiVwuK0LOAPZWaXvhNjIB0g","https://www.instagram.com/jcastellanodesign/","https://twitter.com/vjcastellano"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Bookmarkwise: a Claude Code skill that cleans up Chrome bookmarks","description":"How Bookmarkwise plans bookmark changes with Claude Code, applies them through a one-off Chrome extension, and keeps a backup and undo.","image":"https://jacopocastellano.com/blog/bookmarkwise-claude-code-chrome-bookmarks/cover.png","author":{"@type":"Person","name":"Jacopo Castellano"},"publisher":{"@type":"Person","name":"Jacopo Castellano"},"datePublished":"2026-11-22T00:00:00.000Z","dateModified":"2026-11-22T00:00:00.000Z","mainEntityOfPage":{"@type":"WebPage","@id":"https://jacopocastellano.com/blog/bookmarkwise-claude-code-chrome-bookmarks/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://jacopocastellano.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://jacopocastellano.com/blog/"},{"@type":"ListItem","position":3,"name":"Bookmarkwise: a Claude Code skill that cleans up Chrome bookmarks"}]}</script><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet"><script async src="https://www.googletagmanager.com/gtag/js?id=G-HQZQ0P6KD5"></script><script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HQZQ0P6KD5');
+      </script><script>
+  (function () {
+    function track(event) {
+      var link = event.target.closest && event.target.closest('a[href]');
+      if (!link || typeof gtag !== 'function') return;
+      var url;
+      try { url = new URL(link.href, location.href); } catch (e) { return; }
+      if (!/^https?:$/.test(url.protocol)) return;
+      var host = url.hostname.replace(/^www\./, '');
+      var here = location.hostname.replace(/^www\./, '');
+      if (host === here) return;
+
+      var params = {
+        link_url: url.href,
+        link_domain: host,
+        link_text: (link.textContent || '').trim().slice(0, 100),
+        page_path: location.pathname,
+        transport_type: 'beacon'
+      };
+      gtag('event', 'outbound_click', params);
+
+      if (/(^|\.)gumroad\.com$/.test(host)) {
+        var slug = (url.pathname.match(/\/l\/([^/?#]+)/) || [])[1] || url.pathname;
+        gtag('event', 'store_click', Object.assign({ item_id: slug }, params));
+      }
+    }
+    document.addEventListener('click', track, true);
+    document.addEventListener('auxclick', function (e) { if (e.button === 1) track(e); }, true);
+  })();
+</script><link rel="stylesheet" href="/_astro/about.BZ8JD7lu.css">
+<style>.bl-lead{display:grid;grid-template-columns:7fr 5fr;gap:48px;align-items:end}.bl-lead h2{margin:14px 0;font-size:var(--text-subheading);font-weight:400;line-height:1.15}.bl-lead p{font-size:16px;color:var(--muted)}@media(max-width:720px){.bl-lead{grid-template-columns:1fr;gap:20px}}.wrap.rows{margin-top:clamp(64px,9vw,112px)}.bl-row{display:grid;grid-template-columns:140px 1fr 80px;gap:28px;padding:28px 0;align-items:baseline}.bl-row h3{font-size:22px;font-weight:400;line-height:1.25;transition:transform var(--dur) var(--ease)}.bl-row:hover h3{transform:translate(8px)}.bl-row p{margin-top:8px;font-size:15px;color:var(--muted);max-width:64ch}.bl-min{text-align:right}@media(max-width:720px){.bl-row{grid-template-columns:1fr;gap:6px}.bl-min{display:none}}.bp-title{font-size:var(--text-heading)!important;line-height:1.05!important;max-width:20ch!important}.bp-meta{display:flex;flex-direction:column;align-items:flex-end;gap:14px}@media(max-width:720px){.bp-meta{align-items:flex-start}}.bp-cover{margin-top:clamp(48px,7vw,96px)}.bp-cover img{width:100%;height:auto;display:block}.bp-body{display:grid;grid-template-columns:1fr;justify-items:center}.bp-author{width:100%;max-width:680px;margin-top:96px;padding-top:28px;border-top:1px solid var(--hairline)}.bp-author p{font-size:22px;margin:6px 0 4px}.bp-related{padding-top:0}
+</style></head> <body> <a class="skip" href="#main">Skip to content</a> <header class="topbar past-hero"> <a href="/" class="name">Jacopo Castellano</a> <a href="/" class="mark" aria-label="Jacopo Castellano, home">..:::: JC ::::..</a> <nav class="topnav" aria-label="Main"> <a href="/portfolio/">Work</a><a href="/blog/" aria-current="page">Writing</a><a href="/ai-digest/">AI Digest</a><a href="/store/">Store</a><a href="/about/">About</a><a href="/contact/">Contact</a> </nav> <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu</button> </header> <div class="menu" id="menu" hidden> <nav aria-label="Main"> <a href="/portfolio/">Work</a><a href="/blog/" aria-current="page">Writing</a><a href="/ai-digest/">AI Digest</a><a href="/store/">Store</a><a href="/about/">About</a><a href="/contact/">Contact</a> </nav> <div class="menu-social"><a href="https://www.linkedin.com/in/jacopocastellano/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/JCPetrelli" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://medium.com/@jacopocastellano" target="_blank" rel="noopener noreferrer">Medium</a><a href="https://www.youtube.com/channel/UCiVwuK0LOAPZWaXvhNjIB0g" target="_blank" rel="noopener noreferrer">YouTube</a><a href="https://vimeo.com/jacopocastellano" target="_blank" rel="noopener noreferrer">Vimeo</a><a href="https://www.instagram.com/jcastellanodesign/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://x.com/vjcastellano" target="_blank" rel="noopener noreferrer">X</a><a href="https://www.pinterest.de/jcastellanodesign/boards/" target="_blank" rel="noopener noreferrer">Pinterest</a></div> </div> <main id="main">  <article> <header class="pg-hero"> <div class="wrap"> <a href="/blog/" class="back">&larr; Writing</a> <h1 class="bp-title">Bookmarkwise: a Claude Code skill that cleans up Chrome bookmarks</h1> <div class="pg-intro"> <p>How Bookmarkwise plans bookmark changes with Claude Code, applies them through a one-off Chrome extension, and keeps a backup and undo.</p> <div class="bp-meta"> <span class="label"><time datetime="2026-11-22T00:00:00.000Z">November 22, 2026</time> · 5 min read</span> <div class="tags"><span class="tag">AI</span><span class="tag">Tools</span><span class="tag">Python</span><span class="tag">Productivity</span></div> </div> </div> </div> </header> <div class="wrap bp-cover"><img src="/blog/bookmarkwise-claude-code-chrome-bookmarks/cover.png" alt="Bookmarkwise: a Claude Code skill that cleans up Chrome bookmarks"></div> <div class="wrap pg-body bp-body"> <div class="prose"><p><a href="https://github.com/JCPetrelli/bookmarkwise">Bookmarkwise</a> is a Claude Code skill that cleans up Chrome bookmarks. It is released under the MIT license.</p>
+<p>You say “clean up my bookmarks” in Claude Code. Claude asks how you want your bookmarks named, organized and pruned. Then it shows a plan, and it changes nothing until you approve it. The changes go through Chrome itself, after a backup.</p>
+<p><img src="/blog/bookmarkwise-claude-code-chrome-bookmarks/bookmarkwise.gif" alt="The Bookmarkwise demo: duplicates and junk links disappear, titles become Tool · What it is, the folder sorts itself" title="Bookmarkwise demo"></p>
+<h2 id="the-five-steps">The five steps</h2>
+<ol>
+<li>Inventory. A Python tool reads the profile’s <code>Bookmarks</code> file. It finds exact duplicates, near duplicates, junk links and messy titles.</li>
+<li>Style. Claude asks how to name bookmarks, which folders to keep, what to remove and what to sort. Each option uses three of your own bookmarks as the example.</li>
+<li>Plan. Claude shows tables: what to delete and why, what to rename, what to move, what to sort.</li>
+<li>Extension. Claude writes a small one-off extension that holds only the approved plan. You load it, click Backup, then click Apply.</li>
+<li>Check. Claude reads the bookmark files again and confirms that every change is there.</li>
+</ol>
+<p>The answers from step 2 go into a style file (<code>~/.config/bookmarkwise/style.json</code>), so the next cleanup starts with one question: same style or not.</p>
+<h2 id="what-the-inventory-finds">What the inventory finds</h2>
+<p>The inventory flags URL kinds and title issues. On the demo profile (25 bookmarks in 5 folders) it reports 2 exact duplicate groups, 2 near duplicate groups, 13 flagged bookmarks and 1 empty folder.</p>
+<ul>
+<li>Same page with different decoration: an article saved with and without <code>?utm_source=newsletter</code>.</li>
+<li>Pinned page state: a sprint board saved with <code>?selectedIssue=HAR-311</code> in the URL.</li>
+<li>Local links: <code>http://localhost:3000/</code>, an address on the home network.</li>
+<li>Login redirects: <code>…/login?next=%2Fdashboard</code>, which can point straight at the dashboard.</li>
+<li>Messy titles: “ACME CORP - SPRINT BOARD - Agile Board - Jira”, a URL as the title, two bookmarks both called “Board”.</li>
+</ul>
+<p><code>javascript:</code> bookmarklets are flagged but kept by default, because they are tools, not pages.</p>
+<h2 id="why-an-extension-writes-the-changes">Why an extension writes the changes</h2>
+<p>Chrome gives three ways to reach bookmarks.</p>
+<p>The <code>Bookmarks</code> file in the profile folder is the best source to read. It is not safe to write. Chrome rewrites it while it runs and keeps an encrypted copy next to it. With sync on, the server copy can undo edits made behind Chrome’s back.</p>
+<p>Browser automation on <code>chrome://bookmarks</code> does not work, because <code>chrome://</code> pages are closed to automation.</p>
+<p>An unpacked extension with the <code>bookmarks</code> permission uses Chrome’s <code>chrome.bookmarks</code> API. Changes apply at once, sync normally and act on exact bookmark IDs.</p>
+<p>So Bookmarkwise reads the file to make the plan and writes through the extension. The bookmark IDs in the file are the same IDs that the extension API uses. This ID match joins the read side to the write side.</p>
+<h2 id="safety-rules-in-the-code">Safety rules in the code</h2>
+<ul>
+<li>The Python package only reads the bookmark files. Nothing in it writes them.</li>
+<li>A plan must be approved before an extension can be built from it. Approval records the plan’s hash, so a plan edited after approval does not build.</li>
+<li>The Apply button stays locked until you download a backup of every bookmark in the profile.</li>
+<li>Before it changes anything, the extension checks every target bookmark: same title, same URL, same folder as when the plan was frozen. If one differs, it changes nothing.</li>
+<li>A folder is deleted only when it is empty.</li>
+<li>A plan applies once. The extension refuses to run it again.</li>
+<li>The extension is built on your machine from a template in the repo (<code>bookmarkwise/extension_template/</code>), so you can read its code before you load it. It asks only for the <code>bookmarks</code> permission. The optional dead-link check is the only part that uses the network, and it runs only after you agree.</li>
+</ul>
+<p>The backup is also the undo. <code>bookmarkwise undo</code> turns it into an undo plan that re-creates deleted bookmarks, restores titles, URLs and order, and removes the folders the plan created. Re-created bookmarks get new IDs.</p>
+<h2 id="tests">Tests</h2>
+<p>CI runs the unit tests on Python 3.10, 3.12 and 3.13.</p>
+<p>An end-to-end test runs the demo plan in a real browser with a throwaway profile. It checks that a plan with drift is refused with nothing changed, that all 28 operations apply, that the bookmarks file shows them, and that the undo restores the original titles, URLs and order. CI runs it on Chrome for Testing, because branded Google Chrome ignores <code>--load-extension</code>.</p>
+<h2 id="install">Install</h2>
+<p>From inside Claude Code:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>/plugin marketplace add JCPetrelli/bookmarkwise</span></span>
+<span class="line"><span>/plugin install bookmarkwise@bookmarkwise</span></span></code></pre>
+<p>Or clone the repo and run <code>just install</code>, which links the skill into <code>~/.claude/skills</code>. It needs Python 3.10 or newer, with no packages, and Chrome on macOS, Linux or Windows.</p>
+<h2 id="limits">Limits</h2>
+<ul>
+<li>Tests use Chrome for Testing 156 on macOS, and Linux in CI. Brave, Edge, Vivaldi and Chromium keep the same files and API (<code>--browser brave</code>), but they are not tested.</li>
+<li>You load the extension by hand (Developer mode, Load unpacked). Chrome lets only the user add an unpacked extension.</li>
+<li>If the plain <code>Bookmarks</code> file looks older than Chrome’s encrypted copy, the inventory warns and Claude stops.</li>
+</ul>
+<p>The code, the demo profile and the full walkthrough are on <a href="https://github.com/JCPetrelli/bookmarkwise">GitHub</a>.</p>
+<p>This article is also on <a href="https://medium.com/@jacopocastellano/bookmarkwise-a-claude-code-skill-that-cleans-up-chrome-bookmarks-db70940ab826">Medium</a>.</p></div> <footer class="bp-author"> <span class="label">Written by</span> <p>Jacopo Castellano</p> <span class="label">Senior Software Engineer &amp; Video Designer</span> </footer> </div> </article> <section class="bp-related"> <div class="wrap"> <div class="section-head"><h2>Related</h2></div> <div class="rows"> <a href="/blog/7-benefits-of-memorizing-the-first-2000-digits-of-/" class="post"> <span class="label">2022</span> <h3>7 benefits of memorizing the first 2000 digits of π</h3> <span class="arrow">&rarr;</span> </a><a href="/blog/ai-weekly-digest-week-of-2026-05-25/" class="post"> <span class="label">2026</span> <h3>AI Weekly Digest: The Top 10 Things to Know This Week (Week of May 25, 2026)</h3> <span class="arrow">&rarr;</span> </a><a href="/blog/ai-weekly-digest-week-of-2026-06-01/" class="post"> <span class="label">2026</span> <h3>AI Weekly Digest: The Top 10 Things to Know This Week (Week of June 1, 2026)</h3> <span class="arrow">&rarr;</span> </a> </div> </div> </section> </main> <footer> <div class="wrap"> <a href="/contact/" class="big">Say hello</a> <div class="cols"> <div><span>Berlin, Germany</span><span>Senior Software Engineer</span><span>Video Designer</span><span>&copy; 2026 Jacopo Castellano</span></div> <div><a href="https://www.linkedin.com/in/jacopocastellano/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/JCPetrelli" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://medium.com/@jacopocastellano" target="_blank" rel="noopener noreferrer">Medium</a><a href="https://www.youtube.com/channel/UCiVwuK0LOAPZWaXvhNjIB0g" target="_blank" rel="noopener noreferrer">YouTube</a><a href="https://vimeo.com/jacopocastellano" target="_blank" rel="noopener noreferrer">Vimeo</a><a href="https://www.instagram.com/jcastellanodesign/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://x.com/vjcastellano" target="_blank" rel="noopener noreferrer">X</a><a href="https://www.pinterest.de/jcastellanodesign/boards/" target="_blank" rel="noopener noreferrer">Pinterest</a></div> <div><a href="/portfolio/">Work</a><a href="/blog/">Writing</a><a href="/ai-digest/">AI Digest</a><a href="/store/">Store</a><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/rss.xml">RSS</a></div> </div> </div> </footer>  <script>
+    (function () {
+      var bar = document.querySelector('.topbar');
+      var hero = document.querySelector('.hero');
+      if (hero) {
+        // top bar: white over the hero, ink once the hero has scrolled past
+        new IntersectionObserver(function (e) { bar.classList.toggle('past-hero', !e[0].isIntersecting); },
+          { rootMargin: '-66px 0px 0px 0px' }).observe(hero);
+      }
+      var btn = document.querySelector('.menu-btn'), menu = document.getElementById('menu');
+      function setMenu(open) {
+        btn.setAttribute('aria-expanded', String(open));
+        btn.textContent = open ? 'Close' : 'Menu';
+        menu.hidden = !open;
+        bar.classList.toggle('menu-open', open);
+        document.body.style.overflow = open ? 'hidden' : '';
+        if (open) menu.querySelector('a').focus();
+      }
+      btn.addEventListener('click', function () { setMenu(menu.hidden); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !menu.hidden) { setMenu(false); btn.focus(); } });
+      matchMedia('(min-width: 1080px)').addEventListener('change', function (m) { if (m.matches) setMenu(false); });
+    })();
+  </script> </body> </html>
