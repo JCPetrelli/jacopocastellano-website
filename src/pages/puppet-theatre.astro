@@ -1,0 +1,162 @@
+---
+// Landing page for puppet and children's theatres (outreach after the
+// Puppentheaterfest FEZ Berlin 2026). Not in the nav; linked from emails.
+// Design: Scripts/puppet_collab/docs/specs/2026-11-22-landing-page-design.md
+import fs from 'node:fs';
+import SiteLayout from '../layouts/redesign/SiteLayout.astro';
+import { P } from '../layouts/redesign/paths';
+
+const teaser = '/videos/puppet-theatre-teaser';
+const hasTeaser = fs.existsSync(`public${teaser}.mp4`);
+const mail = 'info@jacopocastellano.com';
+const subject = encodeURIComponent('Projections for our puppet theatre');
+
+const principles = [
+  { title: 'Part of the set', text: 'The image lands on the scenery itself: a backdrop, a gauze, a shadow screen. It becomes part of the stage you already built.' },
+  { title: 'Your story comes first', text: 'Projection gives space and mood: sky, weather, time of day, a whole world around the scene. It supports your story instead of telling it for you.' },
+  { title: 'Played live', text: 'I run the projections myself during the show, following your performance. Nothing runs on by itself when the audience laughs or calls out.' },
+];
+
+const steps = [
+  { n: '01', title: 'Your story', text: 'I watch your piece and find the moments where light can tell something: rain, night, a forest that grows.' },
+  { n: '02', title: 'Images for your stage', text: 'I design the scenes for your set and its measurements, in your colours.' },
+  { n: '03', title: 'Light setup', text: 'Little equipment, set up in about ten minutes. The darkened room you already play in is enough.' },
+  { n: '04', title: 'On stage', text: 'I set everything up with you and play the projections live at every performance, cue by cue with your show.' },
+];
+
+const work = [
+  { img: '/images/portfolio/carmina_burana/carmina_burana_4.jpg', title: 'Carmina Burana', note: 'Projections on curved screens, with orchestra and ballet', href: `${P}/portfolio/carmina-burana/` },
+  { img: '/images/portfolio/stabat_mater/stabat5.jpg', title: 'Stabat Mater', note: 'The projection is the set: 73 videos, played live to the music', href: `${P}/portfolio/stabat-mater/` },
+  { img: '/images/portfolio/carmina_burana/carmina_burana_2.jpg', title: 'Carmina Burana', note: 'Lines of light above the dancers', href: `${P}/portfolio/carmina-burana/` },
+  { img: '/images/portfolio/stabat_mater/stabat_mater_1.jpg', title: 'Stabat Mater', note: 'A space made of light instead of built scenery', href: `${P}/portfolio/stabat-mater/` },
+];
+---
+<SiteLayout
+  title="Projections for Puppet Theatre"
+  description="Video projections for puppet and children's theatre, built into the set and played live during the show. Jacopo Castellano, Berlin."
+>
+  <section class="pg-hero ft-hero">
+    <div class="wrap">
+      <span class="label">For puppet and children's theatre</span>
+      <h1>Light for your stage.</h1>
+      <div class="pg-intro">
+        <p>Video projections built into the set of your show. Rain on a window, leaves in the wind, a storm coming in: played live, in the rhythm of your performance.</p>
+        <div class="pg-actions">
+          <a href={`mailto:${mail}?subject=${subject}`} class="pill">Write to me &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap ft-teaser">
+    {hasTeaser ? (
+      <video autoplay muted loop playsinline preload="metadata" poster={`${teaser}.jpg`}>
+        <source src={`${teaser}.webm`} type="video/webm" />
+        <source src={`${teaser}.mp4`} type="video/mp4" />
+      </video>
+    ) : (
+      <div class="ft-placeholder"><span class="label">Teaser "Raindrop" coming soon</span></div>
+    )}
+    <p class="label ft-caption">Raindrop: rain, leaves and wind. Each scene is cued live.</p>
+  </div>
+
+  <section class="on-dark ft-why">
+    <div class="wrap">
+      <span class="label">The idea</span>
+      <h2 class="ft-h2">Projection as part of the stage.</h2>
+      <p class="ft-lead">Light that falls on your scenery and blends with fabric, paper and shadow. It makes the world of your story bigger and changes the weather, the season or the time of day in a second.</p>
+      <div class="ft-principles">
+        {principles.map((p) => (
+          <div>
+            <h3>{p.title}</h3>
+            <p>{p.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head"><h2>How I work</h2></div>
+      <ol class="ft-steps">
+        {steps.map((s) => (
+          <li>
+            <span class="label">{s.n}</span>
+            <h3>{s.title}</h3>
+            <p>{s.text}</p>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head"><h2>Stage work</h2><a href={`${P}/portfolio/`}>All projects &rarr;</a></div>
+      <p class="ft-sub">So far I have made projections for ballet and classical concerts. The same technique, quieter and smaller, fits your stage.</p>
+      <div class="ft-work">
+        {work.map((w) => (
+          <a href={w.href} class="ft-card">
+            <img src={w.img} alt={`${w.title}: ${w.note}`} loading="lazy" />
+            <span class="ft-card-title">{w.title}</span>
+            <span class="label">{w.note}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="on-dark ft-end">
+    <div class="wrap">
+      <span class="label">About me</span>
+      <h2 class="ft-h2">Hi, I'm Jacopo.</h2>
+      <p class="ft-lead">Video designer and software developer in Berlin, from Italy. For more than ten years I have made projections for ballet and classical music, played live to the music. I was in the audience at the 30th Puppentheaterfest at FEZ Berlin with my family, and now I would like to bring this light to puppet theatre.</p>
+      <p class="ft-lead">If you are planning a new piece, tell me about it.</p>
+      <div class="ft-actions">
+        <a href={`mailto:${mail}?subject=${subject}`} class="pill">{mail}</a>
+        <a href={`${P}/contact/`} class="pill">Contact form</a>
+      </div>
+    </div>
+  </section>
+</SiteLayout>
+
+<style>
+  .ft-hero h1 { max-width: 12ch; }
+  .ft-teaser { margin-top: clamp(48px, 7vw, 88px); }
+  .ft-teaser video, .ft-placeholder { display: block; width: 100%; aspect-ratio: 16 / 9; background: #000; object-fit: cover; }
+  .ft-placeholder { display: grid; place-items: center; border: 1px dashed var(--hairline); }
+  .ft-placeholder .label { color: rgba(255, 255, 255, 0.6); }
+  .ft-caption { margin-top: 14px; }
+
+  .ft-why, .ft-end { margin-top: var(--section-gap); }
+  .ft-h2 { margin-top: 28px; font-size: var(--text-heading); font-weight: 300; line-height: 1.05; letter-spacing: -0.02em; max-width: 16ch; }
+  .ft-lead { margin-top: 40px; max-width: 58ch; font-size: var(--text-body); line-height: 1.55; color: var(--inverse-muted); }
+  .ft-lead + .ft-lead { margin-top: 20px; }
+  .ft-principles { margin-top: 72px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+  .ft-principles div { border-top: 1px solid var(--inverse-border); padding-top: 24px; }
+  .ft-principles h3 { font-size: 22px; font-weight: 400; }
+  .ft-principles p { margin-top: 12px; color: var(--inverse-muted); font-size: 16px; line-height: 1.5; }
+
+  .ft-steps { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
+  .ft-steps li { border-top: 1px solid var(--hairline); padding-top: 24px; }
+  .ft-steps h3 { margin-top: 14px; font-size: 22px; font-weight: 400; }
+  .ft-steps p { margin-top: 12px; color: var(--text-soft); font-size: 16px; line-height: 1.5; }
+
+  .ft-sub { margin-top: -32px; margin-bottom: 48px; max-width: 56ch; color: var(--text-soft); }
+  .ft-work { display: grid; grid-template-columns: 1fr 1fr; gap: 40px 32px; }
+  .ft-card { display: flex; flex-direction: column; gap: 8px; }
+  .ft-card img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; display: block; transition: opacity 0.6s var(--ease); }
+  .ft-card:hover img { opacity: 0.85; }
+  .ft-card-title { margin-top: 8px; font-size: 22px; }
+
+  .ft-end { padding-bottom: var(--section-gap); }
+  .ft-actions { margin-top: 48px; display: flex; gap: 12px; flex-wrap: wrap; }
+
+  @media (max-width: 900px) {
+    .ft-principles, .ft-steps { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 620px) {
+    .ft-principles, .ft-steps, .ft-work { grid-template-columns: 1fr; }
+  }
+</style>
