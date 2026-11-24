@@ -1,0 +1,116 @@
+{
+  "date": "2026-11-24",
+  "window": "48h",
+  "sources": 42,
+  "articles": 210,
+  "points": [
+    {
+      "headline": "Jensen Huang is back as Nvidia CEO.",
+      "body": "Nvidia's board reinstated Huang as CEO and chair 11 days after he resigned over reported affairs, one with an executive of Megaspeed, a firm now heading for a US blacklist. President Trump said he lobbied the board for the return; the stock rose, while politicians of both parties and some employees objected. Huang testifies in the Senate next week.",
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/23/nvidia-reverses-course-and-brings-jensen-huang-back-as-ceo/"
+        },
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/ai/2026/11/jensen-huang-reinstated-as-nvidia-ceo-board-chair/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1040652/jensen-huang-nvidia-trump-reinstated"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/inside-nvidia-not-everyone-is-celebrating-jensen-huangs-return/"
+        }
+      ]
+    },
+    {
+      "headline": "AI agents move into code review and approvals.",
+      "body": "Anthropic launched Claude Ship, agents that review pull requests, push fixes and check which approvals a repository still needs. At QCon San Francisco, Netflix showed a review agent that posts only verified blockers, and OpenAI said it built its ChatGPT ads product with Codex agents and no human-written code. As AI code piles up, review is the new bottleneck.",
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/"
+        },
+        {
+          "name": "InfoQ",
+          "url": "https://www.infoq.com/news/2026/11/netflix-sdlc-ai-coding-agents/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global"
+        },
+        {
+          "name": "InfoQ",
+          "url": "https://www.infoq.com/news/2026/11/qcon-sf-openai-lessons/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global"
+        }
+      ]
+    },
+    {
+      "headline": "AI proofs raise the question of who understands them.",
+      "body": "Anthropic says Claude solved a long-standing math problem, but the written proof runs to 250,000 pages that critics call unreadable. Commentators argue a machine-checked proof only becomes knowledge once people can explain and extend it, while Google DeepMind paired agent teams with formal verification to find faster quantum algorithms for chemistry and fusion.",
+      "sources": [
+        {
+          "name": "The Register",
+          "url": "https://www.theregister.com/ai-and-ml/2026/11/24/anthropic-says-claude-solved-an-age-old-math-problem-but-the-written-proof-is-250000-pages-of-slop/5311775"
+        },
+        {
+          "name": "Towards Data Science",
+          "url": "https://towardsdatascience.com/ai-math-proofs-arent-knowledge-until-someone-explains-them/"
+        },
+        {
+          "name": "Google DeepMind",
+          "url": "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/"
+        }
+      ]
+    },
+    {
+      "headline": "Data center power collides with climate goals.",
+      "body": "The COP31 climate summit ended without a deal, with power-hungry AI data centers complicating plans to electrify the economy. Meta dropped its 2030 net-zero goal, and a gas supplier for its data centers lobbied for an exemption from acid rain rules. President Trump also threatened a heavy tax on US data centers built abroad.",
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/science/1040497/ai-data-centers-electricity-un-climate-summit"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/23/meta-throws-out-its-net-zero-goal-its-competitors-should-be-furious/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/a-power-provider-for-meta-urged-regulators-to-exempt-data-center-plants-from-acid-rain-rules/"
+        },
+        {
+          "name": "The Register",
+          "url": "https://www.theregister.com/off-prem/2026/11/23/trump-says-he-wont-allow-us-companies-to-build-datacenters-abroad/5311640"
+        }
+      ]
+    },
+    {
+      "headline": "Amazon buys Decart's AI optimization tech for its chips.",
+      "body": "Amazon is acquiring Decart's AI optimization technology and research team in a reported $7.5 billion deal, without buying the whole startup. The aim is to keep its Trainium accelerators busy at all times as Amazon prepares to sell the chips more widely.",
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/23/amazon-snaps-up-decarts-ai-optimization-tech-for-7-5b-as-it-prepares-to-sell-trainium-chips/"
+        },
+        {
+          "name": "The Register",
+          "url": "https://www.theregister.com/ai-and-ml/2026/11/23/amazon-scoops-up-ai-accelerator-tech-to-keep-chips-busy-at-all-times/5311754"
+        }
+      ]
+    },
+    {
+      "headline": "States sue Musk's companies over Grok deepfakes.",
+      "body": "The attorneys general of Oregon and Virginia are suing SpaceX and other Musk companies, saying Grok still generates sexualized images of real people, including children. X says every Grok output is screened, but the states argue the safeguards are too weak.",
+      "sources": [
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/states-sue-spacex-over-grok-deepfakes/"
+        },
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/tech-policy/2026/11/states-sue-spacex-to-stop-grok-from-generating-child-sex-images-revenge-porn/"
+        }
+      ]
+    }
+  ]
+}
