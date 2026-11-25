@@ -12,6 +12,7 @@
 - [Store](https://jacopocastellano.com/store/): 3D model packs and animation packs.
 
 ## Blog
+- [The two-minute rule needs an update for AI agents](https://jacopocastellano.com/blog/two-minute-rule-ai-agents/): GTD says do anything under two minutes now. With agents most tasks start that fast, so the rule needs a review step and a fixed slot for it.
 - [AI Weekly Digest: The Top 10 Things to Know This Week (Week of November 16, 2026)](https://jacopocastellano.com/blog/ai-weekly-digest-week-of-2026-11-16/): Nvidia's first week without Jensen Huang, Anthropic's record IPO, California suing OpenAI over runaway agents, GPT-6.2 and a Claude-assisted Riemann proof.
 - [Bookmarkwise: a Claude Code skill that cleans up Chrome bookmarks](https://jacopocastellano.com/blog/bookmarkwise-claude-code-chrome-bookmarks/): How Bookmarkwise plans bookmark changes with Claude Code, applies them through a one-off Chrome extension, and keeps a backup and undo.
 - [AI Weekly Digest: The Top 10 Things to Know This Week (Week of November 9, 2026)](https://jacopocastellano.com/blog/ai-weekly-digest-week-of-2026-11-09/): Jensen Huang resigns at Nvidia, Anthropic ships Fable 5.2 and Mythos 5.2, Google rolls out Gemini 4 Hydrogen, ChatGPT Wallet lets agents pay, and more.
