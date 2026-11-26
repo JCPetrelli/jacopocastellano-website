@@ -38,6 +38,14 @@ A series of animations inspired by the work of Marcello Morandini, Italian artis
 <button class="yt-facade" data-yt="mFny-DvaWpI" data-title="Cilindri" aria-label="Play Cilindri"><img src="/images/portfolio/morandini/cilindri.jpg" alt="Cilindri" loading="lazy"></button>
 </div>
 <div>
+<h2 style="text-align:center;margin:0 0 1rem">Espansione</h2>
+<button class="yt-facade" data-yt="LaWXlDNA2MA" data-title="Espansione" aria-label="Play Espansione"><img src="/images/portfolio/morandini/espansione.jpg" alt="Espansione" loading="lazy"></button>
+</div>
+<div>
+<h2 style="text-align:center;margin:0 0 1rem">Cubi</h2>
+<button class="yt-facade" data-yt="Sba-PtnUttA" data-title="Cubi" aria-label="Play Cubi"><img src="/images/portfolio/morandini/cubi.jpg" alt="Cubi" loading="lazy"></button>
+</div>
+<div>
 <h2 style="text-align:center;margin:0 0 1rem">Facciata</h2>
 <button class="yt-facade" data-yt="6ryKlAI2FU0" data-title="Facciata" aria-label="Play Facciata"><img src="/images/portfolio/morandini/facciata.jpg" alt="Facciata" loading="lazy"></button>
 </div>
@@ -60,5 +68,33 @@ A series of animations inspired by the work of Marcello Morandini, Italian artis
 <div>
 <h2 style="text-align:center;margin:0 0 1rem">Galleria</h2>
 <button class="yt-facade" data-yt="xTO1ALpbp9A" data-title="Galleria" aria-label="Play Galleria"><img src="/images/portfolio/morandini/galleria.jpg" alt="Galleria" loading="lazy"></button>
+</div>
+<div>
+<h2 style="text-align:center;margin:0 0 1rem">Onde</h2>
+<button class="yt-facade" data-yt="6lG31XjRRbI" data-title="Onde" aria-label="Play Onde"><img src="/images/portfolio/morandini/onde.jpg" alt="Onde" loading="lazy"></button>
+</div>
+<div>
+<h2 style="text-align:center;margin:0 0 1rem">Raggi</h2>
+<button class="yt-facade" data-yt="uc_9f-r_oU8" data-title="Raggi" aria-label="Play Raggi"><img src="/images/portfolio/morandini/raggi.jpg" alt="Raggi" loading="lazy"></button>
+</div>
+<div>
+<h2 style="text-align:center;margin:0 0 1rem">Conchiglia</h2>
+<button class="yt-facade" data-yt="u1H_m8Y_Ebo" data-title="Conchiglia" aria-label="Play Conchiglia"><img src="/images/portfolio/morandini/conchiglia.jpg" alt="Conchiglia" loading="lazy"></button>
+</div>
+<div>
+<h2 style="text-align:center;margin:0 0 1rem">Piramide</h2>
+<button class="yt-facade" data-yt="NdLik0PYyjs" data-title="Piramide" aria-label="Play Piramide"><img src="/images/portfolio/morandini/piramide.jpg" alt="Piramide" loading="lazy"></button>
+</div>
+<div>
+<h2 style="text-align:center;margin:0 0 1rem">Fuga</h2>
+<button class="yt-facade" data-yt="vvRTRDghRYo" data-title="Fuga" aria-label="Play Fuga"><img src="/images/portfolio/morandini/fuga.jpg" alt="Fuga" loading="lazy"></button>
+</div>
+<div>
+<h2 style="text-align:center;margin:0 0 1rem">Pozzo</h2>
+<button class="yt-facade" data-yt="e9OXdbVXNvQ" data-title="Pozzo" aria-label="Play Pozzo"><img src="/images/portfolio/morandini/pozzo.jpg" alt="Pozzo" loading="lazy"></button>
+</div>
+<div>
+<h2 style="text-align:center;margin:0 0 1rem">Arco</h2>
+<button class="yt-facade" data-yt="h5kwmTIh6YQ" data-title="Arco" aria-label="Play Arco"><img src="/images/portfolio/morandini/arco.jpg" alt="Arco" loading="lazy"></button>
 </div>
 </div>
