@@ -132,6 +132,7 @@
 
 ## Optional
 - [AI Digest archive](https://jacopocastellano.com/ai-digest/archive/)
+- [AI Digest 2026-11-28](https://jacopocastellano.com/ai-digest/archive/2026-11-28/)
 - [AI Digest 2026-11-26](https://jacopocastellano.com/ai-digest/archive/2026-11-26/)
 - [AI Digest 2026-11-24](https://jacopocastellano.com/ai-digest/archive/2026-11-24/)
 - [AI Digest 2026-11-22](https://jacopocastellano.com/ai-digest/archive/2026-11-22/)
@@ -141,5 +142,4 @@
 - [AI Digest 2026-11-14](https://jacopocastellano.com/ai-digest/archive/2026-11-14/)
 - [AI Digest 2026-11-12](https://jacopocastellano.com/ai-digest/archive/2026-11-12/)
 - [AI Digest 2026-11-10](https://jacopocastellano.com/ai-digest/archive/2026-11-10/)
-- [AI Digest 2026-11-09](https://jacopocastellano.com/ai-digest/archive/2026-11-09/)
 - [Sitemap](https://jacopocastellano.com/sitemap-index.xml)
